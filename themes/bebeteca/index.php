@@ -1,5 +1,155 @@
 	<?php get_header(); ?>
 	<!-- Insert content here -->
-	
+	<div class="main">
+		<section>
+			<article class="entero">
+				<span class="titulo1">Embarazo</p>
+
+				<div id="slider-principal" class="slider-principal">
+					<a class="flecha-left prev" href="#"></a>
+					<div class="viewport">
+						<ul class="overview">
+							<li>
+								<img src="">
+							</li>
+							<li>
+								<img src="">
+							</li>
+							<li>
+								<img src="">
+							</li>
+						</ul>
+					</div>
+					<a class="absolute flecha-right next" href="#"></a>
+					<ul class="bullets clearfix">
+						<li><a href="#" class="bullet"></a></li>
+					</ul>
+				</div>
+
+				<div class="footer-slide">
+					<h4>9 Last-Minute Ways to Prep for Baby</h4>
+					<p>Everything you need to check off your list before that D-day dawns.</p>
+
+					<div class="extras">
+						<span class="megusta"></span><p>190</p>
+						<span class="compartir"></span><p>340</p>
+					</div>
+				</div>
+			</article><!-- SLIDE -->
+
+			<article class="un-medio">
+				<span class="titulo2">Videos</span>
+				<img src="">
+				<div class="footer-un-medio">
+					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
+					<p>Everything you need to check off your list before that D-day dawns.</p>
+					<div class="extras">
+						<span class="megusta"></span><p>190</p>
+						<span class="compartir"></span><p>340</p>
+					</div>
+				</div>
+			</article><!-- VIDEOS -->
+
+			<article class="un-medio">
+				<span class="titulo2">Promociones</span>
+				<img src="">
+				<div class="footer-un-medio">
+					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
+					<p>Everything you need to check off your list before that D-day dawns.</p>
+					<div class="extras">
+						<span class="megusta"></span><p>190</p>
+						<span class="compartir"></span><p>340</p>
+					</div>
+				</div>
+			</article><!-- VIDEOS -->
+
+			<article class="entero autor-home">
+				<img src="">
+				<div class="info-autor">
+					<h4>Nombre autor</h4>
+					<p class="rol">Editora</p>
+					<p>I am of the mindset that if you are creative enough you can make anything happen</p>
+					<div class="boton">Más sobre el autor</div>
+				</div>
+				<div class="post-autor">
+					<div>
+						<a href=""><span>></span><h4>Disappointing Pregnancy Announcements</h4></a>
+					</div>
+					<div>
+						<a href=""><span>></span><h4>Why Kids Need Their Dads</h4></a>
+					</div>
+					<div>
+						<a href=""><span>></span><h4>10 Things I Regret Not Enjoying More During...</h4></a>
+					</div>
+					<div>
+						<a href=""><span>></span><h4>7 Things Parents Need to Know</h4></a>
+					</div>
+				</div>
+			</article>
+
+			<div class="entero">
+				<span class="line"></span>
+				<h5>Más artículos</h5>
+				<span class="line"></span>
+			</div>
+
+			<article class="entero article-gral">
+				<a href="">
+					<span class="titulo1 pleca-embarazo">Embarazo</span>
+					<img src="">
+					<h4>9 Last-Minute Ways to Prep for Baby</h4>
+					<p>Everything you need to check off your list before that D-day dawns.</p>
+					<div class="extras">
+						<span class="megusta"></span><p>190</p>
+						<span class="compartir"></span><p>340</p>
+					</div>
+				</a>
+			</article>
+
+			<article class="entero article-gral">
+				<a href="">
+					<span class="titulo1 pleca-nacimiento">Nacimiento</span>
+					<img src="">
+					<h4>9 Last-Minute Ways to Prep for Baby</h4>
+					<p>Everything you need to check off your list before that D-day dawns.</p>
+					<div class="extras">
+						<span class="megusta"></span><p>190</p>
+						<span class="compartir"></span><p>340</p>
+					</div>
+				</a>
+			</article>
+
+			<article class="entero article-gral">
+				<a href="">
+					<span class="titulo1 pleca-nutricion">Nutrición</span>
+					<img src="">
+					<h4>9 Last-Minute Ways to Prep for Baby</h4>
+					<p>Everything you need to check off your list before that D-day dawns.</p>
+					<div class="extras">
+						<span class="megusta"></span><p>190</p>
+						<span class="compartir"></span><p>340</p>
+					</div>
+				</a>
+			</article>
+
+			<article class="entero article-gral">
+				<span class="titulo1 pleca-lactancia">Lactancia</span>
+				<img src="">
+				<h4>9 Last-Minute Ways to Prep for Baby</h4>
+				<p>Everything you need to check off your list before that D-day dawns.</p>
+				<div class="extras">
+					<span class="megusta"></span><p>190</p>
+					<span class="compartir"></span><p>340</p>
+				</div>
+			</article>
+
+			<div class="boton">Mas entradas ></div>
+
+		</section>
+		<aside>
+
+		</aside>
+	</div>
+
 	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>

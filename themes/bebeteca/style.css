@@ -67,3 +67,5 @@ figure {margin: 0;}
 .right{ float: right;}
 
 /*** GENERAL ***/
+
+html, body{margin: 0; padding: 0;}
