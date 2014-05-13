@@ -3,24 +3,21 @@
 	<div class="main">
 		<section>
 			<article class="entero">
-				<span class="titulo1">Embarazo</p>
+				<span class="titulo1">Embarazo</span>
 
 				<div id="slider-principal" class="slider-principal">
-					<a class="flecha-left prev" href="#"></a>
+					<a class="flecha_carrusel prev" href="#"></a>
 					<div class="viewport">
 						<ul class="overview">
 							<li>
-								<img src="">
+								<a href=""><img src="<?php echo THEMEPATH; ?>images/img1.jpg"></a>
 							</li>
 							<li>
-								<img src="">
-							</li>
-							<li>
-								<img src="">
+								<a href=""><img src="<?php echo THEMEPATH; ?>images/img2.jpg"></a>
 							</li>
 						</ul>
 					</div>
-					<a class="absolute flecha-right next" href="#"></a>
+					<a class="flecha_carrusel next" href="#"></a>
 					<ul class="bullets clearfix">
 						<li><a href="#" class="bullet"></a></li>
 					</ul>
