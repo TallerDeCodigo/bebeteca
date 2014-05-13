@@ -140,4 +140,11 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .main section span.titulo1{position: absolute;top: 27px; left: -18px; background: url(images/p_emb.png) no-repeat; width: 108px; height: 28px; z-index: 999; color: #fff; padding-left: 10px; text-align: center; line-height: 22px;}
 
 .main section .bullets{position: absolute; display: inline-block; bottom: 0; width: 154px; height: 30px; z-index: 999; background-color: #77b4c6; border-radius: 10px 10px 0 0; list-style: none; margin: 0; left: 232px;}
-.footer-slide
+.main section .footer-slide{position: relative;overflow: hidden;width: 100%; height: 110px; background-color: #fff; padding: 16px 22px;}
+.main section .footer-slide h4{font-size: 16px; color: #9e65b4; margin-bottom: 7px;}
+.main section .footer-slide p{color: #808080; font-size: 12px;}
+.extras{position: relative; overflow: hidden; clear: both; width: 100%; height: auto;}
+.extras span.megusta{display: block; overflow: hidden; width: 18px; height: 16px; margin-right: 5px; float: left; background: url(images/iconos.png) no-repeat; background-position: -54px -12px;}
+.extras span.megusta.verde{background: url(images/iconos.png) no-repeat; background-position: -54px -12px;}
+.extras p{color:#b0d04b !important; display: block; width: auto; margin-right: 10px; float: left; margin-top: 2px;}
+.extras span.compartir{display: block; overflow: hidden; width: 20px; height: 20px; margin-right: 5px; float: left; background: url(images/iconos.png) no-repeat; background-position: -76px -9px;}

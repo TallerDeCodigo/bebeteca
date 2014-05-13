@@ -28,7 +28,7 @@
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 
 					<div class="extras">
-						<span class="megusta"></span><p>190</p>
+						<span class="megusta verde"></span><p>190</p>
 						<span class="compartir"></span><p>340</p>
 					</div>
 				</div>
