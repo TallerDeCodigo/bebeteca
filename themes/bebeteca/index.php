@@ -36,7 +36,7 @@
 
 			<article class="un-medio">
 				<span class="titulo2">Videos</span>
-				<img src="">
+				<img src="<?php echo THEMEPATH; ?>images/img1.jpg">
 				<div class="footer-un-medio">
 					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
@@ -47,15 +47,15 @@
 				</div>
 			</article><!-- VIDEOS -->
 
-			<article class="un-medio">
-				<span class="titulo2">Promociones</span>
-				<img src="">
-				<div class="footer-un-medio">
+			<article class="un-medio ultimo-fila">
+				<span class="titulo2 color-rosa">Promociones</span>
+				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+				<div class="footer-un-medio color-rosa">
 					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 					<div class="extras">
-						<span class="megusta"></span><p>190</p>
-						<span class="compartir"></span><p>340</p>
+						<span class="megusta rosa"></span><p>190</p>
+						<span class="compartir rosa"></span><p>340</p>
 					</div>
 				</div>
 			</article><!-- VIDEOS -->
