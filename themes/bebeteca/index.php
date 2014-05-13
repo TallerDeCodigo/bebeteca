@@ -41,8 +41,8 @@
 					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 					<div class="extras">
-						<span class="megusta"></span><p>190</p>
-						<span class="compartir"></span><p>340</p>
+						<span class="megusta azul"></span><p class="azul">190</p>
+						<span class="compartir azul"></span><p class="azul">340</p>
 					</div>
 				</div>
 			</article><!-- VIDEOS -->
@@ -54,14 +54,14 @@
 					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 					<div class="extras">
-						<span class="megusta rosa"></span><p>190</p>
-						<span class="compartir rosa"></span><p>340</p>
+						<span class="megusta rosa"></span><p class="rosa">190</p>
+						<span class="compartir rosa"></span><p class="rosa">340</p>
 					</div>
 				</div>
 			</article><!-- VIDEOS -->
 
 			<article class="entero autor-home">
-				<img src="">
+				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
 				<div class="info-autor">
 					<h4>Nombre autor</h4>
 					<p class="rol">Editora</p>
@@ -78,13 +78,13 @@
 					<div>
 						<a href=""><span>></span><h4>10 Things I Regret Not Enjoying More During...</h4></a>
 					</div>
-					<div>
+					<div class="ultimo-bottom" >
 						<a href=""><span>></span><h4>7 Things Parents Need to Know</h4></a>
 					</div>
 				</div>
 			</article>
 
-			<div class="entero">
+			<div class="entero divicion">
 				<span class="line"></span>
 				<h5>Más artículos</h5>
 				<span class="line"></span>
