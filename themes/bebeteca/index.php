@@ -93,7 +93,7 @@
 			<article class="entero article-gral">
 				<a href="">
 					<span class="titulo1 pleca-embarazo">Embarazo</span>
-					<img src="">
+					<img src=" <?php echo THEMEPATH; ?>images/img3.jpg">
 					<h4>9 Last-Minute Ways to Prep for Baby</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 					<div class="extras">
@@ -106,7 +106,7 @@
 			<article class="entero article-gral">
 				<a href="">
 					<span class="titulo1 pleca-nacimiento">Nacimiento</span>
-					<img src="">
+					<img src="<?php echo THEMEPATH; ?>images/img4.jpg">
 					<h4>9 Last-Minute Ways to Prep for Baby</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 					<div class="extras">
@@ -119,7 +119,7 @@
 			<article class="entero article-gral">
 				<a href="">
 					<span class="titulo1 pleca-nutricion">Nutrición</span>
-					<img src="">
+					<img src="<?php echo THEMEPATH; ?>images/img3.jpg">
 					<h4>9 Last-Minute Ways to Prep for Baby</h4>
 					<p>Everything you need to check off your list before that D-day dawns.</p>
 					<div class="extras">
@@ -131,7 +131,7 @@
 
 			<article class="entero article-gral">
 				<span class="titulo1 pleca-lactancia">Lactancia</span>
-				<img src="">
+				<img src="<?php echo THEMEPATH; ?>images/img4.jpg">
 				<h4>9 Last-Minute Ways to Prep for Baby</h4>
 				<p>Everything you need to check off your list before that D-day dawns.</p>
 				<div class="extras">
@@ -140,7 +140,7 @@
 				</div>
 			</article>
 
-			<div class="boton">Mas entradas ></div>
+			<div class="boton mas-entradas">Mas entradas ></div>
 
 		</section>
 		<aside>
