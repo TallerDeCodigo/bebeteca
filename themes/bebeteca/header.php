@@ -16,34 +16,44 @@
 			<p class="chromeframe">Estás usando una versión <strong>vieja</strong> de tu explorador. Por favor <a href="http://browsehappy.com/" target="_blank"> actualiza tu explorador</a> para tener una experiencia completa.</p>
 		<![endif]-->
 		<div class="content-header">
-			<header>
-				<h1><a href="">La Bebeteca</a></h1>
+			<header class="border-radius">
+				<h1 class="logo"><a href="<?php echo site_url('/') ?>">La Bebeteca</a></h1>
 				<div class="top-header">
 					<span>Visítanos</span>
 					<ul class="redes-sociales">
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
-						<li><a href=""><img src=""></a></li>
+						<li class="b-fb"><a href="">faceboock</a></li>
+						<li class="b-tw"><a href="">twitter</a></li>
+						<li class="b-gm"><a href="">google +</a></li>
 					</ul>
 					<div class="boton">Registrate</div>
 					<div class="boton">Inicia Sesión</div>
 					<form class="forma-buscar" method="GET" action="<?php echo site_url('/') ?>">
+						<input type="text" name="s" value="" placeholder="Buscar" >
 						<input type="submit" value="">
-						<input type="text" name="s" value="">
 					</form>
 				</div>
 				<nav id="main-menu">
 					<ul>
-						<li class="bt-embarazo">Embarazo</li>
-						<li class="bt-nacimiento">Nacimiento</li>
-						<li class="bt-dia-a-dia">Día a Día</li>
-						<li class="bt-estimulacion">Estimulación</li>
-						<li class="bt-nutricion">Nutrición</li>
-						<li class="bt-lactancia">Lactancia</li>
-						<li class="bt-entrevistas">Entrevistas</li>
-						<li class="bt-promociones">Promociones</li>
+						<li class="bg-embarazo boton">Embarazo
+							<div class="submenu border-radius">
+								<div class="subcategorias">
+
+								</div>
+								<div class="post-rel">
+
+								</div>
+								<div class="post-rel">
+
+								</div>
+							</div>
+						</li>
+						<li class="bg-nacimiento boton">Nacimiento</li>
+						<li class="bg-dia-a-dia boton">Día a Día</li>
+						<li class="bg-estimulacion boton">Estimulación</li>
+						<li class="bg-nutricion boton">Nutrición</li>
+						<li class="bg-lactancia boton">Lactancia</li>
+						<li class="bg-entrevistas boton">Entrevistas</li>
+						<li class="bg-promociones boton ultimo-fila">Promociones</li>
 					</ul>
 				</nav>
 			</header>

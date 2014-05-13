@@ -54,18 +54,68 @@ figure {margin: 0;}
 
 /*** FONT FACE ***/
 
-/*** VARIABLES ***/
 
-/*** MIXINS ***/
+@font-face {
+    font-family: 'arvoregular';
+    src: url('fonts/arvo-regular-webfont.eot');
+    src: url('fonts/arvo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/arvo-regular-webfont.woff') format('woff'),
+         url('fonts/arvo-regular-webfont.ttf') format('truetype'),
+         url('fonts/arvo-regular-webfont.svg#arvoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /*** FRAMEWORK ***/
 
 .first{ margin-left: 0; padding-left: 0;}
 .last{ margin-right: 0; padding-right: 0;}
 
+.ultimo-fila{margin-right: 0 !important;}
+
 .left{ float: left;}
 .right{ float: right;}
 
+.boton{position: relative; overflow: hidden; width: auto; height: 26px; padding: 0 10px; text-align: center; margin-right:10px; border-radius: 5px; background-color: #8bd3d9; float: left; line-height: 26px; font-size: 13px; color:#fff; cursor: pointer;}
+
 /*** GENERAL ***/
 
-html, body{margin: 0; padding: 0;}
+body{margin: 0; padding: 0; background-color: #f5f5ed; font-family: 'arvoregular';}
+
+.border-radius{border-radius: 10px;}
+
+.content-header{position: relative; width: 100%; height: 213px; padding-top: 50px; background-image: url(images/fondo-header.png); background-repeat: repeat-x; }
+.content-header header{position: relative; width: 960px; height: 154px; margin: 0px auto; padding: 20px 12px; background: #fff; -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
+.content-header header h1.logo{display: block; overflow: hidden; width: 213px; height: 141px; float: left; background: url('images/logo.png') no-repeat; text-indent: -9999px; margin-top: -61px;margin-left: 11px; margin-bottom: 9px;}
+.content-header header h1.logo a{ width: 213px; height: 141px; display: block;}
+.content-header header .top-header{position: relative;overflow: hidden; width: auto; float: right; padding-bottom: 10px; border-bottom: 1px solid #badce8; margin-top: 6px;}
+.content-header header .top-header span{color: #8bd3d9; font-size: 14px; display: block; float: left; line-height: 27px;}
+.content-header header .top-header ul.redes-sociales{display: block; float: left; overflow: hidden; width: auto; list-style: none; margin: 0 10px 0 10px; }
+.content-header header .top-header ul.redes-sociales li{width: 27px; height: 27px; float: left; margin-right: 6px; text-indent: -9999px; background: url(images/iconos.png);}
+.content-header header .top-header ul.redes-sociales li a{width: 27px; height: 27px; display: block;}
+.content-header header .top-header ul.redes-sociales li.b-fb{background-position: -7px -37px;}
+.content-header header .top-header ul.redes-sociales li.b-tw{ background-position: -40px -37px;}
+.content-header header .top-header ul.redes-sociales li.b-gm{ background-position: -72px -37px;}
+.content-header header .top-header form{margin: 0; padding: 0; float: left; display: block; }
+.content-header header .top-header input{border: 0;background: 0;width: 162px; height: 26px;font-size: 13px; color: #8bd3d9;padding-left: 4px; padding-right: 27px; outline: none; border-radius: 5px; border: 1px solid #8bd3d9;}
+.content-header header .top-header form input[type=submit] {position: absolute; right: -8px;top: 4px; width: 18px;height: 18px;background: url(images/iconos.png);background-position: -107px -43px;border: 0;}
+::-webkit-input-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic; }
+::-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic;} /* firefox 19+ */
+:-ms-input-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic; } /* ie */
+input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic; }
+
+.content-header header nav#main-menu{position: relative; width: 100%; height: 26px; clear: both;}
+.content-header header nav#main-menu ul{ margin: 0 0 0 0; list-style: none;}
+.content-header header nav#main-menu ul li{margin-right: 11px; font-size: 16px; background:transparent; color: #999999; overflow: visible;}
+.content-header header nav#main-menu ul li:hover{color: #fff;}
+.content-header header nav#main-menu ul li .submenu{display: none; width: 960px; left: -12px; height: 200px; background: #fff; position: absolute;  -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888;}
+.content-header header nav#main-menu ul li:hover .submenu{display: block;}
+.content-header header nav#main-menu ul li.bg-embarazo:hover{background-color: #ae3079;}
+.content-header header nav#main-menu ul li.bg-nacimiento:hover{background-color: #c57fa6;}
+.content-header header nav#main-menu ul li.bg-dia-a-dia:hover{background-color: #4e9bab;}
+.content-header header nav#main-menu ul li.bg-estimulacion:hover{background-color: #a674b8;}
+.content-header header nav#main-menu ul li.bg-nutricion:hover{background-color: #a2b736;}
+.content-header header nav#main-menu ul li.bg-lactancia:hover{background-color: #fac600;}
+.content-header header nav#main-menu ul li.bg-entrevistas:hover{background-color: #8fa0e0;}
+.content-header header nav#main-menu ul li.bg-promociones:hover{background-color: #ff7a83;}
