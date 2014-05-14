@@ -103,7 +103,8 @@
 
 	if ( function_exists('add_image_size') ){
 		
-		// add_image_size( 'size_name', 200, 200, true );
+		add_image_size( 'slider-home', 620, 356, true );
+		add_image_size( 'slider-home', 300, 224, true );
 		
 		// cambiar el tamaño del thumbnail
 		/*

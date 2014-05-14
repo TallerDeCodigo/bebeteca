@@ -38,7 +38,31 @@
 		
 		
 		// TERMS
-		/*if ( ! term_exists( 'Carlos Fuentes', 'autor' ) ){
-			wp_insert_term( 'Carlos Fuentes', 'autor' );
-		}*/
+		if ( ! term_exists( 'Embarazo', 'category' ) ){
+			wp_insert_term( 'Embarazo', 'category' );
+		}
+
+		if ( ! term_exists( 'Nacimiento', 'category' ) ){
+			wp_insert_term( 'Nacimiento', 'category' );
+		}
+
+		if ( ! term_exists( 'Día a Día', 'category' ) ){
+			wp_insert_term( 'Día a Día', 'category' );
+		}
+
+		if ( ! term_exists( 'Estimulación', 'category' ) ){
+			wp_insert_term( 'Estimulación', 'category' );
+		}
+
+		if ( ! term_exists( 'Nutrición', 'category' ) ){
+			wp_insert_term( 'Nutrición', 'category' );
+		}
+
+		if ( ! term_exists( 'Lactancia', 'category' ) ){
+			wp_insert_term( 'Lactancia', 'category' );
+		}
+
+		if ( ! term_exists( 'Entrevistas', 'category' ) ){
+			wp_insert_term( 'Entrevistas', 'category' );
+		}
 	}
