@@ -143,10 +143,8 @@
 			<div class="boton mas-entradas">Mas entradas ></div>
 
 		</section>
-		<aside>
-
-		</aside>
+		<?php get_sidebar(); ?>
 	</div>
 
-	<?php get_sidebar(); ?>
+	
 	<?php get_footer(); ?>

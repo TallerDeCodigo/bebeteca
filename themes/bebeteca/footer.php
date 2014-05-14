@@ -1,5 +1,4 @@
-<?php wp_footer(); ?>
-		</div><!-- container -->
+</div><!-- container -->
 		<footer>
 			<div class="footer-parte1">
 				<img src="">
@@ -87,6 +86,7 @@
 			<p><a href="">Aviso de privacidad</a></p>
 			<p><a href="">La Bebeteca, algunos derechos reservados, 2014</a></p>
 		</footer>
+		<?php wp_footer(); ?>
 	</body>
 
 </html>
