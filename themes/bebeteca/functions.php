@@ -108,12 +108,7 @@
 		add_image_size( 'articulos-gral', 219, 165, true );
 		add_image_size( 'articulos-side', 81, 61, true );
 
-		// cambiar el tamaño del thumbnail
-		/*
-		update_option( 'thumbnail_size_h', 100 );
-		update_option( 'thumbnail_size_w', 200 );
-		update_option( 'thumbnail_crop', false );
-		*/
+
 
 		/**
 		 * Remove standard image sizes so that these sizes are not
@@ -158,7 +153,7 @@
 
 		if ( $query->is_main_query() and ! is_admin() ) {
 
-			if (is_category() || is_home()) {
+			if ((is_category() || is_home() ) AND !is_category('entrevistas')) {
 				$query->set( 'posts_per_page', 4 );
 				$query->set( 'post_type', array('post', 'articulo-slider') );
 
@@ -171,6 +166,10 @@
 							);
 				$query->set( 'meta_query', $meta_query );
 				$query->set( 'meta_key', 'slider_categoria' );
+			}
+
+			if(is_category('entrevistas')){
+				$query->set( 'posts_per_page', 8 );
 			}
 
 

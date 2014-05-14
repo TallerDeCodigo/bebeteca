@@ -17,7 +17,8 @@
 		<![endif]-->
 		<div class="content-header">
 			<header class="border-radius">
-				<h1 class="logo"><a href="<?php echo site_url('/') ?>">La Bebeteca</a></h1>
+				<?php $etiqueta = is_single() ? 'h2' : 'h1'; ?>
+				<<?php echo $etiqueta; ?> class="logo"><a href="<?php echo site_url('/') ?>">La Bebeteca</a></h1>
 				<div class="top-header">
 					<span>Visítanos</span>
 					<ul class="redes-sociales">

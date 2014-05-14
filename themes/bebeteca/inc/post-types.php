@@ -40,17 +40,17 @@
 
 		// videos
 		$labels = array(
-			'name'          => 'Videos',
-			'singular_name' => 'Video',
-			'add_new'       => 'Nueva Video',
-			'add_new_item'  => 'Nueva Video',
-			'edit_item'     => 'Editar Video',
-			'new_item'      => 'Nueva Video',
+			'name'          => 'Promociones',
+			'singular_name' => 'promocion',
+			'add_new'       => 'Nueva promocion',
+			'add_new_item'  => 'Nueva promocion',
+			'edit_item'     => 'Editar promocion',
+			'new_item'      => 'Nueva promocion',
 			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Video',
-			'search_items'  => 'Buscar Video',
+			'view_item'     => 'Ver promocion',
+			'search_items'  => 'Buscar promocion',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Videos'
+			'menu_name'     => 'Promociones'
 		);
 
 		$args = array(
@@ -60,7 +60,7 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'videos' ),
+			'rewrite'            => array( 'slug' => 'promociones' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -68,6 +68,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'videos', $args );
+		register_post_type( 'promociones', $args );
 
 	});

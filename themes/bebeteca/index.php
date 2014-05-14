@@ -44,15 +44,36 @@
 
 			<article class="un-medio">
 				<span class="titulo2">Videos</span>
-				<img src="<?php echo THEMEPATH; ?>images/img1.jpg">
-				<div class="footer-un-medio">
-					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
-					<p>Everything you need to check off your list before that D-day dawns.</p>
-					<div class="extras">
-						<span class="megusta azul"></span><p class="azul">190</p>
-						<span class="compartir azul"></span><p class="azul">340</p>
-					</div>
-				</div>
+				<?php $meta_query = array(
+										'relation' => 'OR',
+										array(
+											'key' => 'id_vimeo',
+											'value' => '',
+											'compare' => '!='
+										),
+										array(
+											'key' => 'id_youtube',
+											'value' => '',
+											'compare' => '!='
+										)
+									);
+
+				$post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('post', 'articulo-slider'), 'meta_query' => $meta_query) );
+
+				if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); ?>
+					<a href="">
+						<?php the_post_thumbnail('medio-home'); ?>
+						<div class="footer-un-medio">
+							<h4><?php the_title(); ?></h4>
+							<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
+							<div class="extras">
+								<span class="megusta azul"></span><p class="azul"><?php echo get_count_like($post->ID, 'post'); ?></p>
+								<span class="compartir azul"></span><p class="azul"><?php echo get_count_share($post->ID, 'post'); ?></p>
+							</div>
+						</div>
+					</a>
+
+				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
 			<article class="un-medio ultimo-fila">
@@ -98,7 +119,9 @@
 				<span class="line"></span>
 			</div>
 
-			<?php $post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts) );
+			<?php $cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
+
+			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts, 'category__not_in' => array($cat_no->term_id) ) );
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
 				get_template_part( 'template/articulo', 'general' );

@@ -8,16 +8,16 @@
 
 
 		// CONTACTO
-		/*if( ! get_page_by_path('faq') ){
+		if( ! get_page_by_path('videos') ){
 			$page = array(
 				'post_author' => 1,
 				'post_status' => 'publish',
-				'post_title'  => 'Frequently Asked Questions',
-				'post_name'   => 'faq'
+				'post_title'  => 'videos',
+				'post_name'   => 'videos',
 				'post_type'   => 'page'
 			);
 			wp_insert_post( $page, true );
-		}*/
+		}
 
 
 	});
