@@ -278,6 +278,7 @@ span.breadcrumbs{display: block; overflow: hidden;width: 100%; height: auto; cle
 .single .extras-category{float: left; margin-top: 21px;}
 .single article{position: relative; overflow: hidden; width: 100%; height: auto; padding: 25px; background: #fff; -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .single article img{width: 620px; height: auto; margin-top: -25px; margin-left: -25px;}
+.single article iframe{margin-top: -25px;margin-left: -25px;}
 .single article h3{color: #9d65b4; font-size: 18px;}
 .single article p, .single article ul li, .single article ul ol, .single article span{font-family: 'pt_sansregular'; font-size: 15px; color: #808080; line-height: 25px;}
 .single article p{margin-bottom: 30px;}

@@ -29,7 +29,17 @@ $term_slug = $terms[0]->slug;
 				</div>
 			</div>
 			<article class="entero">
-				<?php the_post_thumbnail('slider-home'); ?>
+				<?php if (get_post_meta($post->ID, 'id_youtube', true) OR get_post_meta($post->ID, 'id_vimeo', true) ):
+
+					if(get_post_meta($post->ID, 'id_vimeo', true)): ?>
+						<iframe src="http://player.vimeo.com/video/<?php echo get_post_meta($post->ID, 'id_vimeo', true); ?>?color=00a6ce" width="620" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<?php elseif(get_post_meta($post->ID, 'id_youtube', true)): ?>
+						<iframe width="620" height="340" src="http://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'id_youtube', true); ?>" frameborder="0" allowfullscreen></iframe>
+					<?php endif;
+
+				else:
+					the_post_thumbnail('slider-home');
+				endif; ?>
 				<h3>Subtitulo</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>

@@ -61,7 +61,7 @@
 				$post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('post', 'articulo-slider'), 'meta_query' => $meta_query) );
 
 				if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); ?>
-					<a href="">
+					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail('medio-home'); ?>
 						<div class="footer-un-medio">
 							<h4><?php the_title(); ?></h4>
