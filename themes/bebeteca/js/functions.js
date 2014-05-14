@@ -32,6 +32,16 @@
 		}
 
 
+		/**
+		* SLIDE HOME
+		**/
+		$("#slider-principal").tinycarousel({
+			bullets : true,
+			interval: true,
+			intervalTime : 3000
+		});
+
+
 	});
 
 })(jQuery);

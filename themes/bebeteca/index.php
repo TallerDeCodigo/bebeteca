@@ -15,10 +15,19 @@
 							<li>
 								<a href=""><img src="<?php echo THEMEPATH; ?>images/img2.jpg"></a>
 							</li>
+							<li>
+								<a href=""><img src="<?php echo THEMEPATH; ?>images/img1.jpg"></a>
+							</li>
+							<li>
+								<a href=""><img src="<?php echo THEMEPATH; ?>images/img2.jpg"></a>
+							</li>
 						</ul>
 					</div>
 					<a class="flecha_carrusel next" href="#"></a>
 					<ul class="bullets clearfix">
+						<li><a href="#" class="bullet"></a></li>
+						<li><a href="#" class="bullet"></a></li>
+						<li><a href="#" class="bullet"></a></li>
 						<li><a href="#" class="bullet"></a></li>
 					</ul>
 				</div>
