@@ -35,8 +35,8 @@
 
 			register_taxonomy( 'autor', 'libro', $args );
 		}*/
-		
-		
+
+
 		// TERMS
 		if ( ! term_exists( 'Embarazo', 'category' ) ){
 			wp_insert_term( 'Embarazo', 'category' );

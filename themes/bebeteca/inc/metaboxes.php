@@ -7,7 +7,8 @@
 
 	add_action('add_meta_boxes', function(){
 
-		// add_meta_box( id, title, name_meta_callback, post_type, context, priority );
+		add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
+		add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
 
 	});
 
@@ -17,11 +18,13 @@
 
 
 
-	function name_meta_callback($post){
-		// $name = get_post_meta($post->ID, '_name_meta', true);
-		// wp_nonce_field(__FILE__, '_name_meta_nonce');
-		// echo "<input type='text' class='widefat' id='name' name='_name_meta' value='$name'/>";
-	}
+	function show_metabox_slider_categoria($post){
+		global $post;
+		    $slider_categoria = get_post_meta( $post->ID, 'slider_categoria', true );
+
+			$checked = $slider_categoria ? 'checked' : '';?>
+            <input type="checkbox" name="slider_categoria" id="slider_categoria" value="1"  <?php echo $checked; ?> /> Check slider categoria</label>
+	<?php }
 
 
 
@@ -31,34 +34,25 @@
 
 	add_action('save_post', function($post_id){
 
-
-		if ( ! current_user_can('edit_page', $post_id)) 
+		global $post;
+		if ( ! current_user_can('edit_page', $post_id))
 			return $post_id;
 
 
-		if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE ) 
-			return $post_id;
-		
-		
-		if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) ) 
+		if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE )
 			return $post_id;
 
 
-		if ( isset($_POST['_name_meta']) and check_admin_referer(__FILE__, '_name_meta_nonce') ){
-			update_post_meta($post_id, '_name_meta', $_POST['_name_meta']);
-		}
+		if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) )
+			return $post_id;
 
 
 		// Guardar correctamente los checkboxes
-		/*if ( isset($_POST['_checkbox_meta']) and check_admin_referer(__FILE__, '_checkbox_nonce') ){
-			update_post_meta($post_id, '_checkbox_meta', $_POST['_checkbox_meta']);
+		if ( isset($_POST['slider_categoria'])){
+			update_post_meta($post_id, 'slider_categoria', $_POST['slider_categoria']);
 		} else if ( ! defined('DOING_AJAX') ){
-			delete_post_meta($post_id, '_checkbox_meta', $_POST['_checkbox_meta']);
-		}*/
+			delete_post_meta($post_id, 'slider_categoria', $_POST['slider_categoria']);
+		}
 
 
 	});
-
-
-
-// OTHER METABOXES ELEMENTS //////////////////////////////////////////////////////////

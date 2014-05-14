@@ -4,10 +4,6 @@
 
 	$(function(){
 
-
-		console.log('hello from functions.js');
-
-
 		/**
 		 * Validación de emails
 		 */
@@ -19,7 +15,7 @@
 
 
 		/**
-		 * Regresa todos los valores de un formulario como un associative array 
+		 * Regresa todos los valores de un formulario como un associative array
 		 */
 		window.getFormData = function (selector) {
 			var result = [],

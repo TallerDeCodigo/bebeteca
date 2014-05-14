@@ -6,39 +6,6 @@
 
 	add_action('init', function(){
 
-
-		// NOTICIAS
-		$labels = array(
-			'name'          => 'Articulos Mixtos',
-			'singular_name' => 'Articulo Mixto',
-			'add_new'       => 'Nueva Articulo Mixto',
-			'add_new_item'  => 'Nueva Articulo Mixto',
-			'edit_item'     => 'Editar Articulo Mixto',
-			'new_item'      => 'Nueva Articulo Mixto',
-			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Articulo Mixto',
-			'search_items'  => 'Buscar Articulo Mixto',
-			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Articulos Mixtos'
-		);
-
-		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'articulo-mixto' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => 6,
-			'taxonomies'         => array( 'category' ),
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
-		);
-		register_post_type( 'articulo-mixto', $args );
-
 		// articulo slider
 		$labels = array(
 			'name'          => 'Articulos Slider',
@@ -93,7 +60,7 @@
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'video' ),
+			'rewrite'            => array( 'slug' => 'videos' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -101,6 +68,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'video', $args );
+		register_post_type( 'videos', $args );
 
 	});

@@ -10,7 +10,7 @@
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
 
 	define( 'THEMEPATH', get_template_directory_uri() . '/' );
-	
+
 	define( 'SITEURL', site_url('/') );
 
 
@@ -59,10 +59,10 @@
 
 
 	/*add_action( 'after_setup_theme', function () {
-		
+
 		$frontPage = get_page_by_path('home', OBJECT);
 		$blogPage  = get_page_by_path('blog', OBJECT);
-		
+
 		if ( $frontPage AND $blogPage ){
 			update_option('show_on_front', 'page');
 			update_option('page_on_front', $frontPage->ID);
@@ -102,16 +102,30 @@
 	}
 
 	if ( function_exists('add_image_size') ){
-		
+
 		add_image_size( 'slider-home', 620, 356, true );
-		add_image_size( 'slider-home', 300, 224, true );
-		
+		add_image_size( 'medio-home', 300, 224, true );
+		add_image_size( 'articulos-gral', 219, 165, true );
+		add_image_size( 'articulos-side', 81, 61, true );
+
 		// cambiar el tamaño del thumbnail
 		/*
 		update_option( 'thumbnail_size_h', 100 );
 		update_option( 'thumbnail_size_w', 200 );
 		update_option( 'thumbnail_crop', false );
 		*/
+
+		/**
+		 * Remove standard image sizes so that these sizes are not
+		 */
+		function sgr_filter_image_sizes( $sizes) {
+
+		    unset( $sizes['medium']);
+		    unset( $sizes['large']);
+
+		    return $sizes;
+		}
+		add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
 	}
 
 
@@ -130,8 +144,8 @@
 
 
 	require_once('inc/pages.php');
-	
-	
+
+
 	require_once('inc/users.php');
 
 
@@ -143,6 +157,22 @@
 	add_action( 'pre_get_posts', function($query){
 
 		if ( $query->is_main_query() and ! is_admin() ) {
+
+			if (is_category() || is_home()) {
+				$query->set( 'posts_per_page', 4 );
+				$query->set( 'post_type', array('post', 'articulo-slider') );
+
+				$meta_query = array(
+								array(
+									'key'     => 'slider_categoria',
+									'value'   => true,
+									'compare' => '='
+								)
+							);
+				$query->set( 'meta_query', $meta_query );
+				$query->set( 'meta_key', 'slider_categoria' );
+			}
+
 
 		}
 		return $query;
@@ -245,4 +275,19 @@
 			OR isset($query->rewrite) AND preg_match("/$string/i", $query->rewrite['slug'])
 			OR isset($query->post_title) AND preg_match("/$string/i", remove_accents(str_replace(' ', '-', $query->post_title) ) ) )
 			echo 'active';
+	}
+
+
+	/**
+	 * CUENTA LOS MEGUSTA
+	 */
+	function get_count_like($id, $tipo){
+		return '290';
+	}
+
+	/**
+	 * CUENTA LAS VECES QUE SE COMPARTIO
+	 */
+	function get_count_share($id, $tipo){
+		return '150';
 	}

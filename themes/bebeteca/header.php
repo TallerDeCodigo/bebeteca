@@ -34,7 +34,7 @@
 				</div>
 				<nav id="main-menu">
 					<ul>
-						<li class="bg-embarazo boton">Embarazo
+						<li class="bg-embarazo boton"><a href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>
 							<div class="submenu border-radius">
 								<div class="subcategorias">
 
@@ -47,13 +47,13 @@
 								</div>
 							</div>
 						</li>
-						<li class="bg-nacimiento boton">Nacimiento</li>
-						<li class="bg-dia-a-dia boton">Día a Día</li>
-						<li class="bg-estimulacion boton">Estimulación</li>
-						<li class="bg-nutricion boton">Nutrición</li>
-						<li class="bg-lactancia boton">Lactancia</li>
-						<li class="bg-entrevistas boton">Entrevistas</li>
-						<li class="bg-promociones boton ultimo-fila">Promociones</li>
+						<li class="bg-nacimiento boton"><a href="<?php echo site_url('/categoria/nacimiento/'); ?>">Nacimiento</a></li>
+						<li class="bg-dia-a-dia boton"><a href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a></li>
+						<li class="bg-estimulacion boton"><a href="<?php echo site_url('/categoria/estimulacion/'); ?>">Estimulación</a></li>
+						<li class="bg-nutricion boton"><a href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a></li>
+						<li class="bg-lactancia boton"><a href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a></li>
+						<li class="bg-entrevistas boton"><a href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a></li>
+						<li class="bg-promociones boton ultimo-fila"><a href="">Promociones</a></li>
 					</ul>
 				</nav>
 			</header>

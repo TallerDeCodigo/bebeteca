@@ -1,47 +1,46 @@
-	<?php get_header(); ?>
+	<?php get_header(); $no_posts = array();?>
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<article class="entero">
-				<span class="titulo1">Embarazo</span>
+			<?php if ( have_posts() ) : ?>
+				<article class="entero">
+					<span class="titulo1 pleca-"></span>
 
-				<div id="slider-principal" class="slider-principal">
-					<a class="flecha_carrusel prev" href="#"></a>
-					<div class="viewport">
-						<ul class="overview">
-							<li>
-								<a href=""><img src="<?php echo THEMEPATH; ?>images/img1.jpg"></a>
-							</li>
-							<li>
-								<a href=""><img src="<?php echo THEMEPATH; ?>images/img2.jpg"></a>
-							</li>
-							<li>
-								<a href=""><img src="<?php echo THEMEPATH; ?>images/img1.jpg"></a>
-							</li>
-							<li>
-								<a href=""><img src="<?php echo THEMEPATH; ?>images/img2.jpg"></a>
-							</li>
+					<div id="slider-principal" class="slider-principal">
+						<a class="flecha_carrusel prev" href="#"></a>
+						<div class="viewport">
+							<ul class="overview">
+								<?php while( have_posts() ) : the_post(); ?>
+									<li>
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('slider-home'); ?>
+											<div class="footer-slide">
+												<h4><?php the_title(); ?></h4>
+												<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
+
+												<div class="extras">
+													<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
+													<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+												</div>
+											</div>
+										</a>
+									</li>
+
+								<?php $no_posts[] = $post->ID;
+								endwhile; ?>
+							</ul>
+						</div>
+						<a class="flecha_carrusel next" href="#"></a>
+						<ul class="bullets clearfix">
+							<?php if (have_posts() ) : while( have_posts() ) : the_post(); ?>
+								<li><a href="#" class="bullet"></a></li>
+							<?php endwhile; endif; wp_reset_postdata(); ?>
 						</ul>
-					</div>
-					<a class="flecha_carrusel next" href="#"></a>
-					<ul class="bullets clearfix">
-						<li><a href="#" class="bullet"></a></li>
-						<li><a href="#" class="bullet"></a></li>
-						<li><a href="#" class="bullet"></a></li>
-						<li><a href="#" class="bullet"></a></li>
-					</ul>
-				</div>
 
-				<div class="footer-slide">
-					<h4>9 Last-Minute Ways to Prep for Baby</h4>
-					<p>Everything you need to check off your list before that D-day dawns.</p>
-
-					<div class="extras">
-						<span class="megusta verde"></span><p>190</p>
-						<span class="compartir"></span><p>340</p>
 					</div>
-				</div>
-			</article><!-- SLIDE -->
+
+				</article><!-- SLIDE -->
+			<?php endif; wp_reset_postdata(); ?>
 
 			<article class="un-medio">
 				<span class="titulo2">Videos</span>
@@ -99,61 +98,20 @@
 				<span class="line"></span>
 			</div>
 
-			<article class="entero article-gral">
-				<a href="">
-					<span class="titulo1 pleca-embarazo">Embarazo</span>
-					<img src=" <?php echo THEMEPATH; ?>images/img3.jpg">
-					<h4>9 Last-Minute Ways to Prep for Baby</h4>
-					<p>Everything you need to check off your list before that D-day dawns.</p>
-					<div class="extras">
-						<span class="megusta"></span><p>190</p>
-						<span class="compartir"></span><p>340</p>
-					</div>
-				</a>
-			</article>
+			<?php $post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts) );
+			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
-			<article class="entero article-gral">
-				<a href="">
-					<span class="titulo1 pleca-nacimiento">Nacimiento</span>
-					<img src="<?php echo THEMEPATH; ?>images/img4.jpg">
-					<h4>9 Last-Minute Ways to Prep for Baby</h4>
-					<p>Everything you need to check off your list before that D-day dawns.</p>
-					<div class="extras">
-						<span class="megusta"></span><p>190</p>
-						<span class="compartir"></span><p>340</p>
-					</div>
-				</a>
-			</article>
+				get_template_part( 'template/articulo', 'general' );
 
-			<article class="entero article-gral">
-				<a href="">
-					<span class="titulo1 pleca-nutricion">Nutrición</span>
-					<img src="<?php echo THEMEPATH; ?>images/img3.jpg">
-					<h4>9 Last-Minute Ways to Prep for Baby</h4>
-					<p>Everything you need to check off your list before that D-day dawns.</p>
-					<div class="extras">
-						<span class="megusta"></span><p>190</p>
-						<span class="compartir"></span><p>340</p>
-					</div>
-				</a>
-			</article>
-
-			<article class="entero article-gral">
-				<span class="titulo1 pleca-lactancia">Lactancia</span>
-				<img src="<?php echo THEMEPATH; ?>images/img4.jpg">
-				<h4>9 Last-Minute Ways to Prep for Baby</h4>
-				<p>Everything you need to check off your list before that D-day dawns.</p>
-				<div class="extras">
-					<span class="megusta"></span><p>190</p>
-					<span class="compartir"></span><p>340</p>
-				</div>
-			</article>
+			endwhile; ?>
 
 			<div class="boton mas-entradas">Mas entradas ></div>
+
+			<?php endif; wp_reset_postdata(); ?>
 
 		</section>
 		<?php get_sidebar(); ?>
 	</div>
 
-	
+
 	<?php get_footer(); ?>
