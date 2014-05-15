@@ -294,7 +294,7 @@ span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
 .single article.slide .slide_header{position: relative;overflow: visible;float: left; width: 276px; margin-right: 18px;}
 .single article.slide .slide_header span{font-family: 'pt_sansregular'; font-size: 16px; color: #b73ba1; font-style: italic;}
 .single article.slide .texto-slide{position: relative; overflow: hidden;width: 276px; height: auto;}
-.single article.slide .texto-slide span.paginacion{display: block; font-size: 14px; color: #b73ba1; float: left; margin-right: 26px; margin-left: 18px;}
+.single article.slide .texto-slide span.paginacion{display: block; font-size: 14px; color: #b73ba1; float: left; margin-right: 22px; margin-left: 14px;}
 .single article.slide .texto-slide .boton{margin-bottom: 24px; background: #a98eb4;}
 
 .single .divicion span.line{width: 179px;}

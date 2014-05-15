@@ -6,18 +6,20 @@
 
 
 	add_action('add_meta_boxes', function(){
+		global $post;
+		if ( get_post_status ( $post->ID ) != 'slide_post' ) {
 
-		add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'post', 'side', 'high' );
-		add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'articulo-slider', 'side', 'high' );
-		add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'videos', 'side', 'high' );
+			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'post', 'side', 'high' );
+			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'articulo-slider', 'side', 'high' );
+			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'videos', 'side', 'high' );
 
-		add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
-		add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
+			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
+			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
 
-		add_meta_box( 'meta-box-subtema', 'Agregar Subtema', 'show_metabox_subtema', 'articulo-slider' );
+			add_meta_box( 'meta-box-subtema', 'Agregar Subtema', 'show_metabox_subtema', 'articulo-slider' );
 
-		add_meta_box( 'meta-box-vew_subtemas', 'Subtemas', 'show_metabox_vew_subtemas', 'articulo-slider', 'side', 'high');
-
+			add_meta_box( 'meta-box-vew_subtemas', 'Subtemas', 'show_metabox_vew_subtemas', 'articulo-slider', 'side', 'high');
+		}
 	});
 
 
@@ -55,7 +57,7 @@ meta_box_post_video;
 
 
 	function show_metabox_subtema($post) {
-		$post_id = $_GET['post'];
+		$post_id = $post->ID;
 		wp_nonce_field(__FILE__, '_articulo_genear_subtema_nonce');
 		echo <<< meta_box_subpost
 
@@ -73,28 +75,29 @@ meta_box_post_video;
 				<a href="">Agregar Imagen</a>
 			</div>
 
-			<input type="submit" class="button-primary" id="add_subtema" data-post_id="$post_id";  value="Guardar Subtema">
+			<input type="submit" class="button-primary" id="add_subtema" data-post_id="$post_id"  value="Guardar Subtema">
 
 meta_box_subpost;
 	}
 
 	function show_metabox_vew_subtemas($post) {
-		$post_id = $post->ID;
+
 		wp_nonce_field(__FILE__, '_articulo_genear_subtema_nonce');
+		$post_id = $post->ID;
 
 		$post_child = new WP_Query(array( 'posts_per_page' => -1, 'post_type' => array('articulo-slider'), 'post_parent' => $post_id, 'post_status'=>'slide_post', 'orderby' => 'ID', 'order' => 'ASC' ) );
 
-		if ( $post_child->have_posts() ) : while( $post_child->have_posts() ) : $post_child->the_post(); ?>
+		foreach ($post_child->posts as $key => $value) { ?>
+
 			<div class="caja_post">
-				<?php if( has_post_thumbnail() ):
-					the_post_thumbnail('thumbnail', array('class' => 'img_s'));
+				<?php if( has_post_thumbnail($value->ID) ):
+					echo get_the_post_thumbnail( $value->ID, 'thumbnail', array('class' => 'img_s') );
 				else: ?>
 					<img src="" class="img_s">
 				<?php endif;?>
-				<h5><?php the_title(); ?></h5>
-				<?php edit_post_link(); ?>
+				<h5><?php echo $value->post_title; ?></h5>
 			</div>
-	<?php endwhile; endif; wp_reset_postdata();
+		<?php }
 	}
 
 
@@ -105,12 +108,6 @@ meta_box_subpost;
 
 	add_action('save_post', function($post_id){
 
-		global $post;
-
-		if ($post->post_status == 'slide_post') {
-			global $wpdb;
-			$wpdb->update( $wpdb->posts, array( 'post_status' => 'slide_post' ), array( 'ID' => $post->ID ) );
-		}
 
 		if ( ! current_user_can('edit_page', $post_id))
 			return $post_id;
@@ -127,8 +124,6 @@ meta_box_subpost;
 		// Guardar correctamente los checkboxes
 		if ( isset($_POST['slider_categoria'])){
 			update_post_meta($post_id, 'slider_categoria', $_POST['slider_categoria']);
-		} else if ( ! defined('DOING_AJAX') ){
-			delete_post_meta($post_id, 'slider_categoria', $_POST['slider_categoria']);
 		}
 
 		/// VIDEOS
@@ -144,4 +139,12 @@ meta_box_subpost;
 		}
 
 
+		if ( get_post_status ( $post_id ) == 'slide_post' ) {
+
+		}
+
+
+
 	});
+
+

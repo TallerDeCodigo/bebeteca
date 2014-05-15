@@ -13,7 +13,7 @@
 			$.post(ajax_url, {
 				titulo:    titulo,
 				contenido: contenido,
-				post_id:   post_id,
+				postid:   post_id,
 				action: 'ajax_create_subpost'
 			}, 'json').done(function (data) {
 				location.reload();

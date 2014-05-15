@@ -195,6 +195,39 @@ function my_custom_post_status(){
 }
 add_action( 'init', 'my_custom_post_status' );
 
+add_action('admin_footer-post.php', 'jc_append_post_status_list');
+function jc_append_post_status_list(){
+     global $post;
+     $complete = '';
+     $label = '';
+     if($post->post_type == 'articulo-slider'){
+          if($post->post_status == 'slide_post'){
+               $complete = ' selected=\"selected\"';
+               $label = '<span id=\"post-status-display\"> slide_post</span>';
+          }
+          echo '
+          <script>
+          jQuery(document).ready(function($){
+               $("select#post_status").append("<option value=\"slide_post\" '.$complete.'>slide_post</option>");
+               $(".misc-pub-section label").append("'.$label.'");
+          });
+          </script>
+          ';
+     }
+}
+
+
+function jc_display_archive_state( $states ) {
+     global $post;
+     $arg = get_query_var( 'post_status' );
+     if($arg != 'slide_post'){
+          if($post->post_status == 'slide_post'){
+               return array('slide_post');
+          }
+     }
+    return $states;
+}
+add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 
 // THE EXECRPT FORMAT AND LENGTH /////////////////////////////////////////////////////

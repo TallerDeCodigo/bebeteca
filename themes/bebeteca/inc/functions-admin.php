@@ -15,13 +15,13 @@ function ajax_create_subpost(){
 		'post_status'  => 'slide_post',
 		'post_date'    => date('Y-m-d H:i:s'),
 		'post_author'  => $current_user->ID,
-		'post_parent'  => $post_id,
+		'post_parent'  => $postid,
 		'post_type'    => 'articulo-slider'
 	);
 
 	$post_id = wp_insert_post($new_post);
 
-	wp_send_json(true);
+	wp_send_json($post_id);
 }
 
 add_action('wp_ajax_ajax_create_subpost', 'ajax_create_subpost');
