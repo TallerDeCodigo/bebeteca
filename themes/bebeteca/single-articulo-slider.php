@@ -1,9 +1,147 @@
-	<?php get_header();?>
+<?php get_header(); the_post();
+
+$post_child = return_posts_slide($post->ID);
+
+if(empty($post_child->posts) ){
+	$terms  = wp_get_post_terms( $post->post_parent, 'category');
+	$term_name = $terms[0]->name;
+	$term_slug = $terms[0]->slug;
+	$titulo = get_the_title($post->post_parent);
+	$permalink =  get_permalink($post->post_parent);
+	$post_child2 = return_posts_slide($post->post_parent);
+	$de = count($post_child2->posts);
+	$post_slide_ID = $post->ID;
+
+	foreach ($post_child2->posts as $key => $value) {
+		if ($value->ID == $post->ID) {
+			$estoy = $key + 1;
+			$post_anterior = $key - 1;
+			$post_sig = $key + 1;
+
+			if ($post_sig == $de){
+				$link_next = get_permalink($post_child2->posts[0]->ID);
+			}else{
+				$link_next = get_permalink($post_child2->posts[$post_sig]->ID);
+			}
+
+			if ($estoy == 1){
+				$post_anterior = $de - 1;
+				$link_prev = get_permalink($post_child2->posts[$post_anterior]->ID);
+			}else{
+				$link_prev = get_permalink($post_child2->posts[$post_anterior]->ID);
+			}
+
+		}
+	}
+
+}else{
+	$terms  = wp_get_post_terms( get_the_ID(), 'category');
+	$term_name = $terms[0]->name;
+	$term_slug = $terms[0]->slug;
+	$titulo = get_the_title();
+	$de = count($post_child->posts);
+	$estoy = 1;
+	$post_anterior = $de - 1;
+	$link_prev = get_permalink($post_child->posts[$post_anterior]->ID);
+
+
+	if ($de == 1){
+		$link_next = get_permalink($post_child->posts[0]->ID);
+	}else{
+		$link_next = get_permalink($post_child->posts[1]->ID);
+	}
+	$permalink =  get_permalink($post->ID);
+
+	$post_slide_ID = $post_child->posts[0]->ID;
+}
+
+
+
+
+?>
 
 	<!-- Insert content here -->
-	<div class="main">
 
-		<?php the_title(); get_sidebar(); ?>
+	<div class="main single">
+		<section>
+
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/categoria/'.$term_slug.'/') ?>"><?php echo $term_name; ?></a>/<a href="<?php echo $permalink; ?>"><?php echo $titulo; ?></a></span>
+			<h1><?php echo $titulo; ?></h1>
+			<span class="autor">Autor: <?php the_author_posts_link(); ?></span>
+
+			<div class="header-category">
+				<div class="extras-category">
+					<div class="extras">
+						<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
+						<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+					</div>
+					<span>Comparte</span>
+					<ul>
+						<li class="fb"><a href=""></a></li>
+						<li class="tw"><a href=""></a></li>
+						<li class="gm"><a href=""></a></li>
+						<li class="pr"><a href=""></a></li>
+						<li class="mail"><a href=""></a></li>
+					</ul>
+				</div>
+			</div>
+			<article class="entero slide">
+				<div class="slide_header">
+					<?php echo get_the_post_thumbnail( $post_slide_ID, 'slider-home'); ?>
+					<span>Everything you need to check off your list before that D-day dawns.</span>
+				</div>
+
+				<div class="texto-slide">
+					<a href="<?php echo $link_prev;?>" class="boton">< Anterior</a>
+					<span class="paginacion"><?php echo $estoy; ?> de <?php echo $de; ?></span>
+					<a href="<?php echo $link_next;?>" class="boton ultimo-fila">Siguiente ></a>
+
+					<h3><?php echo get_the_title($post_slide_ID); ?></h3>
+					<p><?php echo get_post_field('post_content', $post_slide_ID); ?></p>
+
+					<div class="header-category">
+						<div class="extras-category">
+							<span>Comparte</span>
+							<ul>
+								<li class="fb"><a href=""></a></li>
+								<li class="tw"><a href=""></a></li>
+								<li class="gm"><a href=""></a></li>
+								<li class="pr"><a href=""></a></li>
+								<li class="mail"><a href=""></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</article>
+
+			<article class="entero autor-home">
+				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+				<div class="info-autor">
+					<h4>Nombre autor</h4>
+					<p class="rol">Editora</p>
+					<div class="boton">Más sobre el autor</div>
+				</div>
+				<div class="post-autor">
+					<p>I am of the mindset that if you are creative enough you can make anything happen</p>
+				</div>
+			</article>
+
+			<article class="entero">
+				comentarios falta maquetar
+			</article>
+
+			<div class="entero divicion">
+				<span class="line"></span>
+				<h5>Artículos relacionados</h5>
+				<span class="line"></span>
+			</div>
+
+			<?php get_template_part( 'template/articulo', 'general' ); ?>
+
+		</section>
+
+		<?php get_sidebar(); ?>
 	</div>
 
 

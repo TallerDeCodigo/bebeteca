@@ -121,7 +121,7 @@
 
 			<?php $cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
 
-			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts, 'category__not_in' => array($cat_no->term_id) ) );
+			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts, 'category__not_in' => array($cat_no->term_id) ) );
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
 				get_template_part( 'template/articulo', 'general' );

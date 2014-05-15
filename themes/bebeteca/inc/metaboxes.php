@@ -14,6 +14,10 @@
 		add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
 		add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
 
+		add_meta_box( 'meta-box-subtema', 'Agregar Subtema', 'show_metabox_subtema', 'articulo-slider' );
+
+		add_meta_box( 'meta-box-vew_subtemas', 'Subtemas', 'show_metabox_vew_subtemas', 'articulo-slider', 'side', 'high');
+
 	});
 
 
@@ -50,6 +54,50 @@ meta_box_post_video;
 	}
 
 
+	function show_metabox_subtema($post) {
+		$post_id = $_GET['post'];
+		wp_nonce_field(__FILE__, '_articulo_genear_subtema_nonce');
+		echo <<< meta_box_subpost
+
+			<label for="subtitulo" class="prin">Subtitulo</label>
+			<input type="text" name="subtitulo" id="subtitulo" value=" " size="30" class="subtitulos" placeholder="Subtitulo">
+
+			<div class="sub_p1">
+				<label for="contenido" class="prin">Contenido</label>
+				<textarea name="contenido" id="contenido" placeholder="Contenido" class="contenido"></textarea>
+			</div>
+
+			<div class="sub_p2">
+				<label for="imagen" class="prin">Imagen Subtema</label>
+				<div class="contenedor_image"></div>
+				<a href="">Agregar Imagen</a>
+			</div>
+
+			<input type="submit" class="button-primary" id="add_subtema" data-post_id="$post_id";  value="Guardar Subtema">
+
+meta_box_subpost;
+	}
+
+	function show_metabox_vew_subtemas($post) {
+		$post_id = $post->ID;
+		wp_nonce_field(__FILE__, '_articulo_genear_subtema_nonce');
+
+		$post_child = new WP_Query(array( 'posts_per_page' => -1, 'post_type' => array('articulo-slider'), 'post_parent' => $post_id, 'post_status'=>'slide_post', 'orderby' => 'ID', 'order' => 'ASC' ) );
+
+		if ( $post_child->have_posts() ) : while( $post_child->have_posts() ) : $post_child->the_post(); ?>
+			<div class="caja_post">
+				<?php if( has_post_thumbnail() ):
+					the_post_thumbnail('thumbnail', array('class' => 'img_s'));
+				else: ?>
+					<img src="" class="img_s">
+				<?php endif;?>
+				<h5><?php the_title(); ?></h5>
+				<?php edit_post_link(); ?>
+			</div>
+	<?php endwhile; endif; wp_reset_postdata();
+	}
+
+
 
 // SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
 
@@ -58,6 +106,12 @@ meta_box_post_video;
 	add_action('save_post', function($post_id){
 
 		global $post;
+
+		if ($post->post_status == 'slide_post') {
+			global $wpdb;
+			$wpdb->update( $wpdb->posts, array( 'post_status' => 'slide_post' ), array( 'ID' => $post->ID ) );
+		}
+
 		if ( ! current_user_can('edit_page', $post_id))
 			return $post_id;
 

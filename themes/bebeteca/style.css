@@ -252,6 +252,7 @@ aside .un-medio.destacados{overflow: visible; margin-top: 13px;}
 aside span.titulo4{position: relative; overflow: hidden; width: 269px; height: 30px; margin: -13px auto 0 auto; display: block; background-image: url(images/fondo_4.png); background-repeat: no-repeat; text-align: center; color: #fff; font-size: 16px; line-height: 25px;}
 
 span.breadcrumbs{display: block; overflow: hidden;width: 100%; height: auto; clear: both; color: #b73ba1; font-size: 14px; margin-bottom: 24px;}
+span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
 .header-category{position: relative;overflow: hidden;width: 100%; height: auto; margin-bottom: 26px;}
 .header-category h4{display: block; float: left; font-size: 30px; color:#9d65b4;}
 .header-category .extras-category{position: relative;overflow: hidden;float: right;width: auto; margin-top: 7px;}
@@ -288,6 +289,13 @@ span.breadcrumbs{display: block; overflow: hidden;width: 100%; height: auto; cle
 .single article.autor-home .info-autor{width: 155px; border-right: 1px solid #cccccc; margin-right: 16px;}
 .single article.autor-home .info-autor h4{font-size: 14px;}
 .single article.autor-home .info-autor p.rol{font-size: 12px; margin-bottom: 10px;}
+
+.single article.slide img{width: 300px; height: 226px;}
+.single article.slide .slide_header{position: relative;overflow: visible;float: left; width: 276px; margin-right: 18px;}
+.single article.slide .slide_header span{font-family: 'pt_sansregular'; font-size: 16px; color: #b73ba1; font-style: italic;}
+.single article.slide .texto-slide{position: relative; overflow: hidden;width: 276px; height: auto;}
+.single article.slide .texto-slide span.paginacion{display: block; font-size: 14px; color: #b73ba1; float: left; margin-right: 26px; margin-left: 18px;}
+.single article.slide .texto-slide .boton{margin-bottom: 24px; background: #a98eb4;}
 
 .single .divicion span.line{width: 179px;}
 .single .article-gral img{margin-left: 0px; margin-top: -20px;}

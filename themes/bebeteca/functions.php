@@ -143,6 +143,8 @@
 
 	require_once('inc/users.php');
 
+	require_once('inc/functions-admin.php');
+
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
@@ -177,6 +179,21 @@
 		return $query;
 
 	});
+
+
+// REGISTER POST STATUS //////////////////////////////////////////////////////////////
+
+function my_custom_post_status(){
+	register_post_status( 'slide_post', array(
+		'label'                     => _x( 'slide_post', 'articulo-slider' ),
+		'public'                    => true,
+		'exclude_from_search'       => true,
+		'show_in_admin_all_list'    => true,
+		'show_in_admin_status_list' => true,
+		'label_count'               => _n_noop( 'slide_post <span class="count">(%s)</span>', 'slide_post <span class="count">(%s)</span>' ),
+	) );
+}
+add_action( 'init', 'my_custom_post_status' );
 
 
 
@@ -289,4 +306,10 @@
 	 */
 	function get_count_share($id, $tipo){
 		return '150';
+	}
+
+
+	function return_posts_slide($post_parent_id){
+		return new WP_Query(array( 'posts_per_page' => -1, 'post_type' => array('articulo-slider'), 'post_parent' => $post_parent_id, 'post_status'=>'slide_post', 'orderby' => 'ID', 'order' => 'ASC' ) );
+
 	}
