@@ -346,3 +346,35 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		return new WP_Query(array( 'posts_per_page' => -1, 'post_type' => array('articulo-slider'), 'post_parent' => $post_parent_id, 'post_status'=>'slide_post', 'orderby' => 'ID', 'order' => 'ASC' ) );
 
 	}
+
+	// CREAR TABLA PARA GUARDAR EL MAIL PARA NEWSLETTER //////////////////////////////////////////////////////
+
+	add_action('init', function(){
+		global $wpdb;
+		$wpdb->query(
+			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}newsletter (
+				news_id bigint(20) NOT NULL AUTO_INCREMENT,
+				email VARCHAR(40) NOT NULL DEFAULT '',
+				PRIMARY KEY (email),
+				UNIQUE KEY `news_id` (`news_id`)
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+		);
+
+	});
+
+	/**
+	 * GUARDA MAIL PARA ENVIO DE NEWSLETTER
+	 */
+	function save_mail_for_newsletter($email){
+		global $wpdb;
+		$table_name = $wpdb->prefix . "newsletter";
+		return $wpdb->insert(
+				$table_name,
+				array(
+					'email' => $email,
+				),
+				array(
+					'%s',
+				)
+			);
+}

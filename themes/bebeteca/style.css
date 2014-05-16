@@ -232,8 +232,8 @@ aside{position: relative; overflow: hidden; width: 306px; padding-left: 3px; hei
 aside .banner-aside{position: relative;overflow: hidden; width: 300px; height: 250px; background-color: #a1a1a1; margin-bottom: 20px;}
 aside .un-medio{overflow: hidden; margin-right: 0; background-color: #fff; margin-bottom: 20px;  -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 aside .un-medio.pb{padding-bottom: 22px;}
-aside span.titulo3{position: relative;overflow: hidden;width: 100%; height: 68px; display: block; background-image: url(images/fondo-morado.png); background-repeat: repeat-x; font-family: 'simplicitymedium'; text-align: center; color: #fff; font-size: 25px; letter-spacing: 1px; line-height: 55px;}
-aside span.titulo3.verde{background-image: url(images/fondo-verde.png);}
+span.titulo3{position: relative;overflow: hidden;width: 100%; height: 68px; display: block; background-image: url(images/fondo-morado.png); background-repeat: repeat-x; font-family: 'simplicitymedium' !important; text-align: center; color: #fff !important; font-size: 25px !important; letter-spacing: 1px !important; line-height: 55px !important;}
+span.titulo3.verde{background-image: url(images/fondo-verde.png);}
 aside .un-medio form{width: 238px; margin: 0; padding: 0; display: block; position: relative; overflow: hidden; margin: 20px auto; border-radius: 5px; border: 1px solid #a98eb4;}
 aside .un-medio input{border: 0;background: 0;width: 184px; height: 37px;font-size: 13px; color: #a98eb4;padding-left: 4px; padding-right: 27px; outline: none; }
 aside .un-medio form input[type=submit] {position: absolute; right: 0px;top: 0px; width: 78px;height: 37px;border: 0 !important; padding: 0 !important; background-color: #a98eb4; color: #fff; text-align: center; font-family: 'arvoregular'; cursor: pointer; }
@@ -281,7 +281,7 @@ span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
 .single article img{width: 620px; height: auto; margin-top: -25px; margin-left: -25px;}
 .single article iframe{margin-top: -25px;margin-left: -25px;}
 .single article h3{color: #9d65b4; font-size: 18px;}
-.single article p, .single article ul li, .single article ul ol, .single article span{font-family: 'pt_sansregular'; font-size: 15px; color: #808080; line-height: 25px;}
+.single article p, .single article ul li, .single article ul ol, .single article span{font-family: 'pt_sansregular' !important; font-size: 15px !important; color: #808080 !important; line-height: 25px !important;}
 .single article p{margin-bottom: 30px;}
 .single article blockquote{clear: both; width: 435px; display: block; overflow: hidden; margin: 0 auto 30px auto; padding: 12px 66px; background: url(images/fondo_blo.png) no-repeat; font-size: 22px; color: #9d65b4; text-align: center;}
 .single article .header-category{margin-bottom: 0px;}
@@ -300,5 +300,8 @@ span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
 .single .divicion span.line{width: 179px;}
 .single .article-gral img{margin-left: 0px; margin-top: -20px;}
 .single .article-gral{overflow-y: hidden; overflow: visible; height: 165px;}
+.single .entero.news blockquote{background: transparent; font-size: 31px; padding: 0 0;}
+.single .entero.news img{width: 248px; height: auto; margin: 0 auto; display: block;}
 
+.no-padding{padding: 0 !important;}
 footer{position: relative;overflow: hidden;width: 100%; height: auto; background-color: #9b65b3; margin-top: 57px;}

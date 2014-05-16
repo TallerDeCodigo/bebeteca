@@ -54,7 +54,7 @@
 						<li class="bg-nutricion boton"><a href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a></li>
 						<li class="bg-lactancia boton"><a href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a></li>
 						<li class="bg-entrevistas boton"><a href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a></li>
-						<li class="bg-promociones boton ultimo-fila"><a href="">Promociones</a></li>
+						<li class="bg-promociones boton ultimo-fila"><a href="<?php echo site_url('/promociones/'); ?>">Promociones</a></li>
 					</ul>
 				</nav>
 			</header>

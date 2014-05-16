@@ -3,10 +3,11 @@
 $post_child = return_posts_slide($post->ID);
 
 if(empty($post_child->posts) ){
-	$terms  = wp_get_post_terms( $post->post_parent, 'category');
+	$terms     = wp_get_post_terms( $post->post_parent, 'category');
 	$term_name = $terms[0]->name;
 	$term_slug = $terms[0]->slug;
-	$titulo = get_the_title($post->post_parent);
+	$titulo    = get_the_title($post->post_parent);
+	$parent_id = $post->post_parent;
 	$permalink =  get_permalink($post->post_parent);
 	$post_child2 = return_posts_slide($post->post_parent);
 	$de = count($post_child2->posts);
@@ -53,6 +54,7 @@ if(empty($post_child->posts) ){
 	$permalink =  get_permalink($post->ID);
 
 	$post_slide_ID = $post_child->posts[0]->ID;
+	$parent_id = $post->ID;
 }
 
 
@@ -114,16 +116,15 @@ if(empty($post_child->posts) ){
 				</div>
 
 			</article>
-
 			<article class="entero autor-home">
 				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
 				<div class="info-autor">
-					<h4>Nombre autor</h4>
-					<p class="rol">Editora</p>
+					<h4><?php the_author_meta( 'user_login'); ?></h4>
+					<p class="rol">Editora /-- integrar --/</p>
 					<div class="boton">Más sobre el autor</div>
 				</div>
 				<div class="post-autor">
-					<p>I am of the mindset that if you are creative enough you can make anything happen</p>
+					<p><?php echo wp_trim_words( get_the_author_meta( 'description' ), 12 ) ?></p>
 				</div>
 			</article>
 
@@ -136,8 +137,13 @@ if(empty($post_child->posts) ){
 				<h5>Artículos relacionados</h5>
 				<span class="line"></span>
 			</div>
+			<?php
+			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => array($parent_id), 'category_name' => $term_slug ) );
+			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
-			<?php get_template_part( 'template/articulo', 'general' ); ?>
+				get_template_part( 'template/articulo', 'general' );
+
+			endwhile; endif; wp_reset_postdata(); ?>
 
 		</section>
 

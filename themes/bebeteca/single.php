@@ -39,12 +39,10 @@ $term_slug = $terms[0]->slug;
 
 				else:
 					the_post_thumbnail('slider-home');
-				endif; ?>
-				<h3>Subtitulo</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				endif;
+
+				the_content();?>
+
 
 				<div class="header-category">
 					<div class="extras-category">
@@ -63,12 +61,12 @@ $term_slug = $terms[0]->slug;
 			<article class="entero autor-home">
 				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
 				<div class="info-autor">
-					<h4>Nombre autor</h4>
-					<p class="rol">Editora</p>
+					<h4><?php the_author_meta( 'user_login'); ?></h4>
+					<p class="rol">Editora /-- integrar --/</p>
 					<div class="boton">Más sobre el autor</div>
 				</div>
 				<div class="post-autor">
-					<p>I am of the mindset that if you are creative enough you can make anything happen</p>
+					<p><?php echo wp_trim_words( get_the_author_meta( 'description' ), 12 ) ?></p>
 				</div>
 			</article>
 
@@ -82,7 +80,13 @@ $term_slug = $terms[0]->slug;
 				<span class="line"></span>
 			</div>
 
-			<?php get_template_part( 'template/articulo', 'general' ); ?>
+			<?php
+			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => array($post->ID), 'category_name' => $term_slug ) );
+			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
+
+				get_template_part( 'template/articulo', 'general' );
+
+			endwhile; endif; wp_reset_postdata(); ?>
 
 		</section>
 
