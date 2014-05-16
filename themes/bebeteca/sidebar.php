@@ -8,7 +8,7 @@
 			Suscríbete al newsletter
 		</span>
 		<form class="forma-news" method="POST" action="<?php echo site_url('/newsletter/') ?>">
-			<input type="text" name="email" value="" placeholder="email@mail.com" >
+			<input type="email" name="email" value="" placeholder="email@mail.com" >
 			<input type="submit" value="Enviar">
 		</form>
 	</div>

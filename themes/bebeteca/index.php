@@ -78,15 +78,22 @@
 
 			<article class="un-medio ultimo-fila">
 				<span class="titulo2 color-rosa">Promociones</span>
-				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
-				<div class="footer-un-medio color-rosa">
-					<h4>Doctora nos dice 10 tips importantes para tu bebé</h4>
-					<p>Everything you need to check off your list before that D-day dawns.</p>
-					<div class="extras">
-						<span class="megusta rosa"></span><p class="rosa">190</p>
-						<span class="compartir rosa"></span><p class="rosa">340</p>
-					</div>
-				</div>
+					<?php $post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('promociones') ) );
+
+					if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); ?>
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail('medio-home'); ?>
+						<div class="footer-un-medio color-rosa">
+							<h4><?php the_title(); ?></h4>
+							<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
+							<div class="extras">
+								<span class="megusta rosa"></span><p class="rosa"><?php echo get_count_like($post->ID, 'post'); ?></p>
+								<span class="compartir rosa"></span><p class="rosa"><?php echo get_count_share($post->ID, 'post'); ?></p>
+							</div>
+						</div>
+					</a>
+
+				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
 			<article class="entero autor-home">

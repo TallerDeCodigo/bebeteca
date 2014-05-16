@@ -174,6 +174,11 @@
 				$query->set( 'posts_per_page', 8 );
 			}
 
+			if (is_search()) {
+				$query->set( 'post_status', 'publish' );
+				$query->set( 'post_type', array('post', 'articulo-slider', 'promociones') );
+			}
+
 
 		}
 		return $query;
