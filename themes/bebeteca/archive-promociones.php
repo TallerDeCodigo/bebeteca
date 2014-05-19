@@ -12,7 +12,7 @@
 						<span class="compartir"></span><p><?php echo get_count_share('', 'cat'); ?></p>					</div>
 					<span>Comparte</span>
 					<ul>
-						<li class="fb"><a href=""></a></li>
+						<li class="fb"> <a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo site_url('/promociones/') ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo site_url('/promociones/') ?>" target="_blank"></a></li>
 						<li class="tw"><a href=""></a></li>
 						<li class="gm"><a href=""></a></li>
 						<li class="pr"><a href=""></a></li>

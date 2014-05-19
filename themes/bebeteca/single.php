@@ -71,8 +71,12 @@ $term_slug = $terms[0]->slug;
 				</div>
 			</article>
 
-			<article class="entero">
-				comentarios falta maquetar
+			<article class="entero comentarios">
+				<h5>DEJA TU COMENTARIO</h5>
+				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+				<?php if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				} ?>
 			</article>
 
 			<div class="entero divicion">

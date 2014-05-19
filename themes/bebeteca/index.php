@@ -4,7 +4,7 @@
 		<section>
 			<?php if ( have_posts() ) : ?>
 				<article class="entero">
-					<span class="titulo1 pleca-"></span>
+						<!-- <span class="titulo1 pleca-"></span> -->
 
 					<div id="slider-principal" class="slider-principal">
 						<a class="flecha_carrusel prev" href="#"></a>
@@ -62,6 +62,7 @@
 
 				if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); ?>
 					<a href="<?php the_permalink(); ?>">
+						<img class="play_2 home_vid" src="<?php echo THEMEPATH; ?>images/play_2.png">
 						<?php the_post_thumbnail('medio-home'); ?>
 						<div class="footer-un-medio">
 							<h4><?php the_title(); ?></h4>
@@ -97,26 +98,29 @@
 			</article><!-- VIDEOS -->
 
 			<article class="entero autor-home">
+				<?php $user_query = new WP_User_Query(array('role' => 'colaborador','number' => 40));
+				$users  = $user_query->results;
+				$total  = count($users) - 1;
+				$select = rand(0, $total);
+				$user_id =  $users[$select]->ID;
+				?>
 				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
 				<div class="info-autor">
-					<h4>Nombre autor</h4>
+					<h4><?php echo $users[$select]->user_login; ?></h4>
 					<p class="rol">Editora</p>
-					<p>I am of the mindset that if you are creative enough you can make anything happen</p>
-					<div class="boton">Más sobre el autor</div>
+					<p><?php echo wp_trim_words( get_the_author_meta( 'description', $user_id ), 12 ) ?></p>
+					<?php $user_nicename = get_the_author_meta( 'user_nicename', $user_id); ?>
+					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 				</div>
 				<div class="post-autor">
-					<div>
-						<a href=""><span>></span><h4>Disappointing Pregnancy Announcements</h4></a>
-					</div>
-					<div>
-						<a href=""><span>></span><h4>Why Kids Need Their Dads</h4></a>
-					</div>
-					<div>
-						<a href=""><span>></span><h4>10 Things I Regret Not Enjoying More During...</h4></a>
-					</div>
-					<div class="ultimo-bottom" >
-						<a href=""><span>></span><h4>7 Things Parents Need to Know</h4></a>
-					</div>
+					<?php $post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'author' => $user_id) );
+					if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
+
+						<div>
+							<a href="<?php the_permalink(); ?>"><span>></span><h4><?php the_title() ;?></h4></a>
+						</div>
+
+					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 			</article>
 

@@ -42,16 +42,16 @@
 		</ul>
 		<div class="bt-siguenos fb">
 			<span class="triangulo"></span>
-			<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+			<div class="fb-like" data-href="<?php echo site_url('/') ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
 		<div class="bt-siguenos tw">
 			<span class="triangulo"></span>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-dnt="true">Tweet</a>
+			<a href="https://twitter.com/HacemosCodigo" class="twitter-follow-button" data-show-count="false">Follow @HacemosCodigo</a>
 		</div>
 		<div class="bt-siguenos gm">
 			<span class="triangulo"></span>
 			<!-- Place this tag where you want the share button to render. -->
-			<div class="g-plus" data-action="share" data-annotation="bubble" data-href="<?php the_permalink(); ?>"></div>
+			<div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/118300723396545429987" data-rel="author"></div>
 		</div>
 	</div>
 

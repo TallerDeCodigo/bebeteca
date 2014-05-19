@@ -110,7 +110,7 @@ p{margin-bottom: 7px;}
 
 /*** GENERAL ***/
 
-body{margin: 0; padding: 0; background-color: #f5f5ed; font-family: 'arvoregular';}
+body{margin: 0; padding: 0; background-color: #f5f5ed; font-family: 'arvoregular';  background: url('images/fondo-cor.png') no-repeat; background-position: center 250px;}
 
 .border-radius{border-radius: 10px;}
 
@@ -278,7 +278,8 @@ aside .un-medio .bt-siguenos.fb span.triangulo{left: 72px;}
 aside .un-medio .bt-siguenos.tw span.triangulo{left: 133px;}
 aside .un-medio .bt-siguenos.gm span.triangulo{left: 188px;}
 aside .un-medio .bt-siguenos.tw, aside .un-medio .bt-siguenos.gm{display: none;}
-.bt-siguenos .fb-like, .bt-siguenos .twitter-share-button{margin-top: 6px;  display: inline-block;}
+.bt-siguenos .fb-like, .bt-siguenos .twitter-follow-button{margin-top: 6px;  display: inline-block;}
+.bt-siguenos .twitter-follow-button{width: 61px !important;}
 
 aside .un-medio.destacados{overflow: visible; margin-top: 13px;}
 aside span.titulo4{position: relative; overflow: hidden; width: 269px; height: 30px; margin: -13px auto 0 auto; display: block; background-image: url(images/fondo_4.png); background-repeat: no-repeat; text-align: center; color: #fff; font-size: 16px; line-height: 25px;}
@@ -361,3 +362,26 @@ footer .content-footer .footer-partesitas ul li{margin-bottom: 3px;}
 footer .content-footer .footer-partesitas ul li a{ text-decoration: none; color: #e2c9e3; font-size: 12px;}
 footer .content-footer p.sueltos{display: inline-block;}
 footer .content-footer p.sueltos a{text-decoration: none;color: #fff; margin-right: 22px;}
+
+
+.fondo-pop{display: none; position: fixed; height: 100%; width: 100%; top: 0; left: 0; background: #000; z-index: 1030; opacity: 0.7;}
+.pop-registrarse{display: none; position: fixed; _position: absolute;  height: 390px; width: 960px; background: #fff;  z-index: 1031; top: 50%; left: 50%; margin-left: -480px; margin-top: -195px; border:1px solid #aaaaaa; -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888; padding: 26px;}
+.pop-registrarse #form-registrate{position: relative;overflow: hidden; width: 552px; height: auto; float: left;}
+.pop-registrarse h5{color: #787878;font-size: 33px;font-family: 'arial'; font-weight: normal; margin-top: 26px; margin-bottom: 32px;}
+.pop-registrarse #form-registrate input, .pop-registrarse  #form-login input{width: 239px; height: 41px; margin-right: 20px; margin-bottom: 17px; border: 1px solid #b3b3b3; color: #6e6e6e;font-size: 15px;font-family: 'arial'; padding: 0 20px; outline: none;}
+.pop-registrarse ::-webkit-input-placeholder{ color:#6e6e6e; font-family: 'arial'; }
+.pop-registrarse ::-moz-placeholder{ color:#6e6e6e; font-family: 'arial';} /* firefox 19+ */
+.pop-registrarse :-ms-input-placeholder{ color:#6e6e6e; font-family: 'arial'; } /* ie */
+.pop-registrarse input:-moz-placeholder { color:#6e6e6e; font-family: 'arial'; }
+.pop-registrarse input[type=submit]{width: 151px !important; background: #666666; border-radius: 3px; color: #fff !important; margin-top: 10px; clear: both; display: block;}
+
+.pop-registrarse  #form-login{position: relative;overflow: hidden;width: 347px; height: 341px; background: #f0f0f0; padding: 0 17px;}
+.pop-registrarse  #form-login input{width: 309px; margin-bottom: 27px;}
+.pop-registrarse  #form-login a{color: #787878;font-size: 15px;font-family: 'arial'; text-decoration: none;}
+
+.play_2.home_vid{top: 102px;left: 103px;}
+
+.comentarios h5{font-size: 18px; color:#9d65b4;}
+.comentarios img{width: 44px; height: 44px;}
+
+.corazon-1{position: absolute;overflow: visible; width: 150px; height: 500px; }

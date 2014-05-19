@@ -125,7 +125,16 @@
 		    s.parentNode.insertBefore(po, s);
 		  })();
 
+		$('.abre-pop-registro').on('click', function (event) {
+		  	event.preventDefault();
+		  	$('.fondo-pop').fadeIn(750);
+		  	$('.pop-registrarse').fadeIn(750);
+		});
 
+		$('.fondo-pop').on('click', function () {
+			$('.fondo-pop').fadeOut(750);
+		  	$('.pop-registrarse').fadeOut(750);
+		});
 	});
 
 })(jQuery);

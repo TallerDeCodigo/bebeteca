@@ -17,6 +17,29 @@
 		<![endif]-->
 
 		<div id="fb-root"></div>
+
+		<div class="fondo-pop"></div>
+		<div class="pop-registrarse">
+			<form id="form-registrate">
+				<h5>Regístrate</h5>
+				<input id="form-registrate-nombre" name="registrate-nombre" placeholder="Nombre" >
+				<input id="form-registrate-email" name="registrate-email" placeholder="email" >
+				<input type="password" id="form-registrate-password" name="registrate-password" placeholder="Contraseña" >
+				<input type="password" id="form-registrate-password" name="registrate-password" placeholder="Repetir contraseña" >
+				<input class="enviar" type="submit" name="submit" value="Registrar">
+
+			</form>
+
+			<form id="form-login">
+				<h5>Iniciar sesión</h5>
+				<input id="form-login-nombre" name="login-usuario" placeholder="email / número de socio" >
+				<input type="password" id="form-login-password" name="login-password" placeholder="contraseña" >
+				<a href="">Olvide mi contraseña</a>
+				<input class="enviar" type="submit" name="submit" value="Iniciar sesión">
+
+			</form>
+		</div>
+
 		<div class="content-header">
 			<header class="border-radius">
 				<?php $etiqueta = is_single() ? 'h2' : 'h1'; ?>
@@ -28,8 +51,8 @@
 						<li class="b-tw"><a href="">twitter</a></li>
 						<li class="b-gm"><a href="">google +</a></li>
 					</ul>
-					<div class="boton">Registrate</div>
-					<div class="boton">Inicia Sesión</div>
+					<div class="boton abre-pop-registro">Registrate</div>
+					<div class="boton abre-pop-registro">Inicia Sesión</div>
 					<form class="forma-buscar" method="GET" action="<?php echo site_url('/') ?>">
 						<input type="text" name="s" value="" placeholder="Buscar" >
 						<input type="submit" value="">
@@ -63,6 +86,7 @@
 		</div><!-- FIN HEADER -->
 
 		<div class="container">
+
 			<div class="banner-top">
 
 			</div>
