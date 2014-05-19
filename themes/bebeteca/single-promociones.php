@@ -59,7 +59,8 @@
 				<div class="info-autor">
 					<h4><?php the_author_meta( 'user_login'); ?></h4>
 					<p class="rol">Editora /-- integrar --/</p>
-					<div class="boton">Más sobre el autor</div>
+					<?php $user_nicename = get_the_author_meta( 'user_nicename'); ?>
+					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 				</div>
 				<div class="post-autor">
 					<p><?php echo wp_trim_words( get_the_author_meta( 'description' ), 12 ) ?></p>

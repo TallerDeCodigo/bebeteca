@@ -7,6 +7,7 @@
 
 	$administrator = get_role('administrator');
 	add_role( 'developer', 'Developer', $administrator->capabilities );
+	add_role( 'colaborador', 'Colaborador', $administrator->capabilities );
 
 
 	remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
@@ -19,6 +20,8 @@
 		unset($contactmethods['jabber']);
 		$contactmethods['twitter']  = 'Twitter';
 		$contactmethods['facebook'] = 'Facebook';
+		$contactmethods['google'] = 'Google plus';
+		$contactmethods['printerest'] = 'Printerest';
 		return $contactmethods;
 	});
 

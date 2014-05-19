@@ -1,4 +1,4 @@
-	<?php get_header();?>
+<?php get_header();?>
 
 	<!-- Insert content here -->
 	<div class="main">

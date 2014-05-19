@@ -34,7 +34,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 6,
 			'taxonomies'         => array( 'category' ),
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'author' )
 		);
 		register_post_type( 'articulo-slider', $args );
 

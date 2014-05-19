@@ -1,4 +1,4 @@
-	<?php get_header();
+<?php get_header();
 	$cat_name = single_cat_title( '', false );
 	$term = get_term_by( 'name', $cat_name, 'category' );?>
 

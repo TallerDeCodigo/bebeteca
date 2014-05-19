@@ -215,9 +215,27 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .autor-home .post-autor div a span{display: inline-block; color: #db006d; font-weight: bold; float: left; font-size: 15px; line-height: 19px; margin-right: 5px;}
 .autor-home .post-autor div a h4{font-weight: normal; display: block; overflow: hidden; font-size: 15px;}
 
+.autor-home.single-autor img{width: 172px; height: 172px; border-radius: 88px; margin-left: 38px; margin-top:0;}
+.autor-home.single-autor .info-autor{width: 280px; margin-left: 64px;  }
+.autor-home.single-autor blockquote{font-size: 18px; color: #9d65b4; padding: 0; margin: 0; margin-bottom: 31px;}
+
+.autor-home.single-autor{min-height: 300px;}
+.sigue-colaborador{position: absolute; width: 207px; height: auto; top: 213px; left: 48px;}
+.sigue-colaborador span{ color: #999999; font-size: 16px; margin-bottom: 10px; display: block;}
+.sigue-colaborador ul{display: block; overflow: hidden; width: auto; float: left; margin: 0; padding: 0;}
+.sigue-colaborador ul li{position: relative; overflow: hidden; width: 27px; height: 27px; float: left; margin-left: 6px; background-image: url(images/iconos_sociales.png);}
+.sigue-colaborador ul li a{display: block; width: 27px; height: 27px; margin-top: -15px;}
+.sigue-colaborador ul li.fb{background-position: -5px -3px;}
+.sigue-colaborador ul li.tw{background-position: -33px -3px;}
+.sigue-colaborador ul li.gm{background-position: -61px -3px;}
+.sigue-colaborador ul li.pr{background-position: -89px -3px;}
+.sigue-colaborador ul li.mail{background-position: -117px -3px;}
+
 .entero.divicion{overflow: hidden;}
 span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px solid #9b65b3; width: 221px; margin-top: 18px;}
 .entero h5{color: #9b65b3; font-size: 20px; font-weight: normal;float: left;margin: 0 21px; }
+
+.entero.divicion.autor span.line{width: 199px;}
 
 .article-gral{background-color: #fff; height: 165px; padding: 20px 0 0 0 !important;   -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .article-gral .titulo1{top:10px !important;}

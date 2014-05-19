@@ -1,4 +1,4 @@
-	<?php get_header(); $no_posts = array();?>
+<?php get_header(); $no_posts = array();?>
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
