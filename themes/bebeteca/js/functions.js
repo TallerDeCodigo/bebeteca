@@ -39,7 +39,7 @@
 					action   : 'ajax_resive_info_contacto'
 				}, 'json')
 				.done(function (data){
-
+					window.location.reload();
 				});
 			}
 

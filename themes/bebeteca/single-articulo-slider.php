@@ -79,11 +79,25 @@ if(empty($post_child->posts) ){
 					</div>
 					<span>Comparte</span>
 					<ul>
-						<li class="fb"><a href=""></a></li>
-						<li class="tw"><a href=""></a></li>
-						<li class="gm"><a href=""></a></li>
-						<li class="pr"><a href=""></a></li>
-						<li class="mail"><a href=""></a></li>
+						<li class="fb">
+							<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo $permalink; ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo $permalink; ?>" target="_blank"></a>
+						</li>
+
+						<li class="tw">
+							<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo $permalink; ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo $permalink; ?>" target="_blank" ></a>
+						</li>
+
+						<li class="gm">
+							<a href="https://plus.google.com/share?url=<?php echo $permalink; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+						</li>
+
+						<?php $url_image = attachment_image_url($parent_id, 'large'); ?>
+						<li class="pr">
+							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo $permalink; ?>&media=<?php echo $url_image; ?>&description=<?php echo $titulo; ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo $permalink; ?>&media=<?php echo $url_image; ?>&description=<?php echo $titulo; ?> (Bebeteca)" target="_blank" ></a>
+						</li>
+						<li class="mail">
+							<a href=""></a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -105,11 +119,25 @@ if(empty($post_child->posts) ){
 						<div class="extras-category">
 							<span>Comparte</span>
 							<ul>
-								<li class="fb"><a href=""></a></li>
-								<li class="tw"><a href=""></a></li>
-								<li class="gm"><a href=""></a></li>
-								<li class="pr"><a href=""></a></li>
-								<li class="mail"><a href=""></a></li>
+								<li class="fb">
+									<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>" target="_blank"></a>
+								</li>
+
+								<li class="tw">
+									<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>" target="_blank" ></a>
+								</li>
+
+								<li class="gm">
+									<a href="https://plus.google.com/share?url=<?php echo get_permalink($post_slide_ID); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+								</li>
+
+								<?php $url_image = attachment_image_url($post_slide_ID, 'large'); ?>
+								<li class="pr">
+									<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)" target="_blank" ></a>
+								</li>
+								<li class="mail">
+									<a href=""></a>
+								</li>
 							</ul>
 						</div>
 					</div>

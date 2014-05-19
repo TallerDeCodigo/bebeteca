@@ -263,6 +263,19 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 // HELPER METHODS AND FUNCTIONS //////////////////////////////////////////////////////
 
+	/**
+	 * Regresa la url del attachment especificado
+	 * @param  int     $post_id
+	 * @param  string  $size
+	 * @return string  url de la imagen
+	 */
+	function attachment_image_url($post_id, $size){
+		$image_id   = get_post_thumbnail_id($post_id);
+		$image_data = wp_get_attachment_image_src($image_id, $size, true);
+		return isset($image_data[0]) ? $image_data[0] : '';
+	}
+
+
 
 
 	/**
@@ -352,23 +365,65 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 
 
+
+
+
+	// CREAR TABLA PARA GUARDAR CONTACTOS //////////////////////////////////////////////////////
+
+	add_action('init', function(){
+		global $wpdb;
+		$wpdb->query(
+			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}contactos (
+				contact_id bigint(20) NOT NULL AUTO_INCREMENT,
+				nombre VARCHAR(40) NOT NULL DEFAULT '',
+				email VARCHAR(40) NOT NULL DEFAULT '',
+				mensaje VARCHAR(700) NOT NULL DEFAULT '',
+				fecha datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+				PRIMARY KEY (email),
+				UNIQUE KEY `contact_id` (`contact_id`)
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+		);
+
+	});
+
+
+
+
+
+
 	/**
 	 * RESIVE INFORMACION DEL FORMULARIO DE CONTACTO
 	 */
 	function ajax_resive_info_contacto(){
 
-		// $id_post   = isset($_POST['post_id']) ? $_POST['post_id'] : false;
-		// $idioma   = isset($_POST['idioma']) ? $_POST['idioma'] : false;
+		$nombre   = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+		$email   = isset($_POST['email']) ? $_POST['email'] : '';
+		$mensaje   = isset($_POST['mensaje']) ? $_POST['mensaje'] : '';
 
-		// $post = get_post($id_post);
+		global $wpdb;
+		$table_name = $wpdb->prefix . "contactos";
+		$wpdb->insert(
+				$table_name,
+				array(
+					'nombre' => $nombre,
+					'email'  => $email,
+					'mensaje'  => $mensaje,
+					'fecha'  => date('Y-m-d'),
+				),
+				array(
+					'%s',
+					'%s',
+					'%s',
+					'%s',
+				)
+			);
 
-		//  if ($idioma == 'en'):
-		//  	$result = qtrans_use('en', $post->post_content);
-		//  else:
-		//  	$result = qtrans_use('es', $post->post_content);
-		//  endif;
+		$mensaje = 'Se a agregado un nuevo contacto Nombre: '.$nombre;
 
-		wp_send_json($result);
+    	$headers[] = 'From: Bebeteca <alex@losmaquiladores.com>';
+        wp_mail( 'alex@losmaquiladores.com', 'Bebeteca', $mensaje, $headers );
+
+		wp_send_json('bien');
 
 	}
 
