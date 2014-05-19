@@ -35,8 +35,24 @@
 
 	<div class="un-medio">
 		<p class="siguenos">Síguenos en redes</p>
-
-		<p>falta maquetar</p>
+		<ul class="redes-siguenos">
+			<li class="fb">facebook</li>
+			<li class="tw">twitter</li>
+			<li class="gm">goggle +</li>
+		</ul>
+		<div class="bt-siguenos fb">
+			<span class="triangulo"></span>
+			<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+		</div>
+		<div class="bt-siguenos tw">
+			<span class="triangulo"></span>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-dnt="true">Tweet</a>
+		</div>
+		<div class="bt-siguenos gm">
+			<span class="triangulo"></span>
+			<!-- Place this tag where you want the share button to render. -->
+			<div class="g-plus" data-action="share" data-annotation="bubble" data-href="<?php the_permalink(); ?>"></div>
+		</div>
 	</div>
 
 	<div class="un-medio pb destacados">

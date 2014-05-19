@@ -14,16 +14,13 @@
 
 				<form id="form_contacto">
 
-					 <label for="edit-name"><?php _e('NOMBRE', 'fashion'); ?>:</label>
-					 <input id="form-escribenos-name" name="nombre" >
+					 <input id="form-contacto-nombre" name="nombre" placeholder="Nombre" >
 
-					<label for="edit-correo"><?php _e('CORREO', 'fashion'); ?>:</label>
-					<input id="form-escribenos-email" name="email" >
+					<input id="form-contacto-email" name="email" placeholder="email@mail.com" >
 
-					<label for="edit-mensaje"><?php _e('MENSAJE', 'fashion'); ?>:</label>
-					<textarea id="form-escribenos-mensaje" name="mensaje"></textarea>
+					<textarea id="form-contacto-mensaje" name="mensaje" placeholder="Mensaje"></textarea>
 
-					<input class="enviar" type="submit" name="submit" value="<?php _e('ENVIAR', 'fashion'); ?>">
+					<input class="enviar" type="submit" name="submit" value="Enviar">
 
             	</form>
 			</article>

@@ -282,40 +282,6 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 	}
 
 
-
-	/**
-	 * Imprime una lista separada por commas de todos los terms asociados al post id especificado
-	 * los terms pertenecen a la taxonomia especificada. Default: Category
-	 *
-	 * @param  int     $post_id
-	 * @param  string  $taxonomy
-	 * @return string
-	 */
-	function print_the_terms($post_id, $taxonomy = 'category'){
-		$terms = get_the_terms( $post_id, $taxonomy );
-
-		if ( $terms and ! is_wp_error($terms) ){
-			$names = wp_list_pluck($terms ,'name');
-			echo implode(', ', $names);
-		}
-	}
-
-
-
-	/**
-	 * Regresa la url del attachment especificado
-	 * @param  int     $post_id
-	 * @param  string  $size
-	 * @return string  url de la imagen
-	 */
-	function attachment_image_url($post_id, $size){
-		$image_id   = get_post_thumbnail_id($post_id);
-		$image_data = wp_get_attachment_image_src($image_id, $size, true);
-		echo isset($image_data[0]) ? $image_data[0] : '';
-	}
-
-
-
 	/**
 	 * Imprime active si el string coincide con la pagina que se esta mostrando
 	 * @param  string $string
@@ -382,4 +348,29 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 					'%s',
 				)
 			);
-}
+	}
+
+
+
+	/**
+	 * RESIVE INFORMACION DEL FORMULARIO DE CONTACTO
+	 */
+	function ajax_resive_info_contacto(){
+
+		// $id_post   = isset($_POST['post_id']) ? $_POST['post_id'] : false;
+		// $idioma   = isset($_POST['idioma']) ? $_POST['idioma'] : false;
+
+		// $post = get_post($id_post);
+
+		//  if ($idioma == 'en'):
+		//  	$result = qtrans_use('en', $post->post_content);
+		//  else:
+		//  	$result = qtrans_use('es', $post->post_content);
+		//  endif;
+
+		wp_send_json($result);
+
+	}
+
+	add_action('wp_ajax_ajax_resive_info_contacto', 'ajax_resive_info_contacto');
+	add_action('wp_ajax_nopriv_ajax_resive_info_contacto', 'ajax_resive_info_contacto');

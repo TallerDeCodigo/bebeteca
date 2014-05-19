@@ -238,16 +238,29 @@ span.titulo3.verde{background-image: url(images/fondo-verde.png);}
 aside .un-medio form{width: 238px; margin: 0; padding: 0; display: block; position: relative; overflow: hidden; margin: 20px auto; border-radius: 5px; border: 1px solid #a98eb4;}
 aside .un-medio input{border: 0;background: 0;width: 184px; height: 37px;font-size: 13px; color: #a98eb4;padding-left: 4px; padding-right: 27px; outline: none; }
 aside .un-medio form input[type=submit] {position: absolute; right: 0px;top: 0px; width: 78px;height: 37px;border: 0 !important; padding: 0 !important; background-color: #a98eb4; color: #fff; text-align: center; font-family: 'arvoregular'; cursor: pointer; }
-aside .un-medio ::-webkit-input-placeholder { color:#a98eb4; font-family: 'arvoregular'; font-style: italic; }
-aside .un-medio ::-moz-placeholder { color:#a98eb4; font-family: 'arvoregular'; font-style: italic;} /* firefox 19+ */
-aside .un-medio :-ms-input-placeholder { color:#a98eb4; font-family: 'arvoregular'; font-style: italic; } /* ie */
-aside .un-medio input:-moz-placeholder { color:#a98eb4; font-family: 'arvoregular'; font-style: italic; }
+aside .un-medio ::-webkit-input-placeholder, #form_contacto ::-webkit-input-placeholder{ color:#a98eb4; font-family: 'arvoregular'; font-style: italic; }
+aside .un-medio ::-moz-placeholder,  #form_contacto  ::-moz-placeholder{ color:#a98eb4; font-family: 'arvoregular'; font-style: italic;} /* firefox 19+ */
+aside .un-medio :-ms-input-placeholder, #form_contacto :-ms-input-placeholder { color:#a98eb4; font-family: 'arvoregular'; font-style: italic; } /* ie */
+aside .un-medio input:-moz-placeholder, #form_contacto input:-moz-placeholder { color:#a98eb4; font-family: 'arvoregular'; font-style: italic; }
 
 aside .un-medio .caja-ultimos{position: relative;overflow: hidden; width: 261px; height: auto;margin-top: 22px; margin-left: 18px;}
 aside .un-medio .caja-ultimos img{width: 81px; height: 61px; margin-right: 20px; float: left;}
 aside .un-medio .caja-ultimos h4{font-size: 15px; color: #9b65b3; font-weight: normal; }
 
-aside .un-medio p.siguenos{color: #8bd4da; margin-top: 20px; width: 100%; display: block; text-align: center; font-size: 20px;} /*cambiar font*/
+aside .un-medio p.siguenos{color: #8bd4da;  font-family: 'simplicitymedium'; margin-top: 20px; width: 100%; display: block; text-align: center; font-size: 22px;} /*cambiar font*/
+aside .un-medio .redes-siguenos{margin: 10px 0 0 0; padding: 0; list-style: none; display: block;overflow: hidden;}
+aside .un-medio .redes-siguenos li{position: relative;overflow: hidden;width: 40px; height: 40px; float: left; margin-left: 15px; text-indent: -9999px; background-image: url(images/iconos_sociales.png); cursor: pointer;}
+aside .un-medio .redes-siguenos li.fb{background-position: -4px -75px; margin-left: 76px;}
+aside .un-medio .redes-siguenos li.tw{background-position: -45px -33px;}
+aside .un-medio .redes-siguenos li.gm{background-position: -88px -33px;}
+
+aside .un-medio .bt-siguenos{position: relative;overflow: hidden;width: 279px; height: 44px; border-top: 1px solid #58acb3; margin: 20px 10px; padding: 16px; text-align: center;}
+aside .un-medio .bt-siguenos span.triangulo{position: absolute; width: 19px; height: 16px; top: 0; z-index: 999; background-image: url(images/iconos_sociales.png); background-position: -129px -34px;}
+aside .un-medio .bt-siguenos.fb span.triangulo{left: 72px;}
+aside .un-medio .bt-siguenos.tw span.triangulo{left: 133px;}
+aside .un-medio .bt-siguenos.gm span.triangulo{left: 188px;}
+aside .un-medio .bt-siguenos.tw, aside .un-medio .bt-siguenos.gm{display: none;}
+.bt-siguenos .fb-like, .bt-siguenos .twitter-share-button{margin-top: 6px;  display: inline-block;}
 
 aside .un-medio.destacados{overflow: visible; margin-top: 13px;}
 aside span.titulo4{position: relative; overflow: hidden; width: 269px; height: 30px; margin: -13px auto 0 auto; display: block; background-image: url(images/fondo_4.png); background-repeat: no-repeat; text-align: center; color: #fff; font-size: 16px; line-height: 25px;}
@@ -305,7 +318,10 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single .entero.news blockquote{background: transparent; font-size: 31px; padding: 0 0;}
 .single .entero.news img{width: 248px; height: auto; margin: 0 auto; display: block;}
 
-#form_contacto{display: block;overflow: hidden; width: 100%; padding:20px;}
+#form_contacto{display: block;overflow: hidden; width: 100%; padding:20px; text-align: center;}
+#form_contacto input{width: 381px; height: 37px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 0 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic; margin-bottom: 20px; }
+#form_contacto textarea{width: 381px; height: 150px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 10px 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic;resize:none;}
+#form_contacto input[type=submit] {width: 227px; height: 43px; text-align: center; font-family: 'arvoregular'; font-size: 21px; font-weight: normal; background-color: #a98eb4; color: #fff;}
 
 .no-padding{padding: 0 !important;}
 footer{position: relative;overflow: hidden;width: 100%; height: auto; background-color: #9b65b3; margin-top: 57px; padding-bottom: 20px;}

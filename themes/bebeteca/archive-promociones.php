@@ -3,7 +3,7 @@
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs">Home/Promociones</span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/promociones/') ?>">Promociones</a></span>
 			<div class="header-category">
 				<h4>Promociones</h4>
 				<div class="extras-category">

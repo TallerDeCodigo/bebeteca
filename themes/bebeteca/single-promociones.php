@@ -4,7 +4,7 @@
 	<div class="main single">
 		<section>
 
-			<span class="breadcrumbs">Home/Promociones/<?php the_title(); ?></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/promociones/') ?>">Promociones</a>/<?php the_title(); ?></span>
 			<h1><?php the_title(); ?></h1>
 			<span class="autor">Autor: <?php the_author_posts_link(); ?></span>
 

@@ -5,7 +5,7 @@
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs">Home/<?php echo $cat_name; ?></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/categoria/entrevistas/') ?>"><?php echo $cat_name; ?></a></span>
 			<div class="header-category">
 				<h4><?php echo $cat_name; ?></h4>
 				<div class="extras-category">
