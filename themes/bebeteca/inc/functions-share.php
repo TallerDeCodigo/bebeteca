@@ -92,7 +92,7 @@ class Share {
 		{
 			global $wpdb;
 			$result = $wpdb->query( $wpdb->prepare(
-				"INSERT INTO wp_share_url ( url, facebook, twitter, googlePlus, printeres, total ) VALUES ( %s, %d, %d, %d, %d, %d );",
+				"INSERT INTO wp_share_url ( url, facebook, twitter, googlePlus, printerest, total ) VALUES ( %s, %d, %d, %d, %d, %d );",
 				$permalinks, $result_fb, $result_tw, $result_gp, $result_pr, $total
 			));
 			return ($result !== false) ? 1 : 0;
@@ -108,7 +108,7 @@ class Share {
 					'facebook'   => $result_fb,
 					'twitter'    => $result_tw,
 					'googlePlus' => $result_gp,
-					'printeres'  => $result_pr,
+					'printerest' => $result_pr,
 					'total'      => $total
 				),
 				array( 'url' => $permalinks ),
@@ -167,13 +167,18 @@ class Share {
 		if( $share_of_url === false ):
 
 			$share = new Share();
-			return $share->getUrlCompartida($permalinks);
+			$total = $share->getUrlCompartida($permalinks);
 			set_transient( "share_url_redes", 'trancent sahare url redes', 60);
+			return $total;
 
 		else:
 
 			$share = new Share();
-			return $share->getCountShareUrl($permalinks);
+
+			$total = $share->getCountShareUrl($permalinks);
+			if ($total == '') $total = 0;
+
+			return $total;
 
 		endif;
 
