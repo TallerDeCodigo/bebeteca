@@ -12,7 +12,11 @@
 				<div class="extras-category">
 					<div class="extras">
 						<span class="megusta verde"></span><p><?php echo get_count_like($term->term_id, 'cat'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share(site_url('/categoria/'.$term->slug.'/')); ?></p>
+						<span class="compartir"></span><p><?php $ssss = get_count_share(site_url('/categoria/'.$term->slug.'/'));
+							echo '<pre>';
+							print_r($ssss);
+							echo '</pre>';
+						?></p>
 					</div>
 					<span>Comparte</span>
 					<ul>

@@ -34,12 +34,12 @@ class Share {
 			$results = (array)$results;
 
 
-			// foreach ($this->comentados as $index => &$entrada) {
 
-			// 	if ( isset($results[ $entrada->permalink ]->comments) )
-			// 		$entrada->comments = $results[ $entrada->permalink ]->comments;
-			// }
-			return 'hola';
+
+				// if ( isset($results[ $entrada->permalink ]->comments) )
+				// 	$entrada->comments = $results[ $entrada->permalink ]->comments;
+			}
+			return $results;
 		}
 
 
