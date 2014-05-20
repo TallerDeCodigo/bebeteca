@@ -32,10 +32,7 @@ class Share {
 
 			$results = file_get_contents("http://graph.facebook.com/?id=$permalinks");
 			$results = (array)$results;
-			file_put_contents(
-				'/Users/maquilador4/Desktop/php.txt',
-				var_export( $results, true )
-			);
+
 
 			// foreach ($this->comentados as $index => &$entrada) {
 
@@ -53,7 +50,7 @@ class Share {
 
 
 
-			return $results ;
+			return $result_fb ;
 		}
 	}
 
