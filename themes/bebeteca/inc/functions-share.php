@@ -30,15 +30,15 @@ class Share {
 		{
 			if ( empty($permalinks)) return array();
 
-			$results = file_get_contents("http://graph.facebook.com/?id=$permalinks");
-			$results = (array)$results;
+				$results = file_get_contents("http://graph.facebook.com/?id=$permalinks");
+				$results = (array)$results;
 
 
 
 
 				// if ( isset($results[ $entrada->permalink ]->comments) )
 				// 	$entrada->comments = $results[ $entrada->permalink ]->comments;
-			}
+
 			return $results;
 		}
 
