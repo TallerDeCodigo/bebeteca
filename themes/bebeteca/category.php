@@ -1,6 +1,7 @@
-<?php get_header(); $no_posts = array();
+<?php get_header();
+	$paged    = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$cat_name = single_cat_title( '', false );
-	$term = get_term_by( 'name', $cat_name, 'category' );?>
+	$term     = get_term_by( 'name', $cat_name, 'category' );?>
 
 	<!-- Insert content here -->
 	<div class="main">
@@ -42,7 +43,8 @@
 					</ul>
 				</div>
 			</div>
-			<?php if ( have_posts() ) : ?>
+			<?php $post_general = query_categorias_slide($term->term_id);
+			if ( $post_general->have_posts() AND $paged == 1 ) :?>
 				<article class="entero">
 					<span class="titulo1 pleca-<?php echo $term->slug; ?>"><?php echo $cat_name; ?></span>
 
@@ -50,7 +52,7 @@
 						<a class="flecha_carrusel prev" href="#"></a>
 						<div class="viewport">
 							<ul class="overview">
-								<?php while( have_posts() ) : the_post(); ?>
+								<?php while( $post_general->have_posts() ) : $post_general->the_post(); ?>
 									<li>
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('slider-home'); ?>
@@ -72,7 +74,7 @@
 						</div>
 						<a class="flecha_carrusel next" href="#"></a>
 						<ul class="bullets clearfix">
-							<?php if (have_posts() ) : while( have_posts() ) : the_post(); ?>
+							<?php if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
 								<li><a href="#" class="bullet"></a></li>
 							<?php endwhile; endif; wp_reset_postdata(); ?>
 						</ul>
@@ -82,16 +84,16 @@
 				</article><!-- SLIDE -->
 			<?php endif; wp_reset_postdata(); ?>
 
-			<?php $post_general = new WP_Query(array( 'posts_per_page' => 7, 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts, 'cat' => $term->term_id) );
-			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
+			<?php if ( have_posts() ) :  while( have_posts() ) : the_post();
 
 				get_template_part( 'template/articulo', 'general' );
 
-			endwhile; ?>
+			endwhile;
 
-				<div class="boton mas-entradas">Mas entradas ></div>
+				if(has_previous_posts()): ?><div class="boton mas-entradas"><?php previous_posts_link( '< Anteriores' ); ?></div><?php endif;
+				if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Mas entradas >' ); ?></div> <?php endif;
 
-			<?php endif; wp_reset_postdata(); ?>
+			endif; wp_reset_postdata(); ?>
 
 
 
@@ -101,3 +103,5 @@
 
 
 	<?php get_footer(); ?>
+
+

@@ -72,6 +72,7 @@
 								<span class="compartir azul"></span><p class="azul"><?php echo get_count_share($post->ID, 'post'); ?></p>
 							</div>
 						</div>
+						<a class="boton mas-videos" href="<?php echo site_url('/videos/') ?>">ver mas ></a
 					</a>
 
 				<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -137,11 +138,7 @@
 
 				get_template_part( 'template/articulo', 'general' );
 
-			endwhile; ?>
-
-			<div class="boton mas-entradas">Mas entradas ></div>
-
-			<?php endif; wp_reset_postdata(); ?>
+			endwhile; endif; wp_reset_postdata(); ?>
 
 		</section>
 		<?php get_sidebar(); ?>

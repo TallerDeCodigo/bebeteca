@@ -1,4 +1,5 @@
-<?php get_header();?>
+<?php get_header();
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 
 	<!-- Insert content here -->
 	<div class="main">
@@ -42,7 +43,7 @@
 			</div>
 			<?php if ( have_posts() ) : $count = 1; while( have_posts() ) : the_post();
 
-				if ($count == 1) : ?>
+				if ($count == 1 AND $paged == 1) : ?>
 					<article class="entero">
 						<a href="<?php the_permalink(); ?>">
 							<div class="slider-principal videos">
@@ -65,8 +66,10 @@
 
 					get_template_part( 'template/articulo', 'general' );
 
-			endif; $count++; endwhile; endif; wp_reset_postdata(); ?>
-			<div class="boton mas-entradas">Mas entradas ></div>
+			endif; $count++; endwhile;
+				if(has_previous_posts()): ?><div class="boton mas-entradas"><?php previous_posts_link( '< Anteriores' ); ?></div><?php endif;
+				if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Mas entradas >' ); ?></div> <?php endif;
+			endif; wp_reset_postdata(); ?>
 		</section>
 		<?php get_sidebar(); ?>
 	</div>

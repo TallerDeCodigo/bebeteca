@@ -10,7 +10,6 @@
 		if ( get_post_status ( $post->ID ) != 'slide_post' ) {
 
 			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'post', 'side', 'high' );
-			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'articulo-slider', 'side', 'high' );
 			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'videos', 'side', 'high' );
 
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );

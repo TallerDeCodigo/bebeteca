@@ -11,8 +11,10 @@
 
 				get_template_part( 'template/articulo', 'general' );
 
-			endwhile; endif; wp_reset_postdata(); ?>
-			<div class="boton mas-entradas">Mas entradas ></div>
+			endwhile; endif; wp_reset_postdata();
+
+			if(has_previous_posts()): ?><div class="boton mas-entradas"><?php previous_posts_link( '< Anteriores' ); ?></div><?php endif;
+			if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Mas entradas >' ); ?></div> <?php endif; ?>
 		</section>
 		<?php get_sidebar(); ?>
 	</div>

@@ -155,7 +155,7 @@
 
 		if ( $query->is_main_query() and ! is_admin() ) {
 
-			if ((is_category() || is_home() ) AND !is_category('entrevistas')) {
+			if ( is_home() ) {
 				$query->set( 'posts_per_page', 4 );
 				$query->set( 'post_type', array('post', 'articulo-slider') );
 
@@ -171,12 +171,29 @@
 			}
 
 			if(is_category('entrevistas')){
-				$query->set( 'posts_per_page', 8 );
+				$query->set( 'posts_per_page', 10 );
 			}
 
 			if (is_search()) {
 				$query->set( 'post_status', 'publish' );
+				$query->set( 'posts_per_page', 10 );
 				$query->set( 'post_type', array('post', 'articulo-slider', 'promociones') );
+			}
+
+
+			if(is_category() AND !is_category('entrevistas')){
+				$query->set( 'posts_per_page', 10 );
+				$query->set( 'post_type', array('post', 'articulo-slider') );
+				$query->set( 'post_status', 'publish' );
+
+				$term_id      = $query->queried_object->term_id;
+				$posts_query  = query_categorias_slide($term_id);
+				$no_post      = array();
+				foreach ($posts_query->posts as $post) {
+					$no_post[] = $post->ID;
+				}
+
+				$query->set('post__not_in', $no_post);
 			}
 
 
@@ -276,6 +293,11 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 	}
 
 
+// QUERY CATEGORIAS /////////////////////////////////////////////////////////////////////
+
+	function query_categorias_slide($term_id){
+		return new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'cat' => $term_id, 'meta_key' => 'slider_categoria', 'meta_query' => array( array( 'key' => 'slider_categoria', 'value'   => true, 'compare' => '=' ) ) ) );
+	}
 
 
 	/**
@@ -418,10 +440,11 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 				)
 			);
 
-		$mensaje = 'Se a agregado un nuevo contacto Nombre: '.$nombre;
+		$fecha = date('Y-m-d');
+		$mensaje_mail = "Se a agregado un nuevo contacto \n\rNombre: $nombre \n\rEmail: $email \n\rFecha: $fecha \n\rMensaje: $mensaje";
 
     	$headers[] = 'From: Bebeteca <alex@losmaquiladores.com>';
-        wp_mail( 'alex@losmaquiladores.com', 'Bebeteca', $mensaje, $headers );
+        wp_mail( 'alex@losmaquiladores.com', 'Bebeteca', $mensaje_mail, $headers );
 
 		wp_send_json('bien');
 
@@ -429,3 +452,28 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 	add_action('wp_ajax_ajax_resive_info_contacto', 'ajax_resive_info_contacto');
 	add_action('wp_ajax_nopriv_ajax_resive_info_contacto', 'ajax_resive_info_contacto');
+
+
+	// PAGINACION ///////////////////////////////////////////////////////////////////////////////
+
+	/**
+	 * CHECA SI EXISTE UNA PAGINA ANTERIOR
+	 */
+	function has_previous_posts() {
+		ob_start();
+		previous_posts_link();
+		$result = strlen(ob_get_contents());
+		ob_end_clean();
+		return $result;
+	}
+
+	function has_next_posts() {
+		/**
+		 * CHECA SI EXISTE UNA PAGINA SIGUIENTE
+		 */
+		ob_start();
+		next_posts_link();
+		$result = strlen(ob_get_contents());
+		ob_end_clean();
+		return $result;
+	}
