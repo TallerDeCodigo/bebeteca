@@ -32,6 +32,7 @@ class Share {
 
 				$results = file_get_contents("http://graph.facebook.com/?id=$permalinks");
 				$results = (array)$results;
+				$shares  = (array)$results[0]->shares;
 
 
 
@@ -39,7 +40,7 @@ class Share {
 				// if ( isset($results[ $entrada->permalink ]->comments) )
 				// 	$entrada->comments = $results[ $entrada->permalink ]->comments;
 
-			return $results[0];
+			return $shares;
 		}
 
 
