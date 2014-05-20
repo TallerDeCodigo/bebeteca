@@ -39,7 +39,7 @@ class Share {
 				// if ( isset($results[ $entrada->permalink ]->comments) )
 				// 	$entrada->comments = $results[ $entrada->permalink ]->comments;
 
-			return $results;
+			return $results[0]->shares;
 		}
 
 
