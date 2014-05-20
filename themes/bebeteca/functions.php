@@ -145,6 +145,8 @@
 
 	require_once('inc/functions-admin.php');
 
+	require_once('inc/functions-share.php');
+
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
@@ -332,20 +334,14 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 			echo 'active';
 	}
 
-
-	/**
+/**
 	 * CUENTA LOS MEGUSTA
 	 */
 	function get_count_like($id, $tipo){
 		return '290';
 	}
 
-	/**
-	 * CUENTA LAS VECES QUE SE COMPARTIO
-	 */
-	function get_count_share($id, $tipo){
-		return '150';
-	}
+
 
 
 	function return_posts_slide($post_parent_id){

@@ -12,7 +12,7 @@
 				<div class="extras-category">
 					<div class="extras">
 						<span class="megusta verde"></span><p><?php echo get_count_like($term->term_id, 'cat'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share($term->term_id, 'cat'); ?></p>
+						<span class="compartir"></span><p><?php echo get_count_share(site_url('/categoria/'.$term->slug.'/')); ?></p>
 					</div>
 					<span>Comparte</span>
 					<ul>
@@ -62,7 +62,7 @@
 
 												<div class="extras">
 													<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
-													<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+													<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 												</div>
 											</div>
 										</a>

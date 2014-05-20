@@ -137,18 +137,18 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu{position: relative; width: 100%; height: 26px; clear: both;}
 .content-header header nav#main-menu ul{ margin: 0 0 0 0; list-style: none;}
 .content-header header nav#main-menu ul li{margin-right: 11px; font-size: 16px; background:transparent; color: #999999; overflow: visible;}
-.content-header header nav#main-menu ul li:hover a{color: #fff;}
+.content-header header nav#main-menu ul li:hover a, .active a{color: #fff !important;}
 .content-header header nav#main-menu ul li a{text-decoration: none; color: #999999;}
 .content-header header nav#main-menu ul li .submenu{display: none; width: 960px; left: -12px; height: 200px; background: #fff; position: absolute;  -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888;}
 /*.content-header header nav#main-menu ul li:hover .submenu{display: block;}*/
-.content-header header nav#main-menu ul li.bg-embarazo:hover{background-color: #ae3079;}
-.content-header header nav#main-menu ul li.bg-nacimiento:hover{background-color: #c57fa6;}
-.content-header header nav#main-menu ul li.bg-dia-a-dia:hover{background-color: #4e9bab;}
-.content-header header nav#main-menu ul li.bg-estimulacion:hover{background-color: #a674b8;}
-.content-header header nav#main-menu ul li.bg-nutricion:hover{background-color: #a2b736;}
-.content-header header nav#main-menu ul li.bg-lactancia:hover{background-color: #fac600;}
-.content-header header nav#main-menu ul li.bg-entrevistas:hover{background-color: #8fa0e0;}
-.content-header header nav#main-menu ul li.bg-promociones:hover{background-color: #ff7a83;}
+.content-header header nav#main-menu ul li.bg-embarazo:hover, nav#main-menu ul li.bg-embarazo.active{background-color: #ae3079;}
+.content-header header nav#main-menu ul li.bg-nacimiento:hover, nav#main-menu ul li.bg-nacimiento.active{background-color: #c57fa6;}
+.content-header header nav#main-menu ul li.bg-dia-a-dia:hover, nav#main-menu ul li.bg-dia-a-dia.active{background-color: #4e9bab;}
+.content-header header nav#main-menu ul li.bg-estimulacion:hover, nav#main-menu ul li.bg-estimulacion.active{background-color: #a674b8;}
+.content-header header nav#main-menu ul li.bg-nutricion:hover, nav#main-menu ul li.bg-nutricion.active{background-color: #a2b736;}
+.content-header header nav#main-menu ul li.bg-lactancia:hover, nav#main-menu ul li.bg-lactancia.active{background-color: #fac600;}
+.content-header header nav#main-menu ul li.bg-entrevistas:hover, nav#main-menu ul li.bg-entrevistas.active{background-color: #8fa0e0;}
+.content-header header nav#main-menu ul li.bg-promociones:hover, nav#main-menu ul li.bg-promociones.active{background-color: #ff7a83;}
 
 .container{position: relative;overflow-y: hidden; overflow: visible; width: 950px; height: auto;margin: 0 auto; padding: 0;}
 .container .banner-top{position: relative; width: 727px; height: 87px; margin: 2px auto 11px auto; background: #e9e;}

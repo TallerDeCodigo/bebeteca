@@ -60,7 +60,7 @@
 				</div>
 				<nav id="main-menu">
 					<ul>
-						<li class="bg-embarazo boton"><a href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>
+						<li class="bg-embarazo boton <?php nav_is('embarazo');?>"><a href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>
 							<div class="submenu border-radius">
 								<div class="subcategorias">
 
@@ -73,13 +73,13 @@
 								</div>
 							</div>
 						</li>
-						<li class="bg-nacimiento boton"><a href="<?php echo site_url('/categoria/nacimiento/'); ?>">Nacimiento</a></li>
-						<li class="bg-dia-a-dia boton"><a href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a></li>
-						<li class="bg-estimulacion boton"><a href="<?php echo site_url('/categoria/estimulacion/'); ?>">Estimulación</a></li>
-						<li class="bg-nutricion boton"><a href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a></li>
-						<li class="bg-lactancia boton"><a href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a></li>
-						<li class="bg-entrevistas boton"><a href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a></li>
-						<li class="bg-promociones boton ultimo-fila"><a href="<?php echo site_url('/promociones/'); ?>">Promociones</a></li>
+						<li class="bg-nacimiento boton <?php nav_is('nacimiento');?>"><a href="<?php echo site_url('/categoria/nacimiento/'); ?>">Nacimiento</a></li>
+						<li class="bg-dia-a-dia boton <?php nav_is('dia-a-dia');?>"><a href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a></li>
+						<li class="bg-estimulacion boton <?php nav_is('estimulacion');?>"><a href="<?php echo site_url('/categoria/estimulacion/'); ?>">Estimulación</a></li>
+						<li class="bg-nutricion boton <?php nav_is('nutricion');?>"><a href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a></li>
+						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a></li>
+						<li class="bg-entrevistas boton <?php nav_is('entrevistas');?>"><a href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a></li>
+						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?>"><a href="<?php echo site_url('/promociones/'); ?>">Promociones</a></li>
 					</ul>
 				</nav>
 			</header>

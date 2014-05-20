@@ -17,7 +17,7 @@
 			<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
 			<div class="extras">
 				<span class="megusta"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
-				<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+				<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 			</div>
 		</a>
 	</article>

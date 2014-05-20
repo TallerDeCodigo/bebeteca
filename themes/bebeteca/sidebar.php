@@ -13,6 +13,7 @@
 		</form>
 	</div>
 
+	<?php if (! is_home()) :?>
 	<div class="un-medio pb">
 		<span class="titulo3 verde">
 			Últimos Artículos
@@ -21,13 +22,17 @@
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
 
 				<div class="caja-ultimos">
-					<?php the_post_thumbnail('articulos-side'); ?>
-					<h4><?php the_title(); ?></h4>
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail('articulos-side'); ?>
+						<h4><?php the_title(); ?></h4>
+					</a>
 				</div>
 
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 
 	</div>
+
+<?php endif; ?>
 
 	<div class="banner-aside">
 

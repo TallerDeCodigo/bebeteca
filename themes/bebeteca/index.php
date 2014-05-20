@@ -20,7 +20,7 @@
 
 												<div class="extras">
 													<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
-													<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+													<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 												</div>
 											</div>
 										</a>
@@ -69,7 +69,7 @@
 							<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
 							<div class="extras">
 								<span class="megusta azul"></span><p class="azul"><?php echo get_count_like($post->ID, 'post'); ?></p>
-								<span class="compartir azul"></span><p class="azul"><?php echo get_count_share($post->ID, 'post'); ?></p>
+								<span class="compartir azul"></span><p class="azul"><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
 						</div>
 						<a class="boton mas-videos" href="<?php echo site_url('/videos/') ?>">ver mas ></a
@@ -90,7 +90,7 @@
 							<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
 							<div class="extras">
 								<span class="megusta rosa"></span><p class="rosa"><?php echo get_count_like($post->ID, 'post'); ?></p>
-								<span class="compartir rosa"></span><p class="rosa"><?php echo get_count_share($post->ID, 'post'); ?></p>
+								<span class="compartir rosa"></span><p class="rosa"><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
 						</div>
 					</a>

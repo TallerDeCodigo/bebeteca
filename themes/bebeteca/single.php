@@ -16,7 +16,7 @@ $term_slug = $terms[0]->slug;
 				<div class="extras-category">
 					<div class="extras">
 						<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+						<span class="compartir"></span><p><?php echo get_count_share(get_permalink($post->ID)); ?></p>
 					</div>
 					<span>Comparte</span>
 					<ul>

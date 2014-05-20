@@ -15,73 +15,88 @@
 				<div class="footer-partesitas">
 					<strong>Embarazo</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+
+						<?php $term = get_term_by( 'name', 'embarazo', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Nacimiento</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Día a Día</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<?php $term = get_term_by( 'name', 'día a día', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Entrevistas</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Lactancia</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<?php $term = get_term_by( 'name', 'lactancia', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Nutrición</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<?php $term = get_term_by( 'name', 'nutricion', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Estimulación</strong>
 					<ul>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
+						$termchildren = get_term_children( $term->term_id, 'category' );
+						foreach ( $termchildren as $child ) {
+							$term = get_term_by( 'id', $child, 'category' );
+							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+						}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
 					<strong>Promociones</strong>
 					<ul>
+					<!-- 	<li><a href="">Subcategoria</a></li>
 						<li><a href="">Subcategoria</a></li>
 						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
-						<li><a href="">Subcategoria</a></li>
+						<li><a href="">Subcategoria</a></li> -->
 					</ul>
 				</div>
 				<p class="sueltos"><a href="<?php echo site_url('/aviso-privacidad/'); ?>">Aviso de privacidad</a></p>

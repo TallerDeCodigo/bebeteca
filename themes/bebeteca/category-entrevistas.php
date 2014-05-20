@@ -12,7 +12,7 @@
 				<div class="extras-category">
 					<div class="extras">
 						<span class="megusta verde"></span><p><?php echo get_count_like($term->term_id, 'cat'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share($term->term_id, 'cat'); ?></p>					</div>
+						<span class="compartir"></span><p><?php echo get_count_share(site_url('/categoria/entrevistas/')); ?></p>					</div>
 					<span>Comparte</span>
 					<ul>
 						<li class="fb">
@@ -58,7 +58,7 @@
 
 								<div class="extras">
 									<span class="megusta verde"></span><p><?php echo get_count_like($term->term_id, 'cat'); ?></p>
-								<span class="compartir"></span><p><?php echo get_count_share($term->term_id, 'cat'); ?></p>
+								<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 								</div>
 							</div>
 						</a>
@@ -74,7 +74,7 @@
 							<p><?php echo wp_trim_words( get_the_excerpt(), 23 ) ?></p>
 							<div class="extras">
 								<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
-								<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
+								<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
 						</a>
 					</article>

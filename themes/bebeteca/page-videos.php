@@ -23,7 +23,7 @@
 				<div class="extras-category">
 					<div class="extras">
 						<span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share('', 'cat'); ?></p>					</div>
+						<span class="compartir"></span><p><?php echo get_count_share(site_url('/videos/')); ?></p>					</div>
 					<span>Comparte</span>
 					<ul>
 						<li class="fb">
@@ -55,7 +55,7 @@
 			</div>
 			<?php if ( $videos->have_posts() ) : $count = 1; while( $videos->have_posts() ) : $videos->the_post();
 
-				if ($count == 1 AND $paged == 1) : ?>
+				if ($count == 1) : ?>
 					<article class="entero">
 						<a href="<?php the_permalink(); ?>">
 							<div class="slider-principal videos">

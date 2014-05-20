@@ -13,7 +13,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 				<div class="extras-category">
 					<div class="extras">
 						<span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share('', 'cat'); ?></p>
+						<span class="compartir"></span><p><?php echo get_count_share(site_url('/author/'.$user_nicename.'/')); ?></p>
 					</div>
 					<span>Comparte</span>
 					<ul>
