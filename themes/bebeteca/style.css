@@ -333,6 +333,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article.slide .texto-slide{position: relative; overflow: hidden;width: 276px; height: auto;}
 .single article.slide .texto-slide span.paginacion{display: block; font-size: 14px; color: #b73ba1; float: left; margin-right: 22px; margin-left: 14px;}
 .single article.slide .texto-slide .boton{margin-bottom: 24px; background: #a98eb4;}
+.single article.slide .texto-slide h3{display: block;}
 
 .single .divicion span.line{width: 179px;}
 .single .article-gral img{margin-left: 0px; margin-top: -20px;}
