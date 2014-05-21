@@ -151,6 +151,8 @@ $status_slide_post = '';
 
 	require_once('inc/functions-comments.php');
 
+	require_once('inc/functions-newsletter.php');
+
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
