@@ -86,21 +86,20 @@
 		<span class="titulo4">
 			Lo más comentado
 		</span>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img1.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img3.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img4.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
+
+		<?php $facebook = new Comments\Facebook();
+			$comentados = $facebook->getComentados();
+
+		if( $comentados ) : foreach (array_slice($comentados, 0, 5) as $post) : setup_postdata($post); ?>
+
+			<div class="caja-ultimos">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail('articulos-side'); ?>
+					<h4><?php the_title(); ?></h4>
+				</a>
+			</div>
+
+		<?php endforeach; endif; wp_reset_postdata(); ?>
+
 	</div>
 </aside><!-- main_sidebar -->

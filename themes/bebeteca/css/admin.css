@@ -14,9 +14,7 @@
 .contenido{padding: 3px 8px;font-size: 15px; resize: none;line-height: 100%;width: 100%; height: 300px; outline: 0;margin: 0;background-color: #FFF; margin-bottom: 12px;}
 label.prin{clear: both; display: block; font-family: 'arvoregular'; font-size: 16px;}
 .sub_p1{position: relative;overflow: hidden; width: 73%; float: left; margin-right: 2%;}
-.sub_p2{position: relative;overflow: hidden; width: 24%;}
-.sub_p2 a{clear: both; display: block; margin-bottom: 20px;}
-#add_subtema{position: absolute;bottom: 12px; right: 12px;}
+#add_subtema{position: relative; overflow: hidden; float: right;}
 #meta-box-subtema .inside{overflow: hidden;}
 .caja_post{position: relative;overflow: hidden;width: 100%; margin-bottom: 5px;}
 .caja_post .img_s{width: 60px; height: 60px; margin-right: 5px; float: left;}

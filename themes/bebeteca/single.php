@@ -76,7 +76,7 @@ $term_slug = $terms[0]->slug;
 
 							<?php $url_image = attachment_image_url($post->ID, 'large'); ?>
 							<li class="pr">
-								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_content(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_content(); ?>" target="_blank" ></a>
+								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 							</li>
 							<li class="mail">
 								<a href=""></a>
@@ -100,11 +100,7 @@ $term_slug = $terms[0]->slug;
 			</article>
 
 			<article class="entero comentarios">
-				<!-- <h5>DEJA TU COMENTARIO</h5>
-				<img src="<?php // echo THEMEPATH; ?>images/img2.jpg">
-				<?php //if ( comments_open() || get_comments_number() ) {
-					//comments_template();
-				//} ?> -->
+				<div class="fb-comments" data-width="100%" data-href="<?php echo get_permalink($post->ID) ?>" data-numposts="5" data-colorscheme="light"></div>
 			</article>
 
 			<div class="entero divicion">

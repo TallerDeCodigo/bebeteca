@@ -168,7 +168,7 @@ class Share {
 
 			$share = new Share();
 			$total = $share->getUrlCompartida($permalinks);
-			set_transient( "share_url_redes", 'trancent sahare url redes', 60);
+			set_transient( "share_url_redes", 'trancent sahare url redes', 3600);
 			return $total;
 
 		else:

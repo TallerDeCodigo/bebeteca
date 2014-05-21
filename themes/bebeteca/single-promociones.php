@@ -29,13 +29,12 @@
 						</li>
 
 						<?php if ( have_posts() ) : $count = 1; while( have_posts() ) : the_post();
-							if ($count = 1) {
-								$url_image = attachment_image_url($post->ID, 'large');
-							}
+							$url_image = attachment_image_url($post->ID, 'large');
+
 							$count++;
 						endwhile; endif; wp_reset_postdata();  ?>
 						<li class="pr">
-							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_content(); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_content(); ?> (Bebeteca)" target="_blank" ></a>
+							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?> (Bebeteca)" target="_blank" ></a>
 						</li>
 						<li class="mail">
 							<a href=""></a>
@@ -77,7 +76,7 @@
 
 							<?php $url_image = attachment_image_url($post->ID, 'large'); ?>
 							<li class="pr">
-								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_content(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_content(); ?>" target="_blank" ></a>
+								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 							</li>
 							<li class="mail">
 								<a href=""></a>
@@ -100,8 +99,8 @@
 				</div>
 			</article>
 
-			<article class="entero">
-				comentarios falta maquetar
+			<article class="entero comentarios">
+				<div class="fb-comments" data-width="100%" data-href="<?php echo get_permalink($post->ID) ?>" data-numposts="5" data-colorscheme="light"></div>
 			</article>
 
 			<div class="entero divicion">

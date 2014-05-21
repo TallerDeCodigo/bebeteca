@@ -3,10 +3,22 @@
 
 // CUSTOM METABOXES //////////////////////////////////////////////////////////////////
 
+	add_action( 'load-post.php', function(){
+		add_action('add_meta_boxes', function(){
+			global $post;
+			if ( get_post_status ( $post->ID ) != 'slide_post' ) {
 
+				add_meta_box( 'meta-box-subtema', 'Agregar Subtema', 'show_metabox_subtema', 'articulo-slider' );
+
+				add_meta_box( 'meta-box-vew_subtemas', 'Subtemas', 'show_metabox_vew_subtemas', 'articulo-slider', 'side', 'high');
+
+			}
+		});
+	});
 
 	add_action('add_meta_boxes', function(){
 		global $post;
+		global $status_slide_post;
 		if ( get_post_status ( $post->ID ) != 'slide_post' ) {
 
 			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'post', 'side', 'high' );
@@ -15,9 +27,9 @@
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
 
-			add_meta_box( 'meta-box-subtema', 'Agregar Subtema', 'show_metabox_subtema', 'articulo-slider' );
-
-			add_meta_box( 'meta-box-vew_subtemas', 'Subtemas', 'show_metabox_vew_subtemas', 'articulo-slider', 'side', 'high');
+			$status_slide_post = false;
+		}else{
+			$status_slide_post = true;
 		}
 	});
 
@@ -61,18 +73,12 @@ meta_box_post_video;
 		echo <<< meta_box_subpost
 
 			<label for="subtitulo" class="prin">Subtitulo</label>
-			<input type="text" name="subtitulo" id="subtitulo" value=" " size="30" class="subtitulos" placeholder="Subtitulo">
+			<input type="text" name="subtitulo" id="subtitulo" value="" size="30" class="subtitulos" placeholder="Subtitulo">
 
-			<div class="sub_p1">
-				<label for="contenido" class="prin">Contenido</label>
-				<textarea name="contenido" id="contenido" placeholder="Contenido" class="contenido"></textarea>
-			</div>
 
-			<div class="sub_p2">
-				<label for="imagen" class="prin">Imagen Subtema</label>
-				<div class="contenedor_image"></div>
-				<a href="">Agregar Imagen</a>
-			</div>
+			<label for="contenido" class="prin">Contenido</label>
+			<textarea name="contenido" id="contenido" placeholder="Contenido" class="contenido"></textarea>
+
 
 			<input type="submit" class="button-primary" id="add_subtema" data-post_id="$post_id"  value="Guardar Subtema">
 
@@ -95,6 +101,8 @@ meta_box_subpost;
 					<img src="" class="img_s">
 				<?php endif;?>
 				<h5><?php echo $value->post_title; ?></h5>
+				<?php $link_edit =  get_edit_post_link( $value->ID ); ?>
+				<a href="<?php echo $link_edit; ?>">Editar subtema</a>
 			</div>
 		<?php }
 	}
@@ -107,6 +115,7 @@ meta_box_subpost;
 
 	add_action('save_post', function($post_id){
 
+		global $post;
 
 		if ( ! current_user_can('edit_page', $post_id))
 			return $post_id;
@@ -139,6 +148,7 @@ meta_box_subpost;
 
 
 		if ( get_post_status ( $post_id ) == 'slide_post' ) {
+
 
 		}
 

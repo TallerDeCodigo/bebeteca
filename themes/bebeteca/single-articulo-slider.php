@@ -157,8 +157,8 @@ if(empty($post_child->posts) ){
 				</div>
 			</article>
 
-			<article class="entero">
-				comentarios falta maquetar
+			<article class="entero comentarios">
+				<div class="fb-comments" data-width="100%" data-href="<?php echo $permalink; ?>" data-numposts="5" data-colorscheme="light"></div>
 			</article>
 
 			<div class="entero divicion">

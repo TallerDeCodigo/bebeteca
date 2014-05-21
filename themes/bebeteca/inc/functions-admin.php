@@ -26,3 +26,4 @@ function ajax_create_subpost(){
 
 add_action('wp_ajax_ajax_create_subpost', 'ajax_create_subpost');
 add_action('wp_ajax_nopriv_ajax_create_subpost', 'ajax_create_subpost');
+
