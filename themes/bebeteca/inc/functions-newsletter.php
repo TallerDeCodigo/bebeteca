@@ -39,4 +39,4 @@ function send_email_to_user_with_token($subject, $from, $from_name, $content, $e
 	$sent = curl_exec($ch);
 }
 
-send_email_to_user_with_token('sfadadsf a', 'alex@hacemoscodigo.com', 'alex', 'hola alex', 'alex@losmaquiladores.com');
+// send_email_to_user_with_token('sfadadsf a', 'alex@hacemoscodigo.com', 'alex', 'hola alex', 'alex@losmaquiladores.com');
