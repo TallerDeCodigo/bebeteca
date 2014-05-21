@@ -7,8 +7,8 @@
 		<span class="titulo3">
 			Suscríbete al newsletter
 		</span>
-		<form class="forma-news" method="POST" action="<?php echo site_url('/newsletter/') ?>">
-			<input type="email" name="email" value="" placeholder="email@mail.com" >
+		<form action="http://www.us8.list-manage1.com/subscribe/post?u=534e428797ba0f0ecd9f3ba5a&amp;id=f522eb0cdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate forma-news" target="_blank" novalidate>
+			<input type="email" name="EMAIL" id="mce-EMAIL" value="" placeholder="email@mail.com" >
 			<input type="submit" value="Enviar">
 		</form>
 	</div>
