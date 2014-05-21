@@ -64,16 +64,7 @@
 		<span class="titulo4">
 			Lo más visto
 		</span>
-		<?php
-			if(function_exists('stats_get_csv')){
-		        $popular = stats_get_csv( 'postviews', array( 'days' => 2, 'limit' => 10 ) );
-		        echo '<ol>';
-		        foreach ( $popular as $p ) {
-		                printf('<li><a href="%s">%s</a>(%d)</li>', $p['post_permalink'], $p['post_title'], $p['views'] );
-		      }
-		        echo '</ol>';
-}
-		 ?>
+
 		<div class="caja-ultimos">
 			<img src="<?php echo THEMEPATH; ?>images/img1.jpg">
 			<h4>Disappointing Pregnancy Announcement</h4>

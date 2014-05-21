@@ -111,7 +111,7 @@
 						<li class="bg-dia-a-dia boton <?php nav_is('dia-a-dia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
-									<?php $term = get_term_by( 'name', 'dia-a-dia', 'category' );
+									<?php $term = get_term_by( 'slug', 'dia-a-dia', 'category' );
 									$termchildren = get_term_children( $term->term_id, 'category' );
 									foreach ( $termchildren as $child ) {
 										$term = get_term_by( 'id', $child, 'category' );
