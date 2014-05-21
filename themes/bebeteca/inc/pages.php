@@ -75,4 +75,28 @@
 		}
 
 
+		if( ! get_page_by_path('derechos-reservados') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Derechos Reservados',
+				'post_name'   => 'derechos-reservados',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+
+		if( ! get_page_by_path('alianzas-y-colaboradores') ){
+			$page = array(
+				'post_author' => 1,
+				'post_status' => 'publish',
+				'post_title'  => 'Alianzas y Colaboradores',
+				'post_name'   => 'alianzas-y-colaboradores',
+				'post_type'   => 'page'
+			);
+			wp_insert_post( $page, true );
+		}
+
+
 	});

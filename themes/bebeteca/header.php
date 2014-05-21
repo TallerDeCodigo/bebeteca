@@ -60,26 +60,195 @@
 				</div>
 				<nav id="main-menu">
 					<ul>
-						<li class="bg-embarazo boton <?php nav_is('embarazo');?>"><a href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>
+						<li class="bg-embarazo boton <?php nav_is('embarazo');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>
 							<div class="submenu border-radius">
-								<div class="subcategorias">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'embarazo', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_embarazo = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'embarazo') );
 
-								</div>
-								<div class="post-rel">
+								if ( $cat_embarazo->have_posts() ) : while( $cat_embarazo->have_posts() ) : $cat_embarazo->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
 
-								</div>
-								<div class="post-rel">
-
-								</div>
 							</div>
 						</li>
-						<li class="bg-nacimiento boton <?php nav_is('nacimiento');?>"><a href="<?php echo site_url('/categoria/nacimiento/'); ?>">Nacimiento</a></li>
-						<li class="bg-dia-a-dia boton <?php nav_is('dia-a-dia');?>"><a href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a></li>
-						<li class="bg-estimulacion boton <?php nav_is('estimulacion');?>"><a href="<?php echo site_url('/categoria/estimulacion/'); ?>">Estimulación</a></li>
-						<li class="bg-nutricion boton <?php nav_is('nutricion');?>"><a href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a></li>
-						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a></li>
-						<li class="bg-entrevistas boton <?php nav_is('entrevistas');?>"><a href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a></li>
-						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?>"><a href="<?php echo site_url('/promociones/'); ?>">Promociones</a></li>
+						<li class="bg-nacimiento boton <?php nav_is('nacimiento');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nacimiento/'); ?>">Nacimiento</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_nacimiento = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nacimiento') );
+
+								if ( $cat_nacimiento->have_posts() ) : while( $cat_nacimiento->have_posts() ) : $cat_nacimiento->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
+						<li class="bg-dia-a-dia boton <?php nav_is('dia-a-dia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'dia-a-dia', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_dia_a_dia = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'dia-a-dia') );
+
+								if ( $cat_dia_a_dia->have_posts() ) : while( $cat_dia_a_dia->have_posts() ) : $cat_dia_a_dia->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
+						<li class="bg-estimulacion boton <?php nav_is('estimulacion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/estimulacion/'); ?>">Estimulación</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_estimulacion = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'estimulacion') );
+
+								if ( $cat_estimulacion->have_posts() ) : while( $cat_estimulacion->have_posts() ) : $cat_estimulacion->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
+						<li class="bg-nutricion boton <?php nav_is('nutricion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'nutricion', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_nutricion = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nutricion') );
+
+								if ( $cat_nutricion->have_posts() ) : while( $cat_nutricion->have_posts() ) : $cat_nutricion->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
+						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'lactancia', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_lactancia = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'lactancia') );
+
+								if ( $cat_lactancia->have_posts() ) : while( $cat_lactancia->have_posts() ) : $cat_lactancia->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
+						<li class="bg-entrevistas boton <?php nav_is('entrevistas');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+									<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
+									$termchildren = get_term_children( $term->term_id, 'category' );
+									foreach ( $termchildren as $child ) {
+										$term = get_term_by( 'id', $child, 'category' );
+										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+									}?>
+								</ul>
+								<?php $cat_entrevistas = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'entrevistas') );
+
+								if ( $cat_entrevistas->have_posts() ) : while( $cat_entrevistas->have_posts() ) : $cat_entrevistas->the_post(); ?>
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
+						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?>"><a class="mnu-a" href="<?php echo site_url('/promociones/'); ?>">Promociones</a>
+							<div class="submenu border-radius">
+								<ul class="subcategorias">
+
+								</ul>
+								<?php $promociones = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('promociones'), 'post_status' => 'publish') );
+
+								if ( $promociones->have_posts() ) : while( $promociones->have_posts() ) : $promociones->the_post(); ?>
+
+									<div class="post-rel">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('articulos-gral'); ?>
+											<h4><?php the_title(); ?></h4>
+											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+										</a>
+									</div>
+
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</header>

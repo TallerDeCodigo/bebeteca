@@ -7,7 +7,7 @@
 		<span class="titulo3">
 			Suscríbete al newsletter
 		</span>
-		<form action="http://www.us8.list-manage1.com/subscribe/post?u=534e428797ba0f0ecd9f3ba5a&amp;id=f522eb0cdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate forma-news" target="_blank" novalidate>
+		<form action="http://www.us8.list-manage.com/subscribe/post?u=534e428797ba0f0ecd9f3ba5a&amp;id=f522eb0cdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate forma-news" target="_blank" novalidate>
 			<input type="email" name="EMAIL" id="mce-EMAIL" value="" placeholder="email@mail.com" >
 			<input type="submit" value="Enviar">
 		</form>
@@ -41,7 +41,7 @@
 	<div class="un-medio">
 		<p class="siguenos">Síguenos en redes</p>
 		<ul class="redes-siguenos">
-			<li class="fb">facebook</li>
+			<li class="fb active-red">facebook</li>
 			<li class="tw">twitter</li>
 			<li class="gm">goggle +</li>
 		</ul>
@@ -64,6 +64,16 @@
 		<span class="titulo4">
 			Lo más visto
 		</span>
+		<?php
+			if(function_exists('stats_get_csv')){
+		        $popular = stats_get_csv( 'postviews', array( 'days' => 2, 'limit' => 10 ) );
+		        echo '<ol>';
+		        foreach ( $popular as $p ) {
+		                printf('<li><a href="%s">%s</a>(%d)</li>', $p['post_permalink'], $p['post_title'], $p['views'] );
+		      }
+		        echo '</ol>';
+}
+		 ?>
 		<div class="caja-ultimos">
 			<img src="<?php echo THEMEPATH; ?>images/img1.jpg">
 			<h4>Disappointing Pregnancy Announcement</h4>

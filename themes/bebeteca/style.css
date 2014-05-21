@@ -137,10 +137,24 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu{position: relative; width: 100%; height: 26px; clear: both;}
 .content-header header nav#main-menu ul{ margin: 0 0 0 0; list-style: none;}
 .content-header header nav#main-menu ul li{margin-right: 11px; font-size: 16px; background:transparent; color: #999999; overflow: visible;}
-.content-header header nav#main-menu ul li:hover a, .active a{color: #fff !important;}
+.content-header header nav#main-menu ul li:hover a.mnu-a, .active a{color: #fff !important;}
 .content-header header nav#main-menu ul li a{text-decoration: none; color: #999999;}
-.content-header header nav#main-menu ul li .submenu{display: none; width: 960px; left: -12px; height: 200px; background: #fff; position: absolute;  -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888;}
-/*.content-header header nav#main-menu ul li:hover .submenu{display: block;}*/
+.content-header header nav#main-menu ul li .submenu{display: none; width: 960px; left: -12px; height: 200px; padding: 20px; background: #fff; position: absolute;  -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888; z-index: 999;}
+.content-header header nav#main-menu ul li:hover .submenu{display: block;}
+.content-header header nav#main-menu ul li .submenu .subcategorias{position: relative; overflow: hidden; width: 150px; height: auto; list-style: none; float: left;}
+.content-header header nav#main-menu ul li .submenu .subcategorias li{display: block; overflow: hidden; margin: 0; padding: 0; width: 100%; text-align: left; font-size: 16px; line-height: 20px; margin-bottom: 13px; font-weight: normal;}
+.content-header header nav#main-menu ul li .submenu .subcategorias li a{font-size: 16px;}
+.content-header header nav#main-menu ul li .submenu .post-rel{position: relative;overflow: hidden;float: left;width: 372px; height: auto; padding:0 10px; margin-left: 13px; }
+.content-header header nav#main-menu ul li .submenu .post-rel img{display: block; width: 149px; height: auto; margin-right: 9px; float: left;}
+.content-header header nav#main-menu ul li .submenu .post-rel h4{font-size: 18px; color:#9d65b4; text-align: left;}
+.content-header header nav#main-menu ul li .submenu .post-rel p{font-family: 'pt_sansregular'; font-size: 15px; font-weight: normal; text-align: left;}
+.bg-nacimiento .submenu{left: -122px !important;}
+.bg-dia-a-dia .submenu{left: -246px !important;}
+.bg-estimulacion .submenu{left: -346px !important;}
+.bg-nutricion .submenu{left: -482px !important;}
+.bg-lactancia .submenu{left: -591px !important;}
+.bg-entrevistas .submenu{left: -699px !important;}
+.bg-promociones .submenu{left: -819px !important;}
 .content-header header nav#main-menu ul li.bg-embarazo:hover, nav#main-menu ul li.bg-embarazo.active{background-color: #ae3079;}
 .content-header header nav#main-menu ul li.bg-nacimiento:hover, nav#main-menu ul li.bg-nacimiento.active{background-color: #c57fa6;}
 .content-header header nav#main-menu ul li.bg-dia-a-dia:hover, nav#main-menu ul li.bg-dia-a-dia.active{background-color: #4e9bab;}
@@ -274,6 +288,9 @@ aside .un-medio .redes-siguenos li{position: relative;overflow: hidden;width: 40
 aside .un-medio .redes-siguenos li.fb{background-position: -4px -75px; margin-left: 76px;}
 aside .un-medio .redes-siguenos li.tw{background-position: -45px -33px;}
 aside .un-medio .redes-siguenos li.gm{background-position: -88px -33px;}
+aside .un-medio .redes-siguenos li.fb.active-red{background-position: -4px -33px;}
+aside .un-medio .redes-siguenos li.tw.active-red{background-position: -45px -75px;}
+aside .un-medio .redes-siguenos li.gm.active-red{background-position: -88px -75px;}
 
 aside .un-medio .bt-siguenos{position: relative;overflow: hidden;width: 279px; height: 44px; border-top: 1px solid #58acb3; margin: 20px 10px; padding: 16px; text-align: center;}
 aside .un-medio .bt-siguenos span.triangulo{position: absolute; width: 19px; height: 16px; top: 0; z-index: 999; background-image: url(images/iconos_sociales.png); background-position: -129px -34px;}
@@ -343,8 +360,8 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 
 #form_contacto{display: block;overflow: hidden; width: 100%; padding:20px; text-align: center;}
 #form_contacto input{width: 381px; height: 37px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 0 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic; margin-bottom: 20px; }
-#form_contacto textarea{width: 381px; height: 150px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 10px 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic;resize:none;}
-#form_contacto input[type=submit] {width: 227px; height: 43px; text-align: center; font-family: 'arvoregular'; font-size: 21px; font-weight: normal; background-color: #a98eb4; color: #fff;}
+#form_contacto textarea{width: 381px; height: 150px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 10px 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic;resize:none; }
+#form_contacto input[type=submit] {width: 227px; height: 43px; text-align: center; font-family: 'arvoregular'; font-size: 21px; font-weight: normal; background-color: #a98eb4; color: #fff; margin-top: 20px;  }
 
 .no-padding{padding: 0 !important;}
 footer{position: relative;overflow: hidden;width: 100%; height: auto; background-color: #9b65b3; margin-top: 57px; padding-bottom: 20px;}

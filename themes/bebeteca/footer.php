@@ -9,7 +9,7 @@
 						<li class="gm"><a href=""></a></li>
 					</ul>
 					<p><a href="<?php echo site_url('/terminos-y-condiciones/'); ?>">Términos y condiciones</a></p>
-					<p><a href="">Alianzas y colaboradores</a></p>
+					<p><a href="<?php echo site_url('/alianzas-y-colaboradores/'); ?>">Alianzas y colaboradores</a></p>
 					<p><a href="<?php echo site_url('/contacto/'); ?>">Contáctanos</a></p>
 				</div>
 				<div class="footer-partesitas">
@@ -100,7 +100,7 @@
 					</ul>
 				</div>
 				<p class="sueltos"><a href="<?php echo site_url('/aviso-privacidad/'); ?>">Aviso de privacidad</a></p>
-				<p class="sueltos"><a href="">La Bebeteca, algunos derechos reservados, 2014</a></p>
+				<p class="sueltos"><a href="<?php echo site_url('/derechos-reservados/'); ?>">La Bebeteca, algunos derechos reservados, 2014</a></p>
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
