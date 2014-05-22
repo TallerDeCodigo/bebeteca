@@ -3,6 +3,12 @@
 		$term_name = $terms[0]->name;
 		$term_slug = $terms[0]->slug;
 	}else{
+		$term_name = '';
+		$term_slug = '';
+	}
+
+	$postype = get_post_type(get_the_ID());
+	if ($postype == 'promociones') {
 		$term_name = 'Promociones';
 		$term_slug = 'promociones';
 	}
