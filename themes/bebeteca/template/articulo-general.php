@@ -17,7 +17,7 @@
 	<article class="entero article-gral">
 		<a href="<?php the_permalink(); ?>">
 			<?php if ($term_slug == 'entrevistas'): ?><img class="play_2" src="<?php echo THEMEPATH; ?>images/play_2.png"><?php endif; ?>
-			<span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span>
+			<?php if ($term_name != ''): ?><span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span><?php endif; ?>
 			<?php the_post_thumbnail('articulos-gral'); ?>
 			<h4><?php the_title(); ?></h4>
 			<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
