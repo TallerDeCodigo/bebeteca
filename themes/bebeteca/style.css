@@ -359,7 +359,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article.autor-home .info-autor h4{font-size: 14px;}
 .single article.autor-home .info-autor p.rol{font-size: 12px; margin-bottom: 10px;}
 
-.single article.slide img{width: 300px; height: 226px;}
+.single article.slide img{width: 300px; height: 224px;}
 .single article.slide .slide_header{position: relative;overflow: visible;float: left; width: 276px; margin-right: 18px;}
 .single article.slide .slide_header span{font-family: 'pt_sansregular'; font-size: 16px; color: #b73ba1; font-style: italic;}
 .single article.slide .texto-slide{position: relative; overflow: hidden;width: 276px; height: auto;}

@@ -103,8 +103,8 @@ if(empty($post_child->posts) ){
 			</div>
 			<article class="entero slide">
 				<div class="slide_header">
-					<?php echo get_the_post_thumbnail( $post_slide_ID, 'slider-home'); ?>
-					<span>Everything you need to check off your list before that D-day dawns.</span>
+					<?php echo get_the_post_thumbnail( $post_slide_ID, 'medio-home'); ?>
+					<span><?php echo get_post_meta($post_slide_ID, 'tagline', true); ?></span>
 				</div>
 
 				<div class="texto-slide">

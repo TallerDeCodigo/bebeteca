@@ -29,6 +29,7 @@
 
 			$status_slide_post = false;
 		}else{
+			add_meta_box( 'meta-box-tagline', 'Tagline', 'show_metabox_tagline', 'articulo-slider', 'side', 'high' );
 			$status_slide_post = true;
 		}
 	});
@@ -64,6 +65,18 @@
 			<p class="howto" style="font-size:11px; margin: 0.2em 0 1.5em 0;">http://www.youtube.com/watch?v=<strong>rT_OmTMwvZI</strong></p>
 
 meta_box_post_video;
+	}
+
+
+	function show_metabox_tagline($post) {
+		$tagline   = get_post_meta($post->ID, 'tagline', true);
+		wp_nonce_field(__FILE__, '_articulo_tagline_nonce');
+		echo <<< meta_box_tagline
+
+			<input type="text" name="tagline" id="tagline" value="$tagline" class="widefat">
+
+
+meta_box_tagline;
 	}
 
 
@@ -144,6 +157,11 @@ meta_box_subpost;
 			if (isset($_POST['id_youtube']) ) {
 					update_post_meta($post_id, 'id_youtube', $_POST['id_youtube']);
 			}
+		}
+
+		if( isset($_POST['tagline']) and check_admin_referer( __FILE__, '_articulo_tagline_nonce' ) ){
+
+			update_post_meta($post_id, 'tagline', $_POST['tagline']);
 		}
 
 
