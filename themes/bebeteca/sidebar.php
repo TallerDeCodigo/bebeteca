@@ -13,7 +13,6 @@
 		</form>
 	</div>
 
-	<?php if (! is_home()) :?>
 	<div class="un-medio pb">
 		<span class="titulo3 verde">
 			Últimos Artículos
@@ -31,8 +30,6 @@
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 
 	</div>
-
-<?php endif; ?>
 
 	<div class="banner-aside">
 
