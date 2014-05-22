@@ -335,7 +335,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article img{width: 620px; height: auto; margin-top: -25px; margin-left: -25px;}
 .single article iframe{margin-top: -25px;margin-left: -25px;}
 .single article h3{color: #9d65b4; font-size: 18px;}
-.single article p, .single article ul li, .single article ul ol, .single article span{font-family: 'pt_sansregular'; font-size: 15px; color: #808080; line-height: 25px;}
+.single article p, .single article ul li, .single article ol li, .single article span{font-family: 'pt_sansregular'; font-size: 15px; color: #808080; line-height: 25px;}
 .single article p{margin-bottom: 30px;}
 .single article blockquote{clear: both; width: 435px; display: block; overflow: hidden; margin: 0 auto 30px auto; padding: 12px 66px; background: url(images/fondo_blo.png) no-repeat; font-size: 22px !important; color: #9d65b4 !important; text-align: center;}
 .single article blockquote p{ font-size: 22px !important; color: #9d65b4 !important; margin-bottom: 0px;}
