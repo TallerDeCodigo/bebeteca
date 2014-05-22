@@ -67,7 +67,7 @@ if(empty($post_child->posts) ){
 	<div class="main single">
 		<section>
 
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/categoria/'.$term_slug.'/') ?>"><?php echo $term_name; ?></a>/<a href="<?php echo $permalink; ?>"><?php echo $titulo; ?></a></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/categoria/'.$term_slug.'/') ?>"><?php echo $term_name; ?></a> / <a href="<?php echo $permalink; ?>"><?php echo $titulo; ?></a></span>
 			<h1><?php echo $titulo; ?></h1>
 			<span class="autor">Autor: <?php the_author_posts_link(); ?></span>
 
