@@ -1,5 +1,5 @@
 <?php get_header(); the_post();
-if (isset($_POST['email'])) $news_resp = save_mail_for_newsletter($_POST['email']);
+// if (isset($_POST['email'])) $news_resp = save_mail_for_newsletter($_POST['email']);
 $news_resp = isset($news_resp) ? $news_resp : '';
 ?>
 
@@ -26,12 +26,7 @@ $news_resp = isset($news_resp) ? $news_resp : '';
 				</div>
 			</div>
 			<article class="entero news">
-				<?php if ($news_resp == 1) :?>
 					<blockquote>¡Gracias por registrarte<br /> a nuestro newsletter!</blockquote>
-				<?php else: ?>
-					<blockquote>¡Ya estabas registrado<br /> a nuestro newsletter!</blockquote>
-				<?php endif; ?>
-
 				<img src="<?php echo THEMEPATH; ?>images/logo.png">
 
 			</article>

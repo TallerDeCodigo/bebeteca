@@ -349,69 +349,13 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 
 
-
+	/**
+	 * DEVUELVE LOS POST HIJOS DE LOS SLIDE
+	 */
 	function return_posts_slide($post_parent_id){
 		return new WP_Query(array( 'posts_per_page' => -1, 'post_type' => array('articulo-slider'), 'post_parent' => $post_parent_id, 'post_status'=>'slide_post', 'orderby' => 'ID', 'order' => 'ASC' ) );
 
 	}
-
-	// CREAR TABLA PARA GUARDAR EL MAIL PARA NEWSLETTER //////////////////////////////////////////////////////
-
-	add_action('init', function(){
-		global $wpdb;
-		$wpdb->query(
-			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}newsletter (
-				news_id bigint(20) NOT NULL AUTO_INCREMENT,
-				email VARCHAR(40) NOT NULL DEFAULT '',
-				PRIMARY KEY (email),
-				UNIQUE KEY `news_id` (`news_id`)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
-		);
-
-	});
-
-	/**
-	 * GUARDA MAIL PARA ENVIO DE NEWSLETTER
-	 */
-	function save_mail_for_newsletter($email){
-		global $wpdb;
-		$table_name = $wpdb->prefix . "newsletter";
-		return $wpdb->insert(
-				$table_name,
-				array(
-					'email' => $email,
-				),
-				array(
-					'%s',
-				)
-			);
-	}
-
-
-
-
-
-
-	// CREAR TABLA PARA GUARDAR CONTACTOS //////////////////////////////////////////////////////
-
-	add_action('init', function(){
-		global $wpdb;
-		$wpdb->query(
-			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}contactos (
-				contact_id bigint(20) NOT NULL AUTO_INCREMENT,
-				nombre VARCHAR(40) NOT NULL DEFAULT '',
-				email VARCHAR(40) NOT NULL DEFAULT '',
-				mensaje VARCHAR(700) NOT NULL DEFAULT '',
-				fecha datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-				PRIMARY KEY (email),
-				UNIQUE KEY `contact_id` (`contact_id`)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
-		);
-
-	});
-
-
-
 
 
 
@@ -424,23 +368,21 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$email   = isset($_POST['email']) ? $_POST['email'] : '';
 		$mensaje   = isset($_POST['mensaje']) ? $_POST['mensaje'] : '';
 
-		global $wpdb;
-		$table_name = $wpdb->prefix . "contactos";
-		$wpdb->insert(
-				$table_name,
-				array(
-					'nombre' => $nombre,
-					'email'  => $email,
-					'mensaje'  => $mensaje,
-					'fecha'  => date('Y-m-d'),
-				),
-				array(
-					'%s',
-					'%s',
-					'%s',
-					'%s',
-				)
-			);
+		// Create post object
+		global $user_ID;
+		$new_post = array(
+			'post_title'   => $nombre,
+			'post_content' => $mensaje,
+			'post_status'  => 'draft',
+			'post_date'    => date('Y-m-d H:i:s'),
+			'post_type'    => 'contactos'
+		);
+
+		$post_id = wp_insert_post($new_post);
+
+		if ($post_id) {
+			update_post_meta($post_id, 'email_contactos', $email);
+		}
 
 		$fecha = date('Y-m-d');
 		$mensaje_mail = "Se a agregado un nuevo contacto \n\rNombre: $nombre \n\rEmail: $email \n\rFecha: $fecha \n\rMensaje: $mensaje";

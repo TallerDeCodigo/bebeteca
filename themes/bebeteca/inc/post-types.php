@@ -65,9 +65,39 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
 		register_post_type( 'promociones', $args );
+
+
+		$labels = array(
+			'name'          => 'Contactos',
+			'singular_name' => 'contacto',
+			'add_new'       => 'Nueva contacto',
+			'add_new_item'  => 'Nueva contacto',
+			'edit_item'     => 'Editar contacto',
+			'new_item'      => 'Nueva contacto',
+			'all_items'     => 'Todas',
+			'view_item'     => 'Ver contacto',
+			'search_items'  => 'Buscar contacto',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Contactos'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'contactos' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'contactos', $args );
 
 	});

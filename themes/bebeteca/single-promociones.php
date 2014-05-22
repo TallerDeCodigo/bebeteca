@@ -46,13 +46,13 @@
 				<?php if (get_post_meta($post->ID, 'id_youtube', true) OR get_post_meta($post->ID, 'id_vimeo', true) ):
 
 					if(get_post_meta($post->ID, 'id_vimeo', true)): ?>
-						<iframe src="http://player.vimeo.com/video/<?php echo get_post_meta($post->ID, 'id_vimeo', true); ?>?color=00a6ce" width="620" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<iframe src="http://player.vimeo.com/video/<?php echo get_post_meta($post->ID, 'id_vimeo', true); ?>?color=00a6ce" width="620" height="340" class="margin-botton-img" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 					<?php elseif(get_post_meta($post->ID, 'id_youtube', true)): ?>
-						<iframe width="620" height="340" src="http://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'id_youtube', true); ?>" frameborder="0" allowfullscreen></iframe>
+						<iframe width="620" height="340" class="margin-botton-img" src="http://www.youtube.com/embed/<?php echo get_post_meta($post->ID, 'id_youtube', true); ?>" frameborder="0" allowfullscreen></iframe>
 					<?php endif;
 
 				else:
-					the_post_thumbnail('slider-home');
+					the_post_thumbnail('slider-home', array('class' => 'margin-botton-img'));
 				endif;
 
 				the_content();?>

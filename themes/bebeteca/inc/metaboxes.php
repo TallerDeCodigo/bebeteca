@@ -27,6 +27,8 @@
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
 
+			add_meta_box( 'meta-box-email_contacto', 'Email contacto', 'show_metabox_email_contacto', 'contactos', 'side', 'high' );
+
 			$status_slide_post = false;
 		}else{
 			add_meta_box( 'meta-box-tagline', 'Tagline', 'show_metabox_tagline', 'articulo-slider', 'side', 'high' );
@@ -80,6 +82,18 @@ meta_box_tagline;
 	}
 
 
+	function show_metabox_email_contacto($post) {
+		$email_contactos   = get_post_meta($post->ID, 'email_contactos', true);
+		wp_nonce_field(__FILE__, '_articulo_email_contactos_nonce');
+		echo <<< meta_box_email_contactos
+
+			<input type="text" name="email_contactos" id="email_contactos" value="$email_contactos" class="widefat">
+
+
+meta_box_email_contactos;
+	}
+
+
 	function show_metabox_subtema($post) {
 		$post_id = $post->ID;
 		wp_nonce_field(__FILE__, '_articulo_genear_subtema_nonce');
@@ -88,10 +102,18 @@ meta_box_tagline;
 			<label for="subtitulo" class="prin">Subtitulo</label>
 			<input type="text" name="subtitulo" id="subtitulo" value="" size="30" class="subtitulos" placeholder="Subtitulo">
 
+			<div class="columna-1-subtema">
+				<label for="contenido" class="prin">Contenido</label>
+				<textarea name="contenido" id="contenido" placeholder="Contenido" class="contenido"></textarea>
+			</div>
+			<div class="columna-2-subtema">
+				<div class="contenedor-imagen">
+				</div>
 
-			<label for="contenido" class="prin">Contenido</label>
-			<textarea name="contenido" id="contenido" placeholder="Contenido" class="contenido"></textarea>
+				<input type="submit" class="button-primary" id="add_image" value="Imagen Subtema">
+				<input type="file" name="foto-subtema" id="subir-foto-subtema"  multiple accept="image/*">
 
+			</div>
 
 			<input type="submit" class="button-primary" id="add_subtema" data-post_id="$post_id"  value="Guardar Subtema">
 
@@ -164,11 +186,11 @@ meta_box_subpost;
 			update_post_meta($post_id, 'tagline', $_POST['tagline']);
 		}
 
+		if( isset($_POST['email_contactos']) and check_admin_referer( __FILE__, '_articulo_email_contactos_nonce' ) ){
 
-		if ( get_post_status ( $post_id ) == 'slide_post' ) {
-
-
+			update_post_meta($post_id, 'email_contactos', $_POST['email_contactos']);
 		}
+
 
 
 
