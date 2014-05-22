@@ -4,9 +4,31 @@
 		<section>
 			<?php if ( have_posts() ) : ?>
 				<article class="entero">
-						<!-- <span class="titulo1 pleca-"></span> -->
 
 					<div id="slider-principal" class="slider-principal">
+						<ul class="bullets clearfix pleca">
+							<?php if (have_posts() ) : while( have_posts() ) : the_post();
+							$terms  = wp_get_post_terms( get_the_ID(), 'category');
+							if (!empty($terms)) {
+								$term_name = $terms[0]->name;
+								$term_slug = $terms[0]->slug;
+							}else{
+								$term_name = '';
+								$term_slug = '';
+							}
+
+							$postype = get_post_type(get_the_ID());
+							if ($postype == 'promociones') {
+								$term_name = 'Promociones';
+								$term_slug = 'promociones';
+							}?>
+								<?php if ($term_name != ''): ?>
+									<li class="bullet">
+										<span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span>
+										<a href="#" ></a>
+									</li><?php endif; ?>
+							<?php endwhile; endif; wp_reset_postdata(); ?>
+						</ul>
 						<a class="flecha_carrusel prev" href="#"></a>
 						<div class="viewport">
 							<ul class="overview">
@@ -31,11 +53,7 @@
 							</ul>
 						</div>
 						<a class="flecha_carrusel next" href="#"></a>
-						<ul class="bullets clearfix">
-							<?php if (have_posts() ) : while( have_posts() ) : the_post(); ?>
-								<li><a href="#" class="bullet"></a></li>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
-						</ul>
+
 
 					</div>
 

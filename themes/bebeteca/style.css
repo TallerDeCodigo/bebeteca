@@ -206,6 +206,9 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .main section .bullets li{ display: inline-block; width: 15px; height: 15px; margin: 9px 2px;}
 .main section .bullets li a{background: url(images/iconos.png); background-position: -33px -11px; width: 15px; height: 15px; display: block; }
 .main section .bullets li a.active{background: url(images/iconos.png); background-position: -12px -10px;}
+.bullets.pleca li.active a{background: url(images/iconos.png); background-position: -12px -10px;}
+.bullets.pleca li span{display: none; left: -249px !important;top: -307px !important;}
+.bullets.pleca li.active span.titulo1{ display: inline; top: -45px; left: 0;}
 .main section .footer-slide{position: relative;overflow: hidden;width: 100%; height: 110px; background-color: #fff; padding: 16px 22px; margin-top: -3px;}
 .main section .footer-slide h4{font-size: 22px; font-weight: normal; color: #9e65b4; margin-bottom: 7px;}
 .main section .footer-slide p{color: #808080; font-size: 15px; font-family: 'pt_sansregular';}
