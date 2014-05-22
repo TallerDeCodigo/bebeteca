@@ -47,7 +47,7 @@
 		    $slider_categoria = get_post_meta( $post->ID, 'slider_categoria', true );
 
 			$checked = $slider_categoria ? 'checked' : '';?>
-            <input type="checkbox" name="slider_categoria" id="slider_categoria" value=""  <?php echo $checked; ?> /> Check slider categoria</label>
+            <input type="checkbox" name="slider_categoria" id="slider_categoria" value="1"  <?php echo $checked; ?> /> Check slider categoria</label>
 	<?php }
 
 	// Callback function to show fields in meta box Opciones de video
@@ -109,7 +109,7 @@ meta_box_email_contactos;
 			<div class="columna-2-subtema">
 				<label for="add_image" class="prin">Imagen Subtema</label>
 				<div id="contenedor-imagen">
-					<img src="" >
+					<img src="" />
 				</div>
 
 				<input type="submit" class="button-primary" id="add-image-post" value="Asignar Imagen">
@@ -169,6 +169,8 @@ meta_box_subpost;
 		// Guardar correctamente los checkboxes
 		if ( isset($_POST['slider_categoria'])){
 			update_post_meta($post_id, 'slider_categoria', $_POST['slider_categoria']);
+		}else if ( ! defined('DOING_AJAX') ){
+			delete_post_meta($post_id, 'slider_categoria', $_POST['slider_categoria']);
 		}
 
 		/// VIDEOS

@@ -47,7 +47,7 @@
 				<div class="top-header">
 					<span>Visítanos</span>
 					<ul class="redes-sociales">
-						<li class="b-fb"><a href="">faceboock</a></li>
+						<li class="b-fb"><a href="https://www.facebook.com/labbteca">faceboock</a></li>
 						<li class="b-tw"><a href="">twitter</a></li>
 						<li class="b-gm"><a href="">google +</a></li>
 					</ul>

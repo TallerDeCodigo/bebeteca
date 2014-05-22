@@ -4,7 +4,7 @@
 				<div class="footer-parte1">
 					<img src="<?php echo THEMEPATH; ?>images/logo-footer.png">
 					<ul class="redes-footer">
-						<li class="fb"><a href=""></a></li>
+						<li class="fb"><a href="https://www.facebook.com/labbteca"></a></li>
 						<li class="tw"><a href=""></a></li>
 						<li class="gm"><a href=""></a></li>
 					</ul>
