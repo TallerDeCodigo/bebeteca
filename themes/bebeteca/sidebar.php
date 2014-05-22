@@ -24,6 +24,7 @@
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail('articulos-side'); ?>
 						<h4><?php the_title(); ?></h4>
+						<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
 					</a>
 				</div>
 

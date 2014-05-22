@@ -280,7 +280,8 @@ aside .un-medio input:-moz-placeholder, #form_contacto input:-moz-placeholder { 
 
 aside .un-medio .caja-ultimos{position: relative;overflow: hidden; width: 261px; height: auto;margin-top: 22px; margin-left: 18px;}
 aside .un-medio .caja-ultimos img{width: 81px; height: 61px; margin-right: 20px; float: left;}
-aside .un-medio .caja-ultimos h4{font-size: 15px; color: #9b65b3; font-weight: normal; }
+aside .un-medio .caja-ultimos h4{font-size: 15px; color: #9b65b3; font-weight: normal; margin-bottom: 5px; }
+aside .un-medio .caja-ultimos p{ color: #808080;}
 
 aside .un-medio p.siguenos{color: #8bd4da;  font-family: 'simplicitymedium'; margin-top: 20px; width: 100%; display: block; text-align: center; font-size: 22px;} /*cambiar font*/
 aside .un-medio .redes-siguenos{margin: 10px 0 0 0; padding: 0; list-style: none; display: block;overflow: hidden;}
