@@ -19,3 +19,7 @@ label.prin{clear: both; display: block; font-family: 'arvoregular'; font-size: 1
 .caja_post{position: relative;overflow: hidden;width: 100%; margin-bottom: 5px;}
 .caja_post .img_s{width: 60px; height: 60px; margin-right: 5px; float: left;}
 .caja_post h5{margin-top: 0px; font-family: 'arvoregular'; font-size: 13px; margin-bottom: 5px;}
+
+
+#subir-foto-user{display: none;}
+.image-user{position: relative;overflow: hidden;width: 150px; height: 150px; margin: 0; background: url(../images/cargar-imagen.jpg) no-repeat center center #000; border: 1px solid #949393; cursor: pointer;}

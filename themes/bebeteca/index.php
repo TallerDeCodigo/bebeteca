@@ -104,8 +104,9 @@
 				$total  = count($users) - 1;
 				$select = rand(0, $total);
 				$user_id =  $users[$select]->ID;
-				?>
-				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+
+				echo vew_image_user($user_id);?>
+
 				<div class="info-autor">
 					<h4><?php echo $users[$select]->user_login; ?></h4>
 					<p class="rol">Editora</p>

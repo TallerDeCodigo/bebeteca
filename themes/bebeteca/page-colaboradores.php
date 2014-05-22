@@ -42,7 +42,7 @@
 			if ( ! empty( $user_query->results ) ) {
 				foreach ( $user_query->results as $user ) {?>
 					<article class="entero autor-home">
-						<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+						<?php echo vew_image_user($user->ID); ?>
 						<div class="info-autor">
 							<h4><?php echo $user->display_name; ?></h4>
 							<p class="rol">Editor</p>

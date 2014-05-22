@@ -41,7 +41,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 			</div>
 
 			<article class="entero autor-home single-autor">
-				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+				<?php echo vew_image_user($user_id); ?>
 				<div class="sigue-colaborador">
 					<span>Sigue a este colaborador</span>
 					<ul>

@@ -2,6 +2,7 @@
 $terms  = wp_get_post_terms( get_the_ID(), 'category');
 $term_name = $terms[0]->name;
 $term_slug = $terms[0]->slug;
+
 ?>
 
 	<!-- Insert content here -->
@@ -87,7 +88,7 @@ $term_slug = $terms[0]->slug;
 			</article>
 
 			<article class="entero autor-home">
-				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+				<?php echo vew_image_user($post->post_author); ?>
 				<div class="info-autor">
 					<h4><?php the_author_meta( 'user_login'); ?></h4>
 					<p class="rol">Editora /-- integrar --/</p>

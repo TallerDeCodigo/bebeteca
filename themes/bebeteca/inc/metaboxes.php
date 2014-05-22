@@ -44,7 +44,7 @@
 		    $slider_categoria = get_post_meta( $post->ID, 'slider_categoria', true );
 
 			$checked = $slider_categoria ? 'checked' : '';?>
-            <input type="checkbox" name="slider_categoria" id="slider_categoria" value="1"  <?php echo $checked; ?> /> Check slider categoria</label>
+            <input type="checkbox" name="slider_categoria" id="slider_categoria" value=""  <?php echo $checked; ?> /> Check slider categoria</label>
 	<?php }
 
 	// Callback function to show fields in meta box Opciones de video

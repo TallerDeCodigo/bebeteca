@@ -145,7 +145,7 @@ if(empty($post_child->posts) ){
 
 			</article>
 			<article class="entero autor-home">
-				<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
+				<?php echo vew_image_user($post->post_author); ?>
 				<div class="info-autor">
 					<h4><?php echo get_the_author_meta( 'user_login'); ?></h4>
 					<p class="rol">Editora /-- integrar --/</p>
