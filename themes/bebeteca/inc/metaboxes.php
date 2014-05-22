@@ -107,10 +107,12 @@ meta_box_email_contactos;
 				<textarea name="contenido" id="contenido" placeholder="Contenido" class="contenido"></textarea>
 			</div>
 			<div class="columna-2-subtema">
-				<div class="contenedor-imagen">
+				<label for="add_image" class="prin">Imagen Subtema</label>
+				<div id="contenedor-imagen">
+					<img src="" >
 				</div>
 
-				<input type="submit" class="button-primary" id="add_image" value="Imagen Subtema">
+				<input type="submit" class="button-primary" id="add-image-post" value="Asignar Imagen">
 				<input type="file" name="foto-subtema" id="subir-foto-subtema"  multiple accept="image/*">
 
 			</div>

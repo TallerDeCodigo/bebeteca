@@ -6,16 +6,27 @@
 
 		$('#add_subtema').on('click', function (event) {
 			event.preventDefault();
-			var titulo    = $('#subtitulo').val();
-			var contenido = $('#contenido').val();
-			var post_id   = $(this).data('post_id');
-			console.log(titulo);
+			var titulo     = $('#subtitulo').val();
+			var contenido  = $('#contenido').val();
+			var post_id    = $(this).data('post_id');
+			var data_image = $('#contenedor-imagen img').attr('src');
+
+			if ( data_image != '') {
+				console.log(data_image);
+				var image  = data_imagen_procesada(data_image);
+			}else{
+				var image = 'no-image';
+				console.log(image);
+			};
+
+
 			if (titulo != '') {
 
 				$.post(ajax_url, {
 					titulo:    titulo,
 					contenido: contenido,
 					postid:   post_id,
+					image: image,
 					action: 'ajax_create_subpost'
 				}, 'json').done(function (data) {
 					location.reload();
@@ -27,6 +38,16 @@
 
 		});
 
+
+		/**
+		 * Procesa imagen para enviar por ajax
+		 */
+		function data_imagen_procesada(data_image){
+				var data  = data_image.split(','),
+					image = data[1];
+
+				return image;
+		}
 
 		if (is_slide_post == '1') {
 			$('#publishing-action #publish').attr('name', 'slide_post');
@@ -76,6 +97,36 @@
 		$('#subir-foto-user').live('change', function (e) {
 
 			display_file( this );
+
+		});
+
+
+
+
+		// GUARDAR IMAGEN SUB POST ////////////////////////////////////////////////////////////////
+
+
+		/**
+		 * Despliega la imagen selecionada en el container indicado
+		 */
+		function display_file_post (input, container) {
+			var reader = new FileReader();
+			reader.onload = function(e){
+				$('#contenedor-imagen').empty().append('<img src="'+ e.target.result +'">');
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+
+
+
+		$('#add-image-post').on('click', function (event) {
+			event.preventDefault();
+			$('#subir-foto-subtema').trigger('click');
+		});
+
+		$('#subir-foto-subtema').live('change', function (e) {
+
+			display_file_post (this);
 
 		});
 

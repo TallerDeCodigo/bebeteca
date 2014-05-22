@@ -21,6 +21,10 @@ function ajax_create_subpost(){
 
 	$post_id = wp_insert_post($new_post);
 
+	if ($post_id AND $image != 'no-image') {
+		guardar_imagen_subtema($post_id, $image, $titulo);
+	}
+
 	wp_send_json($post_id);
 }
 
@@ -98,6 +102,45 @@ function guardar_imagen() {
 
 add_action('wp_ajax_guardar_imagen', 'guardar_imagen');
 add_action('wp_ajax_nopriv_guardar_imagen', 'guardar_imagen');
+
+
+
+// RESIVE VALORES PARA GUARDAR LA IMAGEN DEL SUBTEMA ////////////////////////////////////
+
+function guardar_imagen_subtema($post_id, $image, $image_name) {
+	global $wpdb;
+
+	$file       = saveAttachmentData($image, $image_name);
+	$imagen     = pathinfo($file);
+
+	$wp_upload_dir = wp_upload_dir();
+
+	$attachment = array(
+		'post_status'    => 'inherit',
+		'post_mime_type' => "image/{$imagen['extension']}",
+		'post_type'      => 'attachment',
+		'post_parent'    => $post_id,
+		'post_title'     => preg_replace('/\.[^.]+$/', '', $imagen['basename']),
+
+	);
+
+	$dir = substr($wp_upload_dir['subdir'], 1);
+	$img = $dir .'/'. $imagen['basename'];
+
+	$attach_id = wp_insert_attachment( $attachment, $img);
+
+	if($attach_id){
+		// you must first include the image.php file for the function wp_generate_attachment_metadata() to work
+		require_once(ABSPATH . 'wp-admin/includes/image.php');
+		$image_file = $wp_upload_dir['path'] .'/'. $imagen['basename'];
+		$attach_data = wp_generate_attachment_metadata( $attach_id, $image_file );
+		$_POST['attach_id'] = $attach_id;
+		wp_update_attachment_metadata( $attach_id, $attach_data );
+		set_post_thumbnail( $post_id, $attach_id );
+
+	}
+
+}
 
 
 // SAVE ATTACHMENT DATA //////////////////////////////////////////////////////////////
