@@ -23,3 +23,4 @@ label.prin{clear: both; display: block; font-family: 'arvoregular'; font-size: 1
 
 #subir-foto-user{display: none;}
 .image-user{position: relative;overflow: hidden;width: 150px; height: 150px; margin: 0; background: url(../images/cargar-imagen.jpg) no-repeat center center #000; border: 1px solid #949393; cursor: pointer;}
+.image-user img{width: 150px; height: 150px;}

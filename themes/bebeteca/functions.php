@@ -79,7 +79,7 @@ $status_slide_post = '';
 
 
 	add_filter( 'show_admin_bar', function($content){
-		return ( current_user_can('administrator') ) ? $content : false;
+		return ( current_user_can('administrator') ) ? $content : true;
 	});
 
 
