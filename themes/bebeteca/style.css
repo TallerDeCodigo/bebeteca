@@ -302,24 +302,29 @@ aside .un-medio .caja-ultimos img{width: 81px; height: 61px; margin-right: 20px;
 aside .un-medio .caja-ultimos h4{font-size: 15px; color: #9b65b3; font-weight: normal; margin-bottom: 5px; }
 aside .un-medio .caja-ultimos p{ color: #808080;}
 
-aside .un-medio p.siguenos{color: #8bd4da;  font-family: 'simplicitymedium'; margin-top: 20px; width: 100%; display: block; text-align: center; font-size: 22px;} /*cambiar font*/
-aside .un-medio .redes-siguenos{margin: 10px 0 0 0; padding: 0; list-style: none; display: block;overflow: hidden;}
-aside .un-medio .redes-siguenos li{position: relative;overflow: hidden;width: 40px; height: 40px; float: left; margin-left: 15px; text-indent: -9999px; background-image: url(images/iconos_sociales.png); cursor: pointer;}
-aside .un-medio .redes-siguenos li.fb{background-position: -4px -75px; margin-left: 76px;}
-aside .un-medio .redes-siguenos li.tw{background-position: -45px -33px;}
-aside .un-medio .redes-siguenos li.gm{background-position: -88px -33px;}
-aside .un-medio .redes-siguenos li.fb.active-red{background-position: -4px -33px;}
-aside .un-medio .redes-siguenos li.tw.active-red{background-position: -45px -75px;}
-aside .un-medio .redes-siguenos li.gm.active-red{background-position: -88px -75px;}
+p.siguenos{color: #8bd4da;  font-family: 'simplicitymedium'; margin-top: 20px; width: 100%; display: block; text-align: center; font-size: 22px;} /*cambiar font*/
+.redes-siguenos{margin: 10px 0 0 0; padding: 0; list-style: none; display: block;overflow: hidden;}
+.redes-siguenos li{position: relative;overflow: hidden;width: 40px; height: 40px; float: left; margin-left: 15px; text-indent: -9999px; background-image: url(images/iconos_sociales.png); cursor: pointer;}
+.redes-siguenos li.fb{background-position: -4px -75px; margin-left: 76px;}
+.redes-siguenos li.tw{background-position: -45px -33px;}
+.redes-siguenos li.gm{background-position: -88px -33px;}
+.redes-siguenos li.fb.active-red{background-position: -4px -33px;}
+.redes-siguenos li.tw.active-red{background-position: -45px -75px;}
+.redes-siguenos li.gm.active-red{background-position: -88px -75px;}
 
-aside .un-medio .bt-siguenos{position: relative;overflow: hidden;width: 279px; height: 44px; border-top: 1px solid #58acb3; margin: 20px 10px; padding: 16px; text-align: center;}
-aside .un-medio .bt-siguenos span.triangulo{position: absolute; width: 19px; height: 16px; top: 0; z-index: 999; background-image: url(images/iconos_sociales.png); background-position: -129px -34px;}
-aside .un-medio .bt-siguenos.fb span.triangulo{left: 72px;}
-aside .un-medio .bt-siguenos.tw span.triangulo{left: 133px;}
-aside .un-medio .bt-siguenos.gm span.triangulo{left: 188px;}
-aside .un-medio .bt-siguenos.tw, aside .un-medio .bt-siguenos.gm{display: none;}
+.bt-siguenos{position: relative;overflow: hidden;width: 279px; height: 44px; border-top: 1px solid #58acb3; margin: 20px 10px; padding: 16px; text-align: center;}
+.bt-siguenos span.triangulo{position: absolute; width: 19px; height: 16px; top: 0; z-index: 999; background-image: url(images/iconos_sociales.png); background-position: -129px -34px;}
+.bt-siguenos.fb span.triangulo{left: 72px;}
+.bt-siguenos.tw span.triangulo{left: 133px;}
+.bt-siguenos.gm span.triangulo{left: 188px;}
+.bt-siguenos.tw, .bt-siguenos.gm{display: none;}
 .bt-siguenos .fb-like, .bt-siguenos .twitter-follow-button{margin-top: 6px;  display: inline-block;}
+.bt-siguenos .fb-like iframe{margin-top: 0; margin-left: 0;}
 .bt-siguenos .twitter-follow-button{width: 61px !important;}
+
+.siguenos-contacto p.siguenos{color: #8BD4DA; font-family: 'simplicitymedium'; font-size: 22px; letter-spacing: 1px; }
+.siguenos-contacto .bt-siguenos{margin: 20px auto !important;}
+.siguenos-contacto .redes-siguenos li.fb{margin-left: 210px;}
 
 aside .un-medio.destacados{overflow: visible; margin-top: 13px;}
 aside span.titulo4{position: relative; overflow: hidden; width: 269px; height: 30px; margin: -13px auto 0 auto; display: block; background-image: url(images/fondo_4.png); background-repeat: no-repeat; text-align: center; color: #fff; font-size: 16px; line-height: 25px;}

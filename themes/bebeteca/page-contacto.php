@@ -24,7 +24,27 @@
 
             	</form>
 			</article>
-
+			<article class="entero siguenos-contacto">
+				<p class="siguenos">Síguenos en redes</p>
+				<ul class="redes-siguenos">
+					<li class="fb active-red">facebook</li>
+					<li class="tw">twitter</li>
+					<li class="gm">goggle +</li>
+				</ul>
+				<div class="bt-siguenos fb">
+					<span class="triangulo"></span>
+					<div class="fb-like" data-href="<?php echo site_url('/') ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<div class="bt-siguenos tw">
+					<span class="triangulo"></span>
+					<a href="https://twitter.com/HacemosCodigo" class="twitter-follow-button" data-show-count="false">Follow @HacemosCodigo</a>
+				</div>
+				<div class="bt-siguenos gm">
+					<span class="triangulo"></span>
+					<!-- Place this tag where you want the share button to render. -->
+					<div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/118300723396545429987" data-rel="author"></div>
+				</div>
+			</article>
 		</section>
 
 		<?php get_sidebar(); ?>
