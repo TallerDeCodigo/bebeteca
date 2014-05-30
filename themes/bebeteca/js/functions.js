@@ -23,12 +23,12 @@
 		* SUBIT FORM CONTACTO
 		*/
 		$('#form_contacto').on('submit', function (event) {
-		 	event.preventDefault();
-		 	var nombre  = $('#form-contacto-nombre').val();
-		 	var email   = $('#form-contacto-email').val();
-		 	var mensaje = $('#form-contacto-mensaje').val();
+			event.preventDefault();
+			var nombre  = $('#form-contacto-nombre').val();
+			var email   = $('#form-contacto-email').val();
+			var mensaje = $('#form-contacto-mensaje').val();
 
-		 	if( ! validateEmail(email)){
+			if( ! validateEmail(email)){
 				alert('El campo de mail no es valido');
 				$('#form-contacto-email').focus();
 			}else{
@@ -124,23 +124,46 @@
 		window.___gcfg = {lang: 'es-419'};
 
 		(function() {
-		    var po = document.createElement('script');
-		    po.type = 'text/javascript'; po.async = true;
-		    po.src = 'https://apis.google.com/js/platform.js';
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(po, s);
+			var po = document.createElement('script');
+			po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/platform.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(po, s);
 		  })();
 
 		$('.abre-pop-registro').on('click', function (event) {
-		  	event.preventDefault();
-		  	$('.fondo-pop').fadeIn(750);
-		  	$('.pop-registrarse').fadeIn(750);
+			event.preventDefault();
+			$('.fondo-pop').fadeIn(750);
+			$('.pop-registrarse').fadeIn(750);
 		});
 
 		$('.fondo-pop').on('click', function () {
 			$('.fondo-pop').fadeOut(750);
-		  	$('.pop-registrarse').fadeOut(750);
+			$('.pop-registrarse').fadeOut(750);
 		});
+
+
+		/**
+		 * RESALTAR PALABRA BUSCADA
+		 */
+
+		$.fn.extend({
+			resaltar: function(busqueda, claseCSSbusqueda){
+				var regex = new RegExp("(<[^>]*>)|("+ busqueda.replace(/([-.*+?^${}()|[\]\/\\])/g,"\\$1") +')', 'ig');
+				var nuevoHtml=this.html(this.html().replace(regex, function(a, b, c){
+					return (a.charAt(0) == "<") ? a : "<span class=\""+ claseCSSbusqueda +"\">" + c + "</span>";
+				}));
+				return nuevoHtml;
+			}
+		});
+
+		if (is_search == 1) {
+			$(".search-main").resaltar(get,"resaltarTexto");
+		};
+
+
+
+
 	});
 
 })(jQuery);

@@ -438,3 +438,12 @@ footer .content-footer p.sueltos a{text-decoration: none;color: #fff; margin-rig
 
 .perfil-usuario{display: block; clear: both; color: #B54084; font-style: italic; font-size: 22px; font-weight: normal;font-size: 17px;
 margin-top:47px;}
+
+.resaltarTexto{
+    color: #fff;
+    background-color: #fa9b23;
+    padding: 3px 3px 0 3px;
+}
+.breadcrumbs .resaltarTexto{color: #B73BA1; background-color: transparent; padding: 0; margin-right: 0px;}
+.header-category h4 .resaltarTexto{color: #9D65B4; background-color: transparent; padding: 0; margin-right: 0px;}
+.titulo1 .resaltarTexto{color: #fff; background-color: transparent; padding: 0; margin-right: 0px;}

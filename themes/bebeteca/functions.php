@@ -1,5 +1,4 @@
 <?php
-
 $status_slide_post = '';
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
@@ -28,6 +27,11 @@ $status_slide_post = '';
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
+		wp_localize_script( 'functions', 'is_search', (string)is_search() );
+		if (is_search()) {
+			wp_localize_script( 'functions', 'get', $_GET['s'] );
+		}
+
 
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );
