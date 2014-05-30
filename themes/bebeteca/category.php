@@ -45,7 +45,7 @@
 			</div>
 			<?php $post_general = query_categorias_slide($term->term_id);
 			if ( $post_general->have_posts() AND $paged == 1 ) :?>
-				<article class="entero">
+				<article class="entero shadow">
 					<span class="titulo1 pleca-<?php echo $term->slug; ?>"><?php echo $cat_name; ?></span>
 
 					<div id="slider-principal" class="slider-principal">

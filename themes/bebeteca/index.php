@@ -3,7 +3,7 @@
 	<div class="main">
 		<section>
 			<?php if ( have_posts() ) : ?>
-				<article class="entero">
+				<article class="entero shadow">
 
 					<div id="slider-principal" class="slider-principal">
 						<ul class="bullets clearfix pleca">

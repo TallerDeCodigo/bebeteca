@@ -45,7 +45,7 @@
 			<?php if ( have_posts() ) : $count = 1; while( have_posts() ) : the_post();
 
 				if ($count == 1 AND $paged == 1) : ?>
-					<article class="entero">
+					<article class="entero shadow">
 						<a href="<?php the_permalink(); ?>">
 							<div class="slider-principal videos">
 								<img class="play_1" src="<?php echo THEMEPATH; ?>images/play_1.png">
