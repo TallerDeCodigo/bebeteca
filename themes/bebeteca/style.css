@@ -384,7 +384,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 #form_contacto input[type=submit] {width: 227px; height: 43px; text-align: center; font-family: 'arvoregular'; font-size: 21px; font-weight: normal; background-color: #a98eb4; color: #fff; margin-top: 20px;  }
 
 .no-padding{padding: 0 !important;}
-footer{position: relative;overflow: hidden;width: 100%; height: auto; background-color: #9b65b3; margin-top: 57px; padding-bottom: 20px;}
+footer{position: relative;overflow: hidden;width: 100%; height: auto; background-color: #a88eb5; margin-top: 57px; padding-bottom: 20px;}
 footer .content-footer{position: relative; width: 960px; height: auto; margin: 0px auto; padding: 25px 72px;}
 footer .content-footer .footer-parte1{position: relative;overflow: hidden;width: 152px; height: auto; float: left; margin-right: 105px; }
 footer .content-footer .footer-parte1 img{margin-bottom: 21px;}
