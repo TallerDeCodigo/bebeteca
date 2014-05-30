@@ -54,7 +54,6 @@
 						</div>
 						<a class="flecha_carrusel next" href="#"></a>
 
-
 					</div>
 
 				</article><!-- SLIDE -->

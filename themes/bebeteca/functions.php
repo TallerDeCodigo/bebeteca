@@ -387,8 +387,8 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$fecha = date('Y-m-d');
 		$mensaje_mail = "Se a agregado un nuevo contacto \n\rNombre: $nombre \n\rEmail: $email \n\rFecha: $fecha \n\rMensaje: $mensaje";
 
-    	$headers[] = 'From: Bebeteca <alex@losmaquiladores.com>';
-        wp_mail( 'alex@losmaquiladores.com', 'Bebeteca', $mensaje_mail, $headers );
+    	$headers[] = 'From: Bebeteca <labebeteca@labebeteca.com>';
+        wp_mail( 'labebeteca@labebeteca.com', 'Bebeteca', $mensaje_mail, $headers );
 
 		wp_send_json('bien');
 
