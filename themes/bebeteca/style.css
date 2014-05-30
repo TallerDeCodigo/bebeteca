@@ -124,7 +124,7 @@ p{margin-bottom: 7px;}
 
 /*** GENERAL ***/
 
-body{margin: 0; padding: 0; background-color: #f5f5ed; font-family: 'arvoregular';  background: url('images/fondo-cor.png') no-repeat; background-position: center 250px;}
+body{margin: 0; padding: 0; font-family: 'arvoregular';  background: url('images/fondo-cor.png') no-repeat; background-position: center 250px; background-color: #f5f5ed;}
 
 .border-radius{border-radius: 10px;}
 
