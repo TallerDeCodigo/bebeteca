@@ -89,7 +89,7 @@
 								<span class="compartir azul"></span><p class="azul"><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
 						</div>
-						<a class="boton mas-videos" href="<?php echo site_url('/videos/') ?>">ver mas ></a
+						<a class="boton mas-videos" href="<?php echo site_url('/videos/') ?>">ver más ></a
 					</a>
 
 				<?php endwhile; endif; wp_reset_postdata(); ?>
