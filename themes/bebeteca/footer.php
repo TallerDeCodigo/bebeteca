@@ -5,8 +5,8 @@
 					<img src="<?php echo THEMEPATH; ?>images/logo-footer.png">
 					<ul class="redes-footer">
 						<li class="fb"><a href="https://www.facebook.com/labbteca"></a></li>
-						<li class="tw"><a href=""></a></li>
-						<li class="gm"><a href=""></a></li>
+						<li class="tw"><a href="https://twitter.com/la_bebeteca"></a></li>
+						<li class="gm"><a href="https://plus.google.com/116499142736660749871/about"></a></li>
 					</ul>
 					<p><a href="<?php echo site_url('/terminos-y-condiciones/'); ?>">Términos y condiciones</a></p>
 					<p><a href="<?php echo site_url('/alianzas-y-colaboradores/'); ?>">Alianzas y colaboradores</a></p>

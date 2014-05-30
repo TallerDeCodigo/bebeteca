@@ -48,8 +48,8 @@
 					<span>Visítanos</span>
 					<ul class="redes-sociales">
 						<li class="b-fb"><a href="https://www.facebook.com/labbteca">faceboock</a></li>
-						<li class="b-tw"><a href="">twitter</a></li>
-						<li class="b-gm"><a href="">google +</a></li>
+						<li class="b-tw"><a href="https://twitter.com/la_bebeteca">twitter</a></li>
+						<li class="b-gm"><a href="https://plus.google.com/116499142736660749871/about">google +</a></li>
 					</ul>
 					<div class="boton abre-pop-registro">Registrate</div>
 					<div class="boton abre-pop-registro">Inicia Sesión</div>
