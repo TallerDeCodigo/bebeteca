@@ -90,7 +90,7 @@
 				<?php echo vew_image_user($post->post_author); ?>
 				<div class="info-autor">
 					<h4><?php the_author_meta( 'user_login'); ?></h4>
-					<p class="rol">Editora /-- integrar --/</p>
+					<p class="rol"><?php the_author_meta('perfil', $user_id) ?></p>
 					<?php $user_nicename = get_the_author_meta( 'user_nicename'); ?>
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 				</div>

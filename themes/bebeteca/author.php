@@ -10,34 +10,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/') ?>">Colaboradores</a>/<?php echo $display_name; ?></span>
 			<div class="header-category">
 				<h4><?php echo $display_name; ?></h4>
-				<div class="extras-category">
-					<div class="extras">
-						<span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p>
-						<span class="compartir"></span><p><?php echo get_count_share(site_url('/author/'.$user_nicename.'/')); ?></p>
-					</div>
-					<span>Comparte</span>
-					<ul>
-						<li class="fb">
-							<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo site_url('/author/'.$user_nicename.'/') ?>&t=author', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo site_url('/author/'.$user_nicename.'/') ?>" target="_blank"></a>
-						</li>
-
-						<li class="tw">
-							<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo site_url('/author/'.$user_nicename.'/') ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo site_url('/author/'.$user_nicename.'/') ?>" target="_blank" ></a>
-						</li>
-
-						<li class="gm">
-							<a href="https://plus.google.com/share?url=<?php echo site_url('/author/'.$user_nicename.'/') ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-						</li>
-
-						<?php $url_image = '' ?>
-						<li class="pr">
-							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo site_url('/author/'.$user_nicename.'/') ?>&media=<?php echo $url_image; ?>&description=<?php echo get_the_author_meta( 'description', $user_id ); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo site_url('/author/'.$user_nicename.'/') ?>&media=<?php echo $url_image; ?>&description=<?php echo get_the_author_meta( 'description', $user_id ); ?>" target="_blank" ></a>
-						</li>
-						<li class="mail">
-							<a href=""></a>
-						</li>
-					</ul>
-				</div>
+				<span class="perfil-usuario"><?php the_author_meta('perfil', $user_id) ?></span>
 			</div>
 
 			<article class="entero autor-home single-autor">

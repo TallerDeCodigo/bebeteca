@@ -430,3 +430,6 @@ footer .content-footer p.sueltos a{text-decoration: none;color: #fff; margin-rig
 .comentarios iframe{margin-top: 0 !important; margin-left: 0 !important;}
 
 .corazon-1{position: absolute;overflow: visible; width: 150px; height: 500px; }
+
+.perfil-usuario{display: block; clear: both; color: #B54084; font-style: italic; font-size: 22px; font-weight: normal;font-size: 17px;
+margin-top:47px;}

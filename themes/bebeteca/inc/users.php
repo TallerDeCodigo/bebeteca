@@ -18,6 +18,7 @@
 		unset($contactmethods['aim']);
 		unset($contactmethods['yim']);
 		unset($contactmethods['jabber']);
+		$contactmethods['perfil'] = 'Perfil';
 		$contactmethods['twitter']  = 'Twitter';
 		$contactmethods['facebook'] = 'Facebook';
 		$contactmethods['google'] = 'Google plus';

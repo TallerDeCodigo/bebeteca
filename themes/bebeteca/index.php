@@ -126,7 +126,7 @@
 
 				<div class="info-autor">
 					<h4><?php echo $users[$select]->user_login; ?></h4>
-					<p class="rol">Editora</p>
+					<p class="rol"><?php the_author_meta('perfil', $user_id) ?></p>
 					<p><?php echo wp_trim_words( get_the_author_meta( 'description', $user_id ), 12 ) ?></p>
 					<?php $user_nicename = get_the_author_meta( 'user_nicename', $user_id); ?>
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
