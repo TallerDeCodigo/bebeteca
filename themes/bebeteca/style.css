@@ -425,7 +425,7 @@ footer .content-footer p.sueltos a{text-decoration: none;color: #fff; margin-rig
 .play_2.home_vid{top: 102px;left: 103px;}
 
 .comentarios{padding: 20px;}
-.comentarios h5{font-size: 18px; color:#9d65b4;}
+.comentarios h5{font-size: 18px; color:#9d65b4; margin: 0 0 20px 0;}
 .comentarios img{width: 44px; height: 44px;}
 .comentarios iframe{margin-top: 0 !important; margin-left: 0 !important;}
 

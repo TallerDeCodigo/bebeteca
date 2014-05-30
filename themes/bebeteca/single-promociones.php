@@ -100,6 +100,7 @@
 			</article>
 
 			<article class="entero comentarios">
+				<h5>DEJA TU COMENTARIO</h5>
 				<div class="fb-comments" data-width="100%" data-href="<?php echo get_permalink($post->ID) ?>" data-numposts="5" data-colorscheme="light"></div>
 			</article>
 

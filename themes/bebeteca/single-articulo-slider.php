@@ -158,6 +158,7 @@ if(empty($post_child->posts) ){
 			</article>
 
 			<article class="entero comentarios">
+				<h5>DEJA TU COMENTARIO</h5>
 				<div class="fb-comments" data-width="100%" data-href="<?php echo $permalink; ?>" data-numposts="5" data-colorscheme="light"></div>
 			</article>
 
