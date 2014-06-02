@@ -18,7 +18,7 @@
 		<a href="<?php the_permalink(); ?>">
 			<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
 			$id_youtube = get_post_meta( $post->ID, 'id_youtube', true );
-			if ($id_vimeo != '' OR $id_youtube != '') { ?>
+			if ($id_vimeo != '' OR $id_youtube != '' OR $term_slug == 'entrevistas') { ?>
 				<img class="play_2" src="<?php echo THEMEPATH; ?>images/play_2.png">
 			<?php }?>
 
