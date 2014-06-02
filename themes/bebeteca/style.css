@@ -116,7 +116,7 @@ figure {margin: 0;}
 span.leyenda-img{margin-top: -2px;display: block;font-style: italic; font-size: 13px !important; margin-bottom: 30px;}
 .shadow{ -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .wp-caption{width: 100% !important; position: relative;overflow: hidden; text-align: center;}
-.wp-caption img{width: 441px !important; height: auto; display: inline-block; }
+.wp-caption img{width: 441px !important; height: auto; display: inline-block; margin-left: 0 !important; }
 .wp-caption-text{font-style: italic; font-size: 13px !important; display: inline-block;width: 441px;text-align: left;}
 .left{ float: left;}
 .right{ float: right !important;}
