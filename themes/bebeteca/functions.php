@@ -406,13 +406,22 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		return $result;
 	}
 
+
+	/**
+	 * CHECA SI EXISTE UNA PAGINA SIGUIENTE
+	 */
 	function has_next_posts() {
-		/**
-		 * CHECA SI EXISTE UNA PAGINA SIGUIENTE
-		 */
 		ob_start();
 		next_posts_link();
 		$result = strlen(ob_get_contents());
 		ob_end_clean();
 		return $result;
+	}
+
+
+	// LYENDA IMAGEN ///////////////////////////////////////////////////
+
+	function get_post_thumbnail_caption() {
+		if ( $thumb = get_post_thumbnail_id() )
+			return get_post( $thumb )->post_excerpt;
 	}

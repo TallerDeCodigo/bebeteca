@@ -53,8 +53,11 @@ $term_slug = $terms[0]->slug;
 					<?php endif;
 
 				else:
-					the_post_thumbnail('slider-home', array('class' => 'margin-botton-img'));
-				endif;
+					the_post_thumbnail('slider-home');?>
+
+					<span class="leyenda-img"><?php echo get_post_thumbnail_caption(); ?></span>
+
+				<?php endif;
 
 				the_content();?>
 
