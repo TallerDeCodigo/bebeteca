@@ -16,7 +16,12 @@
 
 	<article class="entero article-gral">
 		<a href="<?php the_permalink(); ?>">
-			<?php if ($term_slug == 'entrevistas'): ?><img class="play_2" src="<?php echo THEMEPATH; ?>images/play_2.png"><?php endif; ?>
+			<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
+			$id_youtube = get_post_meta( $post->ID, 'id_youtube', true );
+			if ($id_vimeo != '' OR $id_youtube != '') { ?>
+				<img class="play_2" src="<?php echo THEMEPATH; ?>images/play_2.png">
+			<?php }?>
+
 			<?php if ($term_name != ''): ?><span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span><?php endif; ?>
 			<?php the_post_thumbnail('articulos-gral'); ?>
 			<h4><?php the_title(); ?></h4>

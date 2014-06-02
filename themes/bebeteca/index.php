@@ -39,9 +39,8 @@
 											$id_youtube = get_post_meta( $post->ID, 'id_youtube', true );
 											if ($id_vimeo != '' OR $id_youtube != '') { ?>
 												<img class="play_1" src="<?php echo THEMEPATH; ?>images/play_1.png">
-											<?php }?>
-
-											<?php the_post_thumbnail('slider-home'); ?>
+											<?php }
+											the_post_thumbnail('slider-home'); ?>
 											<div class="footer-slide">
 												<h4><?php the_title(); ?></h4>
 												<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>

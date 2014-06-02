@@ -55,6 +55,11 @@
 								<?php while( $post_general->have_posts() ) : $post_general->the_post(); ?>
 									<li>
 										<a href="<?php the_permalink(); ?>">
+											<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
+											$id_youtube = get_post_meta( $post->ID, 'id_youtube', true );
+											if ($id_vimeo != '' OR $id_youtube != '') { ?>
+												<img class="play_1" src="<?php echo THEMEPATH; ?>images/play_1.png">
+											<?php }?>
 											<?php the_post_thumbnail('slider-home'); ?>
 											<div class="footer-slide">
 												<h4><?php the_title(); ?></h4>
