@@ -1,12 +1,13 @@
 <?php get_header();
 	$paged    = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$cat_name = single_cat_title( '', false );
-	$term     = get_term_by( 'name', $cat_name, 'category' );?>
+	$term     = get_term_by( 'name', $cat_name, 'category' );
+	 ?>
 
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/categoria/'.$term->slug.'/'); ?>"><?php echo $cat_name; ?></a></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/categoria/'.$term->slug.'/'); ?>"><?php echo get_category_parents( $term->term_id, true, '/' ); ?></a></span>
 			<div class="header-category">
 				<h4><?php echo $cat_name; ?></h4>
 				<div class="extras-category">
