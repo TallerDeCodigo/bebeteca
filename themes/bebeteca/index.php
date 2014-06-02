@@ -115,14 +115,15 @@
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
-			<article class="entero autor-home">
+			<article class="entero autor-home index-au">
 				<?php $user_query = new WP_User_Query(array('role' => 'colaborador','number' => 40));
 				$users  = $user_query->results;
 				$total  = count($users) - 1;
 				$select = rand(0, $total);
-				$user_id =  $users[$select]->ID;
+				$user_id =  $users[$select]->ID;?>
 
-				echo vew_image_user($user_id);?>
+				<?php echo vew_image_user($user_id);?>
+
 
 				<div class="info-autor">
 					<h4><?php echo $users[$select]->user_login; ?></h4>

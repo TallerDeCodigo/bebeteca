@@ -236,9 +236,10 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .un-medio .footer-un-medio h4{font-size: 21px; color: #fff; font-weight: normal; margin-bottom: 16px;}
 .un-medio .footer-un-medio p{font-size: 15px; color: #fff; font-weight: normal; margin-bottom: 29px; font-family: 'pt_sansregular';}
 
-.autor-home{background-color: #fff; overflow: hidden; padding: 27px 16px;  -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
-.autor-home img{display: block; width: 111px; height: 111px; float: left; margin-right: 10px; margin-top: 30px; border-radius: 55px;}
-.autor-home .info-autor{position: relative;overflow: hidden;width: 182px; height: auto; float: left; margin-right: 10px;}
+.autor-home{background-color: #fff; overflow: hidden; padding: 27px 16px;  -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9; min-height: 121px;}
+/*.imagen-autores{position: relative;overflow: hidden; width: 111px; height: 100%;float: left; margin-right: 10px;}*/
+.autor-home img{position: absolute; overflow: visible; width: 111px; height: 111px; border-radius: 55px; top: 50%;margin-top: -55px;}
+.autor-home .info-autor{position: relative;overflow: hidden;width: 182px; height: auto; float: left; margin-right: 10px; margin-left: 121px; }
 .autor-home .info-autor h4{color: #9b65b3; font-size: 20px; font-weight: normal;}
 .autor-home .info-autor p.rol{color: #b54084; font-size: 14px; font-style: italic; }
 .autor-home .info-autor p{color: #808080; font-size: 16px; margin-bottom: 27px; font-family: 'pt_sansregular';}
@@ -248,9 +249,11 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .autor-home .post-autor div a span{display: inline-block; color: #db006d; font-weight: bold; float: left; font-size: 15px; line-height: 19px; margin-right: 5px;}
 .autor-home .post-autor div a h4{font-weight: normal; display: block; overflow: hidden; font-size: 15px;}
 
-.autor-home.single-autor img{width: 172px; height: 172px; border-radius: 88px; margin-left: 38px; margin-top:0;}
+.autor-home.single-autor img{position: relative;overflow: hidden; float: left; width: 172px; height: 172px; border-radius: 88px; margin-left: 38px; margin-top:0;}
 .autor-home.single-autor .info-autor{width: 280px; margin-left: 64px;  }
 .autor-home.single-autor blockquote{font-size: 18px; color: #9d65b4; padding: 0; margin: 0; margin-bottom: 31px;}
+
+.index-au{min-height: 170px !important;}
 
 .autor-home.single-autor{min-height: 300px;}
 .sigue-colaborador{position: absolute; width: 207px; height: auto; top: 213px; left: 48px;}
@@ -366,7 +369,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article blockquote{clear: both; width: 435px; display: block; overflow: hidden; margin: 0 auto 30px auto; padding: 12px 66px; background: url(images/fondo_blo.png) no-repeat; font-size: 22px !important; color: #9d65b4 !important; text-align: center;}
 .single article blockquote p{ font-size: 22px !important; color: #9d65b4 !important; margin-bottom: 0px;}
 .single article .header-category{margin-bottom: 0px;}
-.single article.autor-home img{width: 67px; height: 67px; margin-left: 0px; margin-top: 5px;}
+.single article.autor-home img{width: 67px; height: 67px; margin-left: 0px; margin-top: 5px; top: 21px;}
 .single article.autor-home .info-autor{width: 155px; border-right: 1px solid #cccccc; margin-right: 16px;}
 .single article.autor-home .info-autor h4{font-size: 14px;}
 .single article.autor-home .info-autor p.rol{font-size: 12px; margin-bottom: 10px;}

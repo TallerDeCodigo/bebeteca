@@ -78,15 +78,6 @@ $status_slide_post = '';
 
 
 
-// REMOVE ADMIN BAR FOR NON ADMINS ///////////////////////////////////////////////////
-
-
-
-	add_filter( 'show_admin_bar', function($content){
-		return ( current_user_can('administrator') ) ? $content : true;
-	});
-
-
 
 // CAMBIAR EL CONTENIDO DEL FOOTER EN EL DASHBOARD ///////////////////////////////////
 
