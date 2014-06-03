@@ -7,7 +7,7 @@
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/categoria/'.$term->slug.'/'); ?>"><?php echo get_category_parents( $term->term_id, true, '/' ); ?></a></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/categoria/'.$term->slug.'/'); ?>"><?php echo get_category_parents( $term->term_id, true, ' / ' ); ?></a></span>
 			<div class="header-category">
 				<h4><?php echo $cat_name; ?></h4>
 				<div class="extras-category">

@@ -4,7 +4,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/promociones/') ?>">Promociones</a></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/promociones/') ?>">Promociones</a></span>
 			<div class="header-category">
 				<h4>Promociones</h4>
 				<div class="extras-category">

@@ -425,3 +425,26 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		if ( $thumb = get_post_thumbnail_id() )
 			return get_post( $thumb )->post_excerpt;
 	}
+
+
+	// REGRESA LA SUBCATEGORIA  Y LA CATEGORIA PAPA ////////////////////
+	function cat_and_subcat(){
+		$categoria = get_the_category();
+		$categoria1 = isset($categoria[1]->category_parent) ? $categoria[1]->category_parent : '';
+		$parent1 = get_cat_name($categoria[0]->category_parent);
+		$parent2 = get_cat_name($categoria1);
+
+		if (!empty($parent1) OR !empty($parent2)) {
+
+			if (!empty($parent1)) {
+				return get_category_parents( $categoria[0]->category_parent, true, ' / <a href="'.site_url('/categoria/'.$categoria[1]->slug.'/'.$categoria[0]->slug.'/ ').'">'.$categoria[0]->name .'</a>');
+
+			}else{
+				return get_category_parents( $categoria[1]->category_parent, true, ' / <a href="'.site_url('/categoria/'.$categoria[0]->slug.'/'.$categoria[1]->slug.'/ ').'">'.$categoria[1]->name .'</a>');
+			}
+
+		} else {
+			return get_category_parents( $categoria[0]->term_id, true, '' );
+
+		}
+	}
