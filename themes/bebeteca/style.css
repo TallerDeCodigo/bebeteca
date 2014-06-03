@@ -278,7 +278,7 @@ span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px s
 
 .entero.divicion.autor span.line{width: 199px;}
 
-.article-gral{background-color: #fff; height: 165px; padding: 20px 0 0 0 !important;   -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
+.article-gral{background-color: #fff; height: auto; min-height: 165px; padding: 20px 0 45px 0 !important;   -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .article-gral .titulo1{top:10px !important; font-family: 'arvoregular' !important; font-size: 13px !important;}
 .article-gral img{display: block; width: 219px !important; height: 165px; float: left; margin-right: 41px; margin-top: -20px;}
 .article-gral a{text-decoration: none;}
