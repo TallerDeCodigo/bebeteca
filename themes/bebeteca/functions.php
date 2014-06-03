@@ -428,10 +428,11 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 
 	// REGRESA LA SUBCATEGORIA  Y LA CATEGORIA PAPA ////////////////////
-	function cat_and_subcat(){
+	function cat_and_subcat($post_id = ''){
 		$categoria = get_the_category();
+		$categoria0 = isset($categoria[0]->category_parent) ? $categoria[0]->category_parent : '';
 		$categoria1 = isset($categoria[1]->category_parent) ? $categoria[1]->category_parent : '';
-		$parent1 = get_cat_name($categoria[0]->category_parent);
+		$parent1 = get_cat_name($categoria0);
 		$parent2 = get_cat_name($categoria1);
 
 		if (!empty($parent1) OR !empty($parent2)) {
@@ -443,8 +444,12 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 				return get_category_parents( $categoria[1]->category_parent, true, ' / <a href="'.site_url('/categoria/'.$categoria[0]->slug.'/'.$categoria[1]->slug.'/ ').'">'.$categoria[1]->name .'</a>');
 			}
 
-		} else {
+		} elseif(!empty($categoria[0])) {
 			return get_category_parents( $categoria[0]->term_id, true, '' );
+
+		}else{
+			$categoria_s = get_the_category($post_id);
+			return get_category_parents( $categoria_s[0]->term_id, true, '' );
 
 		}
 	}
