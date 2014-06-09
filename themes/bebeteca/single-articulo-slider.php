@@ -153,7 +153,7 @@ if(empty($post_child->posts) ){
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 				</div>
 				<div class="post-autor">
-					<p><?php echo wp_trim_words( get_the_author_meta( 'description' ), 12 ) ?></p>
+					<p><?php echo get_the_author_meta( 'quote' ) ?></p>
 				</div>
 			</article>
 

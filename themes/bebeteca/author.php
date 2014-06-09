@@ -7,7 +7,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/') ?>">Colaboradores</a>/<?php echo $display_name; ?></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/colaboradores/') ?>">Colaboradores</a>/<?php echo $display_name; ?></span>
 			<div class="header-category">
 				<h4><?php echo $display_name; ?></h4>
 				<span class="perfil-usuario"><?php the_author_meta('perfil', $user_id) ?></span>
@@ -18,16 +18,31 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 				<div class="sigue-colaborador">
 					<span>Sigue a este colaborador</span>
 					<ul>
-						<li class="fb"><a href="https://www.facebook.com/<?php the_author_meta('facebook', $user_id) ?>" target="_blank"></a></li>
-						<li class="tw"><a href="https://twitter.com/<?php the_author_meta('twitter', $user_id) ?>" target="_blank"></a></li>
-						<li class="gm"><a href="https://plus.google.com/<?php the_author_meta('google', $user_id) ?>" target="_blank"	></a></li>
-						<li class="pr"><a href="http://es.pinterest.com/<?php the_author_meta('printerest', $user_id) ?>"></a></li>
-						<li class="mail"><a href=""></a></li>
+						<?php $face = get_the_author_meta( 'facebook', $user_id );
+						if ($face != ''):?>
+							<li class="fb"><a href="<?php the_author_meta('facebook', $user_id) ?>" target="_blank"></a></li>
+						<?php endif;
+						$twitter = get_the_author_meta( 'twitter', $user_id );
+						if ($twitter != ''): ?>
+							<li class="tw"><a href="<?php the_author_meta('twitter', $user_id) ?>" target="_blank"></a></li>
+						<?php endif;
+						$google = get_the_author_meta( 'google', $user_id );
+						if ($google != ''):?>
+							<li class="gm"><a href="<?php the_author_meta('google', $user_id) ?>" target="_blank"	></a></li>
+						<?php endif;
+						$printerest = get_the_author_meta( 'printerest', $user_id );
+						if ($printerest != ''): ?>
+							<li class="pr"><a href="<?php the_author_meta('printerest', $user_id) ?>"></a></li>
+						<?php endif;
+						$email = get_the_author_meta( 'user_email', $user_id );
+						if ($email != ''): ?>
+							<li class="mail"><a href="<?php //echo $email; ?>"></a></li>
+						<?php endif; ?>
 					</ul>
 				</div>
 				<div class="info-autor">
-					<blockquote>"Lorem ipsum dolor"</blockquote>
-					<p><?php echo get_the_author_meta( 'description', $user_id ); ?></p>
+					<blockquote>" <?php the_author_meta('quote', $user_id) ?> "</blockquote>
+					<p><?php echo wp_trim_words( get_the_author_meta( 'description', $user_id ), 30 ) ?></p>
 				</div>
 			</article>
 
