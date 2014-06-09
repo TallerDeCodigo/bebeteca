@@ -13,7 +13,7 @@
 					<p><a href="<?php echo site_url('/contacto/'); ?>">Contáctanos</a></p>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Embarazo</strong>
+					<a href="<?php echo site_url('/categoria/embarazo/'); ?>"><strong>Embarazo</strong></a>
 					<ul>
 
 						<?php $term = get_term_by( 'name', 'embarazo', 'category' );
@@ -25,7 +25,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Nacimiento</strong>
+					<a href="<?php echo site_url('/categoria/nacimiento/'); ?>"><strong>Nacimiento</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
@@ -36,7 +36,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Día a Día</strong>
+					<a href="<?php echo site_url('/categoria/dia-a-dia/'); ?>"><strong>Día a Día</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'día a día', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
@@ -47,7 +47,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Entrevistas</strong>
+					<a href="<?php echo site_url('/categoria/entrevistas/'); ?>"><strong>Entrevistas</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
@@ -58,7 +58,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Lactancia</strong>
+					<a href="<?php echo site_url('/categoria/lactancia/'); ?>"><strong>Lactancia</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'lactancia', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
@@ -69,7 +69,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Nutrición</strong>
+					<a href="<?php echo site_url('/categoria/nutricion/'); ?>"><strong>Nutrición</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'nutricion', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
@@ -80,7 +80,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Estimulación</strong>
+					<a href="<?php echo site_url('/categoria/estimulacion/'); ?>"><strong>Estimulación</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
@@ -91,7 +91,7 @@
 					</ul>
 				</div>
 				<div class="footer-partesitas">
-					<strong>Promociones</strong>
+					<a href="<?php echo site_url('/promociones/'); ?>"><strong>Promociones</strong></a>
 					<ul>
 					<!-- 	<li><a href="">Subcategoria</a></li>
 						<li><a href="">Subcategoria</a></li>
