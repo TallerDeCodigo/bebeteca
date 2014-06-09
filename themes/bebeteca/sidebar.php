@@ -15,7 +15,7 @@
 
 	<div class="un-medio pb">
 		<span class="titulo3 verde">
-			Últimos Artículos
+			<?php if (is_home() OR is_author() OR is_page('colaboradores') OR is_post_type_archive('promociones')): echo 'Artículos relacionados'; else: echo 'Últimos Artículos'; endif;?>
 		</span>
 		<?php $post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider') ) );
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
