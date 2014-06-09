@@ -247,7 +247,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .autor-home .info-autor{position: relative;overflow: hidden;width: 182px; height: auto; float: left; margin-right: 10px; margin-left: 121px; }
 .autor-home .info-autor h4{color: #9b65b3; font-size: 20px; font-weight: normal;}
 .autor-home .info-autor p.rol{color: #b54084; font-size: 14px; font-style: italic; }
-.autor-home .info-autor p{color: #808080; font-size: 16px; margin-bottom: 27px; font-family: 'pt_sansregular';}
+.autor-home .info-autor p{color: #808080; font-size: 16px; margin-bottom: 15px; font-family: 'pt_sansregular'; line-height: 25px;}
 .autor-home .post-autor{position: relative; overflow: hidden; width: 275px; height: auto;}
 .autor-home .post-autor div{position: relative; overflow: hidden; width: 100%; height: auto; margin-bottom: 26px;}
 .autor-home .post-autor div a{text-decoration: none; color: #9b65b3;}
@@ -256,7 +256,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 
 .autor-home.single-autor img{position: relative;overflow: hidden; float: left; width: 172px; height: 172px; border-radius: 88px; margin-left: 38px; margin-top:0;}
 .autor-home.single-autor .info-autor{width: 280px; margin-left: 64px;  }
-.autor-home.single-autor blockquote{font-size: 18px; color: #9d65b4; padding: 0; margin: 0; margin-bottom: 31px;}
+.autor-home.single-autor blockquote{font-size: 18px; color: #9d65b4; padding: 0; margin: 0; margin-bottom: 26px;}
 
 .index-au{min-height: 170px !important;}
 

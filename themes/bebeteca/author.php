@@ -42,7 +42,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 				</div>
 				<div class="info-autor">
 					<blockquote>" <?php the_author_meta('quote', $user_id) ?> "</blockquote>
-					<p><?php echo get_the_author_meta( 'description', $user_id ); ?></p>
+					<p><?php echo wpautop(get_the_author_meta( 'description', $user_id ) ); ?></p>
 				</div>
 			</article>
 
