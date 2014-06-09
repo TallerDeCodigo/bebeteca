@@ -42,7 +42,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 				</div>
 				<div class="info-autor">
 					<blockquote>" <?php the_author_meta('quote', $user_id) ?> "</blockquote>
-					<p><?php echo wp_trim_words( get_the_author_meta( 'description', $user_id ), 30 ) ?></p>
+					<p><?php echo wp_trim_words( get_the_author_meta( 'description', $user_id ), 20 ) ?></p>
 				</div>
 			</article>
 
