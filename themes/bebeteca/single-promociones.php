@@ -104,9 +104,9 @@
 				<div class="fb-comments" data-width="100%" data-href="<?php echo get_permalink($post->ID) ?>" data-numposts="5" data-colorscheme="light"></div>
 			</article>
 
-			<div class="entero divicion">
+			<div class="entero divicion promo-rel">
 				<span class="line"></span>
-				<h5>Artículos relacionados</h5>
+				<h5>Promociones relacionadas</h5>
 				<span class="line"></span>
 			</div>
 
