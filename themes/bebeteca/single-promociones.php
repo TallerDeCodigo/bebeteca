@@ -93,7 +93,7 @@
 
 			<div class="entero divicion promo-rel">
 				<span class="line"></span>
-				<h5>Promociones relacionadas</h5>
+				<h5>Otras promociones</h5>
 				<span class="line"></span>
 			</div>
 
