@@ -1,8 +1,13 @@
 <?php get_header(); the_post();
-$terms  = wp_get_post_terms( get_the_ID(), 'category');
+$terms  = get_the_terms( $post->ID, 'category');
 $term_name = $terms[0]->name;
 $term_id = $terms[0]->term_id;
 $term_slug = $terms[0]->slug;
+$terms_query = array();
+foreach ($terms as $key => $term) {
+	
+	if( !empty(get_category_parents($term->term_id, false)) ) $terms_query[] = $term->term_id;
+}
 
 ?>
 
@@ -116,7 +121,18 @@ $term_slug = $terms[0]->slug;
 			</div>
 
 			<?php
-			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => array($post->ID), 'category_name' => $term_slug ) );
+			
+			$args = array( 
+						'posts_per_page' => -1, 
+						'post_status'	=>'publish', 
+						'post_type' 	=> array('post', 'articulo-slider'), 
+						'post__not_in' 	=> array($post->ID), 
+						'category__in' 	=> $terms_query,
+						'orderby'		=> 'rand'
+					);
+
+			$post_general = new WP_Query($args);
+			
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
 				get_template_part( 'template/articulo', 'general' );

@@ -1,7 +1,7 @@
 <?php get_header(); the_post();
 
 $post_child = return_posts_slide($post->ID);
-
+	
 if(empty($post_child->posts) ){
 	$terms     = wp_get_post_terms( $post->post_parent, 'category');
 	$term_name = $terms[0]->name;
@@ -12,6 +12,11 @@ if(empty($post_child->posts) ){
 	$post_child2 = return_posts_slide($post->post_parent);
 	$de = count($post_child2->posts);
 	$post_slide_ID = $post->ID;
+	$terms_query = array();
+	foreach ($terms as $key => $term) {
+		
+		if( !empty(get_category_parents($term->term_id, false)) ) $terms_query[] = $term->term_id;
+	}
 
 	foreach ($post_child2->posts as $key => $value) {
 		if ($value->ID == $post->ID) {
@@ -39,12 +44,18 @@ if(empty($post_child->posts) ){
 	$terms  = wp_get_post_terms( get_the_ID(), 'category');
 	$term_name = $terms[0]->name;
 	$term_slug = $terms[0]->slug;
+	
 	$titulo = get_the_title();
 	$de = count($post_child->posts);
 	$estoy = 1;
 	$post_anterior = $de - 1;
 	$link_prev = get_permalink($post_child->posts[$post_anterior]->ID);
 
+	$terms_query = array();
+	foreach ($terms as $key => $term) {
+		
+		if( !empty(get_category_parents($term->term_id, false)) ) $terms_query[] = $term->term_id;
+	}
 
 	if ($de == 1){
 		$link_next = get_permalink($post_child->posts[0]->ID);
@@ -56,9 +67,6 @@ if(empty($post_child->posts) ){
 	$post_slide_ID = $post_child->posts[0]->ID;
 	$parent_id = $post->ID;
 }
-
-
-
 
 ?>
 
@@ -168,7 +176,18 @@ if(empty($post_child->posts) ){
 				<span class="line"></span>
 			</div>
 			<?php
-			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => array($parent_id), 'category_name' => $term_slug ) );
+			
+			$args = array( 
+						'posts_per_page' => 4, 
+						'post_status'	=>'publish', 
+						'post_type' 	=> array('post', 'articulo-slider'), 
+						'post__not_in' 	=> array($post->ID), 
+						'category__in' 	=> $terms_query,
+						'orderby'		=> 'rand'
+					);
+			
+			$post_general = new WP_Query($args);
+
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
 				get_template_part( 'template/articulo', 'general' );
