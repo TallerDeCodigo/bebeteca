@@ -123,7 +123,7 @@ foreach ($terms as $key => $term) {
 			<?php
 			
 			$args = array( 
-						'posts_per_page' => -1, 
+						'posts_per_page' => 4, 
 						'post_status'	=>'publish', 
 						'post_type' 	=> array('post', 'articulo-slider'), 
 						'post__not_in' 	=> array($post->ID), 
