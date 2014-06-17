@@ -23,9 +23,10 @@
 
 			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'post', 'side', 'high' );
 			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'videos', 'side', 'high' );
+			add_meta_box( 'meta-box-video', 'Video', 'show_metabox_video', 'promociones', 'side', 'high' );
 
-			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
-			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
+			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Home Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
+			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Home Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
 
 			add_meta_box( 'meta-box-email_contacto', 'Email contacto', 'show_metabox_email_contacto', 'contactos', 'side', 'high' );
 
