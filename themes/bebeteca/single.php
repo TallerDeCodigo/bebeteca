@@ -5,8 +5,8 @@ $term_id = $terms[0]->term_id;
 $term_slug = $terms[0]->slug;
 $terms_query = array();
 foreach ($terms as $key => $term) {
-	
-	if( !empty(get_category_parents($term->term_id, false)) ) $terms_query[] = $term->term_id;
+	$cat_parents = get_category_parents($term->term_id, false)
+	if( !empty($cat_parents) ) $terms_query[] = $term->term_id;
 }
 
 ?>
