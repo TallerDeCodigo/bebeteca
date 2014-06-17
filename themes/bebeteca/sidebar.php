@@ -12,24 +12,16 @@
 			<input type="submit" value="Enviar">
 		</form>
 	</div>
+	<?php
+		if( is_single() OR is_singular() ){
+			
+			get_template_part('template/lado', 'relacionados' );
+		}else{
 
-	<div class="un-medio pb">
-		<span class="titulo3 verde">
-			Artículos relacionados
-		</span>
-		<?php $post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider') ) );
-			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
-
-				<div class="caja-ultimos">
-					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail('articulos-side'); ?>
-						<h4><?php the_title(); ?></h4>
-					</a>
-				</div>
-
-			<?php endwhile; endif; wp_reset_postdata(); ?>
-
-	</div>
+			get_template_part('template/lado', 'nuevos' );
+		}
+		
+	?>
 
 	<div class="banner-aside">
 
@@ -62,22 +54,19 @@
 			Lo más visto
 		</span>
 
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img1.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img2.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img3.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
-		<div class="caja-ultimos">
-			<img src="<?php echo THEMEPATH; ?>images/img4.jpg">
-			<h4>Disappointing Pregnancy Announcement</h4>
-		</div>
+		<!-- Showing latest, Analytics API thing -->
+		<?php $mas_vistos = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude  ) );
+			if ( $mas_vistos->have_posts() ) : while( $mas_vistos->have_posts() ) : $mas_vistos->the_post(); ?>
+
+			<div class="caja-ultimos">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail('articulos-side'); ?>
+					<h4><?php the_title(); ?></h4>
+				</a>
+			</div>
+
+		<?php endwhile; endif; wp_reset_postdata(); ?>
+		
 	</div>
 
 	<div class="un-medio pb destacados">

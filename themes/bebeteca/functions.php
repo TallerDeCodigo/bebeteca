@@ -1,5 +1,6 @@
 <?php
 $status_slide_post = '';
+$exclude = array();
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 

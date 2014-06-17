@@ -277,7 +277,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px solid #9b65b3; width: 221px; margin-top: 18px;}
 .entero h5{color: #9b65b3; font-size: 20px; font-weight: normal;float: left;margin: 0 21px; }
 
-.entero.divicion.autor span.line{width: 199px;}
+.entero.divicion.autor span.line{width: 195px;}
 
 .article-gral{background-color: #fff; height: auto; min-height: 165px; padding: 20px 0 45px 0 !important;   -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .article-gral .titulo1{top:10px !important; font-family: 'arvoregular' !important; font-size: 13px !important;}
