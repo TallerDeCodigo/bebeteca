@@ -14,8 +14,8 @@ if(empty($post_child->posts) ){
 	$post_slide_ID = $post->ID;
 	$terms_query = array();
 	foreach ($terms as $key => $term) {
-		
-		if( !empty(get_category_parents($term->term_id, false)) ) $terms_query[] = $term->term_id;
+		$cat_terms = get_category_parents($term->term_id, false);
+		if( !empty($cat_terms) ) $terms_query[] = $term->term_id;
 	}
 
 	foreach ($post_child2->posts as $key => $value) {
@@ -53,8 +53,8 @@ if(empty($post_child->posts) ){
 
 	$terms_query = array();
 	foreach ($terms as $key => $term) {
-		
-		if( !empty(get_category_parents($term->term_id, false)) ) $terms_query[] = $term->term_id;
+		$cat_eterms = get_category_parents($term->term_id, false);
+		if( !empty($cat_terms) ) $terms_query[] = $term->term_id;
 	}
 
 	if ($de == 1){
