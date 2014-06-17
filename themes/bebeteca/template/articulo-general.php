@@ -24,7 +24,7 @@
 
 			<?php if ($term_name != ''): ?><span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span><?php endif; ?>
 			<?php the_post_thumbnail('articulos-gral'); ?>
-			<h4><?php the_title(); ?></h4>
+			<h4><?php echo wp_trim_words( get_the_title(), 6, '...'); ?></h4>
 			<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
 			<div class="extras">
 				<span class="megusta"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>

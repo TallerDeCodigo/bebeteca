@@ -36,7 +36,11 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 						<?php endif;
 						$email = get_the_author_meta( 'user_email', $user_id );
 						if ($email != ''): ?>
-							<li class="mail"><a href="<?php //echo $email; ?>"></a></li>
+							<li class="mail"><a href="mailto:<?php echo $email; ?>"></a></li>
+						<?php endif;
+						$url = get_the_author_meta( 'user_url', $user_id );
+						if ($url != ''): ?>
+							<li class="url"><a href="<?php echo $url; ?>"></a></li>
 						<?php endif; ?>
 					</ul>
 				</div>

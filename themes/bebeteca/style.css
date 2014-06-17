@@ -271,6 +271,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .sigue-colaborador ul li.gm{background-position: -61px -3px;}
 .sigue-colaborador ul li.pr{background-position: -89px -3px;}
 .sigue-colaborador ul li.mail{background-position: -117px -3px;}
+.sigue-colaborador ul li.url{background-position: -146px -3px;}
 
 .entero.divicion{overflow: hidden;}
 span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px solid #9b65b3; width: 221px; margin-top: 18px;}

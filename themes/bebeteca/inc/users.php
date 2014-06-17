@@ -14,7 +14,7 @@
 
 
 	add_filter('user_contactmethods', function ( $contactmethods ) {
-		unset($contactmethods['url']);
+		// unset($contactmethods['url']);
 		unset($contactmethods['aim']);
 		unset($contactmethods['yim']);
 		unset($contactmethods['jabber']);
