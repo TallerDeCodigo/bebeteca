@@ -57,11 +57,7 @@
 		<!-- Showing latest, Analytics API thing -->
 		<?php 
 			global $exclude;
-			file_put_contents(
-				'/Users/johnfalcon/Desktop/php.txt',
-				var_export( $exclude, true ) . PHP_EOL,
-				FILE_APPEND
-			);
+			
 			$mas_vistos = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude  ) );
 			if ( $mas_vistos->have_posts() ) : while( $mas_vistos->have_posts() ) : $mas_vistos->the_post();
 			file_put_contents(
