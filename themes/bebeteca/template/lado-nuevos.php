@@ -4,7 +4,6 @@
 	</span>
 	<?php 
 		global $exclude;
-		$exclude[] = $post->ID;
 		$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude) );
 		if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); 
 			$exclude[] = $post->ID;

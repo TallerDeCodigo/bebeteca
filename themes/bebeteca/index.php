@@ -1,4 +1,4 @@
-<?php get_header(); $no_posts = array();?>
+<?php get_header(); $no_posts = array(); global $exclude; ?>
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
@@ -7,7 +7,7 @@
 
 					<div id="slider-principal" class="slider-principal">
 						<ul class="bullets clearfix pleca">
-							<?php if (have_posts() ) : while( have_posts() ) : the_post();
+							<?php if (have_posts() ) : while( have_posts() ) : the_post(); $exclude[] = $post->ID;
 							$terms  = wp_get_post_terms( get_the_ID(), 'category');
 							if (!empty($terms)) {
 								$term_name = $terms[0]->name;
@@ -80,9 +80,9 @@
 										)
 									);
 
-				$post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('post', 'articulo-slider'), 'meta_query' => $meta_query) );
+				$post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('post', 'articulo-slider'), 'meta_query' => $meta_query, 'post__not_in' => $exclude) );
 
-				if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); ?>
+				if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); $exclude[] = $post->ID; ?>
 					<a href="<?php the_permalink(); ?>">
 						<img class="play_2 home_vid" src="<?php echo THEMEPATH; ?>images/play_2.png">
 						<?php the_post_thumbnail('medio-home'); ?>
@@ -102,9 +102,9 @@
 
 			<article class="un-medio ultimo-fila">
 				<span class="titulo2 color-rosa">Promociones</span>
-					<?php $post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('promociones') ) );
+					<?php $post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('promociones'), 'post__not_in' => $exclude ) );
 
-					if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); ?>
+					if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); $exclude[] = $post->ID; ?>
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail('medio-home'); ?>
 						<div class="footer-un-medio color-rosa">
@@ -139,7 +139,7 @@
 				</div>
 				<div class="post-autor">
 					<?php $post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'author' => $user_id) );
-					if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
+					if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); $exclude[] = $post->ID; ?>
 
 						<div>
 							<a href="<?php the_permalink(); ?>"><span>></span><h4><?php the_title() ;?></h4></a>
@@ -157,9 +157,9 @@
 
 			<?php $cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
 
-			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $no_posts, 'category__not_in' => array($cat_no->term_id) ) );
+			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__not_in' => array($cat_no->term_id) ) );
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
-
+				$exclude[] = $post->ID;
 				get_template_part( 'template/articulo', 'general' );
 
 			endwhile; endif; wp_reset_postdata(); ?>

@@ -55,9 +55,16 @@
 		</span>
 
 		<!-- Showing latest, Analytics API thing -->
-		<?php $mas_vistos = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude  ) );
-			if ( $mas_vistos->have_posts() ) : while( $mas_vistos->have_posts() ) : $mas_vistos->the_post(); ?>
-
+		<?php 
+			global $exclude;
+			
+			$mas_vistos = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude  ) );
+			if ( $mas_vistos->have_posts() ) : while( $mas_vistos->have_posts() ) : $mas_vistos->the_post();
+			file_put_contents(
+				'/Users/johnfalcon/Desktop/php.txt',
+				var_export( $post->ID, true ) . PHP_EOL,
+				FILE_APPEND
+			); ?>
 			<div class="caja-ultimos">
 				<a href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail('articulos-side'); ?>

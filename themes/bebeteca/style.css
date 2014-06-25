@@ -74,7 +74,7 @@ body{-webkit-font-smoothing: antialiased;}
     src: url('fonts/simplicity-webfont.svg#simplicitymedium') format('svg'),
          url('fonts/simplicity-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/simplicity-webfont.woff') format('woff'),
-         url('fonts/simplicity-webfont.ttf') format('truetype')
+         url('fonts/simplicity-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -158,7 +158,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu ul li{margin-right: 11px; font-size: 16px; background:transparent; color: #999999; overflow: visible;}
 .content-header header nav#main-menu ul li:hover a.mnu-a, .active a{color: #fff !important;}
 .content-header header nav#main-menu ul li a{text-decoration: none; color: #999999;}
-.content-header header nav#main-menu ul li .submenu{display: none; width: 960px; left: -12px; height: 200px; padding: 20px; background: #fff; position: absolute;  -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888; z-index: 9999;}
+.content-header header nav#main-menu ul li .submenu{display: none; width: 960px; left: -12px; height: auto; padding: 20px; background: #fff; position: absolute;  -webkit-box-shadow: 0 0px 5px 1px #888;-moz-box-shadow: 0 0px 5px 1px #888;box-shadow: 0 0px 5px 1px #888; z-index: 9999;}
 .content-header header nav#main-menu ul li:hover .submenu{display: block;}
 .content-header header nav#main-menu ul li .submenu .subcategorias{position: relative; overflow: hidden; width: 150px; height: auto; list-style: none; float: left;}
 .content-header header nav#main-menu ul li .submenu .subcategorias li{display: block; overflow: hidden; margin: 0; padding: 0; width: 100%; text-align: left; font-size: 16px; line-height: 20px; margin-bottom: 13px; font-weight: normal;}
