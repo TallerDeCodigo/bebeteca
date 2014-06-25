@@ -82,7 +82,7 @@ if(empty($post_child->posts) ){
 			<div class="header-category">
 				<div class="extras-category">
 					<div class="extras">
-						<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
+						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share($permalink); ?></p>
 					</div>
 					<span>Comparte</span>

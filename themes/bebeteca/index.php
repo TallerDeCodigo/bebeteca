@@ -46,7 +46,7 @@
 												<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
 
 												<div class="extras">
-													<span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p>
+													<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 													<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 												</div>
 											</div>
@@ -90,7 +90,7 @@
 							<h4><?php the_title(); ?></h4>
 							<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
 							<div class="extras">
-								<span class="megusta azul"></span><p class="azul"><?php echo get_count_like($post->ID, 'post'); ?></p>
+								<!-- <span class="megusta azul"></span><p class="azul"><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 								<span class="compartir azul"></span><p class="azul"><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
 						</div>
@@ -111,7 +111,7 @@
 							<h4><?php the_title(); ?></h4>
 							<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
 							<div class="extras">
-								<span class="megusta rosa"></span><p class="rosa"><?php echo get_count_like($post->ID, 'post'); ?></p>
+								<!-- <span class="megusta rosa"></span><p class="rosa"><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 								<span class="compartir rosa"></span><p class="rosa"><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
 						</div>

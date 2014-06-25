@@ -8,7 +8,7 @@
 				<h4>Colaboradores</h4>
 				<div class="extras-category">
 					<div class="extras">
-						<span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p>
+						<!-- <span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share('', 'cat'); ?></p>
 					</div>
 					<span>Comparte</span>
