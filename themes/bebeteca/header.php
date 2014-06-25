@@ -156,7 +156,7 @@
 
 							</div>
 						</li>
-						<li class="bg-nutricion boton <?php nav_is('nutricion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a>
+						<!-- <li class="bg-nutricion boton <?php nav_is('nutricion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'nutricion', 'category' );
@@ -179,7 +179,7 @@
 								<?php endwhile; endif; wp_reset_postdata(); ?>
 
 							</div>
-						</li>
+						</li> -->
 						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">

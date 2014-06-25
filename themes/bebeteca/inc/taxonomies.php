@@ -54,9 +54,9 @@
 			wp_insert_term( 'Estimulación', 'category' );
 		}
 
-		if ( ! term_exists( 'Nutrición', 'category' ) ){
-			wp_insert_term( 'Nutrición', 'category' );
-		}
+		// if ( ! term_exists( 'Nutrición', 'category' ) ){
+		// 	wp_insert_term( 'Nutrición', 'category' );
+		// }
 
 		if ( ! term_exists( 'Lactancia', 'category' ) ){
 			wp_insert_term( 'Lactancia', 'category' );

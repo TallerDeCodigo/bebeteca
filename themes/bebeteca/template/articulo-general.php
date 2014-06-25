@@ -1,7 +1,11 @@
 <?php $terms  = wp_get_post_terms( get_the_ID(), 'category');
 	if (!empty($terms)) {
-		$term_name = $terms[0]->name;
-		$term_slug = $terms[0]->slug;
+		foreach ($terms as $term) {
+			if($term->parent == 0){
+				$term_name = $term->name;
+				$term_slug = $term->slug;
+			}
+		}
 	}else{
 		$term_name = '';
 		$term_slug = '';
