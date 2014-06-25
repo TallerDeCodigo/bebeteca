@@ -26,9 +26,9 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 						if ($twitter != ''): ?>
 							<li class="tw"><a href="<?php the_author_meta('twitter', $user_id) ?>" target="_blank"></a></li>
 						<?php endif;
-						$google = get_the_author_meta( 'google', $user_id );
+						$google = get_the_author_meta( 'googleplus', $user_id );
 						if ($google != ''):?>
-							<li class="gm"><a href="<?php the_author_meta('google', $user_id) ?>" target="_blank"	></a></li>
+							<li class="gm"><a href="<?php the_author_meta('googleplus', $user_id) ?>" target="_blank"	></a></li>
 						<?php endif;
 						$printerest = get_the_author_meta( 'printerest', $user_id );
 						if ($printerest != ''): ?>

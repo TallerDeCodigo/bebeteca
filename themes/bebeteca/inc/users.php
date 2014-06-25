@@ -15,15 +15,18 @@
 
 	add_filter('user_contactmethods', function ( $contactmethods ) {
 		// unset($contactmethods['url']);
+		
 		unset($contactmethods['aim']);
 		unset($contactmethods['yim']);
 		unset($contactmethods['jabber']);
+
 		$contactmethods['quote'] = 'Quote';
 		$contactmethods['perfil'] = 'Puesto';
 		$contactmethods['twitter']  = 'Twitter';
 		$contactmethods['facebook'] = 'Facebook';
-		$contactmethods['google'] = 'Google plus';
+		// $contactmethods['google'] = 'Google +';
 		$contactmethods['printerest'] = 'Printerest';
+		
 		return $contactmethods;
 	});
 
