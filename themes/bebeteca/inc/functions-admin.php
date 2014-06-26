@@ -8,18 +8,28 @@ function ajax_create_subpost(){
 
 	// Create post object
 	global $current_user;
-
+	
+	$post_parent = get_post($postid);
+	
 	$new_post = array(
 		'post_title'   => $titulo,
 		'post_content' => $contenido,
 		'post_status'  => 'slide_post',
 		'post_date'    => date('Y-m-d H:i:s'),
-		'post_author'  => $current_user->ID,
+		'post_author'  => $post_parent->post_author,
 		'post_parent'  => $postid,
 		'post_type'    => 'articulo-slider'
 	);
 
 	$post_id = wp_insert_post($new_post);
+
+	$terms = get_the_terms( $postid, 'category' );
+	$terms_id = array();
+	foreach ($terms as $term) {
+		$terms_id[] = $term->term_id;
+	}
+
+	wp_set_object_terms( $post_id, $terms_id, 'category');
 
 	if ($post_id AND $image != 'no-image') {
 		guardar_imagen_subtema($post_id, $image, $titulo);
