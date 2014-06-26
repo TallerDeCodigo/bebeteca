@@ -208,6 +208,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .main section span.titulo1.pleca-lactancia{background: url(images/p_ltc.png) no-repeat;}
 .main section span.titulo1.pleca-promociones{background: url(images/p_pmc.png) no-repeat;}
 .main section span.titulo1.pleca-entrevistas{background: url(images/p_etb.png) no-repeat;}
+.main section span.titulo1.pleca-dia-a-dia{background: url(images/p_dad.png) no-repeat;}
 
 .main section .bullets{position: absolute; display: inline-block; text-align: center; bottom: 114px; width: 154px; height: 30px; z-index: 999; background-color: #77b4c6; border-radius: 10px 10px 0 0; list-style: none; margin: 0; left: 232px;}
 .main section .bullets li{ display: inline-block; width: 15px; height: 15px; margin: 9px 2px;}
