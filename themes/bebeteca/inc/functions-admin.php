@@ -28,7 +28,6 @@ function ajax_create_subpost(){
 	foreach ($terms as $term) {
 		$terms_id[] = $term->term_id;
 	}
-
 	wp_set_object_terms( $post_id, $terms_id, 'category');
 
 	if ($post_id AND $image != 'no-image') {
@@ -37,7 +36,6 @@ function ajax_create_subpost(){
 
 	wp_send_json($post_id);
 }
-
 add_action('wp_ajax_ajax_create_subpost', 'ajax_create_subpost');
 add_action('wp_ajax_nopriv_ajax_create_subpost', 'ajax_create_subpost');
 
