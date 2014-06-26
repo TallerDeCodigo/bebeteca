@@ -101,7 +101,7 @@ $exclude = array();
 
 	if ( function_exists('add_image_size') ){
 
-		add_image_size( 'slider-home', 620, 356, true );
+		add_image_size( 'slider-home', 620, 465, true );
 		add_image_size( 'medio-home', 300, 224, true );
 		add_image_size( 'articulos-gral', 219, 165, true );
 		add_image_size( 'articulos-side', 81, 61, true );
