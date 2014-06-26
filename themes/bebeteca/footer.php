@@ -68,7 +68,7 @@
 						}?>
 					</ul>
 				</div>
-				<div class="footer-partesitas">
+				<!-- <div class="footer-partesitas">
 					<a href="<?php echo site_url('/categoria/nutricion/'); ?>"><strong>Nutrición</strong></a>
 					<ul>
 						<?php $term = get_term_by( 'name', 'nutricion', 'category' );
@@ -78,7 +78,7 @@
 							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
 						}?>
 					</ul>
-				</div>
+				</div> -->
 				<div class="footer-partesitas">
 					<a href="<?php echo site_url('/categoria/estimulacion/'); ?>"><strong>Estimulación</strong></a>
 					<ul>
