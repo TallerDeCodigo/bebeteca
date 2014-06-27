@@ -7,7 +7,7 @@
 		<span class="titulo3">
 			Suscríbete al newsletter
 		</span>
-		<form action="http://www.us8.list-manage.com/subscribe/post?u=534e428797ba0f0ecd9f3ba5a&amp;id=f522eb0cdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate forma-news" target="_blank" novalidate>
+		<form action="http://facebook.us8.list-manage.com/subscribe/post?u=3c64fd3f21908a89239384f5b&amp;id=d020d6abfe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate forma-news" target="_blank" novalidate>
 			<input type="email" name="EMAIL" id="mce-EMAIL" value="" placeholder="email@mail.com" >
 			<input type="submit" value="Enviar">
 		</form>
