@@ -259,7 +259,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 
 .autor-home.single-autor img{position: relative;overflow: hidden; float: left; width: 172px; height: 172px; border-radius: 88px; margin-left: 38px; margin-top:0;}
 .autor-home.single-autor .info-autor{width: 280px; margin-left: 64px;  }
-.autor-home.single-autor .cont-image{position: relative;overflow: hidden;float: left;  margin-right: 64px; height: 273px}
+.autor-home.single-autor .cont-image{position: relative;overflow: hidden;float: left;  margin-right: 64px; height: 264px}
 .autor-home.single-autor .cont-image img{top: 0px;}
 .autor-home.single-autor blockquote{font-size: 18px; color: #9d65b4; padding: 0; margin: 0; margin-bottom: 26px;}
 
