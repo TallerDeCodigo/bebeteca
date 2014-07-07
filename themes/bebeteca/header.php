@@ -64,7 +64,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'embarazo', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
@@ -86,7 +86,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable;?>
 								</ul>
@@ -108,7 +108,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'slug', 'dia-a-dia', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable;?>
 								</ul>
@@ -130,7 +130,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
@@ -152,7 +152,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'nutricion', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
@@ -174,7 +174,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'lactancia', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
@@ -196,7 +196,7 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable;?>
 								</ul>
