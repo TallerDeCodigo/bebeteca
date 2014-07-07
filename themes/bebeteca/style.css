@@ -384,7 +384,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article blockquote p{ font-size: 22px !important; color: #9d65b4 !important; margin-bottom: 0px;}
 .single article .header-category{margin-bottom: 0px;}
 .single article.autor-home img{width: 67px; height: 67px; margin-left: 0px; margin-top: 5px; top: 21px;}
-.single article.autor-home .info-autor{width: 155px; border-right: 1px solid #cccccc; margin-right: 16px;}
+.single article.autor-home .info-autor{width: 155px; border-right: 1px solid #cccccc; margin-right: 16px; line-height: 15px;}
 .single article.autor-home .info-autor h4{font-size: 14px;}
 .single article.autor-home .info-autor p.rol{font-size: 12px; margin-bottom: 10px;}
 

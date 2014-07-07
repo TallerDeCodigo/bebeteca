@@ -36,8 +36,11 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 						if ($printerest != ''): ?>
 							<li class="pr"><a href="<?php the_author_meta('printerest', $user_id) ?>"></a></li>
 						<?php endif;
+
 						$email = get_the_author_meta( 'user_email', $user_id );
-						if ($email != ''): ?>
+						$user_mail = get_the_author_meta( 'user_vew_mail', $user_id );
+
+						if ($user_mail == 1): ?>
 							<li class="mail"><a href="mailto:<?php echo $email; ?>"></a></li>
 						<?php endif;
 						$url = get_the_author_meta( 'user_url', $user_id );
