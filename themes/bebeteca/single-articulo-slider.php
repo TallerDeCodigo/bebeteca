@@ -1,7 +1,7 @@
 <?php get_header(); the_post();
 
 $post_child = return_posts_slide($post->ID);
-	
+
 if(empty($post_child->posts) ){
 	$terms     = wp_get_post_terms( $post->post_parent, 'category');
 	$term_name = $terms[0]->name;
@@ -44,7 +44,7 @@ if(empty($post_child->posts) ){
 	$terms  = wp_get_post_terms( get_the_ID(), 'category');
 	$term_name = $terms[0]->name;
 	$term_slug = $terms[0]->slug;
-	
+
 	$titulo = get_the_title();
 	$de = count($post_child->posts);
 	$estoy = 1;
@@ -121,33 +121,34 @@ if(empty($post_child->posts) ){
 					<a href="<?php echo $link_next;?>" class="boton ultimo-fila">Siguiente ></a>
 
 					<h3><?php echo get_the_title($post_slide_ID); ?></h3>
-					<p><?php echo get_post_field('post_content', $post_slide_ID); ?></p>
 
-					<div class="header-category">
-						<div class="extras-category">
-							<span>Comparte</span>
-							<ul>
-								<li class="fb">
-									<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>" target="_blank"></a>
-								</li>
+				</div>
+				<p><?php echo get_post_field('post_content', $post_slide_ID); ?></p>
 
-								<li class="tw">
-									<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>" target="_blank" ></a>
-								</li>
+				<div class="header-category post-slide">
+					<div class="extras-category">
+						<span>Comparte</span>
+						<ul>
+							<li class="fb">
+								<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>" target="_blank"></a>
+							</li>
 
-								<li class="gm">
-									<a href="https://plus.google.com/share?url=<?php echo get_permalink($post_slide_ID); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-								</li>
+							<li class="tw">
+								<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>" target="_blank" ></a>
+							</li>
 
-								<?php $url_image = attachment_image_url($post_slide_ID, 'large'); ?>
-								<li class="pr">
-									<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)" target="_blank" ></a>
-								</li>
-								<li class="mail">
-									<a href=""></a>
-								</li>
-							</ul>
-						</div>
+							<li class="gm">
+								<a href="https://plus.google.com/share?url=<?php echo get_permalink($post_slide_ID); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+							</li>
+
+							<?php $url_image = attachment_image_url($post_slide_ID, 'large'); ?>
+							<li class="pr">
+								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)" target="_blank" ></a>
+							</li>
+							<li class="mail">
+								<a href=""></a>
+							</li>
+						</ul>
 					</div>
 				</div>
 
@@ -176,16 +177,16 @@ if(empty($post_child->posts) ){
 				<span class="line"></span>
 			</div>
 			<?php
-			
-			$args = array( 
-						'posts_per_page' => 4, 
-						'post_status'	=>'publish', 
-						'post_type' 	=> array('post', 'articulo-slider'), 
-						'post__not_in' 	=> array($post->ID), 
+
+			$args = array(
+						'posts_per_page' => 4,
+						'post_status'	=>'publish',
+						'post_type' 	=> array('post', 'articulo-slider'),
+						'post__not_in' 	=> array($post->ID),
 						'category__in' 	=> $terms_query,
 						'orderby'		=> 'rand'
 					);
-			
+
 			$post_general = new WP_Query($args);
 
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
