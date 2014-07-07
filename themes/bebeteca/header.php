@@ -64,11 +64,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'embarazo', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable; ?>
 								</ul>
 								<?php $cat_embarazo = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'embarazo') );
 
@@ -88,11 +86,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable;?>
 								</ul>
 								<?php $cat_nacimiento = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nacimiento') );
 
@@ -112,11 +108,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'slug', 'dia-a-dia', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable;?>
 								</ul>
 								<?php $cat_dia_a_dia = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'dia-a-dia') );
 
@@ -136,11 +130,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable; ?>
 								</ul>
 								<?php $cat_estimulacion = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'estimulacion') );
 
@@ -160,11 +152,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'nutricion', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable; ?>
 								</ul>
 								<?php $cat_nutricion = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nutricion') );
 
@@ -184,11 +174,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'lactancia', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable; ?>
 								</ul>
 								<?php $cat_lactancia = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'lactancia') );
 
@@ -208,11 +196,9 @@
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
-									$termchildren = get_term_children( $term->term_id, 'category' );
-									foreach ( $termchildren as $child ) {
-										$term = get_term_by( 'id', $child, 'category' );
-										echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-									}?>
+									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ),) );
+									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
+									echo $variable;?>
 								</ul>
 								<?php $cat_entrevistas = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'entrevistas') );
 

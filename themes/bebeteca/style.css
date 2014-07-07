@@ -169,6 +169,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu ul li .submenu .post-rel img{display: block; width: 149px; height: auto; margin-right: 9px; float: left;}
 .content-header header nav#main-menu ul li .submenu .post-rel h4{font-size: 18px; color:#9d65b4; text-align: left;}
 .content-header header nav#main-menu ul li .submenu .post-rel p{font-family: 'pt_sansregular'; font-size: 15px; font-weight: normal; text-align: left;}
+.active .submenu .subcategorias li.cat-item a{color: #999 !important;}
 .bg-nacimiento .submenu{left: -122px !important;}
 .bg-dia-a-dia .submenu{left: -246px !important;}
 .bg-estimulacion .submenu{left: -346px !important;}
