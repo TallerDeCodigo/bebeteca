@@ -206,6 +206,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 
 .main section span.titulo1{position: absolute;top: 27px; left: -18px; background: url(images/p_emb.png) no-repeat; width: 108px; height: 28px; z-index: 999; color: #fff; padding-left: 10px; text-align: center; line-height: 22px;}
 .main section span.titulo1.pleca-embarazo{background: url(images/p_emb.png) no-repeat;}
+.main section span.titulo1.pleca-estimulacion{background: url(images/p_est.png) no-repeat;}
 .main section span.titulo1.pleca-nacimiento{background: url(images/p_ncm.png) no-repeat;}
 .main section span.titulo1.pleca-nutricion{background: url(images/p_ntc.png) no-repeat;}
 .main section span.titulo1.pleca-lactancia{background: url(images/p_ltc.png) no-repeat;}
