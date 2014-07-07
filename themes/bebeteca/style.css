@@ -248,9 +248,9 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 /*.imagen-autores{position: relative;overflow: hidden; width: 111px; height: 100%;float: left; margin-right: 10px;}*/
 .autor-home img{position: absolute; overflow: visible; width: 111px; height: 111px; border-radius: 55px; top: 50%;margin-top: -55px;}
 .autor-home .info-autor{position: relative;overflow: hidden;width: 182px; height: auto; float: left; margin-right: 10px; margin-left: 121px; }
-.autor-home .info-autor h4{color: #9b65b3; font-size: 20px; font-weight: normal;}
-.autor-home .info-autor p.rol{color: #b54084; font-size: 14px; font-style: italic; }
-.autor-home .info-autor p{color: #808080; font-size: 16px; margin-bottom: 15px; font-family: 'pt_sansregular'; line-height: 25px;}
+.autor-home .info-autor h4, .autor-home.single-autor .info-autor h4{color: #9b65b3; font-size: 20px; font-weight: normal;}
+.autor-home .info-autor p.rol, .autor-home.single-autor .info-autor p.rol{color: #b54084; font-size: 14px; font-style: italic; }
+.autor-home .info-autor p, .autor-home.single-autor .info-autor p{color: #808080; font-size: 16px; margin-bottom: 15px; font-family: 'pt_sansregular'; line-height: 25px;}
 .autor-home .post-autor{position: relative; overflow: hidden; width: 275px; height: auto;}
 .autor-home .post-autor div{position: relative; overflow: hidden; width: 100%; height: auto; margin-bottom: 26px;}
 .autor-home .post-autor div a{text-decoration: none; color: #9b65b3;}
