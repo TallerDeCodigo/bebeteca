@@ -51,6 +51,7 @@
 						<li class="b-tw"><a href="https://twitter.com/la_bebeteca">twitter</a></li>
 						<li class="b-gm"><a href="https://plus.google.com/116499142736660749871/about">google +</a></li>
 					</ul>
+
 					<div class="boton abre-pop-registro non-visible">Registrate</div>
 					<div class="boton abre-pop-registro non-visible">Inicia Sesión</div>
 					<form class="forma-buscar" method="GET" action="<?php echo site_url('/') ?>">

@@ -46,7 +46,7 @@
 						<div class="info-autor">
 							<h4><?php echo $user->display_name; ?></h4>
 							<p class="rol"><?php the_author_meta('perfil', $user->ID) ?></p>
-							<p><?php echo wp_trim_words( get_the_author_meta( 'description', $user->ID ), 20 ); ?></p>
+							<p><?php the_author_meta('quote', $user_id) ?></p>
 							<a href="<?php echo site_url('/author/'.$user->user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 						</div>
 						<div class="post-autor">
