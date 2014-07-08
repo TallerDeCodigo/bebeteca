@@ -46,7 +46,7 @@
 						<div class="info-autor">
 							<h4><?php echo $user->display_name; ?></h4>
 							<p class="rol"><?php the_author_meta('perfil', $user->ID) ?></p>
-							<p><?php the_author_meta('quote', $user_id) ?></p>
+							<p><?php the_author_meta('quote', $user->ID) ?></p>
 							<a href="<?php echo site_url('/author/'.$user->user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 						</div>
 						<div class="post-autor">
