@@ -161,7 +161,7 @@ $exclude = array();
 
 			if ( is_home() ) {
 				$query->set( 'posts_per_page', 4 );
-				$query->set( 'post_type', array('post', 'articulo-slider') );
+				$query->set( 'post_type', array('post', 'articulo-slider', 'promociones') );
 
 				$meta_query = array(
 								array(

@@ -27,6 +27,7 @@
 
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Home Slider', 'show_metabox_slider_categoria', 'post', 'side', 'high' );
 			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Home Slider', 'show_metabox_slider_categoria', 'articulo-slider', 'side', 'high' );
+			add_meta_box( 'meta-box-slider_categoria', 'Colocar en Home Slider', 'show_metabox_slider_categoria', 'promociones', 'side', 'high' );
 
 			add_meta_box( 'meta-box-email_contacto', 'Email contacto', 'show_metabox_email_contacto', 'contactos', 'side', 'high' );
 

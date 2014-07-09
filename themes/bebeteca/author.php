@@ -14,7 +14,9 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 			</div>
 
 			<article class="entero autor-home single-autor">
-				<?php echo vew_image_user($user_id); ?>
+				<div class="cont-image">
+					<?php echo vew_image_user($user_id); ?>
+				</div>
 				<div class="sigue-colaborador">
 					<span>Sigue a este colaborador</span>
 					<ul>
@@ -34,8 +36,11 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 						if ($printerest != ''): ?>
 							<li class="pr"><a href="<?php the_author_meta('printerest', $user_id) ?>"></a></li>
 						<?php endif;
+
 						$email = get_the_author_meta( 'user_email', $user_id );
-						if ($email != ''): ?>
+						$user_mail = get_the_author_meta( 'user_vew_mail', $user_id );
+
+						if ($user_mail == 1): ?>
 							<li class="mail"><a href="mailto:<?php echo $email; ?>"></a></li>
 						<?php endif;
 						$url = get_the_author_meta( 'user_url', $user_id );
@@ -44,10 +49,9 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 						<?php endif; ?>
 					</ul>
 				</div>
-				<div class="info-autor">
-					<blockquote>" <?php the_author_meta('quote', $user_id) ?> "</blockquote>
-					<p><?php echo wpautop(get_the_author_meta( 'description', $user_id ) ); ?></p>
-				</div>
+				<blockquote>" <?php the_author_meta('quote', $user_id) ?> "</blockquote>
+				<p><?php echo wpautop(get_the_author_meta( 'description', $user_id ) ); ?></p>
+
 			</article>
 
 			<div class="entero divicion autor">
