@@ -244,7 +244,7 @@
 		<div class="container">
 
 			<div class="banner-top">
-				<a href="http://www.bebe2go.com/collections/vendors?q=Belly%20Bandit&utm_source=labebetecaweb&utm_medium=web&utm_campaign=bellybanditbanner">
+				<a href="http://www.bebe2go.com/collections/vendors?q=Belly%20Bandit&utm_source=labebetecaweb&utm_medium=web&utm_campaign=bellybanditbanner" target="_blank">
 					<img src="<?php echo THEMEPATH; ?>images/header-banner2.jpg" alt="Protege tu cuerpo durante el embarazo">
 				</a>
 			</div>
