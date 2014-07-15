@@ -128,7 +128,7 @@ body{-webkit-font-smoothing: antialiased;}
 span.leyenda-img{margin-top: -2px;display: block;font-style: italic; font-size: 13px !important; margin-bottom: 30px;}
 .shadow{ -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .wp-caption{width: 100% !important; position: relative; text-align: center;}
-.wp-caption img{width: 441px !important; height: auto; display: inline-block; margin-left: 0 !important; }
+.wp-caption img{width: 441px !important; height: auto; display: inline-block;}
 .single article p iframe{margin-left: 0 !important;margin-top: 0 !important; width: 570px;}
 .single article em, .single article em strong, .single article strong em{font-family: 'pt_sansitalic' !important;}
 
