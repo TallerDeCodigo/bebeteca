@@ -1,5 +1,5 @@
 <aside id="main_sidebar">
-	<div class="banner-aside">
+	<div class="banner-aside shadow">
 		<a href="http://www.bebe2go.com/collections/vendors?q=Carters&utm_source=labebetecaweb&utm_medium=web&utm_campaign=cartersbanner" target="_blank">
 			<img src="<?php echo THEMEPATH; ?>images/box-banner1.jpg" alt="bebe2go">
 		</a>
@@ -16,13 +16,13 @@
 	</div>
 	<?php
 		if( is_single() OR is_singular() ){
-			
+
 			get_template_part('template/lado', 'relacionados' );
 		}else{
 
 			get_template_part('template/lado', 'nuevos' );
 		}
-		
+
 	?>
 
 	<div class="banner-aside">
@@ -59,9 +59,9 @@
 		</span>
 
 		<!-- Showing latest, Analytics API thing -->
-		<?php 
+		<?php
 			global $exclude;
-			
+
 			$mas_vistos = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude  ) );
 			if ( $mas_vistos->have_posts() ) : while( $mas_vistos->have_posts() ) : $mas_vistos->the_post();
 			?>
@@ -73,7 +73,7 @@
 			</div>
 
 		<?php endwhile; endif; wp_reset_postdata(); ?>
-		
+
 	</div>
 
 	<div class="un-medio pb destacados">
