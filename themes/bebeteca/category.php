@@ -75,14 +75,15 @@
 									</li>
 
 								<?php $no_posts[] = $post->ID;
+
 								endwhile; ?>
 							</ul>
 						</div>
 						<a class="flecha_carrusel next" href="#"></a>
 						<ul class="bullets clearfix">
-							<?php if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); ?>
-								<li><a href="#" class="bullet"></a></li>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
+							<?php if ( $post_general->have_posts() ) : $contador=0; while( $post_general->have_posts() ) : $post_general->the_post(); ?>
+								<li><a href="#" class="bullet" data-slide="<?php echo $contador; ?>"></a></li>
+							<?php $contador++; endwhile; endif; wp_reset_postdata(); ?>
 						</ul>
 
 					</div>
