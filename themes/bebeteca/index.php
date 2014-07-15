@@ -7,27 +7,28 @@
 
 					<div id="slider-principal" class="slider-principal">
 						<ul class="bullets clearfix pleca">
-							<?php if (have_posts() ) : while( have_posts() ) : the_post(); $exclude[] = $post->ID;
-							$terms  = categoria_papa_post();
-							if (!empty($terms)) {
-								$term_name = $terms->name;
-								$term_slug = $terms->slug;
-							}else{
-								$term_name = '';
-								$term_slug = '';
-							}
+							<?php if (have_posts() ) : $contador=0; while( have_posts() ) : the_post(); $exclude[] = $post->ID;
+								$terms  = categoria_papa_post();
+								if (!empty($terms)) {
+									$term_name = $terms->name;
+									$term_slug = $terms->slug;
+								}else{
+									$term_name = '';
+									$term_slug = '';
+								}
 
-							$postype = get_post_type(get_the_ID());
-							if ($postype == 'promociones') {
-								$term_name = 'Promociones';
-								$term_slug = 'promociones';
-							}?>
-								<?php if ($term_name != ''): ?>
-									<li class="bullet">
-										<span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span>
-										<a href="#" ></a>
-									</li><?php endif; ?>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
+								$postype = get_post_type(get_the_ID());
+								if ($postype == 'promociones') {
+									$term_name = 'Promociones';
+									$term_slug = 'promociones';
+								}
+								if ($term_name != ''): ?>
+										<li class="bullet" data-slide="<?php echo $contador; ?>">
+											<span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span>
+											<a href="#" ></a>
+										</li>
+								<?php endif;
+							$contador++; endwhile; endif; wp_reset_postdata(); ?>
 						</ul>
 						<a class="flecha_carrusel prev" href="#"></a>
 						<div class="viewport">
