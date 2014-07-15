@@ -465,3 +465,16 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 			}
 		}
 	}
+
+
+	function excerpt($limit, $text) {
+	  	// $excerpt = substr($text, $limit);
+	  	$excerpt = strlen($text);
+	  	if ($excerpt>$limit) {
+		  	$excerpt = substr($text, 0,$limit).'...';
+	  	} else {
+	    	$excerpt = $text;
+	  	}
+	  	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+	  	return $excerpt;
+	}
