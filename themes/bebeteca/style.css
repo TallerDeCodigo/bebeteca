@@ -383,7 +383,7 @@ span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
 img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !important; height: 91px !important;}
 
 .single .breadcrumbs{margin-bottom: 16px;}
-.single h1{font-size: 30px; color: #9d65b4; margin-top: 0; margin-bottom: 21px;}
+.single h1{font-size: 30px; color: #9d65b4; margin-top: 0; margin-bottom: 5px;}
 .single span.autor, .single span.autor a{font-family: 'pt_sansregular'; font-size: 14px; color: #808080; text-decoration: none;}
 .single .extras-category{float: left; margin-top: 21px;}
 .single article{position: relative; overflow: hidden; width: 100%; height: auto; padding: 25px; background: #fff; -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
