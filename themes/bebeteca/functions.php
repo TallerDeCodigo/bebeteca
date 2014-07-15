@@ -454,3 +454,14 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 
 		}
 	}
+
+
+	// REGRESA LA CATEGORIA PAPA ////////////////////
+	function categoria_papa_post($post_id = ''){
+		$categorias = get_the_category();
+		foreach ($categorias as $key => $categoria) {
+			if ($categoria->category_parent == 0 || $categoria->category_parent == '') {
+				return $categoria;
+			}
+		}
+	}

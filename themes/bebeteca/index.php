@@ -8,10 +8,10 @@
 					<div id="slider-principal" class="slider-principal">
 						<ul class="bullets clearfix pleca">
 							<?php if (have_posts() ) : while( have_posts() ) : the_post(); $exclude[] = $post->ID;
-							$terms  = wp_get_post_terms( get_the_ID(), 'category');
+							$terms  = categoria_papa_post();
 							if (!empty($terms)) {
-								$term_name = $terms[0]->name;
-								$term_slug = $terms[0]->slug;
+								$term_name = $terms->name;
+								$term_slug = $terms->slug;
 							}else{
 								$term_name = '';
 								$term_slug = '';
