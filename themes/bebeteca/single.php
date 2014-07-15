@@ -105,7 +105,7 @@ foreach ($terms as $key => $term) {
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 				</div>
 				<div class="post-autor">
-					<p><?php get_the_author_meta( 'quote' );?></p>
+					<p><?php the_author_meta('quote') ?> </p>
 				</div>
 			</article>
 
