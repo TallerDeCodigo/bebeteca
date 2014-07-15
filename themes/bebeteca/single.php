@@ -59,7 +59,7 @@ foreach ($terms as $key => $term) {
 					<?php endif;
 
 				else:
-					the_post_thumbnail('slider-home');?>
+					the_post_thumbnail('slider-home', array('class' => 'freatured-post'));?>
 
 					<span class="leyenda-img"><?php echo get_post_thumbnail_caption(); ?></span>
 
@@ -121,18 +121,18 @@ foreach ($terms as $key => $term) {
 			</div>
 
 			<?php
-			
-			$args = array( 
-						'posts_per_page' => 4, 
-						'post_status'	=>'publish', 
-						'post_type' 	=> array('post', 'articulo-slider'), 
-						'post__not_in' 	=> array($post->ID), 
+
+			$args = array(
+						'posts_per_page' => 4,
+						'post_status'	=>'publish',
+						'post_type' 	=> array('post', 'articulo-slider'),
+						'post__not_in' 	=> array($post->ID),
 						'category__in' 	=> $terms_query,
 						'orderby'		=> 'rand'
 					);
 
 			$post_general = new WP_Query($args);
-			
+
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
 				get_template_part( 'template/articulo', 'general' );
