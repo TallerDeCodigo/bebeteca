@@ -171,6 +171,7 @@
 
 							</div>
 						</li> -->
+
 						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
@@ -193,6 +194,7 @@
 
 							</div>
 						</li>
+
 						<li class="bg-entrevistas boton <?php nav_is('entrevistas');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
