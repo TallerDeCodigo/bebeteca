@@ -1,6 +1,8 @@
 <aside id="main_sidebar">
 	<div class="banner-aside">
-
+		<a href="http://www.bebe2go.com/collections/vendors?q=Carters&utm_source=labebetecaweb&utm_medium=web&utm_campaign=cartersbanner" target="_blank">
+			<img src="<?php echo THEMEPATH; ?>images/box-banner1.jpg" alt="bebe2go">
+		</a>
 	</div>
 
 	<div class="un-medio">
@@ -24,7 +26,9 @@
 	?>
 
 	<div class="banner-aside">
-
+		<a href="http://www.bebe2go.com/pages/britax?utm_source=labebetecaweb&utm_medium=web&utm_campaign=britaxbanner" target="_blank">
+			<img src="<?php echo THEMEPATH; ?>images/box-banner2.jpg" alt="bebe2go">
+		</a>
 	</div>
 
 	<div class="un-medio">
