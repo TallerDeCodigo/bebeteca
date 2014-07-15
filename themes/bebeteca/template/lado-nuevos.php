@@ -2,10 +2,27 @@
 	<span class="titulo3 verde">
 		Últimos artículos
 	</span>
-	<?php 
+	<?php
 		global $exclude;
-		$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude) );
-		if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post(); 
+
+		if (is_post_type_archive('promociones')):
+
+			$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('promociones') ) );
+
+		elseif (!is_home()):
+			$cat_name = single_cat_title( '', false );
+			$term     = get_term_by( 'name', $cat_name, 'category' );
+
+			if ($term->parent != 0) {
+				$term = get_term_by('id', $term->parent, 'category');
+			}
+
+			$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__in' => $term->term_id) );
+		else:
+			$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider')) );
+		endif;
+
+		if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 			$exclude[] = $post->ID;
 		?>
 			<div class="caja-ultimos">
