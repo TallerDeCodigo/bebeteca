@@ -467,8 +467,10 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 	}
 
 
+	/**
+	 * EXCERTP POR LETRAS
+	 */
 	function excerpt($limit, $text) {
-	  	// $excerpt = substr($text, $limit);
 	  	$excerpt = strlen($text);
 	  	if ($excerpt>$limit) {
 		  	$excerpt = substr($text, 0,$limit).'...';
