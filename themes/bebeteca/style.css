@@ -413,7 +413,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 
 .single .divicion span.line{width: 175px;}
 .single .divicion.promo-rel span.line{width: 195px;}
-.single .article-gral img{margin-left: 0px; margin-top: -20px;}
+.single .article-gral img{margin-left: 0px; margin-top: -20px; margin-right: 40px;}
 .single .article-gral{overflow-y: hidden; overflow: visible; height: auto;}
 .single .entero.news blockquote{background: transparent; font-size: 31px; padding: 0 0;}
 .single .entero.news img{width: 248px; height: auto; margin: 0 auto; display: block;}
