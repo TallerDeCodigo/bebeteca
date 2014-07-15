@@ -80,8 +80,8 @@
 					</article>
 
 			<?php endif; $count++; endwhile;
-				if(has_previous_posts()): ?><div class="boton mas-entradas"><?php previous_posts_link( '< Anteriores' ); ?></div><?php endif;
-				if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Mas entradas >' ); ?></div> <?php endif;
+				if(has_previous_posts()): ?><div class="boton mas-entradas"><?php previous_posts_link( '< Anterior' ); ?></div><?php endif;
+				if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Siguiente >' ); ?></div> <?php endif;
 			endif; wp_reset_postdata(); ?>
 
 		</section>
