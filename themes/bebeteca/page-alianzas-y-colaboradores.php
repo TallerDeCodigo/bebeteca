@@ -5,7 +5,7 @@
 		<section>
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/Alianzas y colaboradores</span>
 			<div class="header-category">
-				<h4>Colaboradores</h4>
+				<h4>Alianzas y colaboradores</h4>
 				<div class="extras-category">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p> -->
