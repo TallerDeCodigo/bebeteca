@@ -7,7 +7,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/colaboradores/') ?>">Colaboradores</a>/<?php echo $display_name; ?></span>
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a>/<a href="<?php echo site_url('/alianzas-y-colaboradores/') ?>">Alianzas y colaboradores</a>/<?php echo $display_name; ?></span>
 			<div class="header-category">
 				<h4><?php echo $display_name; ?></h4>
 				<span class="perfil-usuario"><?php the_author_meta('perfil', $user_id) ?></span>
