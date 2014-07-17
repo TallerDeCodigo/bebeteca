@@ -26,13 +26,32 @@ $news_resp = isset($news_resp) ? $news_resp : '';
 				</div>
 			</div>
 			<article class="entero news">
-					<blockquote>¡Gracias por registrarte<br /> a nuestro newsletter!</blockquote>
-				<img src="<?php echo THEMEPATH; ?>images/logo.png">
+				<blockquote>¡Gracias por registrarte<br /> a nuestro newsletter!</blockquote>
+				<blockquote>Te hemos enviado un correo electrónico para confirmar tu registro.</blockquote>
+				<a href="<?php echo site_url('/'); ?>"><img src="<?php echo THEMEPATH; ?>images/logo.png"></a>
 
 			</article>
 
-			<article class="entero">
-
+			<article class="entero news-sigue">
+				<p class="siguenos">Síguenos en redes</p>
+				<ul class="redes-siguenos">
+					<li class="fb active-red">facebook</li>
+					<li class="tw">twitter</li>
+					<li class="gm">goggle +</li>
+				</ul>
+				<div class="bt-siguenos fb">
+					<span class="triangulo"></span>
+					<div class="fb-like" data-href="https://www.facebook.com/labbteca" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<div class="bt-siguenos tw">
+					<span class="triangulo"></span>
+					<a href="https://twitter.com/la_bebeteca" class="twitter-follow-button" data-show-count="false">Follow @HacemosCodigo</a>
+				</div>
+				<div class="bt-siguenos gm">
+					<span class="triangulo"></span>
+					<!-- Place this tag where you want the share button to render. -->
+					<div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/116499142736660749871/about" data-rel="author"></div>
+				</div>
 			</article>
 
 

@@ -387,6 +387,9 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single h1{font-size: 30px; color: #9d65b4; margin-top: 0; margin-bottom: 5px;}
 .single span.autor, .single span.autor a{font-family: 'pt_sansregular'; font-size: 14px; color: #808080; text-decoration: none;}
 .single .extras-category{float: left; margin-top: 21px;}
+
+.news-sigue{padding: 25px 160px !important;}
+.news-sigue p.siguenos{color: #8bd4da;  font-family: 'simplicitymedium'; font-size: 29px; font-weight: bold; margin-top: 0;}
 .single article{position: relative; overflow: hidden; width: 100%; height: auto; padding: 25px; background: #fff; -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .single article img.freatured-post{width: 620px; height: auto; margin-top: -25px; margin-left: -25px; max-width: none;}
 .single article img{max-width: 100%;display: block;height: auto;overflow: hidden;margin: 0 auto;}

@@ -1,42 +1,30 @@
 <?php
 
-// require_once 'mandrill-api-php/src/Mandrill.php'; //Not required with Composer
-// $mandrill = new Mandrill('C7vH5WTDJLnbPOBuK7Dvmw');
+require_once('MCAPI.class.php');
 
-// function send_email_to_user_with_token($subject, $from, $from_name, $content, $email){
-// 	$uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
+/**
+ * RESIVE INFORMACION DEL FORMULARIO DE CONTACTO
+ */
+function ajax_resive_mail_newsletter(){
 
-// 	$api_key = get_option('C7vH5WTDJLnbPOBuK7Dvmw');
+	$email = isset($_POST['email']) ? $_POST['email'] : '';
+	$apikey = '0498df364d41ea421f2dc12536a253a4-us8';
+	$listId = 'd020d6abfe';
 
-// 	$content = stripslashes($content);
-// 	$message = str_replace(array('*|USER:EMAIL|*'), array($email), $content);
-// 	$content_text = strip_tags($message);
-// 	$params = array(
-//     "key" => $api_key,
-//     "message" => array(
-//         "html" => $message,
-//         "text" => $content_text,
-//         "to" => array(
-//             array("name" => $email, "email" => $email)
-//         ),
-//         "from_email" => $from,
-//         "from_name" => $from_name,
-//         "subject" => $subject,
-//         "track_opens" => true,
-//         "track_clicks" => true
-//     ),
-//     "async" => false
-// 	);
+	$apiUrl = 'http://api.mailchimp.com/1.3/';
+	$api = new MCAPI($apikey);
 
-// 	$postString = json_encode($params);
-// 	$ch = curl_init();
-// 	curl_setopt($ch, CURLOPT_URL, $uri);
-// 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-// 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
-// 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-// 	curl_setopt($ch, CURLOPT_POST, true);
-// 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-// 	$sent = curl_exec($ch);
-// }
+	$retval = $api->listSubscribe( $listId, $email, array());
 
-// send_email_to_user_with_token('sfadadsf a', 'mail@bebeteca.com', 'alex', '$content', $email)
+	if ($api->errorCode){
+		wp_send_json("Hubo un error con la solicitud, intentalo de nuevo.");
+	} else {
+	    wp_send_json(1);
+	}
+
+
+}
+
+add_action('wp_ajax_ajax_resive_mail_newsletter', 'ajax_resive_mail_newsletter');
+add_action('wp_ajax_nopriv_ajax_resive_mail_newsletter', 'ajax_resive_mail_newsletter');
+

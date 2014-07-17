@@ -46,6 +46,33 @@
 		});
 
 
+		/*
+		* SUBIT NEWSLETTER
+		*/
+		$('#form-newsletter').on('submit', function (event) {
+			event.preventDefault();
+			var email = $('#news-email').val();
+
+			if( ! validateEmail(email)){
+				alert('El mail '+email+' no es valido');
+				$('#news-email').focus();
+			}else{
+				$.post(ajax_url,{
+					email    : email,
+					action   : 'ajax_resive_mail_newsletter'
+				}, 'json')
+				.done(function (data){
+					if (data == 1){
+						 window.location.replace(site_url+'newsletter');
+					}else{
+						alert(data);
+					};
+				});
+			}
+
+		});
+
+
 
 		/**
 		 * VALIDA QUE EL EMAIL SEA CORRECTO
