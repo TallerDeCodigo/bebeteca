@@ -209,11 +209,11 @@
 		});
 
 		$('.mail_pop').on('submit', function(e){
-			console.log('submittin');
 			e.preventDefault();
+
 			$(this).parent().find('#mail_pop').fadeIn('fast');
 			var form_data =  getFormData($(this));
-			console.log(form_data);
+
 			$.post(ajax_url,{
 				username  	  : form_data.username,
 				sender_email  : form_data.sender_email,
@@ -224,7 +224,6 @@
 			}, 'json')
 			.done(function (data){
 				console.log(data);
-				return true;
 			})
 			.fail(function (a,b,c){
 				console.log(a);

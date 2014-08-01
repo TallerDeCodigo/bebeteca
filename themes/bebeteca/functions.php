@@ -493,6 +493,7 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$this_post = get_post($post_id);
 		setup_postdata($this_post);
 		$excerpt =	get_the_excerpt();
+
 		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
@@ -502,8 +503,10 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$headers[] 	= "Content-Type: text/html; charset=ISO-8859-1 \r\n";
 		wp_reset_postdata();
 		
-        if(wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
-        	wp_send_json_success();
+        if($response = wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
+        	wp_send_json_success($response);
+
+        wp_send_json_error($response);
 	
 	}
 
