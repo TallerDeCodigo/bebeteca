@@ -18,10 +18,15 @@
 
 						<?php $term = get_term_by( 'name', 'embarazo', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						foreach ( $termchildren as $child ) {
-							$term = get_term_by( 'id', $child, 'category' );
-							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-						}?>
+						file_put_contents(
+											'/Users/maquilador8/Desktop/php.log', 
+											var_export($termchildren, true), 
+											FILE_APPEND);
+						if(!is_wp_error($termchildren))
+							foreach ( $termchildren as $child ) {
+								$term = get_term_by( 'id', $child, 'category' );
+								echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+							}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
@@ -29,10 +34,11 @@
 					<ul>
 						<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						foreach ( $termchildren as $child ) {
-							$term = get_term_by( 'id', $child, 'category' );
-							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-						}?>
+						if(!is_wp_error($termchildren))
+							foreach ( $termchildren as $child ) {
+								$term = get_term_by( 'id', $child, 'category' );
+								echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+							}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
@@ -40,10 +46,11 @@
 					<ul>
 						<?php $term = get_term_by( 'name', 'día a día', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						foreach ( $termchildren as $child ) {
-							$term = get_term_by( 'id', $child, 'category' );
-							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-						}?>
+						if(!is_wp_error($termchildren))
+							foreach ( $termchildren as $child ) {
+								$term = get_term_by( 'id', $child, 'category' );
+								echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+							}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
@@ -51,10 +58,11 @@
 					<ul>
 						<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						foreach ( $termchildren as $child ) {
-							$term = get_term_by( 'id', $child, 'category' );
-							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-						}?>
+						if(!is_wp_error($termchildren))
+							foreach ( $termchildren as $child ) {
+								$term = get_term_by( 'id', $child, 'category' );
+								echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+							}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">
@@ -62,10 +70,11 @@
 					<ul>
 						<?php $term = get_term_by( 'name', 'lactancia', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						foreach ( $termchildren as $child ) {
-							$term = get_term_by( 'id', $child, 'category' );
-							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-						}?>
+						if(!is_wp_error($termchildren))
+							foreach ( $termchildren as $child ) {
+								$term = get_term_by( 'id', $child, 'category' );
+								echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+							}?>
 					</ul>
 				</div>
 				<!-- <div class="footer-partesitas">
@@ -84,10 +93,11 @@
 					<ul>
 						<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						foreach ( $termchildren as $child ) {
-							$term = get_term_by( 'id', $child, 'category' );
-							echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
-						}?>
+						if(!is_wp_error($termchildren))
+							foreach ( $termchildren as $child ) {
+								$term = get_term_by( 'id', $child, 'category' );
+								echo '<li><a href="' . get_term_link( $child, 'category' ) . '">' . $term->name . '</a></li>';
+							}?>
 					</ul>
 				</div>
 				<div class="footer-partesitas">

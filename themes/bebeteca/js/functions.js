@@ -4,6 +4,19 @@
 
 	$(function(){
 
+		/**
+		 * Regresa todos los valores de un formulario como un associative array 
+		 */
+		window.getFormData = function (selector) {
+			var result = [],
+				data   = $(selector).serializeArray();
+
+			$.map(data, function (attr) {
+				result[attr.name] = attr.value;
+			});
+			return result;
+		}
+
 
 		/**
 		* SLIDE HOME
@@ -11,7 +24,7 @@
 		$("#slider-principal").tinycarousel({
 			bullets : true,
 			interval: true,
-			intervalTime : 3000
+			intervalTime : 5000
 		});
 
 
@@ -187,16 +200,9 @@
 		if (is_search == 1) {
 			$(".search-main").resaltar(get,"resaltarTexto");
 		};
+		console.log('lol catz');
 
-		$('.share_post_by_mail').click(function(e){
-			e.preventDefault();
-			$(this).find('#mail_pop').fadeIn('fast');
-		});
-
-		$('.send_post').click(function(e){
-			e.preventDefault();
-			$(this).find('#mail_pop').fadeIn('fast');
-		});
+		
 
 
 	});

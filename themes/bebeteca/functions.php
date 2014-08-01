@@ -478,3 +478,35 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 	  	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
 	  	return $excerpt;
 	}
+
+	/**
+	 * SHARE POST BY MAIL
+	 */
+	function ajax_send_post_by_mail(){
+
+		$username   	= isset($_POST['username']) ? $_POST['username'] : '';
+		$sender_email   = isset($_POST['sender_email']) ? $_POST['sender_email'] : '';
+		$recipient  = isset($_POST['recipient']) ? $_POST['recipient'] : '';
+		$post_id   	= isset($_POST['message']) ? $_POST['message'] : '';
+		$message   	= isset($_POST['message']) ? $_POST['message'] : '';
+
+		$post = get_post_by('id', $post_id);
+		file_put_contents(
+							'/Users/maquilador8/Desktop/php.log', 
+							var_export($post, true), 
+							FILE_APPEND);
+		$mensaje_mail  = "$sender te ha compartido el siguiente artículo \n\r";
+		$mensaje_mail .= "<h1>$post->title</h1> \n\r";
+		$mensaje_mail .= "<h1>$post->title</h1> \n\r";
+
+    	$headers[]  = 'From: Bebeteca <labebeteca@labebeteca.com>';
+    	$headers 	= "MIME-Version: 1.0 \r\n";
+		$headers 	= "Content-Type: text/html; charset=ISO-8859-1 \r\n";
+
+        if(wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
+        	wp_send_json_success();
+	
+	}
+
+	add_action('wp_ajax_ajax_send_post_by_mail', 'ajax_send_post_by_mail');
+	add_action('wp_ajax_nopriv_ajax_send_post_by_mail', 'ajax_send_post_by_mail');

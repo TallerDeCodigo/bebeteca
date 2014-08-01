@@ -44,13 +44,24 @@ foreach ($terms as $key => $term) {
 							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 						</li>
 						<li class="mail">
-						<?php
-							$title 	 = get_the_title();
-							$body 	 = get_the_excerpt()."\n ";
-							$body 	.= "\n Leer artículo completo: ".get_the_permalink();
-							
-						?>
-							<a rel="nofollow" class="share_post_by_mail"></a>
+							<a rel="nofollow" class="share_post_by_mail" data-id="<?php $post->ID; ?>"></a>
+							<form id="mail_pop" class="mail_pop">
+								<label for="username">Tu nombre:</label>
+								<input type="text" name="username">
+
+								<label for="sender_email">Tu email:</label>
+								<input type="email" name="sender_email">
+
+								<label for="recipient">Email del receptor:</label>
+								<input type="email" name="recipient">
+
+								<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+								<label for="message">Mensaje:</label>
+								<textarea type="text" name="message"></textarea>
+
+								<input type="submit">
+							</form>
 						</li>
 					</ul>
 				</div>
@@ -95,7 +106,24 @@ foreach ($terms as $key => $term) {
 								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 							</li>
 							<li class="mail">
-								<a href=""></a>
+								<a rel="nofollow" class="share_post_by_mail" data-id="<?php echo $post->ID; ?>"></a>
+								<form id="mail_pop" class="mail_pop">
+									<label for="username">Tu nombre:</label>
+									<input type="text" name="username">
+
+									<label for="sender_email">Tu email:</label>
+									<input type="email" name="sender_email">
+
+									<label for="recipient">Email del receptor:</label>
+									<input type="email" name="recipient">
+
+									<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+									<label for="message">Mensaje:</label>
+									<textarea type="text" name="message"></textarea>
+
+									<input type="submit">
+								</form>
 							</li>
 						</ul>
 					</div>
