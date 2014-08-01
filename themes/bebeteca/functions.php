@@ -501,7 +501,7 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
 		$mensaje_mail .= "<a href='$permalink'>Leer artículo completo</a> \n\r";
-		$mensaje_mail .= "<img style='width: 300px; height: auto; margin: auto; display: block;'src='$url' alt='$this_post->post_title'>\n\r";
+		$mensaje_mail .= "<img style='width: 300px; height: auto; margin: auto; display: block;' src='$url' alt='$this_post->post_title'>\n\r";
 
     	$headers[]  = "From: $username <$sender_email>";
     	$headers[] 	= "MIME-Version: 1.0 \r\n";
