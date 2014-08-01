@@ -19,7 +19,7 @@ foreach ($terms as $key => $term) {
 			<h1><?php the_title(); ?></h1>
 			<span class="autor">Autor: <?php the_author_posts_link(); ?></span>
 
-			<div class="header-category">
+			<div class="header-category clearfix">
 				<div class="extras-category">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
