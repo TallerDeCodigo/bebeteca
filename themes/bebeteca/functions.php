@@ -494,7 +494,7 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		setup_postdata($this_post);
 		$excerpt =	get_the_excerpt();
 		$permalink = get_permalink($post_id);
-		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'medium' );
 		$url = $thumb['0'];
 
 		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
