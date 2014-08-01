@@ -224,7 +224,7 @@
 			}, 'json')
 			.done(function (data){
 				console.log(data);
-				$(this).fadeOut('fast');
+				$('.mail_pop').fadeOut('fast');
 			})
 			.fail(function (a,b,c){
 				console.log(a);
