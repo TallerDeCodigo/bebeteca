@@ -502,11 +502,14 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
     	$headers[] 	= "MIME-Version: 1.0 \r\n";
 		$headers[] 	= "Content-Type: text/html; charset=ISO-8859-1 \r\n";
 		wp_reset_postdata();
-		
-        if($response = wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
-        	wp_send_json_success($response);
+		file_put_contents(
+							'/Users/maquilador8/Desktop/php.log', 
+							var_export($recipient, true), 
+							FILE_APPEND);
+        if(wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
+        	wp_send_json_success();
 
-        wp_send_json_error($response);
+        wp_send_json_error();
 	
 	}
 

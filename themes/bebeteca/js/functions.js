@@ -217,7 +217,7 @@
 			$.post(ajax_url,{
 				username  	  : form_data.username,
 				sender_email  : form_data.sender_email,
-				recipient     : form_data.email,
+				recipient     : form_data.recipient,
 				post_id  	  : form_data.post_id,
 				message  	  : form_data.message,
 				action   	  : 'ajax_send_post_by_mail'
