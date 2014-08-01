@@ -451,7 +451,7 @@ footer .content-footer .footer-partesitas a{text-decoration: none;}
 footer .content-footer .footer-partesitas ul{padding: 0; margin:0;}
 footer .content-footer .footer-partesitas ul li{margin-bottom: 3px;}
 footer .content-footer .footer-partesitas ul li a{ text-decoration: none; color: #e2c9e3; font-size: 12px;}
-footer .content-footer p.sueltos{display: inline-block;}
+footer .content-footer p.sueltos{display: inline-block;color: #fff; }
 footer .content-footer p.sueltos a{text-decoration: none;color: #fff; margin-right: 22px;}
 
 
