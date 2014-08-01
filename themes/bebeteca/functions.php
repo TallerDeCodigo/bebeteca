@@ -493,12 +493,12 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$this_post = get_post($post_id);
 		setup_postdata($this_post);
 		$excerpt =	get_the_excerpt();
-		$permalink =	get_permalink();
+		$permalink = get_permalink($post_id);
 
 		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
-		$mensaje_mail .= "<p>$permalink</p> \n\r";
+		$mensaje_mail .= "<a href='$permalink'>Leer artículo completo</a> \n\r";
 
     	$headers[]  = "From: $username <$sender_email>";
     	$headers[] 	= "MIME-Version: 1.0 \r\n";
