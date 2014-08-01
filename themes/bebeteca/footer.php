@@ -1,5 +1,6 @@
 </div><!-- container -->
 		<footer>
+			<?php wp_footer(); ?>
 			<div class="content-footer">
 				<div class="footer-parte1">
 					<img src="<?php echo THEMEPATH; ?>images/logo-footer.png">
@@ -18,10 +19,7 @@
 
 						<?php $term = get_term_by( 'name', 'embarazo', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						file_put_contents(
-											'/Users/maquilador8/Desktop/php.log', 
-											var_export($termchildren, true), 
-											FILE_APPEND);
+						
 						if(!is_wp_error($termchildren))
 							foreach ( $termchildren as $child ) {
 								$term = get_term_by( 'id', $child, 'category' );
@@ -123,7 +121,7 @@
 		  	ga('send', 'pageview');
 
 		</script>
-		<?php wp_footer(); ?>
+		
 	</body>
 
 </html>
