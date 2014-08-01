@@ -498,7 +498,7 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$url = $thumb[0];
 		
 		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
-		$mensaje_mail .= "<img style='width: 500px; height: auto; margin: auto; display: block;' src='$url' alt='$this_post->post_title'>\n\r";
+		// $mensaje_mail .= "<img style='width: 500px; height: auto; margin: auto; display: block;' src='$url' alt='$this_post->post_title'>\n\r";
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
 		$mensaje_mail .= "<a href='$permalink'>Leer artículo completo</a> \n\r";
