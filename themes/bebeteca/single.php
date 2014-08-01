@@ -46,9 +46,7 @@ foreach ($terms as $key => $term) {
 						<li class="mail">
 						<?php
 							$title = get_the_title();
-							$share_url_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-							$body 	 = "<img style='width: 300px; height: auto; display: block; margin:auto;' src='$share_url_image' alt='$title' />";
-							$body 	.= get_the_excerpt()."\n ";
+							$body 	 = get_the_excerpt()."\n ";
 							$body 	.= "\n Leer artículo completo: ".get_the_permalink();
 							
 						?>
