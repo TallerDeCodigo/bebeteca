@@ -487,22 +487,21 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$username   	= isset($_POST['username']) ? $_POST['username'] : '';
 		$sender_email   = isset($_POST['sender_email']) ? $_POST['sender_email'] : '';
 		$recipient  = isset($_POST['recipient']) ? $_POST['recipient'] : '';
-		$post_id   	= isset($_POST['message']) ? $_POST['message'] : '';
+		$post_id   	= isset($_POST['post_id']) ? $_POST['post_id'] : '';
 		$message   	= isset($_POST['message']) ? $_POST['message'] : '';
 
-		$post = get_post_by('id', $post_id);
-		file_put_contents(
-							'/Users/maquilador8/Desktop/php.log', 
-							var_export($post, true), 
-							FILE_APPEND);
-		$mensaje_mail  = "$sender te ha compartido el siguiente artículo \n\r";
-		$mensaje_mail .= "<h1>$post->title</h1> \n\r";
-		$mensaje_mail .= "<h1>$post->title</h1> \n\r";
+		$this_post = get_post($post_id);
+		setup_postdata($this_post);
+		$excerpt =	get_the_excerpt();
+		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
+		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
+		$mensaje_mail .= "<p>$excerpt</p> \n\r";
 
-    	$headers[]  = 'From: Bebeteca <labebeteca@labebeteca.com>';
-    	$headers 	= "MIME-Version: 1.0 \r\n";
-		$headers 	= "Content-Type: text/html; charset=ISO-8859-1 \r\n";
-
+    	$headers[]  = "From: $username <$sender_email>";
+    	$headers[] 	= "MIME-Version: 1.0 \r\n";
+		$headers[] 	= "Content-Type: text/html; charset=ISO-8859-1 \r\n";
+		wp_reset_postdata();
+		
         if(wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
         	wp_send_json_success();
 	

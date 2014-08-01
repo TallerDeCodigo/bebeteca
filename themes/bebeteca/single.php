@@ -45,7 +45,7 @@ foreach ($terms as $key => $term) {
 						</li>
 						<li class="mail">
 							<a rel="nofollow" class="share_post_by_mail" data-id="<?php $post->ID; ?>"></a>
-							<form id="mail_pop" class="mail_pop">
+							<form class="mail_pop">
 								<label for="username">Tu nombre:</label>
 								<input type="text" name="username">
 
@@ -107,7 +107,7 @@ foreach ($terms as $key => $term) {
 							</li>
 							<li class="mail">
 								<a rel="nofollow" class="share_post_by_mail" data-id="<?php echo $post->ID; ?>"></a>
-								<form id="mail_pop" class="mail_pop">
+								<form class="mail_pop">
 									<label for="username">Tu nombre:</label>
 									<input type="text" name="username">
 
@@ -122,7 +122,7 @@ foreach ($terms as $key => $term) {
 									<label for="message">Mensaje:</label>
 									<textarea type="text" name="message"></textarea>
 
-									<input type="submit">
+									<input type="submit" value="Enviar">
 								</form>
 							</li>
 						</ul>

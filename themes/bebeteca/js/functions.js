@@ -205,27 +205,33 @@
 			console.log('lol catz');
 			e.preventDefault();
 
-			$(this).parent().find('#mail_pop').fadeIn('fast');
+			$(this).parent().find('.mail_pop').fadeIn('fast');
 		});
 
-		$('#mail_pop').submit(function(e){
-			
+		$('.mail_pop').on('submit', function(e){
+			console.log('submittin');
 			e.preventDefault();
 			$(this).parent().find('#mail_pop').fadeIn('fast');
-			var form_data =  getFormData('#mail_pop');
+			var form_data =  getFormData($(this));
+			console.log(form_data);
 			$.post(ajax_url,{
-				sender  	  : form_data.username,
+				username  	  : form_data.username,
 				sender_email  : form_data.sender_email,
 				recipient     : form_data.email,
-				post_id  	  : post_id,
+				post_id  	  : form_data.post_id,
 				message  	  : form_data.message,
 				action   	  : 'ajax_send_post_by_mail'
 			}, 'json')
 			.done(function (data){
+				console.log(data);
 				return true;
+			})
+			.fail(function (a,b,c){
+				console.log(a);
+				console.log(b);
+				console.log(c);
 			});
 		});
-
 
 	});
 
