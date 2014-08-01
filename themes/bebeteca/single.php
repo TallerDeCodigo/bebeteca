@@ -45,12 +45,12 @@ foreach ($terms as $key => $term) {
 						</li>
 						<li class="mail">
 						<?php
-							$title = get_the_title();
+							$title 	 = get_the_title();
 							$body 	 = get_the_excerpt()."\n ";
 							$body 	.= "\n Leer artículo completo: ".get_the_permalink();
 							
 						?>
-							<a rel="nofollow" href="mailto:ejemplo@foo.com?subject=<?php echo $title; ?>&body=<?php echo $body; ?>"></a>
+							<a rel="nofollow" class="share_post_by_mail"></a>
 						</li>
 					</ul>
 				</div>

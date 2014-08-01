@@ -100,7 +100,7 @@
 					</ul>
 				</div>
 				<p class="sueltos"><a href="<?php echo site_url('/aviso-privacidad/'); ?>">Aviso de privacidad</a></p>
-				<p class="sueltos"><a href="<?php echo site_url('/derechos-reservados/'); ?>">La Bebeteca, algunos derechos reservados, 2014</a></p>
+				<p class="sueltos">La Bebeteca, algunos derechos reservados, 2014</p>
 			</div>
 		</footer>
 		<script>

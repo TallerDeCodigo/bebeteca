@@ -188,7 +188,15 @@
 			$(".search-main").resaltar(get,"resaltarTexto");
 		};
 
+		$('.share_post_by_mail').click(function(e){
+			e.preventDefault();
+			$(this).find('#mail_pop').fadeIn('fast');
+		});
 
+		$('.send_post').click(function(e){
+			e.preventDefault();
+			$(this).find('#mail_pop').fadeIn('fast');
+		});
 
 
 	});
