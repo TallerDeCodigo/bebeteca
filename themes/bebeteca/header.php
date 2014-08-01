@@ -7,6 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- <meta name="viewport" content="width=100%, initial-scale=1"> -->
 		<meta http-equiv="cleartype" content="on">
+		<meta property="og:image" content="<?php wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" />
+		<meta property="og:title" content="<?php the_title(); ?>" />
+		<meta property="og:description" content="<?php the_excerpt(); ?>"/>
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
