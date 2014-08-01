@@ -44,7 +44,15 @@ foreach ($terms as $key => $term) {
 							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 						</li>
 						<li class="mail">
-							<a href=""></a>
+						<?php
+							$title = get_the_title();
+							$share_url_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+							$body 	 = "<img style='width: 300px; height: auto; display: block; margin:auto;' src='$share_url_image' alt='$title' />";
+							$body 	.= get_the_excerpt()."\n ";
+							$body 	.= "\n Leer artículo completo: ".get_the_permalink();
+							
+						?>
+							<a rel="nofollow" href="mailto:ejemplo@foo.com?subject=<?php echo $title; ?>&body=<?php echo $body; ?>"></a>
 						</li>
 					</ul>
 				</div>
