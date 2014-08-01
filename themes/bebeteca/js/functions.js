@@ -224,6 +224,7 @@
 			}, 'json')
 			.done(function (data){
 				console.log(data);
+				$(this).fadeOut('fast');
 			})
 			.fail(function (a,b,c){
 				console.log(a);
