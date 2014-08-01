@@ -493,19 +493,18 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$this_post = get_post($post_id);
 		setup_postdata($this_post);
 		$excerpt =	get_the_excerpt();
+		$permalink =	get_permalink();
 
 		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
+		$mensaje_mail .= "<p>$permalink</p> \n\r";
 
     	$headers[]  = "From: $username <$sender_email>";
     	$headers[] 	= "MIME-Version: 1.0 \r\n";
-		$headers[] 	= "Content-Type: text/html; charset=ISO-8859-1 \r\n";
+		$headers[] 	= "Content-Type: text/html; charset=UTF-8 \r\n";
 		wp_reset_postdata();
-		file_put_contents(
-							'/Users/maquilador8/Desktop/php.log', 
-							var_export($recipient, true), 
-							FILE_APPEND);
+		
         if(wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
         	wp_send_json_success();
 
