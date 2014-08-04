@@ -150,7 +150,7 @@ foreach ($terms as $key => $term) {
 
 			<div class="entero divicion">
 				<span class="line"></span>
-				<h5>Artículos relacionados</h5>
+				<h5>Más artículos</h5>
 				<span class="line"></span>
 			</div>
 

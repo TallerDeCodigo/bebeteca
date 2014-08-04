@@ -360,7 +360,7 @@ p.siguenos{color: #8bd4da;  font-family: 'simplicitymedium'; margin-top: 20px; w
 aside .un-medio.destacados{overflow: visible; margin-top: 13px;}
 aside span.titulo4{position: relative; overflow: hidden; width: 269px; height: 30px; margin: -13px auto 0 auto; display: block; background-image: url(images/fondo_4.png); background-repeat: no-repeat; text-align: center; color: #fff; font-size: 16px; line-height: 25px;}
 
-span.breadcrumbs{display: block; overflow: hidden;width: 100%; height: auto; clear: both; color: #b73ba1; font-size: 14px; margin-bottom: 24px;}
+span.breadcrumbs{display: block; overflow: hidden;width: 100%; height: auto; clear: both; color: #b73ba1; font-size: 12px; margin-bottom: 24px;}
 span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
 .header-category{position: relative;width: 100%; height: auto; margin-bottom: 26px;}
 .post-slide .extras-category{float: right !important;}
