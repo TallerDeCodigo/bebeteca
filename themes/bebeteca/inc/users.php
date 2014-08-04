@@ -6,12 +6,16 @@
 
 
 	$administrator = get_role('administrator');
-	add_role( 'developer', 'Developer', $administrator->capabilities );
-	add_role( 'colaborador', 'Colaborador', $administrator->capabilities );
+	$author = get_role('author');
+	
 	remove_role( 'contributor' );
+	remove_role( 'colaborador' );
+	add_role( 'developer', 'Developer', $administrator->capabilities );
+	add_role( 'colaborador', 'Colaborador', $author->capabilities );
 
+	$colaborador = get_role('colaborador');
+	
 	remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
-
 
 	add_filter('user_contactmethods', function ( $contactmethods ) {
 		// unset($contactmethods['url']);
