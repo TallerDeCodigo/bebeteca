@@ -13,7 +13,7 @@ $user_nicename = get_the_author_meta( 'user_displayname', $user_id);
 				<span class="perfil-usuario"><?php the_author_meta('perfil', $user_id) ?></span>
 			</div>
 
-			<article class="entero autor-home single-autor">
+			<article class="entero autor-home clearfix single-autor">
 				<div class="cont-image">
 					<?php echo vew_image_user($user_id); ?>
 				</div>

@@ -170,7 +170,7 @@ if(empty($post_child->posts) ){
 				</div>
 
 			</article>
-			<article class="entero autor-home">
+			<article class="entero autor-home clearfix">
 				<?php echo vew_image_user($post->post_author); ?>
 				<div class="info-autor">
 					<h4><?php echo get_the_author_meta( 'display_name'); ?></h4>

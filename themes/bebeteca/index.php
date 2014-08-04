@@ -121,7 +121,7 @@
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
-			<article class="entero autor-home index-au">
+			<article class="entero autor-home clearfix index-au">
 				<?php $user_query = new WP_User_Query(array('role' => 'colaborador','number' => 40));
 				$users  = $user_query->results;
 				$total  = count($users) - 1;

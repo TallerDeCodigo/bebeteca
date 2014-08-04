@@ -130,7 +130,7 @@ foreach ($terms as $key => $term) {
 				</div>
 			</article>
 
-			<article class="entero autor-home">
+			<article class="entero autor-home clearfix clearfix">
 				<?php echo vew_image_user($post->post_author); ?>
 				<div class="info-autor">
 					<h4><?php the_author_meta( 'display_name'); ?></h4>
