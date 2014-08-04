@@ -84,21 +84,27 @@ namespace Comments;
 
 		public function getComentados()
 		{
-			if ( $this->comentados = get_transient('posts_mas_comentados') )
-				return $this->comentados;
+			// if ( $this->comentados = get_transient('posts_mas_comentados') )
+			// 	return $this->comentados;
 
 			$this->comentados = $this->get_from_last_week();
 			$permalinks       = $this->get_permalinks( $this->comentados );
 			$results          = $this->get_facebook_data_comments( $permalinks );
-
+			file_put_contents(
+								'/Users/maquilador8/Desktop/php.log', 
+								var_export($results, true), 
+								FILE_APPEND);
 			$results          = (array)$results;
 
 
 
 			foreach ($this->comentados as $index => &$entrada) {
 
-				if ( isset($results[ $entrada->permalink ]->comments) )
+				if ( isset($results[ $entrada->permalink ]->comments) ){
 					$entrada->comments = $results[ $entrada->permalink ]->comments;
+				}else{
+					unset($this->comentados[$index]);
+				}
 			}
 
 			@usort( $this->comentados, array('Comments\Facebook', 'sort_objects_by_comments') );
