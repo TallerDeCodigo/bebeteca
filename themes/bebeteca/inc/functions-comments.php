@@ -28,8 +28,7 @@ namespace Comments;
 			return $this->wpdb->get_results(
 				"SELECT p.*, CONCAT('$url_site',IF(p.post_type='post','','/'),IF(p.post_type='post','',p.post_type),'/',p.post_name,'/') AS permalink
 					FROM wp_posts AS p
-						WHERE p.post_date > '$fecha_limite'
-							AND p.post_status = 'publish' AND post_type != 'page';", OBJECT
+							WHERE p.post_status = 'publish' AND post_type != 'page';", OBJECT
 			);
 		}
 
@@ -77,7 +76,7 @@ namespace Comments;
 			$permalinks_urls = implode(',', $permalinks);
 
 			$results   = file_get_contents("http://graph.facebook.com/?ids=$permalinks_urls");
-
+			
 			return json_decode($results);
 		}
 
@@ -90,10 +89,7 @@ namespace Comments;
 			$this->comentados = $this->get_from_last_week();
 			$permalinks       = $this->get_permalinks( $this->comentados );
 			$results          = $this->get_facebook_data_comments( $permalinks );
-			file_put_contents(
-								'/Users/maquilador8/Desktop/php.log', 
-								var_export($results, true), 
-								FILE_APPEND);
+			
 			$results          = (array)$results;
 
 
@@ -109,9 +105,7 @@ namespace Comments;
 
 			@usort( $this->comentados, array('Comments\Facebook', 'sort_objects_by_comments') );
 
-
-
-			set_transient( 'posts_mas_comentados', $this->comentados, 604800 );
+			// set_transient( 'posts_mas_comentados', $this->comentados, 604800 );
 
 			return $this->comentados;
 		}
