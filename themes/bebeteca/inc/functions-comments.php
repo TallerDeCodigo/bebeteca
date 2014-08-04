@@ -28,7 +28,8 @@ namespace Comments;
 			return $this->wpdb->get_results(
 				"SELECT p.*, CONCAT('$url_site',IF(p.post_type='post','','/'),IF(p.post_type='post','',p.post_type),'/',p.post_name,'/') AS permalink
 					FROM wp_posts AS p
-							WHERE p.post_status = 'publish' AND post_type != 'page';", OBJECT
+						WHERE p.post_date > '$fecha_limite'
+							AND p.post_status = 'publish' AND post_type != 'page';", OBJECT
 			);
 		}
 
@@ -83,8 +84,8 @@ namespace Comments;
 
 		public function getComentados()
 		{
-			// if ( $this->comentados = get_transient('posts_mas_comentados') )
-			// 	return $this->comentados;
+			if ( $this->comentados = get_transient('posts_mas_comentados') )
+				return $this->comentados;
 
 			$this->comentados = $this->get_from_last_week();
 			$permalinks       = $this->get_permalinks( $this->comentados );
@@ -96,7 +97,7 @@ namespace Comments;
 
 			foreach ($this->comentados as $index => &$entrada) {
 
-				if ( isset($results[ $entrada->permalink ]->comments) && $results[ $entrada->permalink ]->comments !== 0){
+				if ( isset($results[ $entrada->permalink ]->comments) ){
 					$entrada->comments = $results[ $entrada->permalink ]->comments;
 				}else{
 					unset($this->comentados[$index]);
@@ -105,7 +106,7 @@ namespace Comments;
 
 			@usort( $this->comentados, array('Comments\Facebook', 'sort_objects_by_comments') );
 
-			// set_transient( 'posts_mas_comentados', $this->comentados, 604800 );
+			set_transient( 'posts_mas_comentados', $this->comentados, 604800 );
 
 			return $this->comentados;
 		}
