@@ -40,17 +40,17 @@
 
 		// videos
 		$labels = array(
-			'name'          => 'Promociones',
+			'name'          => 'Cupones',
 			'singular_name' => 'promocion',
-			'add_new'       => 'Nueva promocion',
-			'add_new_item'  => 'Nueva promocion',
-			'edit_item'     => 'Editar promocion',
-			'new_item'      => 'Nueva promocion',
-			'all_items'     => 'Todas',
-			'view_item'     => 'Ver promocion',
-			'search_items'  => 'Buscar promocion',
+			'add_new'       => 'Nueva cupón',
+			'add_new_item'  => 'Nueva cupón',
+			'edit_item'     => 'Editar cupón',
+			'new_item'      => 'Nueva cupón',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver cupón',
+			'search_items'  => 'Buscar cupón',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Promociones'
+			'menu_name'     => 'Cupones'
 		);
 
 		$args = array(

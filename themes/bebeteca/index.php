@@ -102,7 +102,7 @@
 			</article><!-- VIDEOS -->
 
 			<article class="un-medio ultimo-fila">
-				<span class="titulo2 color-rosa">Promociones</span>
+				<span class="titulo2 color-rosa">Cupones</span>
 					<?php $post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('promociones'), 'post__not_in' => $exclude ) );
 
 					if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); $exclude[] = $post->ID; ?>

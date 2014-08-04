@@ -70,14 +70,14 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
-								<?php $cat_embarazo = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'embarazo') );
+								<?php $cat_embarazo = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'embarazo') );
 
 								if ( $cat_embarazo->have_posts() ) : while( $cat_embarazo->have_posts() ) : $cat_embarazo->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -92,14 +92,14 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable;?>
 								</ul>
-								<?php $cat_nacimiento = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nacimiento') );
+								<?php $cat_nacimiento = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nacimiento') );
 
 								if ( $cat_nacimiento->have_posts() ) : while( $cat_nacimiento->have_posts() ) : $cat_nacimiento->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -114,14 +114,14 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable;?>
 								</ul>
-								<?php $cat_dia_a_dia = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'dia-a-dia') );
+								<?php $cat_dia_a_dia = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'dia-a-dia') );
 
 								if ( $cat_dia_a_dia->have_posts() ) : while( $cat_dia_a_dia->have_posts() ) : $cat_dia_a_dia->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -136,14 +136,14 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
-								<?php $cat_estimulacion = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'estimulacion') );
+								<?php $cat_estimulacion = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'estimulacion') );
 
 								if ( $cat_estimulacion->have_posts() ) : while( $cat_estimulacion->have_posts() ) : $cat_estimulacion->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -158,14 +158,14 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
-								<?php $cat_nutricion = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nutricion') );
+								<?php $cat_nutricion = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nutricion') );
 
 								if ( $cat_nutricion->have_posts() ) : while( $cat_nutricion->have_posts() ) : $cat_nutricion->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -181,14 +181,14 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable; ?>
 								</ul>
-								<?php $cat_lactancia = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'lactancia') );
+								<?php $cat_lactancia = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'lactancia') );
 
 								if ( $cat_lactancia->have_posts() ) : while( $cat_lactancia->have_posts() ) : $cat_lactancia->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -204,26 +204,26 @@
 									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
 									echo $variable;?>
 								</ul>
-								<?php $cat_entrevistas = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'entrevistas') );
+								<?php $cat_entrevistas = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'entrevistas') );
 
 								if ( $cat_entrevistas->have_posts() ) : while( $cat_entrevistas->have_posts() ) : $cat_entrevistas->the_post(); ?>
 									<div class="post-rel">
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
 
 							</div>
 						</li>
-						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?>"><a class="mnu-a" href="<?php echo site_url('/promociones/'); ?>">Promociones</a>
+						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?>"><a class="mnu-a" href="<?php echo site_url('/promociones/'); ?>">Cupones</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 
 								</ul>
-								<?php $promociones = new WP_Query(array( 'posts_per_page' => 2, 'post_type' => array('promociones'), 'post_status' => 'publish') );
+								<?php $promociones = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('promociones'), 'post_status' => 'publish') );
 
 								if ( $promociones->have_posts() ) : while( $promociones->have_posts() ) : $promociones->the_post(); ?>
 
@@ -231,7 +231,7 @@
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail('articulos-gral'); ?>
 											<h4><?php the_title(); ?></h4>
-											<p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
 										</a>
 									</div>
 
