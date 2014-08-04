@@ -96,7 +96,7 @@ namespace Comments;
 
 			foreach ($this->comentados as $index => &$entrada) {
 
-				if ( isset($results[ $entrada->permalink ]->comments) ){
+				if ( isset($results[ $entrada->permalink ]->comments) && $results[ $entrada->permalink ]->comments !== 0){
 					$entrada->comments = $results[ $entrada->permalink ]->comments;
 				}else{
 					unset($this->comentados[$index]);
