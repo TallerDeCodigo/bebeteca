@@ -1,7 +1,7 @@
 <?php get_header(); global $wp_query;
 $user_id = $wp_query->queried_object->data->ID;
 $display_name = $wp_query->queried_object->data->display_name;
-$user_nicename = get_the_author_meta( 'user_nicename', $user_id);
+$user_nicename = get_the_author_meta( 'user_displayname', $user_id);
 ?>
 
 	<!-- Insert content here -->
