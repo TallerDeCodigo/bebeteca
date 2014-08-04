@@ -508,7 +508,7 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$headers[] 	= "Content-Type: text/html; charset=UTF-8 \r\n";
 		wp_reset_postdata();
 		
-        if(wp_mail( $recipient, 'Te han compartido un artículo en Bebeteca', $mensaje_mail, $headers ))
+        if(wp_mail( $recipient, 'Te han compartido un artículo en La Bebeteca', $mensaje_mail, $headers ))
         	wp_send_json_success();
 
         wp_send_json_error();

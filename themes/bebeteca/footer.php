@@ -10,6 +10,7 @@
 						<li class="gm"><a href="https://plus.google.com/116499142736660749871/about"></a></li>
 					</ul>
 					<p><a href="<?php echo site_url('/terminos-y-condiciones/'); ?>">Términos y condiciones</a></p>
+					<p><a href="<?php echo site_url('/responsabilidad-limitada/'); ?>">Responsabilidad Limitada</a></p>
 					<p><a href="<?php echo site_url('/alianzas-y-colaboradores/'); ?>">Alianzas y colaboradores</a></p>
 					<p><a href="<?php echo site_url('/contacto/'); ?>">Contáctanos</a></p>
 				</div>

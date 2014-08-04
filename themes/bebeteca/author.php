@@ -18,7 +18,7 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 					<?php echo vew_image_user($user_id); ?>
 				</div>
 				<div class="sigue-colaborador">
-					<span>Sigue a este colaborador</span>
+					<span>Contacta a este colaborador</span>
 					<ul>
 						<?php $face = get_the_author_meta( 'facebook', $user_id );
 						if ($face != ''):?>
