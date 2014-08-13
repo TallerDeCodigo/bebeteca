@@ -1,6 +1,6 @@
 <div class="un-medio pb">
 	<span class="titulo3 verde">
-		Más artículos
+		Más promociones
 	</span>
 	<?php
 		global $exclude;
