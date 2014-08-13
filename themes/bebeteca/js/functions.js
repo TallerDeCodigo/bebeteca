@@ -73,6 +73,21 @@
 		});
 
 
+		function ajax_mail_newsletter(email){
+			$.post(ajax_url,{
+				email    : email,
+				action   : 'ajax_resive_mail_newsletter'
+			}, 'json')
+			.done(function (data){
+				if (data == 1){
+					 // window.location.replace(site_url+'newsletter');
+
+					alert('Te hemos enviado un correo electrónico para confirmar tu registro.')
+				}else{
+					alert(data);
+				};
+			});
+		}
 
 		/**
 		 * VALIDA QUE EL EMAIL SEA CORRECTO
