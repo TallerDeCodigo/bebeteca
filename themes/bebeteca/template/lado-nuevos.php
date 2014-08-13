@@ -1,6 +1,6 @@
 <div class="un-medio pb">
 	<span class="titulo3 verde">
-		Últimos artículos
+		Más artículos
 	</span>
 	<?php
 		global $exclude;
@@ -19,7 +19,7 @@
 
 			$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__in' => $term->term_id) );
 		else:
-			$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider')) );
+			$post_general = new WP_Query(array( 'posts_per_page' => 3, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'orderby' => 'rand', 'post__not_in' => $exclude) );
 		endif;
 
 		if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();

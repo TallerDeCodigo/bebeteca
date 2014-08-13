@@ -81,7 +81,8 @@
 			Lo más comentado
 		</span>
 
-		<?php $facebook = new Comments\Facebook();
+		<?php 
+			$facebook = new Comments\Facebook();
 			$comentados = $facebook->getComentados();
 
 		if( $comentados ) : foreach (array_slice($comentados, 0, 5) as $post) : setup_postdata($post); ?>

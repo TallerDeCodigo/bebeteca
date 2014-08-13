@@ -41,7 +41,7 @@
 			// User Loop
 			if ( ! empty( $user_query->results ) ) {
 				foreach ( $user_query->results as $user ) {?>
-					<article class="entero autor-home">
+					<article class="entero autor-home clearfix">
 						<?php echo vew_image_user($user->ID); ?>
 						<div class="info-autor">
 							<h4><?php echo $user->display_name; ?></h4>

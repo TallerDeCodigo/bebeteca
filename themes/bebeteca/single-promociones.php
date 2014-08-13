@@ -7,7 +7,7 @@
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/promociones/') ?>">Promociones</a> / <?php the_title(); ?></span>
 			<h1><?php the_title(); ?></h1>
 
-			<div class="header-category">
+			<div class="header-category clearfix">
 				<div class="extras-category">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
@@ -36,12 +36,29 @@
 							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?> (Bebeteca)" target="_blank" ></a>
 						</li>
 						<li class="mail">
-							<a href=""></a>
+							<a rel="nofollow" class="share_post_by_mail" data-id="<?php echo $post->ID; ?>"></a>
+							<form class="mail_pop">
+								<label for="username">Tu nombre:</label>
+								<input type="text" name="username">
+
+								<label for="sender_email">Tu email:</label>
+								<input type="email" name="sender_email">
+
+								<label for="recipient">Email del receptor:</label>
+								<input type="email" name="recipient">
+
+								<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+								<label for="message">Mensaje:</label>
+								<textarea type="text" name="message"></textarea>
+
+								<input type="submit" value="Enviar">
+							</form>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<article class="entero">
+			<article class="entero clearfix">
 				<?php if (get_post_meta($post->ID, 'id_youtube', true) OR get_post_meta($post->ID, 'id_vimeo', true) ):
 
 					if(get_post_meta($post->ID, 'id_vimeo', true)): ?>

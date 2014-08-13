@@ -9,7 +9,7 @@
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/categoria/entrevistas/') ?>"><?php echo $cat_name; ?></a></span>
 			<div class="header-category">
 				<h4><?php echo $cat_name; ?></h4>
-				<div class="extras-category">
+				<div class="extras-category clearfix">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($term->term_id, 'cat'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share(site_url('/categoria/entrevistas/')); ?></p>					</div>

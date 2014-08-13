@@ -77,7 +77,7 @@ namespace Comments;
 			$permalinks_urls = implode(',', $permalinks);
 
 			$results   = file_get_contents("http://graph.facebook.com/?ids=$permalinks_urls");
-
+			
 			return json_decode($results);
 		}
 
@@ -90,20 +90,21 @@ namespace Comments;
 			$this->comentados = $this->get_from_last_week();
 			$permalinks       = $this->get_permalinks( $this->comentados );
 			$results          = $this->get_facebook_data_comments( $permalinks );
-
+			
 			$results          = (array)$results;
 
 
 
 			foreach ($this->comentados as $index => &$entrada) {
 
-				if ( isset($results[ $entrada->permalink ]->comments) )
+				if ( isset($results[ $entrada->permalink ]->comments) ){
 					$entrada->comments = $results[ $entrada->permalink ]->comments;
+				}else{
+					unset($this->comentados[$index]);
+				}
 			}
 
 			@usort( $this->comentados, array('Comments\Facebook', 'sort_objects_by_comments') );
-
-
 
 			set_transient( 'posts_mas_comentados', $this->comentados, 604800 );
 

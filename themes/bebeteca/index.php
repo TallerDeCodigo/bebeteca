@@ -102,7 +102,7 @@
 			</article><!-- VIDEOS -->
 
 			<article class="un-medio ultimo-fila">
-				<span class="titulo2 color-rosa">Promociones</span>
+				<span class="titulo2 color-rosa">Cupones</span>
 					<?php $post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('promociones'), 'post__not_in' => $exclude ) );
 
 					if ( $post_video->have_posts() ) : while( $post_video->have_posts() ) : $post_video->the_post(); $exclude[] = $post->ID; ?>
@@ -121,7 +121,7 @@
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
-			<article class="entero autor-home index-au">
+			<article class="entero autor-home clearfix index-au">
 				<?php $user_query = new WP_User_Query(array('role' => 'colaborador','number' => 40));
 				$users  = $user_query->results;
 				$total  = count($users) - 1;
@@ -132,10 +132,12 @@
 
 
 				<div class="info-autor">
-					<h4><?php echo $users[$select]->user_login; ?></h4>
+					<h4><?php echo $users[$select]->display_name; ?></h4>
 					<p class="rol"><?php the_author_meta('perfil', $user_id) ?></p>
 					<p><?php echo wp_trim_words( get_the_author_meta( 'quote', $user_id ), 12 ) ?></p>
-					<?php $user_nicename = get_the_author_meta( 'user_nicename', $user_id); ?>
+					<?php 
+						$user_nicename = get_the_author_meta( 'user_nicename', $user_id);
+					?>
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
 				</div>
 				<div class="post-autor">

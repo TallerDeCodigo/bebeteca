@@ -1,7 +1,7 @@
 <?php get_header(); global $wp_query;
 $user_id = $wp_query->queried_object->data->ID;
 $display_name = $wp_query->queried_object->data->display_name;
-$user_nicename = get_the_author_meta( 'user_nicename', $user_id);
+$user_nicename = get_the_author_meta( 'user_displayname', $user_id);
 ?>
 
 	<!-- Insert content here -->
@@ -13,12 +13,12 @@ $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 				<span class="perfil-usuario"><?php the_author_meta('perfil', $user_id) ?></span>
 			</div>
 
-			<article class="entero autor-home single-autor">
+			<article class="entero autor-home clearfix single-autor">
 				<div class="cont-image">
 					<?php echo vew_image_user($user_id); ?>
 				</div>
 				<div class="sigue-colaborador">
-					<span>Sigue a este colaborador</span>
+					<span>Contacta a este colaborador</span>
 					<ul>
 						<?php $face = get_the_author_meta( 'facebook', $user_id );
 						if ($face != ''):?>

@@ -16,7 +16,7 @@
 			</div>
 
 			<?php if(has_previous_posts()): ?><div class="boton mas-entradas"><?php previous_posts_link( '< Anteriores' ); ?></div><?php endif;
-			if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Mas entradas >' ); ?></div> <?php endif; ?>
+			if(has_next_posts()): ?><div class="boton mas-entradas right"><?php next_posts_link( 'Más entradas >' ); ?></div> <?php endif; ?>
 		</section>
 		<?php get_sidebar(); ?>
 	</div>

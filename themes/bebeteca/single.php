@@ -19,7 +19,7 @@ foreach ($terms as $key => $term) {
 			<h1><?php the_title(); ?></h1>
 			<span class="autor">Autor: <?php the_author_posts_link(); ?></span>
 
-			<div class="header-category">
+			<div class="header-category clearfix">
 				<div class="extras-category">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
@@ -44,12 +44,29 @@ foreach ($terms as $key => $term) {
 							<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 						</li>
 						<li class="mail">
-							<a href=""></a>
+							<a rel="nofollow" class="share_post_by_mail" data-id="<?php $post->ID; ?>"></a>
+							<form class="mail_pop">
+								<label for="username">Tu nombre:</label>
+								<input type="text" name="username">
+
+								<label for="sender_email">Tu email:</label>
+								<input type="email" name="sender_email">
+
+								<label for="recipient">Email del receptor:</label>
+								<input type="email" name="recipient">
+
+								<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+								<label for="message">Mensaje:</label>
+								<textarea type="text" name="message"></textarea>
+
+								<input type="submit">
+							</form>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<article class="entero">
+			<article class="entero clearfix">
 				<?php if (get_post_meta($post->ID, 'id_youtube', true) OR get_post_meta($post->ID, 'id_vimeo', true) ):
 
 					if(get_post_meta($post->ID, 'id_vimeo', true)): ?>
@@ -86,20 +103,37 @@ foreach ($terms as $key => $term) {
 
 							<?php $url_image = attachment_image_url($post->ID, 'large'); ?>
 							<li class="pr">
-								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
+								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php get_the_excerpt(); ?>" target="_blank" ></a>
 							</li>
 							<li class="mail">
-								<a href=""></a>
+								<a rel="nofollow" class="share_post_by_mail" data-id="<?php echo $post->ID; ?>"></a>
+								<form class="mail_pop">
+									<label for="username">Tu nombre:</label>
+									<input type="text" name="username">
+
+									<label for="sender_email">Tu email:</label>
+									<input type="email" name="sender_email">
+
+									<label for="recipient">Email del receptor:</label>
+									<input type="email" name="recipient">
+
+									<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+									<label for="message">Mensaje:</label>
+									<textarea type="text" name="message"></textarea>
+
+									<input type="submit" value="Enviar">
+								</form>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</article>
 
-			<article class="entero autor-home">
+			<article class="entero autor-home clearfix clearfix">
 				<?php echo vew_image_user($post->post_author); ?>
 				<div class="info-autor">
-					<h4><?php the_author_meta( 'user_login'); ?></h4>
+					<h4><?php the_author_meta( 'display_name'); ?></h4>
 					<p class="rol"><?php the_author_meta('perfil') ?></p>
 					<?php $user_nicename = get_the_author_meta( 'user_nicename'); ?>
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
@@ -116,7 +150,7 @@ foreach ($terms as $key => $term) {
 
 			<div class="entero divicion">
 				<span class="line"></span>
-				<h5>Artículos relacionados</h5>
+				<h5>Más artículos</h5>
 				<span class="line"></span>
 			</div>
 

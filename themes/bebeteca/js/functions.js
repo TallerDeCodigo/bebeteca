@@ -4,6 +4,19 @@
 
 	$(function(){
 
+		/**
+		 * Regresa todos los valores de un formulario como un associative array 
+		 */
+		window.getFormData = function (selector) {
+			var result = [],
+				data   = $(selector).serializeArray();
+
+			$.map(data, function (attr) {
+				result[attr.name] = attr.value;
+			});
+			return result;
+		}
+
 
 		/**
 		* SLIDE HOME
@@ -11,7 +24,7 @@
 		$("#slider-principal").tinycarousel({
 			bullets : true,
 			interval: true,
-			intervalTime : 3000
+			intervalTime : 5000
 		});
 
 
@@ -203,8 +216,37 @@
 			$(".search-main").resaltar(get,"resaltarTexto");
 		};
 
+		$('.share_post_by_mail').on('click', function(e){
+			console.log('lol catz');
+			e.preventDefault();
 
+			$(this).parent().find('.mail_pop').fadeIn('fast');
+		});
 
+		$('.mail_pop').on('submit', function(e){
+			e.preventDefault();
+
+			$(this).parent().find('#mail_pop').fadeIn('fast');
+			var form_data =  getFormData($(this));
+
+			$.post(ajax_url,{
+				username  	  : form_data.username,
+				sender_email  : form_data.sender_email,
+				recipient     : form_data.recipient,
+				post_id  	  : form_data.post_id,
+				message  	  : form_data.message,
+				action   	  : 'ajax_send_post_by_mail'
+			}, 'json')
+			.done(function (data){
+				console.log(data);
+				$('.mail_pop').fadeOut('fast');
+			})
+			.fail(function (a,b,c){
+				console.log(a);
+				console.log(b);
+				console.log(c);
+			});
+		});
 
 	});
 

@@ -4,10 +4,10 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 	<!-- Insert content here -->
 	<div class="main">
 		<section>
-			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/promociones/') ?>">Promociones</a></span>
-			<div class="header-category">
-				<h4>Promociones</h4>
-				<div class="extras-category">
+			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/promociones/') ?>">Cupones</a></span>
+			<div class="header-category clearfix">
+				<h4>Cupones</h4>
+				<div class="extras-category clearfix">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share(site_url('/promociones/')); ?></p>
