@@ -274,7 +274,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .autor-home .post-autor div a span{display: inline-block; color: #db006d; font-weight: bold; float: left; font-size: 15px; line-height: 19px; margin-right: 5px;}
 .autor-home .post-autor div a h4{font-weight: normal; display: block; overflow: hidden; font-size: 15px;}
 
-.autor-home.single-autor img{position: relative;overflow: hidden; float: left; width: 172px; height: 172px; border-radius: 88px; margin-left: 38px; margin-top:0;}
+.autor-home.single-autor img{position: relative;overflow: hidden; float: left; width: 172px; height: 172px; border-radius: 88px; margin-left: 29px; margin-top:0;}
 .autor-home.single-autor .info-autor{width: 280px; margin-left: 64px;  }
 .autor-home.single-autor .cont-image{position: relative;overflow: hidden;float: left; width: 230px;  margin-right: 42px; height: 264px}
 .autor-home.single-autor .cont-image img{top: 0px;}
@@ -283,7 +283,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .index-au{min-height: 170px !important;}
 
 .autor-home.single-autor{min-height: 300px;}
-.sigue-colaborador{position: absolute; width: 207px; height: auto; top: 213px; left: 48px;}
+.sigue-colaborador{position: absolute; width: 280px; height: auto; top: 213px; left: 37px;}
 .sigue-colaborador span{ color: #999999; font-size: 16px; margin-bottom: 10px; display: block;}
 .sigue-colaborador ul{display: block; overflow: hidden; width: auto; float: left; margin: 0; padding: 0;}
 .sigue-colaborador ul li{position: relative; overflow: hidden; width: 27px; height: 27px; float: left; margin-left: 6px; background-image: url(images/iconos_sociales.png);}
