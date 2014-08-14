@@ -7,7 +7,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- <meta name="viewport" content="width=100%, initial-scale=1"> -->
 		<meta http-equiv="cleartype" content="on">
+		<?php if( is_single() ): //Info para Facebook
+			$objeto = $wp_query->queried_object;
+			$imagen = wp_get_attachment_url( get_post_thumbnail_id($objeto->ID) );
+			$url = get_permalink($objeto->ID);
 
+			echo '<meta property="og:type" content="company"/>';
+			echo '<meta property="og:title" content="'.$objeto->post_title.' | Futbol Total"/>';
+			echo '<meta property="og:url" content="'.$url.'" >';
+			echo '<meta property="og:image" content="'.$imagen.'" >';
+			echo '<meta property="og:description" content="Conoce todo sobre la selección de '.$objeto->post_title.'" />';
+
+		endif; ?>
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
