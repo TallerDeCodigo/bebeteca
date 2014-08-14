@@ -32,7 +32,7 @@ foreach ($terms as $key => $term) {
 							<a rel="nofollow" class="comprtirFB"
 								data-permalink="<?php the_permalink(); ?>"
 								data-title="<?php the_title(); ?>"
-								data-description="<?php the_content(); ?>"
+								data-description="<?php the_excerpt(); ?>"
 								data-image="<?php echo attachment_image_url($post->ID, 'large') ?>">
 							</a>
 						</li>
