@@ -582,8 +582,8 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		  	'format' => '?pag=%#%',
 		  	'current' => max( 1, $paged ),
 		  	'total' => $max_num_pages,
-		  	'prev_text' => __('<'),
-		    'next_text' => __('>'),
+		  	'prev_text' => __('< Anterior'),
+		    'next_text' => __('Siguiente >'),
 		    'end_size' => 1,
 		    'mid_size' => 5,
 		) );
