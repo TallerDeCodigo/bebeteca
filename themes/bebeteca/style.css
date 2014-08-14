@@ -312,6 +312,9 @@ span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px s
 section .mas-entradas{float: left; width: 115px; overflow: hidden;}
 section .mas-entradas a{text-decoration: none; color: #fff;}
 
+.page-numbers{display: none;}
+.prev.page-numbers, .next.page-numbers{display: block;}
+
 .mas-videos{background-color: #4255A1; position: absolute;bottom: 13px;right: 0;}
 
 aside{position: relative; overflow: hidden; width: 306px; padding-left: 3px; height: auto; float: right;}
