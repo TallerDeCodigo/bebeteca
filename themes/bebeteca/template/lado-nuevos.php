@@ -1,6 +1,7 @@
 <div class="un-medio pb">
 	<span class="titulo3 verde">
-		Más promociones
+		<?php if (is_post_type_archive('promociones')) echo 'Más Promociones';
+		if (!is_post_type_archive('promociones')) echo 'Más Artículos'; ?>
 	</span>
 	<?php
 		global $exclude;

@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- <meta name="viewport" content="width=100%, initial-scale=1"> -->
 		<meta http-equiv="cleartype" content="on">
-		
+
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
@@ -150,28 +150,7 @@
 
 							</div>
 						</li>
-						<!-- <li class="bg-nutricion boton <?php nav_is('nutricion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nutricion/'); ?>">Nutrición</a>
-							<div class="submenu border-radius">
-								<ul class="subcategorias">
-									<?php $term = get_term_by( 'name', 'nutricion', 'category' );
-									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
-									$variable = preg_replace('~\((\d+)\)(?=\s*+<)~', '$1', $variable);
-									echo $variable; ?>
-								</ul>
-								<?php $cat_nutricion = new WP_Query(array( 'posts_per_page' => 4, 'post_type' => array('post', 'articulo-slider'), 'post_status' => 'publish', 'category_name' => 'nutricion') );
 
-								if ( $cat_nutricion->have_posts() ) : while( $cat_nutricion->have_posts() ) : $cat_nutricion->the_post(); ?>
-									<div class="post-rel">
-										<a href="<?php the_permalink(); ?>">
-											<?php the_post_thumbnail('articulos-gral'); ?>
-											<h4><?php the_title(); ?></h4>
-											<!-- <p><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p> -->
-										</a>
-									</div>
-								<?php endwhile; endif; wp_reset_postdata(); ?>
-
-							</div>
-						</li> -->
 
 						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a>
 							<div class="submenu border-radius">
