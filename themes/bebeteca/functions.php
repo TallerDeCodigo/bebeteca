@@ -496,28 +496,28 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$permalink = get_permalink($post_id);
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'medium' );
 		$url = $thumb[0];
-		
+
 		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
 		// $mensaje_mail .= "<img style='width: 500px; height: auto; margin: auto; display: block;' src='$url' alt='$this_post->post_title'>\n\r";
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
 		$mensaje_mail .= "<a href='$permalink'>Leer artículo completo</a> \n\r";
-		
+
     	$headers[]  = "From: $username <$sender_email>";
     	$headers[] 	= "MIME-Version: 1.0 \r\n";
 		$headers[] 	= "Content-Type: text/html; charset=UTF-8 \r\n";
 		wp_reset_postdata();
-		
+
         if(wp_mail( $recipient, 'Te han compartido un artículo en La Bebeteca', $mensaje_mail, $headers ))
         	wp_send_json_success();
 
         wp_send_json_error();
-	
+
 	}
 
 	add_action('wp_ajax_ajax_send_post_by_mail', 'ajax_send_post_by_mail');
 	add_action('wp_ajax_nopriv_ajax_send_post_by_mail', 'ajax_send_post_by_mail');
-	
+
 
 	/**
 	 * Include posts from authors in the search results where
@@ -526,12 +526,12 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 	 */
 	add_filter( 'posts_search', 'db_filter_authors_search' );
 	function db_filter_authors_search( $posts_search ) {
-	 
+
 		// Don't modify the query at all if we're not on the search template
 		// or if the LIKE is empty
 		if ( !is_search() || empty( $posts_search ) )
 			return $posts_search;
-	 
+
 		global $wpdb;
 		// Get all of the users of the blog and see if the search query matches either
 		// the display name or the user login
@@ -555,13 +555,36 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$posts_search = str_replace( ')))', ")) OR ( {$wpdb->posts}.post_author IN (" . implode( ',', array_map( 'absint', $matching_users ) ) . ")))", $posts_search );
 		return $posts_search;
 	}
-	
+
 	/**
 	 * Modify get_users() to search display_name instead of user_nicename
 	 */
 	function db_filter_user_query( &$user_query ) {
-	 
+
 		if ( is_object( $user_query ) )
 			$user_query->query_where = str_replace( "user_nicename LIKE", "display_name LIKE", $user_query->query_where );
 		return $user_query;
+	}
+
+
+	/**
+	 * PAGINACION GENERAL
+	 */
+	function paginate_links_otro($max_num_pages, $url){
+
+		global $wp_query;
+
+		$big = 999999999;
+		$paged = isset($_GET['pag']) ? $_GET['pag'] : 1;
+		$base = $url . '%_%';
+		return paginate_links( array(
+		  	'base' => $base,
+		  	'format' => '?pag=%#%',
+		  	'current' => max( 1, $paged ),
+		  	'total' => $max_num_pages,
+		  	'prev_text' => __('<'),
+		    'next_text' => __('>'),
+		    'end_size' => 1,
+		    'mid_size' => 5,
+		) );
 	}

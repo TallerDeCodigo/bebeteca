@@ -13,10 +13,10 @@
 			$url = get_permalink($objeto->ID);
 
 			echo '<meta property="og:type" content="company"/>';
-			echo '<meta property="og:title" content="'.$objeto->post_title.' | Futbol Total"/>';
+			echo '<meta property="og:title" content="'.$objeto->post_title.' | La Bebeteca"/>';
 			echo '<meta property="og:url" content="'.$url.'" >';
 			echo '<meta property="og:image" content="'.$imagen.'" >';
-			echo '<meta property="og:description" content="Conoce todo sobre la selección de '.$objeto->post_title.'" />';
+			echo '<meta property="og:description" content="'.$objeto->post_title.'" />';
 
 		endif; ?>
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->

@@ -60,12 +60,20 @@ $user_nicename = get_the_author_meta( 'user_displayname', $user_id);
 				<span class="line"></span>
 			</div>
 
-			<?php $post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'author' => $user_id ) );
+			<?php $paged = isset($_GET['pag']) ? $_GET['pag'] : 1;
+			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'author' => $user_id, 'paged'=> $paged ) );
 			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
 
 				get_template_part( 'template/articulo', 'general' );
 
-			endwhile; endif; wp_reset_postdata(); ?>
+			endwhile; endif; wp_reset_postdata();
+
+			if($post_general->max_num_pages > 1): ?>
+					<div class="pagination">
+						<?php $url = site_url('/author/'.$user_nicename .'/');
+						echo paginate_links_otro($post_general->max_num_pages, $url); ?>
+					</div>
+				<?php endif; ?>
 
 		</section>
 		<?php get_sidebar(); ?>
