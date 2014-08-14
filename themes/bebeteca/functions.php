@@ -497,7 +497,8 @@ add_filter( 'display_post_states', 'jc_display_archive_state' );
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'medium' );
 		$url = $thumb[0];
 
-		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r $message";
+		$mensaje_mail  = "$username te ha compartido el siguiente artículo: \n\r";
+		$mensaje_mail .= "<p>$message</p> \n\r";
 		$mensaje_mail .= "<h1>$this_post->post_title</h1> \n\r";
 		$mensaje_mail .= "<p>$excerpt</p> \n\r";
 		$mensaje_mail .= "<a href='$permalink'>Leer artículo completo</a> \n\r";
