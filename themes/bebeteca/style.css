@@ -366,7 +366,8 @@ aside span.titulo4{position: relative; overflow: hidden; width: 269px; height: 3
 
 span.breadcrumbs{display: block; overflow: hidden;width: 100%; height: auto; clear: both; color: #b73ba1; font-size: 12px; margin-bottom: 24px;}
 span.breadcrumbs a{text-decoration: none; color: #b73ba1;}
-.header-category{position: relative;width: 100%; height: auto; margin-bottom: 26px;}
+.header-category{position: relative; overflow: hidden; width: 100%; height: auto; margin-bottom: 26px;}
+.single .header-category{overflow: visible !important;}
 .post-slide .extras-category{float: right !important;}
 .header-category h4{display: block; float: left; font-size: 30px; color:#9d65b4;}
 .header-category .extras-category{position: relative;float: right;width: auto; margin-top: 7px;}
@@ -501,3 +502,6 @@ margin-top:47px;}
 .mail_pop label{ clear: left; ;;;margin: 0.5rem 0; ;;;width: 138px;}
 .mail_pop input, textarea{width:160px;}
 .mail_pop input[type=submit]{float:right;clear:left;margin:1rem 1rem 0 0;}
+
+
+.mar-left{margin-left: -48px;}

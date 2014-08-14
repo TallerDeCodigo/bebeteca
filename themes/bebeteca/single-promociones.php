@@ -8,7 +8,7 @@
 			<h1><?php the_title(); ?></h1>
 
 			<div class="header-category clearfix">
-				<div class="extras-category">
+				<div class="extras-category" style="overflow:visible;">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share(get_permalink($post->ID)); ?></p>
