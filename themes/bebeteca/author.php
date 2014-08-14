@@ -70,7 +70,8 @@ $user_nicename = get_the_author_meta( 'user_displayname', $user_id);
 
 			if($post_general->max_num_pages > 1): ?>
 					<div class="pagination">
-						<?php $url = site_url('/author/'.$user_nicename .'/');
+						<?php $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
+						$url = site_url('/author/'.$user_nicename .'/');
 						echo paginate_links_otro($post_general->max_num_pages, $url); ?>
 					</div>
 				<?php endif; ?>
