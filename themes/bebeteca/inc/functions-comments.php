@@ -16,7 +16,7 @@ namespace Comments;
 
 		public function getFechaLimite()
 		{
-			return date('Y-m-d H:i:s', strtotime('-7 days'));
+			return date('Y-m-d H:i:s', strtotime('-30 days'));
 		}
 
 
@@ -77,7 +77,7 @@ namespace Comments;
 			$permalinks_urls = implode(',', $permalinks);
 
 			$results   = file_get_contents("http://graph.facebook.com/?ids=$permalinks_urls");
-			
+
 			return json_decode($results);
 		}
 
@@ -90,7 +90,7 @@ namespace Comments;
 			$this->comentados = $this->get_from_last_week();
 			$permalinks       = $this->get_permalinks( $this->comentados );
 			$results          = $this->get_facebook_data_comments( $permalinks );
-			
+
 			$results          = (array)$results;
 
 
@@ -106,7 +106,7 @@ namespace Comments;
 
 			@usort( $this->comentados, array('Comments\Facebook', 'sort_objects_by_comments') );
 
-			set_transient( 'posts_mas_comentados', $this->comentados, 604800 );
+			set_transient( 'posts_mas_comentados', $this->comentados, 14400 );
 
 			return $this->comentados;
 		}
