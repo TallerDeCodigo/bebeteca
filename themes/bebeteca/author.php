@@ -68,13 +68,17 @@ $user_nicename = get_the_author_meta( 'user_displayname', $user_id);
 
 			endwhile; endif; wp_reset_postdata();
 
-			if($post_general->max_num_pages > 1): ?>
+			if($post_general->max_num_pages > 1):
+				$user_nicename = get_the_author_meta( 'user_nicename', $user_id);
+				$url = site_url('/author/'.$user_nicename .'/');
+				if ($paged == 1):?>
+					<div class="boton mas-entradas right"><a href="<?php echo $url.'?pag=2'; ?>">Más entradas</a></div>
+				<?php else: ?>
 					<div class="pagination">
-						<?php $user_nicename = get_the_author_meta( 'user_nicename', $user_id);
-						$url = site_url('/author/'.$user_nicename .'/');
-						echo paginate_links_otro($post_general->max_num_pages, $url); ?>
+						<?php echo paginate_links_otro($post_general->max_num_pages, $url); ?>
 					</div>
 				<?php endif; ?>
+			<?php endif; ?>
 
 		</section>
 		<?php get_sidebar(); ?>
