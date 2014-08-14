@@ -314,7 +314,7 @@ section .mas-entradas a{text-decoration: none; color: #fff;}
 
 .page-numbers{display: none;}
 .prev.page-numbers, .next.page-numbers{display: block;position: relative;overflow: hidden;width: 115px;height: 26px;padding: 0 10px;text-align: center;margin-right: 10px;border-radius: 5px;background-color: #8BD3D9;float: left;line-height: 26px;font-size: 13px;color: #FFF;}
-
+.next.page-numbers{float: right !important;}
 .mas-videos{background-color: #4255A1; position: absolute;bottom: 13px;right: 0;}
 
 aside{position: relative; overflow: hidden; width: 306px; padding-left: 3px; height: auto; float: right;}
