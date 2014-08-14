@@ -18,21 +18,6 @@
 		}
 
 
-		$('.comprtirFB').live('click', function (event) {
-			event.preventDefault();
-			var button = $(this);
-
-			FB.ui({
-				method:     'feed',
-				link:        button.data('permalink'),
-				name:       'Vive el Centro',
-				caption:     button.data('title'),       // post_title
-				description: button.data('description'), // the_excerpt
-				picture:     button.data('image')
-			});
-		});
-
-
 		/**
 		* SLIDE HOME
 		**/

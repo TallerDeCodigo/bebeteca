@@ -28,13 +28,7 @@ foreach ($terms as $key => $term) {
 					<span>Comparte</span>
 					<ul>
 						<li class="fb">
-
-							<a rel="nofollow" class="comprtirFB"
-								data-permalink="<?php the_permalink(); ?>"
-								data-title="<?php the_title(); ?>"
-								data-description="<?php the_excerpt(); ?>"
-								data-image="<?php echo attachment_image_url($post->ID, 'large') ?>">
-							</a>
+							<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post->ID) ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post->ID) ?>" target="_blank"></a>
 						</li>
 
 						<li class="tw">
