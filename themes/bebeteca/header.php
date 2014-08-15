@@ -10,15 +10,15 @@
 		<?php if( is_single() ): //Info para Facebook
 			$objeto = $wp_query->queried_object;
 			$imagen = wp_get_attachment_url( get_post_thumbnail_id($objeto->ID) );
-			$url = get_permalink($objeto->ID);
+			$url = get_permalink($objeto->ID); ?>
 
-			echo '<meta property="og:type" content="company"/>';
-			echo '<meta property="og:title" content="'.$objeto->post_title.' | La Bebeteca"/>';
-			echo '<meta property="og:url" content="'.$url.'" >';
-			echo '<meta property="og:image" content="'.$imagen.'" >';
-			echo '<meta property="og:description" content="'.$objeto->post_title.'" />';
+			<meta property="og:type" content="company"/>
+			<meta property="og:title" content="<?php echo $objeto->post_title; ?> | La Bebeteca"/>
+			<meta property="og:url" content="<?php echo $url; ?>" >
+			<meta property="og:image" content="<?php echo attachment_image_url($objeto->ID, 'thumbnail'); ?>" >
+			<meta property="og:description" content="<?php echo $objeto->post_title; ?>" />
 
-		endif; ?>
+		<?php endif; ?>
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
