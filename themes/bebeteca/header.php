@@ -7,18 +7,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<!-- <meta name="viewport" content="width=100%, initial-scale=1"> -->
 		<meta http-equiv="cleartype" content="on">
-		<?php if( is_single() ): //Info para Facebook
-			$objeto = $wp_query->queried_object;
-			$imagen = wp_get_attachment_url( get_post_thumbnail_id($objeto->ID) );
-			$url = get_permalink($objeto->ID); ?>
-
-			<meta property="og:type" content="company"/>
-			<meta property="og:title" content="<?php echo $objeto->post_title; ?> | La Bebeteca"/>
-			<meta property="og:url" content="<?php echo $url; ?>" >
-			<meta property="og:image" content="<?php echo attachment_image_url($objeto->ID, 'thumbnail'); ?>" >
-			<meta property="og:description" content="<?php echo $objeto->post_title; ?>" />
-
-		<?php endif; ?>
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
