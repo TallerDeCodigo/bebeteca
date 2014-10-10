@@ -1,8 +1,11 @@
 <aside id="main_sidebar">
 	<div class="banner-aside shadow">
-		<a href="http://www.bebe2go.com/collections/vendors?q=Carters&utm_source=labebetecaweb&utm_medium=web&utm_campaign=cartersbanner" target="_blank">
-			<img src="<?php echo THEMEPATH; ?>images/box-banner1.jpg" alt="bebe2go">
-		</a>
+		<!-- BoxBanner_Top_Home -->
+		<div id='div-gpt-ad-1412961425093-3' style='width:300px; height:250px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-3'); });
+			</script>
+		</div>
 	</div>
 
 	<div class="un-medio">
@@ -26,9 +29,12 @@
 	?>
 
 	<div class="banner-aside">
-		<a href="http://www.bebe2go.com/pages/britax?utm_source=labebetecaweb&utm_medium=web&utm_campaign=britaxbanner" target="_blank">
-			<img src="<?php echo THEMEPATH; ?>images/box-banner2.jpg" alt="bebe2go">
-		</a>
+		<!-- BoxBanner_Bottom_Home -->
+		<div id='div-gpt-ad-1412961425093-2' style='width:300px; height:250px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-2'); });
+			</script>
+		</div>
 	</div>
 
 	<div class="un-medio">
