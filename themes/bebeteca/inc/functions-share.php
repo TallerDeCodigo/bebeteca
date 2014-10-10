@@ -163,12 +163,10 @@ class Share {
 	 * CUENTA LAS VECES QUE SE COMPARTIO
 	 */
 	function get_count_share($permalinks){
-		$share_of_url = get_transient('share_url_redes');
-		if( $share_of_url === false ):
+		if( is_single() ):
 
 			$share = new Share();
 			$total = $share->getUrlCompartida($permalinks);
-			set_transient( "share_url_redes", 'trancent sahare url redes', 900);
 			return $total;
 
 		else:
