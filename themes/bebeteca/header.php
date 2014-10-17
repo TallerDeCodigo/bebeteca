@@ -8,6 +8,35 @@
 		<!-- <meta name="viewport" content="width=100%, initial-scale=1"> -->
 		<meta http-equiv="cleartype" content="on">
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+		<!-- Google Ads DFP-->
+			<script type='text/javascript'>
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+				})();
+			</script>
+
+			<script type='text/javascript'>
+				googletag.cmd.push(function() {
+				googletag.defineSlot('/38946695/Bebeteca_Footer_Leaderboard', [728, 90], 'div-gpt-ad-1412961425093-0').addService(googletag.pubads());
+				googletag.defineSlot('/38946695/Bebeteca_Header_Leaderboard', [728, 90], 'div-gpt-ad-1412961425093-1').addService(googletag.pubads());
+				googletag.defineSlot('/38946695/LaBebeteca_Home_BoxBanner_Bottom', [300, 250], 'div-gpt-ad-1412961425093-2').addService(googletag.pubads());
+				googletag.defineSlot('/38946695/LaBebeteca_Home_BoxBanner_Top', [300, 250], 'div-gpt-ad-1412961425093-3').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+				});
+			</script>
+		<!-- end Google Ads DFP -->
 		<?php wp_head(); ?>
 	</head>
 
@@ -222,10 +251,13 @@
 			</header>
 		</div><!-- FIN HEADER -->
 
-		<div class="container">
+		<div class="container clearfix">
 
 			<div class="banner-top shadow">
-				<a href="http://www.bebe2go.com/collections/vendors?q=Belly%20Bandit&utm_source=labebetecaweb&utm_medium=web&utm_campaign=bellybanditbanner" target="_blank">
-					<img src="<?php echo THEMEPATH; ?>images/header-banner2.jpg" alt="Protege tu cuerpo durante el embarazo">
-				</a>
+				<!-- Bebeteca_Header_Leaderboard -->
+				<div id='div-gpt-ad-1412961425093-1' style='width:728px; height:90px;'>
+					<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-1'); });
+					</script>
+				</div>
 			</div>

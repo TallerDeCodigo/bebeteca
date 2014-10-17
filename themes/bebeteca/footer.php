@@ -1,4 +1,13 @@
+
 </div><!-- container -->
+		<div class="banner-bottom shadow">
+				<!-- Bebeteca_Header_Leaderboard -->
+				<div id='div-gpt-ad-1412961425093-1' style='width:728px; height:90px;'>
+					<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-1'); });
+					</script>
+				</div>
+			</div>
 		<footer>
 			<?php wp_footer(); ?>
 			<div class="content-footer">
@@ -20,7 +29,7 @@
 
 						<?php $term = get_term_by( 'name', 'embarazo', 'category' );
 						$termchildren = get_term_children( $term->term_id, 'category' );
-						
+
 						if(!is_wp_error($termchildren))
 							foreach ( $termchildren as $child ) {
 								$term = get_term_by( 'id', $child, 'category' );
@@ -122,7 +131,7 @@
 		  	ga('send', 'pageview');
 
 		</script>
-		
+
 	</body>
 
 </html>

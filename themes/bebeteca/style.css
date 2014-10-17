@@ -202,6 +202,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 
 .container{position: relative;overflow-y: hidden; overflow: visible; width: 950px; height: auto;margin: 0 auto; padding: 0;}
 .container .banner-top{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; background: #e9e;}
+.banner-bottom{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; background: #e9e;}
 
 .main{position: relative; overflow-y: hidden; overflow: visible; width: 940px;}
 .main section{position: relative; overflow-y: hidden; overflow: visible; width: 620px; margin-bottom: 57px; height: auto; float: left;}
