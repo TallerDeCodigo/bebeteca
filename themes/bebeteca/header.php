@@ -10,33 +10,31 @@
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 
-		<!-- Google Ads DFP-->
-			<script type='text/javascript'>
-				var googletag = googletag || {};
-				googletag.cmd = googletag.cmd || [];
-				(function() {
-				var gads = document.createElement('script');
-				gads.async = true;
-				gads.type = 'text/javascript';
-				var useSSL = 'https:' == document.location.protocol;
-				gads.src = (useSSL ? 'https:' : 'http:') +
-				'//www.googletagservices.com/tag/js/gpt.js';
-				var node = document.getElementsByTagName('script')[0];
-				node.parentNode.insertBefore(gads, node);
-				})();
-			</script>
+		<script type='text/javascript'>
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function() {
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + 
+			'//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+			})();
+		</script>
 
-			<script type='text/javascript'>
-				googletag.cmd.push(function() {
-				googletag.defineSlot('/38946695/Bebeteca_Footer_Leaderboard', [728, 90], 'div-gpt-ad-1412961425093-0').addService(googletag.pubads());
-				googletag.defineSlot('/38946695/Bebeteca_Header_Leaderboard', [728, 90], 'div-gpt-ad-1412961425093-1').addService(googletag.pubads());
-				googletag.defineSlot('/38946695/LaBebeteca_Home_BoxBanner_Bottom', [300, 250], 'div-gpt-ad-1412961425093-2').addService(googletag.pubads());
-				googletag.defineSlot('/38946695/LaBebeteca_Home_BoxBanner_Top', [300, 250], 'div-gpt-ad-1412961425093-3').addService(googletag.pubads());
-				googletag.pubads().enableSingleRequest();
-				googletag.enableServices();
-				});
-			</script>
-		<!-- end Google Ads DFP -->
+		<script type='text/javascript'>
+			googletag.cmd.push(function() {
+			googletag.defineSlot('/38946695/Bebeteca_Footer_Leaderboard', [728, 90], 'div-gpt-ad-1413945214550-0').addService(googletag.pubads());
+			googletag.defineSlot('/38946695/Bebeteca_Header_Leaderboard', [728, 90], 'div-gpt-ad-1413945214550-1').addService(googletag.pubads());
+			googletag.defineSlot('/38946695/LaBebeteca_Home_BoxBanner_Bottom', [300, 250], 'div-gpt-ad-1413945214550-2').addService(googletag.pubads());
+			googletag.defineSlot('/38946695/LaBebeteca_Home_BoxBanner_Top', [300, 250], 'div-gpt-ad-1413945214550-3').addService(googletag.pubads());
+			googletag.pubads().enableSingleRequest();
+			googletag.enableServices();
+			});
+	</script>
 		<?php wp_head(); ?>
 	</head>
 
