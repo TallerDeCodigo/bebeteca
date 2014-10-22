@@ -1,12 +1,14 @@
 
 </div><!-- container -->
+
+		<!-- Bebeteca_Footer_Leaderboard -->
 		<div class="banner-bottom">
-				<div id='div-gpt-ad-1412961425093-1' style='width:728px; height:90px;'>
-					<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-1'); });
-					</script>
-				</div>
+			<div id='div-gpt-ad-1413996590367-0' style='width:728px; height:90px;'>
+				<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1413996590367-0'); });
+				</script>
 			</div>
+		</div>
 		<footer>
 			<?php wp_footer(); ?>
 			<div class="content-footer">

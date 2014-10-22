@@ -1,8 +1,9 @@
 <aside id="main_sidebar">
 	<div class="banner-aside">
-		<div id='div-gpt-ad-1412961425093-3' style='width:300px; height:250px;'>
+		<!-- BoxBanner_Top_Home -->
+		<div id='div-gpt-ad-1413996590367-3' style='width:300px; height:250px;'>
 			<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-3'); });
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1413996590367-3'); });
 			</script>
 		</div>
 	</div>
@@ -29,9 +30,9 @@
 
 	<div class="banner-aside">
 		<!-- BoxBanner_Bottom_Home -->
-		<div id='div-gpt-ad-1412961425093-2' style='width:300px; height:250px;'>
+		<div id='div-gpt-ad-1413996590367-2' style='width:300px; height:250px;'>
 			<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1412961425093-2'); });
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1413996590367-2'); });
 			</script>
 		</div>
 	</div>
