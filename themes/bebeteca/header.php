@@ -251,7 +251,7 @@
 
 		<div class="container clearfix">
 
-			<div class="banner-top shadow">
+			<div class="banner-top">
 				<!-- Bebeteca_Header_Leaderboard -->
 				<div id='div-gpt-ad-1412961425093-1' style='width:728px; height:90px;'>
 					<script type='text/javascript'>

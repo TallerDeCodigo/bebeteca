@@ -201,7 +201,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu ul li.bg-promociones:hover, nav#main-menu ul li.bg-promociones.active{background-color: #ff7a83;}
 
 .container{position: relative;overflow-y: hidden; overflow: visible; width: 950px; height: auto;margin: 0 auto; padding: 0;}
-.container .banner-top{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; background: #e9e;}
+.container .banner-top{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; }
 .banner-bottom{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto;}
 
 .main{position: relative; overflow-y: hidden; overflow: visible; width: 940px;}
