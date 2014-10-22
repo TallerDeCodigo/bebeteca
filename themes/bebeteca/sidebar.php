@@ -81,7 +81,7 @@
 
 	</div>
 
-	<div class="un-medio pb destacados">
+	<!-- <div class="un-medio pb destacados">
 		<span class="titulo4">
 			Lo más comentado
 		</span>
@@ -104,5 +104,5 @@
 
 		<?php endforeach; endif; wp_reset_postdata(); ?>
 
-	</div>
+	</div> -->
 </aside><!-- main_sidebar -->

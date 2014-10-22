@@ -202,7 +202,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 
 .container{position: relative;overflow-y: hidden; overflow: visible; width: 950px; height: auto;margin: 0 auto; padding: 0;}
 .container .banner-top{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; background: #e9e;}
-.banner-bottom{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; background: #e9e;}
+.banner-bottom{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto;}
 
 .main{position: relative; overflow-y: hidden; overflow: visible; width: 940px;}
 .main section{position: relative; overflow-y: hidden; overflow: visible; width: 620px; margin-bottom: 57px; height: auto; float: left;}
@@ -320,7 +320,7 @@ section .mas-entradas a{text-decoration: none; color: #fff;}
 .mas-videos{background-color: #4255A1; position: absolute;bottom: 13px;right: 0;}
 
 aside{position: relative; overflow: hidden; width: 306px; padding-left: 3px; height: auto; float: right;}
-aside .banner-aside{position: relative;overflow: hidden; width: 300px; height: 250px; background-color: #a1a1a1; margin-bottom: 20px;}
+aside .banner-aside{position: relative;overflow: hidden; width: 300px; height: 250px;  margin-bottom: 20px;}
 aside .un-medio{overflow: hidden; margin-right: 0; background-color: #fff; margin-bottom: 20px;  -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 aside .un-medio.pb{padding-bottom: 22px;}
 span.titulo3{position: relative;overflow: hidden;width: 100%; height: 68px; display: block; background-image: url(images/fondo-morado.png); background-repeat: repeat-x; font-family: 'simplicitymedium' !important; text-align: center; color: #fff !important; font-size: 25px !important; letter-spacing: 1px !important; line-height: 55px !important;}
