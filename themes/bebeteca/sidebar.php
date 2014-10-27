@@ -65,20 +65,25 @@
 		</span>
 
 		<!-- Showing latest, Analytics API thing -->
-		<?php
-			global $exclude;
 
-			$mas_vistos = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude  ) );
-			if ( $mas_vistos->have_posts() ) : while( $mas_vistos->have_posts() ) : $mas_vistos->the_post();
-			?>
-			<div class="caja-ultimos">
-				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail('articulos-side'); ?>
-					<h4><?php the_title(); ?></h4>
-				</a>
-			</div>
+		<?php if (function_exists('lo_mas_visto_GA')):
+			$posts = lo_mas_visto_GA();
+			if (!empty($posts)) :
+				foreach ($posts as $key => $visto) :
+					if (isset($visto['post_id']) AND $visto['post_id'] != ''):
+						$post = get_posts( array('post__in' => array($visto['post_id']) ) ); ?>
 
-		<?php endwhile; endif; wp_reset_postdata(); ?>
+						<div class="caja-ultimos">
+							<a href="<?php echo get_permalink($post[0]->ID); ?>">
+								<?php  echo get_the_post_thumbnail( $post[0]->ID, 'articulos-side' ); ?>
+								<h4><?php echo $post[0]->post_title; ?></h4>
+							</a>
+						</div>
+
+					<?php endif;
+				endforeach;
+			endif;
+		endif;?>
 
 	</div>
 
