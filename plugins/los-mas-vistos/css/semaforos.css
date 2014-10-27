@@ -1,0 +1,117 @@
+@charset 'utf-8';
+
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
+
+
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}
+
+/*HTML5 element display*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{display:block;}
+/*Figures*/
+figure {margin: 0;}
+
+/* Utilities */
+.lst_reset, .lst_reset li { margin: 0; padding: 0; list-style: none; }
+.clear { clear:both; height:1px; margin:0; padding:0; font-size: 1px; line-height: 0; }
+* { box-sizing: border-box; }
+
+/* clearfix for modern browsers */
+.clearfix:before,
+.clearfix:after { content:""; display:table; }
+.clearfix:after { clear:both; }
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix { zoom:1; }
+/* SEMAFORO ECONO MICO */
+#wpbody-content{padding-bottom: 5px;}
+
+.bg-gris-sf {background: #F2F2F2;}
+
+header.contenidos-head{height: 46px;position: relative;overflow: visible;width: 675px;margin: 0 auto;background: #FFF;border-bottom: 1px solid #333;padding-left: 27px;padding-top: 20px; z-index: 9998;}
+header.contenidos-head h4{display: inline-block; float: left; margin-right: 4px;}
+header.contenidos-head p{display: inline-block; width: auto; min-width: 177px; color: #cc3399; font-size: 15px; float: left; margin-right: 20px; line-height: 15px;}
+header.contenidos-head p a{text-decoration: none;color: #cc3399; }
+header.contenidos-head span{position: absolute;overflow: visible;width: 9px;height: 30px;background: #333;left: 0;bottom: 0;}
+header.contenidos-head .selector-estado{position: relative;overflow: hidden;width: 189px; height: 26px; padding-right: 28px; background: #4d4d4d url('../img/select.jpg') no-repeat; background-position: 161px 0px; margin-top: -9px; font-size: 12px; color: #fff;line-height: 27px;padding-left: 12px; cursor: pointer;}
+header.contenidos-head .mnu-stados{display: none; position: absolute;overflow: hidden;overflow-y: scroll;width: 190px;height: 500px; background: #fff; top: 37px;left: 392px; padding: 8px 0; border-left:1px solid #000; border-right:1px solid #000; border-bottom: 1px solid #000;}
+header.contenidos-head .mnu-stados.grafica{left: 299px;}
+header.contenidos-head .mnu-stados .c-estado{position: relative;overflow: hidden;height: 25px; width: 100%; line-height: 26px; color: #4d4d4d; padding: 0 8px; cursor: pointer;}
+header.contenidos-head .mnu-stados .c-estado a{display: block;height: 25px; width: 100%; color: #4d4d4d; text-decoration: none;}
+header.contenidos-head .mnu-stados .c-estado:hover{background-color: #C39; color: #fff;}
+header.contenidos-head .mnu-stados .c-estado:hover a{color: #fff;}
+.semaforo-economico-tema, .semaforo-economico-tema .fila{position: relative;overflow: hidden; width: 100%; min-height: 52px;}
+.semaforo-economico-tema{position: relative;overflow: hidden;width: 675px;margin: 0 auto; margin-bottom: 44px;}
+.semaforo-economico-tema .fila .centro-fila{height: 100%;width: 100%;position: relative;overflow: hidden;}
+.semaforo-economico-tema .fila .centro-fila div{float: left; min-height: 48px; padding-top: 10px; padding-bottom: 10px;}
+.semaforo-economico-tema .fila .centro-fila .columna1,
+.semaforo-economico-tema .fila .centro-fila .columna4{position: relative;overflow: hidden; width: 29%; height: 100%; padding-left: 22px; font-size: 12px; padding-right: 10px; border-right: 1px dashed #8d8d8d; }
+.semaforo-economico-tema .fila .centro-fila .columna4{border:0; color: #666; line-height: 28px;}
+.semaforo-economico-tema .fila .centro-fila .columna4.bor-left{border-left: 1px dashed #8d8d8d; }
+.semaforo-economico-tema .fila .centro-fila .columna2{position: relative;overflow: hidden; width: 18%; height: 100%; text-align: center; line-height: 28px;}
+.semaforo-economico-tema .fila .centro-fila .columna3{position: relative;overflow: hidden; width: 16%; height: 100%; text-align: center;  border-right: 1px dashed #8d8d8d; border-left: 1px dashed #8d8d8d; }
+.semaforo-economico-tema .fila .centro-fila .columna3 a{display: block;position: relative;overflow: hidden;width: 73px; margin: 0 auto;padding: 0 10px;height: 28px;background: #C39;color: #FFF;line-height: 26px;border-radius: 5px;float: none;}
+.semaforo-economico-tema .fila .centro-fila .columna3.indi{width: 7%; border-right: 0;}
+.semaforo-economico-tema .fila .centro-fila .columna3.grafica{width: 21%; border-left: 0;}
+.semaforo-economico-tema .fila .centro-fila .columna3.grafica .bt-grafica-indicador{width: 124px;}
+.semaforo-economico-tema .fila .centro-fila .columna3.grafica a{width: 110px; background: #4D4D4D;}
+.semaforo-economico-tema .fila .centro-fila .nombre-col{font-size: 15px; color: #4d4d4d; height: 39px; line-height: 42px;  padding-top: 0px; padding-bottom: 0px;}
+.semaforo-economico-tema .fila .centro-fila .columna2 span,
+.semaforo-economico-tema .fila .centro-fila .columna4 span{display: block; width: 122px; font-size: 12px; color: #666666; margin: auto;  text-align: center; float: none;}
+.semaforo-economico-tema .fila .centro-fila a{display: block; text-decoration: none; color: #ce1e82; font-size: 12px; float: left; margin-left: 35px; margin-top: 23px;}
+.semaforo-economico-tema .fila .centro-fila .compartir-caja{float: right; padding: 14px 0;}
+.semaforo-economico-tema .fila .centro-fila .columna4 span{width: 217px;}
+.semaforo-economico-tema .fila .centro-fila .columna1 a{margin: 0; color: #666;}
+.semaforo-economico-tema .fila .centro-fila .columna1 a:hover{color: #C39;}
+
+.semaforo-economico-tema.semaforo-nal .columna1{width: 327px !important;}
+.semaforo-economico-tema.semaforo-nal .columna2{width: 195px !important;}
+.semaforo-economico-tema .fila .centro-fila .columna2.grafica-im{width: 300px; padding: 5px;}
+.semaforo-economico-tema .fila .centro-fila .columna2.grafica-im img{width: 100%; height: auto;}
+.semaforo-economico-tema.semaforo-nal .columna4{position: relative;overflow: hidden; width: 270px;   border-left: 1px dashed #8d8d8d; text-align: center;}
+.semaforo-economico-tema.semaforo-nal .columna3{width: 148px !important;}
+#subir-foto-grafica1,
+#subir-foto-grafica2,
+#subir-foto-grafica3,
+#subir-foto-grafica4,
+#subir-foto-grafica5,
+#subir-foto-grafica6,
+#subir-foto-grafica7,
+#subir-foto-grafica8,
+#subir-foto-grafica9,
+#subir-foto-grafica10,
+#subir-foto-grafica11,
+#subir-foto-grafica12,
+#subir-foto-grafica13{display: none;}
+
+.semaforo-economico-tema h4.indicador-sec{font-size: 27px; color: #C39;margin-top: 13px;margin-bottom: 13px;}
+
+.fondo-pop-indicador{position: fixed;width: 100%; height: 100%; background: url('../img/f-rec.png'); z-index: 9999;}
+.pop_up_actualizar{position: fixed; overflow: visible; width: 400px; height: 320px; left: 50%; top: 50%; margin-left: -103px; margin-top: -110px; z-index: 10000; background: #fff; border-radius: 15px; padding: 25px;}
+.pop_up_actualizar h4{font-size: 24px; margin-bottom: 15px; text-align: center;}
+.pop_up_actualizar p{font-size: 17px; margin-bottom: 10px;}
+.pop_up_actualizar p span{color: #C39;}
+#form_crecimiento{margin-top: 50px; text-align: center;}
+.pop_up_actualizar .campo-u{position: relative;overflow: hidden; margin-bottom: 12px; text-align: left; padding-left: 27px;}
+.pop_up_actualizar label{width: 132px; float: left; display: block; position: relative;overflow: hidden; font-size: 17px;}
+.pop_up_actualizar input[type=text]{width: 50%; height: 30px; padding: 0 5px; outline: none; margin-right: 15px;float: left;}
+.pop_up_actualizar input[type=submit]{padding: 0 10px;height: 28px;background: #C39;color: #FFF;font-size: 17px; line-height: 26px; border:0; border-radius: 5px;}
+.pop_up_actualizar div.error{border-bottom: 1px solid #DD3D36;position: absolute;left: 41px;}
+
+span.indicador{display: block; overflow: hidden; width: 26px; height: 26px;background: url('../img/spreat.png') no-repeat; float: left; margin-right: 10px; margin-left: 10px;}
+
+span.roja{background-position: -137px -109px  !important;}
+span.verde{background-position: -10px -76px  !important;}
+span.amarilla{background-position: -42px -78px  !important;}
+
+.bt-borrar-indicador, .bt-grafica-indicador{display: block;position: relative;overflow: hidden;width: 73px; margin: 0 auto;padding: 0 10px;height: 28px;background: #C39;color: #FFF;line-height: 26px;border-radius: 5px;float: none; border:0; cursor: pointer;}
