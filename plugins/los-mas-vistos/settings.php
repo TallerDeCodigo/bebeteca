@@ -6,7 +6,7 @@ $email_user = $current_user->data->user_email;
 $domain = explode('@', $email_user);
 $dominio = $domain[1];
 
-if ($dominio == 'hacemoscodigo.com') :?>
+if ($dominio == 'hacemoscodigo.com' || $dominio == 'losmaquiladores.com') :?>
 	<form method="post" action="">
 		<table class="form-table">
 			<tbody>
