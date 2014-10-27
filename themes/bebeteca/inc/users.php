@@ -77,39 +77,3 @@
     }
     add_action( 'personal_options_update', 'user_vew_mail_fields_save' );
     add_action( 'edit_user_profile_update', 'user_vew_mail_fields_save' );
-
-
-
-
-// CREATE DEFAULT USERS ///////////////////////////////////////////////////////////////
-
-
-
-	// add_action('init', function(){
-	// 	$users = array('alex', 'cova', 'nori');
-	// 	array_map('create_usuario_maquilador', $users);
-	// });
-
-
-	// /**
-	//  * Crear un nuevo usuario
-	//  * @param  string $user username
-	//  */
-	// function create_usuario_maquilador($user){
-	// 	$password = wp_generate_password();
-	// 	$user_id  = wp_create_user( $user, $password, "$user@losmaquiladores.com" );
-	// 	if ( is_int($user_id) ){
-	// 		set_maquilador_role( $user_id );
-	// 		wp_new_user_notification( $user_id, $password );
-	// 	}
-	// }
-
-
-	// /**
-	//  * Set user role as developer (super admin)
-	//  * @param int $user_id
-	//  */
-	// function set_maquilador_role($user_id){
-	// 	$wp_user = get_user_by( 'id', $user_id );
-	// 	$wp_user->set_role( 'developer' );
-	// }
