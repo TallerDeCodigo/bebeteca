@@ -127,11 +127,11 @@ function select_id_post_by_slug($slug){
 
 
 function lo_mas_visto_GA(){
-	if ( $comentados = get_transient('posts_mas_vistos_transient_GA_dia') ){
+	if ( $comentados = get_transient('posts_mas_vistos_transient_GA') ){
 		return get_option( 'los_post_mas_vistos_GA' );
 	}else{
 		masVisitados();
-		set_transient( 'posts_mas_vistos_transient_GA_dia', 'tran', 3600 );
+		set_transient( 'posts_mas_vistos_transient_GA', 'tran', 3600 );
 		return get_option( 'los_post_mas_vistos_GA' );
 	}
 
