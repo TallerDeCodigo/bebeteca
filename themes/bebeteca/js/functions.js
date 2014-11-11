@@ -272,11 +272,9 @@
 				var tam_papa = $(this).height();
 				$('.cont-info-gral').css({'height':tam_papa });
 				$('.primer_content' ).removeAttr('style');
-				$(this).addClass('clearfix');
 			});
 
 		}else{
-			$('.article-gral').removeClass('clearfix');
 			$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
 		}
 
@@ -286,12 +284,30 @@
 					var tam_papa = $(this).height();
 					$('.cont-info-gral').css({'height':tam_papa });
 					$('.primer_content' ).removeAttr('style');
-					$(this).addClass('clearfix');
 
 				});
 			}else{
 				$('.article-gral').removeClass('clearfix');
-				$('.cont-info-gral').removeAttr('style');
+			}
+
+		});
+
+
+		if( $(window).width() < 980 ){
+
+			$('.article-gral').addClass('clearfix');
+
+		}else{
+			$('.article-gral').removeClass('clearfix');
+		}
+
+		$(window).resize(function(){
+			if( $(window).width() < 980 ){
+
+				$('article-gral').addClass('clearfix');
+
+			}else{
+				$('.article-gral').removeClass('clearfix');
 			}
 
 		});
