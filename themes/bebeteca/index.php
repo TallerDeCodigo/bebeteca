@@ -1,7 +1,7 @@
 <?php get_header(); $no_posts = array(); global $exclude; ?>
 	<!-- Insert content here -->
 	<div class="main">
-		<section>
+		<section class="no-mobile">
 			<?php if ( have_posts() ) : ?>
 				<article class="entero shadow">
 
@@ -135,7 +135,7 @@
 					<h4><?php echo $users[$select]->display_name; ?></h4>
 					<p class="rol"><?php the_author_meta('perfil', $user_id) ?></p>
 					<p><?php echo wp_trim_words( get_the_author_meta( 'quote', $user_id ), 12 ) ?></p>
-					<?php 
+					<?php
 						$user_nicename = get_the_author_meta( 'user_nicename', $user_id);
 					?>
 					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
@@ -168,7 +168,10 @@
 			endwhile; endif; wp_reset_postdata(); ?>
 
 		</section>
-		<?php get_sidebar(); ?>
+
+		<?php get_template_part( 'template/home', 'responsive' );
+
+		get_sidebar(); ?>
 	</div>
 
 

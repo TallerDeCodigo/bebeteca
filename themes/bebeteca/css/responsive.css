@@ -14,6 +14,22 @@
 .container{width: 93.6%;}
 .main section{width: 66.2%;}
 aside{width: 32.1%;}
+.main section .un-medio{width: 48.2%; margin-right: 3.4%;}
+.main section .un-medio img{height: auto;}
+.main section .un-medio .footer-un-medio{height: auto;}
+.play_2.home_vid{margin-left: 50%;left: -44.5px;margin-top: -10%;}
+.autor-home img{width: 17.6%; height: auto;}
+.autor-home .info-autor{margin-left: 22.4%;width: 30.3%; margin-right: 3.3%;}
+.autor-home .post-autor{width: 40.8%;}
+.autor-home .info-autor .boton{font-size: 11px;}
+span.line{display: inline-block;width: 29%;float: none;}
+.entero h5{display: inline-block; float: none;}
+.entero.divicion{text-align: center;}
+.article-gral{padding-bottom: 5px !important; padding-top: 5px !important; min-height:128px;}
+.article-gral img{width: 35.6% !important; margin-top: -5px; height: auto; margin-right: 5.9%;}
+.article-gral h4, .article-gral p{width: 100%;}
+.article-gral .cont-info-gral{width: 55.8%;}
+.article-gral .extras{display: none;}
 
 /* FOOTER */
 footer .content-footer{width: 100%; padding: 10px 3.4%;}
@@ -24,12 +40,16 @@ footer .content-footer .footer-partesitas{width: 16%;}
 footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 .ultimo_footer{margin-right: 12% !important;}
 
+
 @media only screen and (max-width: 871px){
 	.content-header header nav#main-menu ul li{font-size: 0.8rem;}
 }
 
-@media only screen and (max-width: 765px){
+@media only screen and (max-width: 767px){
 	footer .content-footer .footer-partesitas {width: 19%;margin-right: 2%;}
+	.container .banner-top,
+	.banner-bottom{display: none;}
+
 }
 
 
@@ -54,6 +74,26 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.content-header header #main-menu{display: none; position: fixed; overflow-y: scroll; height: 100%; margin-top: 45px;z-index: 9998;}
 	.content-header header .bt-search-responsive{display: block;width: 20px; height: 20px;background: url(../images/iconos.png); background-position: -150px -43px; float: right;margin-top: 11px; cursor: pointer;}
 
+	#main_sidebar{display: none;}
+	.main section{width: 100%;}
+
+	.article-gral{background: transparent; box-shadow: none; padding: 0 !important;}
+	.article-gral .cont-info-gral{width: 57.8%; background: #fff;  padding-left: 15px; padding-right: 15px;}
+	.article-gral img{width: 40.3% !important;  margin-right: 1.9%;  margin-top: 0;}
+	.article-gral .cont-info-gral .franja{display: block;width: 123%;margin-left: -15px; height: 20px; margin-bottom: 26px; }
+
+	.article-gral .cont-info-gral .franja-embarazo{background: #AE3079;}
+	.article-gral .cont-info-gral .franja-dia-a-dia{background: #4E9BAB;}
+	.article-gral .cont-info-gral .franja-nacimiento{background: #C57FA6;}
+	.article-gral .cont-info-gral .franja-estimulacion{background: #A674B8;}
+	.article-gral .cont-info-gral .franja-lactancia{background: #FAC600;}
+	.article-gral .cont-info-gral .franja-entrevistas{background: #8FA0E0;}
+
+	h4.tit_principal{width:100%;font-size: 1rem; color: #B73BA1; padding-bottom: 11px; border-bottom: 1px solid #B73BA1; margin-bottom: 21px;}
+	.article-gral.primer_post .img-gral2{width: 100% !important;}
+	.article-gral.primer_post .cont-info-gral{width: 100%; padding-bottom: 13px;}
+	.article-gral.primer_post .cont-info-gral .franja{margin-bottom: 13px;}
+
 	footer{padding: 0 1.9% 12px 1.9%; font-size: 0.8rem;}
 
 	footer .p-footer{width: 100%; height: auto; text-align: center; color: #fff; margin-top: 12px; margin-bottom: 18px;}
@@ -70,9 +110,20 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 	footer .news-footer input[type=submit]{width: 74px; height: 27px; background: #C1D091; color: #fff; border: 0;border-radius: 0 5px 5px 0;}
 
-	.no-mobile{display: none;}
+	.no-mobile{display: none !important;}
 
-	.si-mobile{display: block;}
+	.si-mobile{display: block !important;}
+}
+
+@media only screen and (max-width: 513px){
+	.img-gral2{display: block !important;}
+	.img-gral1{display: none !important;}
+	.article-gral h4{font-size: 1.2rem;}
+}
+
+@media only screen and (max-width: 400px){
+	.article-gral h4{font-size: 1rem;}
+	.article-gral .cont-info-gral .franja{margin-bottom: 15px;}
 }
 
 @media only screen and (max-width: 330px){

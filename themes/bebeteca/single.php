@@ -1,8 +1,8 @@
 <?php get_header(); the_post();
 $terms  = get_the_terms( $post->ID, 'category');
-$term_name = $terms[0]->name;
-$term_id = $terms[0]->term_id;
-$term_slug = $terms[0]->slug;
+$term_name = isset($terms[0]->name) ? $terms[0]->name : '';
+$term_id = isset($terms[0]->term_id) ? $terms[0]->term_id : '';
+$term_slug = isset($terms[0]->slug) ? $terms[0]->slug: '';
 $terms_query = array();
 foreach ($terms as $key => $term) {
 	$cat_parents = get_category_parents($term->term_id, false);

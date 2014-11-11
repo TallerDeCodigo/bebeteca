@@ -265,6 +265,34 @@
 
 		});
 
+
+		if( $(window).width() < 728 ){
+
+			$('.article-gral').not( '.primer_post' ).each(function( index ) {
+				var tam_papa = $(this).height();
+				$('.cont-info-gral').css({'height':tam_papa });
+					$('.primer_content' ).removeAttr('style');
+			});
+
+		}else{
+			$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
+		}
+
+		$(window).resize(function(){
+			if( $(window).width() < 728 ){
+				$('.article-gral').not( '.primer_post' ).each(function( index ) {
+					var tam_papa = $(this).height();
+					$('.cont-info-gral').css({'height':tam_papa });
+					$('.primer_content' ).removeAttr('style');
+
+				});
+			}else{
+				$('.cont-info-gral').removeAttr('style');
+			}
+
+		});
+
+
 	});
 
 })(jQuery);

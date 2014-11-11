@@ -312,6 +312,8 @@ span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px s
 .article-gral p{display: block; width: 317px; height: auto; overflow: hidden; color: #808080; font-size: 15px; font-family: 'pt_sansregular'; margin-bottom: 0 !important; line-height: 18px !important;}
 .article-gral .extras{width: 238px !important; clear: none !important; margin-top: 9px;}
 
+.article-gral .cont-info-gral{position: relative;overflow: hidden; width: 317px;}
+
 section .mas-entradas{float: left; width: 115px; overflow: hidden;}
 section .mas-entradas a{text-decoration: none; color: #fff;}
 
@@ -508,4 +510,5 @@ margin-top:47px;}
 
 .mar-left{margin-left: -48px;}
 
-.si-mobile{display: none;}
+.si-mobile,
+.img-gral2{display: none !important;}
