@@ -1,7 +1,7 @@
 <aside id="main_sidebar">
 	<div class="banner-aside">
 		<!-- BoxBanner_Top_Home -->
-		<div id='div-gpt-ad-1413996590367-3' style='width:300px; height:250px;'>
+		<div id='div-gpt-ad-1413996590367-3' style='width:100%; height:auto;'>
 			<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1413996590367-3'); });
 			</script>

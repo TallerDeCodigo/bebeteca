@@ -38,6 +38,7 @@ $exclude = array();
 
 		// styles
 		wp_enqueue_style( 'styles', get_stylesheet_uri() );
+		wp_enqueue_style( 'responsive', CSSPATH. 'responsive.css',array(),'','only screen and (max-width: 980px)' );
 
 	});
 

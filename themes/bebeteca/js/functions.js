@@ -248,6 +248,23 @@
 			});
 		});
 
+
+		/***	RESPONSIVE ***/
+
+		$('.bt-search-responsive').on('click', function (event) {
+			event.preventDefault();
+
+			if( $(this).hasClass('active') ){
+				$('header .top-header').fadeOut(750);
+				$(this).removeClass('active');
+			}else{
+				$('header .top-header').fadeIn(750);
+				$(this).addClass('active');
+			}
+
+
+		});
+
 	});
 
 })(jQuery);

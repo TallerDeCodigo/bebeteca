@@ -149,7 +149,7 @@ body{margin: 0; padding: 0; font-family: 'arvoregular';  background: url('images
 
 .border-radius{border-radius: 10px;}
 
-.content-header{position: relative; width: 100%; height: 213px; padding-top: 50px; background-image: url(images/fondo-header.png); background-repeat: repeat-x; }
+.content-header{position: relative; width: 100%; height: auto; padding-top: 50px; background-image: url(images/fondo-header.png); background-repeat: repeat-x; margin-bottom: 8px; }
 .content-header header{position: relative; width: 960px; height: 154px; margin: 0px auto; padding: 20px 12px; background: #fff; -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .logo{display: block; overflow: hidden; width: 213px; height: 141px; float: left; background: url('images/logo.png') no-repeat; text-indent: -9999px; margin-top: -61px;margin-left: 11px; margin-bottom: 9px;}
 .logo a{ width: 213px; height: 141px; display: block;}
@@ -163,7 +163,7 @@ body{margin: 0; padding: 0; font-family: 'arvoregular';  background: url('images
 .content-header header .top-header ul.redes-sociales li.b-gm{ background-position: -72px -37px;}
 .content-header header .top-header form{margin: 0; padding: 0; float: left; display: block; }
 .content-header header .top-header input{border: 0;background: 0;width: 162px; height: 26px;font-size: 13px; color: #8bd3d9;padding-left: 4px; padding-right: 27px; outline: none; border-radius: 5px; border: 1px solid #8bd3d9;}
-.content-header header .top-header form input[type=submit] {position: absolute; right: -8px;top: 4px; width: 18px;height: 18px;background: url(images/iconos.png);background-position: -107px -43px;border: 0;}
+.content-header header .top-header form input[type=submit] {position: absolute; right: -8px;top: 4px; width: 18px;height: 18px;background: url(images/iconos.png);background-position: -107px -43px;border: 0; text-indent: -9999px}
 ::-webkit-input-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic; }
 ::-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic;} /* firefox 19+ */
 :-ms-input-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: italic; } /* ie */
@@ -199,12 +199,14 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu ul li.bg-lactancia:hover, nav#main-menu ul li.bg-lactancia.active{background-color: #fac600;}
 .content-header header nav#main-menu ul li.bg-entrevistas:hover, nav#main-menu ul li.bg-entrevistas.active{background-color: #8fa0e0;}
 .content-header header nav#main-menu ul li.bg-promociones:hover, nav#main-menu ul li.bg-promociones.active{background-color: #ff7a83;}
+.content-header header .bt-mnu-responsive,
+.content-header header .bt-search-responsive{display: none;}
 
 .container{position: relative;overflow-y: hidden; overflow: visible; width: 950px; height: auto;margin: 0 auto; padding: 0;}
 .container .banner-top{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto; }
 .banner-bottom{position: relative; width: 727px; height: 87px; margin: 10px auto 20px auto;}
 
-.main{position: relative; overflow-y: hidden; overflow: visible; width: 940px;}
+.main{position: relative; overflow-y: hidden; overflow: visible; width: 100%;}
 .main section{position: relative; overflow-y: hidden; overflow: visible; width: 620px; margin-bottom: 57px; height: auto; float: left;}
 .entero{position: relative;overflow-y: hidden; overflow: visible; width: 100%; height: auto; margin: 0 0 28px 0; }
 .entero a{text-decoration: none;}
@@ -443,12 +445,12 @@ footer{position: relative;overflow: hidden;width: 100%; height: auto; background
 footer .content-footer{position: relative; width: 960px; height: auto; margin: 0px auto; padding: 25px 72px;}
 footer .content-footer .footer-parte1{position: relative;overflow: hidden;width: 152px; height: auto; float: left; margin-right: 105px; }
 footer .content-footer .footer-parte1 img{margin-bottom: 21px;}
-footer .content-footer .footer-parte1 ul.redes-footer{margin: 0 0 22px 0; padding: 0 0 0 19px; width: 100%; display: block; clear: both; overflow: hidden;}
-footer .content-footer .footer-parte1 ul.redes-footer li{display: block;margin: 0 11px 0 0 ; padding: 0; width: 32px; height: 32px; float: left; background-image: url(images/iconos_sociales.png)}
-footer .content-footer .footer-parte1 ul.redes-footer li a{display: block; width: 32px; height: 32px;}
-footer .content-footer .footer-parte1 ul.redes-footer li.fb{background-position: -6px -117px;}
-footer .content-footer .footer-parte1 ul.redes-footer li.tw{background-position: -48px -117px;}
-footer .content-footer .footer-parte1 ul.redes-footer li.gm{background-position: -90px -117px; margin-right: 0;}
+footer ul.redes-footer{margin: 0 0 22px 0; padding: 0 0 0 19px; width: 100%; display: block; clear: both; overflow: hidden;}
+footer ul.redes-footer li{display: block;margin: 0 11px 0 0 ; padding: 0; width: 32px; height: 32px; float: left; background-image: url(images/iconos_sociales.png)}
+footer ul.redes-footer li a{display: block; width: 32px; height: 32px;}
+footer ul.redes-footer li.fb{background-position: -6px -117px;}
+footer ul.redes-footer li.tw{background-position: -48px -117px;}
+footer ul.redes-footer li.gm{background-position: -90px -117px; margin-right: 0;}
 footer .content-footer .footer-parte1 p{margin-bottom: 19px; }
 footer .content-footer .footer-parte1 p a{font-size: 12px; color: #fff; text-decoration: none; font-weight: normal;}
 footer .content-footer .footer-partesitas{position: relative;overflow: hidden;width: 135px; height: 94px; float: left;margin-right: 4px; margin-bottom: 33px;}
@@ -504,5 +506,6 @@ margin-top:47px;}
 .mail_pop input, textarea{width:160px;}
 .mail_pop input[type=submit]{float:right;clear:left;margin:1rem 1rem 0 0;}
 
-
 .mar-left{margin-left: -48px;}
+
+.si-mobile{display: none;}

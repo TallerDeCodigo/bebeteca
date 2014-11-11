@@ -24,7 +24,7 @@
 			node.parentNode.insertBefore(gads, node);
 			})();
 		</script>
-		 
+
 		<script type='text/javascript'>
 			googletag.cmd.push(function() {
 				googletag.defineSlot('/38946695/Bebeteca_Footer_Leaderboard', [728, 90], 'div-gpt-ad-1413996590367-0').addService(googletag.pubads());
@@ -69,8 +69,13 @@
 
 		<div class="content-header">
 			<header class="border-radius">
+				<img src="<?php echo THEMEPATH; ?>images/bt_mnu.png" class="bt-mnu-responsive">
+
 				<?php $etiqueta = is_single() ? 'h2' : 'h1'; ?>
 				<<?php echo $etiqueta; ?> class="logo"><a href="<?php echo site_url('/') ?>">La Bebeteca</a></h1>
+
+				<span class="bt-search-responsive"></span>
+
 				<div class="top-header">
 					<span>Visítanos</span>
 					<ul class="redes-sociales">
@@ -83,9 +88,10 @@
 					<div class="boton abre-pop-registro non-visible">Inicia Sesión</div>
 					<form class="forma-buscar" method="GET" action="<?php echo site_url('/') ?>">
 						<input type="text" name="s" value="" placeholder="Buscar" >
-						<input type="submit" value="">
+						<input type="submit" value="Buscar">
 					</form>
 				</div>
+
 				<nav id="main-menu">
 					<ul>
 						<li class="bg-embarazo boton <?php nav_is('embarazo');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>

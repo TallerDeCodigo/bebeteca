@@ -9,7 +9,32 @@
 				</script>
 			</div>
 		</div>
-		<footer>
+
+		<!-- FOOTER RESPONSIVE -->
+		<footer class="si-mobile">
+			<p class="p-footer">
+				<a href="<?php echo site_url('/contacto/'); ?>">Contáctanos</a> /
+				<a href="<?php echo site_url('/alianzas-y-colaboradores/'); ?>">Alianzas y colaboradores</a> /
+				<a href="<?php echo site_url('/promociones/'); ?>">Cupones</a>
+			</p>
+			<ul class="redes-footer">
+				<li class="fb"><a href="https://www.facebook.com/labbteca"></a></li>
+				<li class="tw"><a href="https://twitter.com/la_bebeteca"></a></li>
+				<li class="gm"><a href="https://plus.google.com/116499142736660749871/about"></a></li>
+			</ul>
+			<div class="news-footer">
+				<p>
+					Suscríbete al newsletter
+				</p>
+				<form id="form-newsletter-footer" class="forma-news">
+					<input type="email" name="news-email" id="news-email" value="" placeholder="email@mail.com" >
+					<input type="submit" value="Enviar">
+				</form>
+			</div>
+		</footer>
+
+		<!-- FOOTER NORMAL -->
+		<footer class="no-mobile">
 			<?php wp_footer(); ?>
 			<div class="content-footer">
 				<div class="footer-parte1">
@@ -109,7 +134,7 @@
 							}?>
 					</ul>
 				</div>
-				<div class="footer-partesitas">
+				<div class="footer-partesitas ultimo_footer">
 					<a href="<?php echo site_url('/promociones/'); ?>"><strong>Promociones</strong></a>
 					<ul>
 					<!-- 	<li><a href="">Subcategoria</a></li>
@@ -118,7 +143,7 @@
 						<li><a href="">Subcategoria</a></li> -->
 					</ul>
 				</div>
-				<p class="sueltos"><a href="<?php echo site_url('/aviso-privacidad/'); ?>">Aviso de privacidad</a></p>
+				<p class="sueltos clear_left"><a href="<?php echo site_url('/aviso-privacidad/'); ?>">Aviso de privacidad</a></p>
 				<p class="sueltos">La Bebeteca, algunos derechos reservados, 2014</p>
 			</div>
 		</footer>
