@@ -276,6 +276,7 @@
 			});
 
 		}else{
+			$('.article-gral').removeClass('clearfix');
 			$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
 		}
 
@@ -289,6 +290,7 @@
 
 				});
 			}else{
+				$('.article-gral').removeClass('clearfix');
 				$('.cont-info-gral').removeAttr('style');
 			}
 
