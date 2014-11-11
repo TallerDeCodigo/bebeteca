@@ -291,7 +291,7 @@
 				});
 			}else{
 				$('.article-gral').removeClass('clearfix');
-				$('.cont-info-gral').removeAttr('style');
+				$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
 			}
 
 		});
