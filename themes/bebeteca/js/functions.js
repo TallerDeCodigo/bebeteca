@@ -271,7 +271,8 @@
 			$('.article-gral').not( '.primer_post' ).each(function( index ) {
 				var tam_papa = $(this).height();
 				$('.cont-info-gral').css({'height':tam_papa });
-					$('.primer_content' ).removeAttr('style');
+				$('.primer_content' ).removeAttr('style');
+				$(this).addClass('clearfix');
 			});
 
 		}else{
@@ -284,6 +285,7 @@
 					var tam_papa = $(this).height();
 					$('.cont-info-gral').css({'height':tam_papa });
 					$('.primer_content' ).removeAttr('style');
+					$(this).addClass('clearfix');
 
 				});
 			}else{

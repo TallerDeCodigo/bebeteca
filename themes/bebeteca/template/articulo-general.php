@@ -24,7 +24,7 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 
 	?>
 
-	<article class="entero article-gral clearfix <?php echo $class_primero; ?>">
+	<article class="entero article-gral <?php echo $class_primero; ?>">
 		<a href="<?php the_permalink(); ?>">
 			<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
 			$id_youtube = get_post_meta( $post->ID, 'id_youtube', true );
