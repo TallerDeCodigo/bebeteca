@@ -37,7 +37,7 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 			if ($destacados_home == 1) {
 				the_post_thumbnail('slider-home', array( 'class' => 'img-gral2' ));
 			}else{
-				the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2' ));
+				the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2 img-resp' ));
 			} ?>
 			<div class="cont-info-gral <?php echo $class_content; ?>">
 				<span class="franja si-mobile franja-<?php echo $term_slug; ?>"></span>

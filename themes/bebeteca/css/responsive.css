@@ -77,7 +77,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	#main_sidebar{display: none;}
 	.main section{width: 100%;}
 
-	.article-gral{background: transparent; box-shadow: none; padding: 0 !important;}
+	.article-gral{background: transparent; box-shadow: none; padding: 0 !important; overflow: hidden;}
 	.article-gral .cont-info-gral{width: 57.8%; background: #fff;  padding-left: 15px; padding-right: 15px;}
 	.article-gral img{width: 40.3% !important;  margin-right: 1.9%;  margin-top: 0;}
 	.article-gral .cont-info-gral .franja{display: block;width: 123%;margin-left: -15px; height: 20px; margin-bottom: 26px; }

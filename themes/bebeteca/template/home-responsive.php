@@ -55,7 +55,7 @@
 								if ($destacados_home == 1) {
 									echo get_the_post_thumbnail($post[0]->ID, 'slider-home', array( 'class' => 'img-gral2' ));
 								}else{
-									echo get_the_post_thumbnail($post[0]->ID, 'thumbnail', array( 'class' => 'img-gral2' ));
+									echo get_the_post_thumbnail($post[0]->ID, 'thumbnail', array( 'class' => 'img-gral2 img-resp' ));
 								} ?>
 								<div class="cont-info-gral <?php echo $class_content; ?>">
 									<span class="franja si-mobile franja-<?php echo $term_slug; ?>"></span>
