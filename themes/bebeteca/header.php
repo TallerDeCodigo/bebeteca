@@ -229,7 +229,7 @@
 
 							</div>
 						</li>
-						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?>"><a class="mnu-a" href="<?php echo site_url('/promociones/'); ?>">Cupones</a>
+						<li class="bg-promociones boton ultimo-fila <?php nav_is('promociones');?> no-tablet"><a class="mnu-a" href="<?php echo site_url('/promociones/'); ?>">Cupones</a>
 							<div class="submenu border-radius">
 								<ul class="subcategorias">
 

@@ -1,5 +1,5 @@
 .content-header{padding-top: 40px;}
-.content-header header{width: 93.6%; height: auto;}
+.content-header header{width: 95%; height: auto;}
 .abre-pop-registro{display: none;}
 .content-header header .top-header{width: 64%;}
 .content-header header .top-header ul.redes-sociales{margin-right: 20.1%;}
@@ -11,12 +11,12 @@
 .logo{width: 156px;height: 99px;background-size: 100% auto;margin-top: -43px;}
 .logo a{width: 156px;height: 99px;}
 
-.container{width: 93.6%;}
-.main section{width: 66.2%; margin-bottom: 0;}
-aside{width: 32.1%;}
+.container{width: 95%;}
+.main section{display: block;width: auto;margin-bottom: 0;margin-right: 322px;float: none;}
 .main section .un-medio{width: 48.2%; margin-right: 3.4%;}
 .main section .un-medio img{height: auto;}
 .main section .un-medio .footer-un-medio{height: auto;}
+.main aside{position: absolute;overflow: hidden;width: 300px;top: 0;right: 0;float: none;}
 .play_2.home_vid{margin-left: 50%;left: -44.5px;margin-top: -10%;}
 .autor-home img{width: 17.6%; height: auto;}
 .autor-home .info-autor{margin-left: 22.4%;width: 30.3%; margin-right: 3.3%;}
@@ -29,7 +29,10 @@ span.line{display: inline-block;width: 29%;float: none;}
 .article-gral img{width: 35.6% !important; margin-top: -5px; height: auto; margin-right: 5.9%;}
 .article-gral h4, .article-gral p{width: 100%;}
 .article-gral .cont-info-gral{width: 55.8%;}
-.article-gral .extras{display: none;}
+.article-gral .extras,
+.no-tablet{display: none !important;}
+.si-tablet{display: block !important;}
+.main section .footer-slide .extras{display: none;}
 
 /* FOOTER */
 footer .content-footer{width: 100%; padding: 10px 3.4%;}
@@ -41,14 +44,12 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 .ultimo_footer{margin-right: 12% !important;}
 
 
-@media only screen and (max-width: 871px){
-	.content-header header nav#main-menu ul li{font-size: 0.8rem;}
-}
 
 @media only screen and (max-width: 767px){
 	footer .content-footer .footer-partesitas {width: 19%;margin-right: 2%;}
 	.container .banner-top,
 	.banner-bottom{display: none;}
+	.content-header header nav#main-menu ul li {font-size: 0.9rem;}
 
 }
 

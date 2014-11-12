@@ -311,12 +311,10 @@
 			if($(this).hasClass('mb-mnu-active')){
 				$(this).removeClass('mb-mnu-active', 750, "easeOutBounce");
 				$('#main-menu').removeClass('visible', 750, "easeOutBounce");
-				$('.fondo-pop-mb').fadeOut();
 				$('body').css({'overflow': 'auto'});
 			}else{
 				$(this).addClass('mb-mnu-active', 750, "easeOutBounce");
 				$('#main-menu').addClass('visible', 750, "easeOutBounce");
-				$('.fondo-pop-mb').fadeIn();
 				$('body').css({'overflow': 'hidden'});
 
 			}
@@ -327,6 +325,10 @@
 			var submnu = $(this).data('mnu');
 			$('.submenu').fadeOut(0);
 			$('.sub-'+submnu).toggle(750);
+		});
+
+		$('.flexslider').flexslider({
+			 animation: "slide"
 		});
 
 
