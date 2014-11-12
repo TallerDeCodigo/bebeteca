@@ -56,6 +56,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 
 @media only screen and (max-width: 727px){
+	.content-header.fix-head{position: fixed;}
 	.content-header{background-size: 20px 73px; padding-top: 0; height: 75px; z-index: 999;}
 	.content-header header{width: 97.1%; box-shadow: none;background: none; padding-top: 14px; height: 75px; padding: 14px 0;}
 	.content-header header .bt-mnu-responsive{display: block; cursor: pointer;float: left; margin-top: 4px;}
