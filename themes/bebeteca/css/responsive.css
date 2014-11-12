@@ -73,25 +73,25 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 	#main-menu{display: none; position: fixed !important; overflow-y: scroll; width: 320px !important; height: 100% !important; margin-top: 38px !important;padding-top: 18px; margin-left: -1.6% !important; z-index: 997; background: url('../images/f-mobile.png') no-repeat; background-color: #fff;}
 	.content-header header nav#main-menu.visible{display: block;}
-	.content-header header nav#main-menu.visible ul li{width: 100%; height: 49px;  border-left: 11px solid #fff; border-radius: 0; color: #888888;font-size: 1.2rem;text-align: left; line-height: 53px;}
+	.content-header header nav#main-menu.visible ul li{display: block; overflow: hidden; width: 100%; min-height: 49px; height: auto; border-radius: 0; color: #888888;font-size: 1.2rem;text-align: left; line-height: 53px; padding: 0;}
 	.content-header header nav#main-menu.visible ul li:hover{background: transparent !important;}
 	.content-header header nav#main-menu.visible ul li:hover a.mnu-a,
 	.content-header header nav#main-menu.visible ul li.active a{color: #888888 !important;}
 	.content-header header nav#main-menu.visible ul li.active{background: transparent !important;}
 	.content-header header nav#main-menu.visible ul{width: 100%;position: relative;overflow: hidden;}
-	.content-header header nav#main-menu.visible ul li.bg-embarazo{border-color: #AE3079;}
-	.content-header header nav#main-menu.visible ul li.bg-dia-a-dia{border-color: #4E9BAB;}
-	.content-header header nav#main-menu.visible ul li.bg-nacimiento{border-color: #C57FA6;}
-	.content-header header nav#main-menu.visible ul li.bg-estimulacion{border-color: #A674B8;}
-	.content-header header nav#main-menu.visible ul li.bg-lactancia{border-color: #FAC600;}
-	.content-header header nav#main-menu.visible ul li.bg-entrevistas{border-color: #8FA0E0;}
-	.content-header header nav#main-menu.visible ul li a {width: 100%;height: 49px;display: block;}
-	.content-header header nav#main-menu.visible ul li .submenu{display: none;width: 110%; position: relative;overflow: hidden;border: none;border-radius: 0;box-shadow: none; padding: 0; left: -20px !important; background: transparent;}
+	.content-header header nav#main-menu.visible ul li a.bg-embarazo{border-color: #AE3079;}
+	.content-header header nav#main-menu.visible ul li a.bg-dia-a-dia{border-color: #4E9BAB;}
+	.content-header header nav#main-menu.visible ul li a.bg-nacimiento{border-color: #C57FA6;}
+	.content-header header nav#main-menu.visible ul li a.bg-estimulacion{border-color: #A674B8;}
+	.content-header header nav#main-menu.visible ul li a.bg-lactancia{border-color: #FAC600;}
+	.content-header header nav#main-menu.visible ul li a.bg-entrevistas{border-color: #8FA0E0;}
+	.content-header header nav#main-menu.visible ul li a {width: 100%;height: 49px;display: block; border-left:11px solid #fff; padding-left: 12px;}
+	.content-header header nav#main-menu.visible ul li .submenu{display: none;width: 100%; position: relative;overflow: hidden;border: none;border-radius: 0;box-shadow: none; padding: 0; left: -0px !important; background: transparent;}
 	.content-header header nav#main-menu.visible ul li .submenu .post-rel{display: none;}
 	.content-header header nav#main-menu.visible ul li .submenu ul li{border: 0;}
 	.content-header header nav#main-menu.visible ul li .submenu .subcategorias{width: 100%; }
-	.content-header header nav#main-menu.visible ul li .submenu .subcategorias li{margin:0 13px; width: 92%; line-height: 50px; padding-left: 10px; border-bottom: 1px solid #dddedf;}
-
+	.content-header header nav#main-menu.visible ul li .submenu .subcategorias li{margin:0 13px; width: 92%; line-height: 50px; padding-left: 10px; border: 0; border-bottom: 1px solid #dddedf;}
+	.content-header header nav#main-menu.visible ul li .submenu .subcategorias li a{border: 0; padding-left: 0;}
 	.content-header header .bt-search-responsive{display: block;width: 20px; height: 20px;background: url(../images/iconos.png); background-position: -150px -43px; float: right;margin-top: 11px; cursor: pointer;}
 
 	#main_sidebar{display: none;}
