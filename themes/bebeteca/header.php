@@ -94,8 +94,8 @@
 
 				<nav id="main-menu">
 					<ul>
-						<li class="bg-embarazo boton <?php nav_is('embarazo');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/embarazo/'); ?>">Embarazo</a>
-							<div class="submenu border-radius">
+						<li class="bg-embarazo boton <?php nav_is('embarazo');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/embarazo/'); ?>" data-mnu="embarazo">Embarazo</a>
+							<div class="submenu border-radius sub-embarazo">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'embarazo', 'category' );
 									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
@@ -116,8 +116,8 @@
 
 							</div>
 						</li>
-						<li class="bg-nacimiento boton <?php nav_is('nacimiento');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nacimiento/'); ?>">Nacimiento</a>
-							<div class="submenu border-radius">
+						<li class="bg-nacimiento boton <?php nav_is('nacimiento');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/nacimiento/'); ?>" data-mnu="nacimiento">Nacimiento</a>
+							<div class="submenu border-radius sub-nacimiento">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'nacimiento', 'category' );
 									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
@@ -138,8 +138,8 @@
 
 							</div>
 						</li>
-						<li class="bg-dia-a-dia boton <?php nav_is('dia-a-dia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/dia-a-dia/'); ?>">Día a Día</a>
-							<div class="submenu border-radius">
+						<li class="bg-dia-a-dia boton <?php nav_is('dia-a-dia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/dia-a-dia/'); ?>" data-mnu="dia-a-dia">Día a Día</a>
+							<div class="submenu border-radius sub-dia-a-dia">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'slug', 'dia-a-dia', 'category' );
 									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
@@ -160,8 +160,8 @@
 
 							</div>
 						</li>
-						<li class="bg-estimulacion boton <?php nav_is('estimulacion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/estimulacion/'); ?>">Estimulación</a>
-							<div class="submenu border-radius">
+						<li class="bg-estimulacion boton <?php nav_is('estimulacion');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/estimulacion/'); ?>" data-mnu="estimulacion">Estimulación</a>
+							<div class="submenu border-radius sub-estimulacion">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'estimulacion', 'category' );
 									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
@@ -184,8 +184,8 @@
 						</li>
 
 
-						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/lactancia/'); ?>">Lactancia</a>
-							<div class="submenu border-radius">
+						<li class="bg-lactancia boton <?php nav_is('lactancia');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/lactancia/'); ?>" data-mnu="lactancia">Lactancia</a>
+							<div class="submenu border-radius sub-lactancia">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'lactancia', 'category' );
 									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );
@@ -207,8 +207,8 @@
 							</div>
 						</li>
 
-						<li class="bg-entrevistas boton <?php nav_is('entrevistas');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/entrevistas/'); ?>">Entrevistas</a>
-							<div class="submenu border-radius">
+						<li class="bg-entrevistas boton <?php nav_is('entrevistas');?>"><a class="mnu-a" href="<?php echo site_url('/categoria/entrevistas/'); ?>" data-mnu="entrevistas">Entrevistas</a>
+							<div class="submenu border-radius sub-entrevistas">
 								<ul class="subcategorias">
 									<?php $term = get_term_by( 'name', 'entrevistas', 'category' );
 									$variable = wp_list_categories( array('taxonomy' => 'category','child_of' => $term->term_id, 'title_li' => '', 'show_option_none'   => __( '' ), 'orderby'=> 'id') );

@@ -21,7 +21,6 @@
 					if (isset($visto['post_id']) AND $visto['post_id'] != ''):
 
 						$post = get_posts( array('post__in' => array($visto['post_id']) ) );
-						global $destacados_home;
 
 						$terms  = wp_get_post_terms( $post[0]->ID, 'category');
 							if (!empty($terms)) {
