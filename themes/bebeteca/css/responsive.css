@@ -91,6 +91,8 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 	h4.tit_principal{width:100%;font-size: 1rem; color: #B73BA1; padding-bottom: 11px; border-bottom: 1px solid #B73BA1; margin-bottom: 21px;}
 	.article-gral.primer_post .img-gral2{width: 100% !important;}
+	.img-gral2{display: block !important;}
+	.img-gral1{display: none !important;}
 	.article-gral.primer_post .cont-info-gral{width: 100%; padding-bottom: 13px;}
 	.article-gral.primer_post .cont-info-gral .franja{margin-bottom: 13px;}
 
@@ -116,8 +118,6 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 }
 
 @media only screen and (max-width: 513px){
-	.img-gral2{display: block !important;}
-	.img-gral1{display: none !important;}
 	.article-gral h4{font-size: 1.2rem;}
 }
 
