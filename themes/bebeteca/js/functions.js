@@ -265,20 +265,22 @@
 
 		});
 
+		$( document ).ready(function() {
+		 	if( $(window).width() < 728 ){
+				$('.article-gral').not( '.primer_post' ).each(function( index ) {
+					var tam_papa = $(this).height();
+					$('.cont-info-gral').css({'height':tam_papa });
+					$('.primer_content' ).removeAttr('style');
+					$(this).addClass('clearfix');
 
-		if( $(window).width() < 728 ){
+				});
+			}else{
+				$('.article-gral').removeClass('clearfix');
+				$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
+			}
+		});
 
-			$('.article-gral').not( '.primer_post' ).each(function( index ) {
-				var tam_papa = $(this).height();
-				$('.cont-info-gral').css({'height':tam_papa });
-				$('.primer_content' ).removeAttr('style');
-				$(this).addClass('clearfix');
-			});
 
-		}else{
-			$('.article-gral').removeClass('clearfix');
-			$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
-		}
 
 		$(window).resize(function(){
 			if( $(window).width() < 728 ){
