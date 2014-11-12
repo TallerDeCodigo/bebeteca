@@ -12,7 +12,7 @@
 .logo a{width: 156px;height: 99px;}
 
 .container{width: 93.6%;}
-.main section{width: 66.2%;}
+.main section{width: 66.2%; margin-bottom: 0;}
 aside{width: 32.1%;}
 .main section .un-medio{width: 48.2%; margin-right: 3.4%;}
 .main section .un-medio img{height: auto;}
@@ -25,7 +25,7 @@ aside{width: 32.1%;}
 span.line{display: inline-block;width: 29%;float: none;}
 .entero h5{display: inline-block; float: none;}
 .entero.divicion{text-align: center;}
-.article-gral{padding-bottom: 5px !important; padding-top: 5px !important; min-height:128px;}
+.article-gral{ content:""; display:table; padding-bottom: 0px !important; padding-top: 5px !important; min-height:128px;}
 .article-gral img{width: 35.6% !important; margin-top: -5px; height: auto; margin-right: 5.9%;}
 .article-gral h4, .article-gral p{width: 100%;}
 .article-gral .cont-info-gral{width: 55.8%;}

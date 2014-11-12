@@ -14,7 +14,10 @@
 		<?php if (function_exists('lo_mas_visto_GA')):
 			$posts = lo_mas_visto_GA();
 			if (!empty($posts)) :
-				foreach ($posts as $key => $visto) :
+				foreach (array_slice($posts, 0, 5) as $key => $visto) :
+					$vistos_home = $key + 1;
+					$class_primero = ($destacados_home == 1) ? 'primer_post' : '';
+					$class_content = ($destacados_home == 1) ? 'primer_content' : '';
 					if (isset($visto['post_id']) AND $visto['post_id'] != ''):
 
 						$post = get_posts( array('post__in' => array($visto['post_id']) ) );
@@ -39,8 +42,8 @@
 								$term_slug = 'promociones';
 							}
 
-							$class_primero = ($destacados_home == 1) ? 'primer_post' : '';
-							$class_content = ($destacados_home == 1) ? 'primer_content' : '';?>
+							$class_primero = ($vistos_home == 1) ? 'primer_post' : '';
+							$class_content = ($vistos_home == 1) ? 'primer_content' : '';?>
 
 						<article class="entero article-gral clearfix <?php echo $class_primero; ?>">
 							<a href="<?php echo get_permalink($post[0]->ID); ?>">
@@ -52,7 +55,7 @@
 
 								<?php if ($term_name != ''): ?><span class="titulo1 no-mobile pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span><?php endif; ?>
 								<?php echo get_the_post_thumbnail($post[0]->ID, 'articulos-gral', array( 'class' => 'img-gral1' ));
-								if ($destacados_home == 1) {
+								if ($vistos_home == 1) {
 									echo get_the_post_thumbnail($post[0]->ID, 'slider-home', array( 'class' => 'img-gral2' ));
 								}else{
 									echo get_the_post_thumbnail($post[0]->ID, 'thumbnail', array( 'class' => 'img-gral2 img-resp' ));
