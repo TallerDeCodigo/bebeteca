@@ -25,7 +25,7 @@
 .autor-home.single-autor .cont-image img{margin-left: 0;}
 .mas-autor-t{margin-left: 28.4%;}
 .autor-home.single-autor .cont-image{margin: 0 auto;float: none;}
-.sigue-colaborador{left: 16px;}
+.sigue-colaborador{left: 0;position: relative;top: 0;overflow: hidden;margin-bottom: 21px;}
 .entero.divicion.autor span.line{width: 20%;}
 .autor-home .info-autor .boton{font-size: 11px;}
 span.line{display: inline-block;width: 25.6%;float: none;}
