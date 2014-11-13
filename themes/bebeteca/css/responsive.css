@@ -41,6 +41,10 @@ span.breadcrumbs,
 .header-category .extras-category .extras{display: none;}
 .header-category h4{font-size: 23px; font-weight: normal;}
 .header-category .extras-category{margin-top: 0;}
+.slider-principal.videos img,
+.main section .slider-principal{width: 100%; height: auto;}
+
+.play_1, .play_2{display: none !important;}
 
 /* FOOTER */
 footer .content-footer{width: 100%; padding: 10px 3.4%;}
@@ -124,6 +128,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.article-gral .cont-info-gral .franja-estimulacion{background: #A674B8;}
 	.article-gral .cont-info-gral .franja-lactancia{background: #FAC600;}
 	.article-gral .cont-info-gral .franja-entrevistas{background: #8FA0E0;}
+	.article-gral .cont-info-gral .franja-promociones{background: #FF7A83;}
 
 	h4.tit_principal{width:100%;font-size: 1rem; color: #B73BA1; padding-bottom: 11px; border-bottom: 1px solid #B73BA1; margin-bottom: 21px;}
 	.article-gral.primer_post .img-gral2{width: 100% !important;}

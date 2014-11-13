@@ -54,7 +54,7 @@
 
 							<div class="footer-slide">
 								<h4><?php the_title(); ?></h4>
-								<p><?php echo wp_trim_words( get_the_excerpt(),12 ) ?></p>
+								<p class="excertp-p"><?php echo wp_trim_words( get_the_excerpt(),12 ) ?></p>
 
 								<div class="extras">
 									<!-- <span class="megusta verde"></span><p><?php echo get_count_like($term->term_id, 'cat'); ?></p> -->
@@ -69,13 +69,19 @@
 					<article class="entero article-gral">
 						<a href="<?php the_permalink(); ?>">
 							<img class="play_2" src="<?php echo THEMEPATH; ?>images/play_2.png">
-							<?php the_post_thumbnail('articulos-gral'); ?>
-							<h4><?php the_title(); ?></h4>
-							<p><?php echo wp_trim_words( get_the_excerpt(), 23 ) ?></p>
+							<?php the_post_thumbnail('articulos-gral', array( 'class' => 'img-gral1' ));
+
+							the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2 img-resp' ));?>
+							<div class="cont-info-gral">
+								<span class="franja si-mobile franja-entrevistas"></span>
+								<h4><?php echo excerpt(50, get_the_title()); ?></h4>
+								<p class="no-tablet"><?php echo wp_trim_words( get_the_excerpt(), 10 ) ?></p>
+							</div>
 							<div class="extras">
-								<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
+								<!-- <span class="megusta"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 								<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
 							</div>
+
 						</a>
 					</article>
 

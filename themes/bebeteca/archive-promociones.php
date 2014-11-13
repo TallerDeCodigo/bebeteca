@@ -53,7 +53,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 
 							<div class="footer-slide">
 								<h4><?php the_title(); ?></h4>
-								<p><?php echo wp_trim_words( get_the_excerpt(),12 ) ?></p>
+								<p class="excertp-p"><?php echo wp_trim_words( get_the_excerpt(),12 ) ?></p>
 
 								<div class="extras">
 									<!-- <span class="megusta verde"></span><p><?php echo get_count_like('', 'cat'); ?></p> -->
