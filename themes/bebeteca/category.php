@@ -44,52 +44,7 @@
 					</ul>
 				</div>
 			</div>
-			<?php $post_general = query_categorias_slide($term->term_id);
-			if ( $post_general->have_posts() AND $paged == 1 ) :?>
-				<article class="entero shadow no-mobile">
-					<span class="titulo1 pleca-<?php echo $term->slug; ?>"><?php echo $cat_name; ?></span>
-
-					<div id="slider-principal" class="slider-principal">
-						<a class="flecha_carrusel prev" href="#"></a>
-						<div class="viewport">
-							<ul class="overview">
-								<?php while( $post_general->have_posts() ) : $post_general->the_post(); ?>
-									<li>
-										<a href="<?php the_permalink(); ?>">
-											<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
-											$id_youtube = get_post_meta( $post->ID, 'id_youtube', true );
-											if ($id_vimeo != '' OR $id_youtube != '') { ?>
-												<img class="play_1" src="<?php echo THEMEPATH; ?>images/play_1.png">
-											<?php }?>
-											<?php the_post_thumbnail('slider-home');?>
-											<div class="footer-slide">
-												<h4><?php the_title(); ?></h4>
-												<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
-
-												<div class="extras">
-													<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
-													<span class="compartir"></span><p><?php echo get_count_share(get_permalink()); ?></p>
-												</div>
-											</div>
-										</a>
-									</li>
-
-								<?php $no_posts[] = $post->ID;
-
-								endwhile; ?>
-							</ul>
-						</div>
-						<a class="flecha_carrusel next" href="#"></a>
-						<ul class="bullets clearfix">
-							<?php if ( $post_general->have_posts() ) : $contador=0; while( $post_general->have_posts() ) : $post_general->the_post(); ?>
-								<li><a href="#" class="bullet" data-slide="<?php echo $contador; ?>"></a></li>
-							<?php $contador++; endwhile; endif; wp_reset_postdata(); ?>
-						</ul>
-
-					</div>
-
-				</article><!-- SLIDE -->
-			<?php endif; wp_reset_postdata(); ?>
+			<?php get_template_part( 'template/cat', 'slide' ); ?>
 
 			<?php if ( have_posts() ) :  while( have_posts() ) : the_post();
 

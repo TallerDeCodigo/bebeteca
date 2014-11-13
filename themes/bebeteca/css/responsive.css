@@ -37,6 +37,11 @@ span.line{display: inline-block;width: 25.6%;float: none;}
 .posts-tablet{display: table;}
 
 .entero-slide{max-width: 620px;margin: 0 auto 28px;}
+span.breadcrumbs,
+.header-category .extras-category .extras{display: none;}
+.header-category h4{font-size: 23px; font-weight: normal;}
+.header-category .extras-category{margin-top: 0;}
+
 /* FOOTER */
 footer .content-footer{width: 100%; padding: 10px 3.4%;}
 footer .content-footer .footer-parte1{width: 21.3%; margin-right: 89px;}
@@ -62,12 +67,11 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.span.line{width: 35%;}
 	.extras-category,
 	.header-category .extras-category .extras,
-	.single .breadcrumbs,
 	.comentarios{display: none;}
 	.single .header-category .extras-category {display: block; float: right; }
 	.single article img.freatured-post {max-width: 100%;height: auto;margin: 0 auto;}
 	.content-header.fix-head{position: fixed;}
-	.content-header{background-size: 20px 73px; padding-top: 0; height: 75px; z-index: 999;}
+	.content-header{background-size: 20px 73px; padding-top: 0; height: 75px; z-index: 9999;}
 	.content-header header{width: 97.1%; box-shadow: none;background: none; padding-top: 14px; height: 75px; padding: 14px 0;}
 	.content-header header .bt-mnu-responsive{display: block; cursor: pointer;float: left; margin-top: 4px;}
 	.logo{position: absolute;width: 180px;height: 35px;margin-left: 50%;left: -90px;margin-top: -3px;background: url('../images/logo_res.png') no-repeat;}

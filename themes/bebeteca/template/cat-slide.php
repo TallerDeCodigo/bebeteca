@@ -1,12 +1,16 @@
-<?php if ( have_posts() ) :
-global $exclude;
+<?php global $exclude;
 global $wp_query;
-?>
+
+$cat_name = single_cat_title( '', false );
+$term     = get_term_by( 'name', $cat_name, 'category' );
+$post_general = query_categorias_slide($term->term_id);
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+if ( $post_general->have_posts() AND $paged == 1) :?>
 	<article class="entero shadow entero-slide">
 
 		<div id="slider-principal" class="slider-principal no-tablet">
 			<ul class="bullets clearfix pleca">
-				<?php if (have_posts() ) : $contador=0; while( have_posts() ) : the_post(); $exclude[] = $post->ID;
+				<?php if ($post_general->have_posts() ) : $contador=0; while( $post_general->have_posts() ) : $post_general->the_post(); $exclude[] = $post->ID;
 					$terms  = categoria_papa_post();
 					if (!empty($terms)) {
 						$term_name = $terms->name;
@@ -32,7 +36,7 @@ global $wp_query;
 			<a class="flecha_carrusel prev" href="#"></a>
 			<div class="viewport">
 				<ul class="overview">
-					<?php while( have_posts() ) : the_post(); ?>
+					<?php while( $post_general->have_posts() ) : $post_general->the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
 								<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
@@ -66,7 +70,7 @@ global $wp_query;
 		 	<div class='slider'>
 		 		<div class='flexslider'>
 		 			<ol class="flex-control-nav flex-control-paging bullets2">
-		 				<?php if (have_posts() ) : $contador=0; while( have_posts() ) : the_post();
+		 				<?php if ($post_general->have_posts() ) : $contador=0; while( $post_general->have_posts() ) : $post_general->the_post();
 							$terms  = categoria_papa_post();
 							if (!empty($terms)) {
 								$term_name = $terms->name;
@@ -95,7 +99,7 @@ global $wp_query;
 
 
 		 			<ul class='slides'>
-						<?php while( have_posts() ) : the_post(); ?>
+						<?php while( $post_general->have_posts() ) : $post_general->the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
 								<?php $id_vimeo = get_post_meta( $post->ID, 'id_vimeo', true );
