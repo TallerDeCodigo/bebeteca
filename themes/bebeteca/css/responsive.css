@@ -163,6 +163,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.article-gral .cont-info-gral .franja{margin-bottom: 15px;}
 	.footer-slide .excertp-p{display: none;}
 	.main section .footer-slide h4 {font-size: 17px;}
+	span.line {width: 19.6%;}
 }
 
 @media only screen and (max-width: 330px){
