@@ -266,7 +266,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 
 .autor-home{background-color: #fff; overflow: hidden; padding: 27px 16px;  -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9; min-height: 121px;}
 /*.imagen-autores{position: relative;overflow: hidden; width: 111px; height: 100%;float: left; margin-right: 10px;}*/
-.autor-home img{position: absolute; overflow: visible; width: 111px; height: 111px; border-radius: 55px; top: 50%;margin-top: -55px;left: 1rem;}
+.autor-home img{position: absolute; overflow: visible; width: 111px; height: 111px; border-radius: 50%; top: 50%;margin-top: -55px;left: 1rem;}
 .autor-home .info-autor{position: relative;overflow: hidden;width: 182px; height: auto; float: left; margin-right: 10px; margin-left: 121px; }
 .autor-home .info-autor h4, .autor-home.single-autor h4{color: #9b65b3; font-size: 20px; font-weight: normal;}
 .autor-home .info-autor p.rol, .autor-home.single-autor p.rol{color: #b54084; font-size: 14px; font-style: italic; }

@@ -47,7 +47,7 @@
 							<h4><?php echo $user->display_name; ?></h4>
 							<p class="rol"><?php the_author_meta('perfil', $user->ID) ?></p>
 							<p><?php the_author_meta('quote', $user->ID) ?></p>
-							<a href="<?php echo site_url('/author/'.$user->user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
+							<a href="<?php echo site_url('/author/'.$user->user_nicename.'/') ?>" class="boton no-tablet">Más sobre el autor</a>
 						</div>
 						<div class="post-autor">
 							<?php $post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'author' => $user->ID ) );
@@ -60,6 +60,7 @@
 							<?php endwhile; endif; wp_reset_postdata(); ?>
 
 						</div>
+						<a href="<?php echo site_url('/author/'.$user->user_nicename.'/') ?>" class="boton mas-autor-t si-tablet">Más sobre el autor</a>
 					</article>
 				<?php }
 			}

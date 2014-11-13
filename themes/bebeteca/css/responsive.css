@@ -18,9 +18,14 @@
 .main section .un-medio .footer-un-medio{height: auto;}
 .main aside{position: absolute;overflow: hidden;width: 300px;top: 0;right: 0;float: none;}
 .play_2.home_vid{margin-left: 50%;left: -44.5px;margin-top: -10%;}
-.autor-home img{width: 17.6%; height: auto;}
-.autor-home .info-autor{margin-left: 22.4%;width: 30.3%; margin-right: 3.3%;}
-.autor-home .post-autor{width: 40.8%;}
+.autor-home img{width: 21.6%; height: auto; margin-top: 40px;top: 0;}
+.autor-home .info-autor{margin-left: 28.4%;width: 72.3%; margin-right: 3.3%;}
+.autor-home .post-autor {width: 71.3%;float: right;}
+.autor-home.single-autor .cont-image img{margin-left: 0;}
+.mas-autor-t{margin-left: 28.4%;}
+.autor-home.single-autor .cont-image{margin: 0 auto;float: none;}
+.sigue-colaborador{left: 16px;}
+.entero.divicion.autor span.line{width: 20%;}
 .autor-home .info-autor .boton{font-size: 11px;}
 span.line{display: inline-block;width: 25.6%;float: none;}
 .entero h5{display: inline-block; float: none;}
@@ -137,6 +142,12 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.article-gral.primer_post .cont-info-gral{width: 100%; padding-bottom: 13px;}
 	.article-gral.primer_post .cont-info-gral .franja{margin-bottom: 13px;}
 
+	.autor-home{background: rgba(0, 0, 0, 0);box-shadow: none; border-bottom: 1px solid #D8B0EA;padding-top: 0;}
+	.autor-home img{width: 139px; height: 139px; margin-top: 0;}
+	.autor-home .info-autor {margin-left: 175px;display: block;width: auto; margin-right: 0; }
+	.autor-home .post-autor{display: none;}
+	.mas-autor-t{margin-left: 175px;}
+
 	footer{padding: 0 1.9% 12px 1.9%; font-size: 0.8rem;}
 
 	footer .p-footer{width: 100%; height: auto; text-align: center; color: #fff; margin-top: 12px; margin-bottom: 18px;}
@@ -167,12 +178,21 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.article-gral .cont-info-gral{width: 57.8%; margin-left: 0;}
 }
 
+@media only screen and (max-width: 440px){
+	.autor-home img{width: 92px; height: 92px; left: 0;}
+	.autor-home .info-autor,
+	.mas-autor-t{margin-left: 110px;}
+	.autor-home {padding-left: 0;padding-right: 0;}
+}
+
 @media only screen and (max-width: 400px){
 	.article-gral h4{font-size: 1rem;}
 	.article-gral .cont-info-gral .franja{margin-bottom: 15px;}
 	.footer-slide .excertp-p{display: none;}
 	.main section .footer-slide h4 {font-size: 17px;}
 	span.line {width: 19.6%;}
+	.entero.divicion.autor span.line{width: 11%;}
+
 }
 
 @media only screen and (max-width: 330px){
