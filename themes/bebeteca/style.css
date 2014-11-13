@@ -513,6 +513,7 @@ margin-top:47px;}
 .si-mobile,
 .si-tablet,
 .img-gral2{display: none !important;}
+.posts-tablet{display: none;}
 
 
 .flex-next { background: url(images/iconos.png); background-position: -11px -77px; right: -6px;}

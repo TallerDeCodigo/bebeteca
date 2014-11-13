@@ -22,18 +22,21 @@
 .autor-home .info-autor{margin-left: 22.4%;width: 30.3%; margin-right: 3.3%;}
 .autor-home .post-autor{width: 40.8%;}
 .autor-home .info-autor .boton{font-size: 11px;}
-span.line{display: inline-block;width: 29%;float: none;}
+span.line{display: inline-block;width: 25.6%;float: none;}
 .entero h5{display: inline-block; float: none;}
 .entero.divicion{text-align: center;}
-.article-gral{ content:""; display:table; padding-bottom: 0px !important; padding-top: 5px !important; min-height:128px;}
+.article-gral{ content:""; display:table; padding-bottom: 0px !important; padding-top: 5px !important; min-height:20px;}
 .article-gral img{width: 35.6% !important; margin-top: -5px; height: auto; margin-right: 5.9%;}
 .article-gral h4, .article-gral p{width: 100%;}
+.article-gral h4{font-size: 20px;}
 .article-gral .cont-info-gral{width: 55.8%;}
 .article-gral .extras,
 .no-tablet{display: none !important;}
 .si-tablet{display: block !important;}
 .main section .footer-slide .extras{display: none;}
+.posts-tablet{display: table;}
 
+.entero-slide{max-width: 620px;margin: 0 auto 28px;}
 /* FOOTER */
 footer .content-footer{width: 100%; padding: 10px 3.4%;}
 footer .content-footer .footer-parte1{width: 21.3%; margin-right: 89px;}
@@ -56,6 +59,13 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 
 @media only screen and (max-width: 727px){
+	.span.line{width: 35%;}
+	.extras-category,
+	.header-category .extras-category .extras,
+	.single .breadcrumbs,
+	.comentarios{display: none;}
+	.single .header-category .extras-category {display: block; float: right; }
+	.single article img.freatured-post {max-width: 100%;height: auto;margin: 0 auto;}
 	.content-header.fix-head{position: fixed;}
 	.content-header{background-size: 20px 73px; padding-top: 0; height: 75px; z-index: 999;}
 	.content-header header{width: 97.1%; box-shadow: none;background: none; padding-top: 14px; height: 75px; padding: 14px 0;}
@@ -100,8 +110,8 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.main section{width: 100%;}
 
 	.article-gral{background: transparent; box-shadow: none; padding: 0 !important; overflow: hidden;}
-	.article-gral .cont-info-gral{width: 57.8%; background: #fff;  padding-left: 15px; padding-right: 15px;}
-	.article-gral img{width: 40.3% !important;  margin-right: 1.9%;  margin-top: 0;}
+	.article-gral .cont-info-gral{width: auto; margin-left: 205px; background: #fff;  padding-left: 15px; padding-right: 15px;}
+	.article-gral img{position: absolute;top: 0;left: 0;width: 40.3% !important;  margin-right: 1.9%;  margin-top: 0; max-width: 184px;}
 	.article-gral .cont-info-gral .franja{display: block;width: 123%;margin-left: -15px; height: 20px; margin-bottom: 26px; }
 
 	.article-gral .cont-info-gral .franja-embarazo{background: #AE3079;}
@@ -143,9 +153,16 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.article-gral h4{font-size: 1.2rem;}
 }
 
+@media only screen and (max-width: 480px){
+	.article-gral img{position: relative;}
+	.article-gral .cont-info-gral{width: 57.8%; margin-left: 0;}
+}
+
 @media only screen and (max-width: 400px){
 	.article-gral h4{font-size: 1rem;}
 	.article-gral .cont-info-gral .franja{margin-bottom: 15px;}
+	.footer-slide .excertp-p{display: none;}
+	.main section .footer-slide h4 {font-size: 17px;}
 }
 
 @media only screen and (max-width: 330px){

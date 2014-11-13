@@ -4,6 +4,10 @@
 
 	$(function(){
 
+		$('.flexslider').flexslider({
+			 animation: "slide"
+		});
+
 		/**
 		 * Regresa todos los valores de un formulario como un associative array
 		 */
@@ -290,7 +294,7 @@
 			$('.cont-info-gral').not( '.primer_content' ).removeAttr('style');
 			if( $(window).width() < 728 ){
 				$('.article-gral').not( '.primer_post' ).each(function( index ) {
-					var tam_papa = $(this).height();
+					var tam_papa = $(this).children('a').children('.img-resp').height();
 
 					$(this).children('a').children('.cont-info-gral').css({'height':tam_papa });
 					$('.primer_content' ).removeAttr('style');
@@ -330,13 +334,6 @@
 			$('.submenu').fadeOut(0);
 			$('.sub-'+submnu).toggle(750);
 		});
-
-		$('.flexslider').flexslider({
-			 animation: "slide"
-		});
-
-
-
 
 	});
 

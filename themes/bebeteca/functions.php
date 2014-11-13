@@ -1,7 +1,7 @@
 <?php
 $status_slide_post = '';
 $exclude = array();
-global $destacados_home;
+global $count_m_home;
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 

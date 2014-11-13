@@ -1,5 +1,6 @@
-<?php if ( have_posts() ) : ?>
-	<article class="entero shadow ">
+<?php if ( have_posts() ) :
+global $exclude;?>
+	<article class="entero shadow entero-slide">
 
 		<div id="slider-principal" class="slider-principal no-tablet">
 			<ul class="bullets clearfix pleca">
@@ -50,7 +51,7 @@
 							</a>
 						</li>
 
-					<?php $no_posts[] = $post->ID;
+					<?php $exclude[] = $post->ID;
 					endwhile; ?>
 				</ul>
 			</div>
@@ -62,8 +63,8 @@
 		<div class='slider-container si-tablet'>
 		 	<div class='slider'>
 		 		<div class='flexslider'>
-		 			<ol class="flex-control-nav flex-control-paging">
-		 				<?php if (have_posts() ) : $contador=0; while( have_posts() ) : the_post(); $exclude[] = $post->ID;
+		 			<ol class="flex-control-nav flex-control-paging bullets2">
+		 				<?php if (have_posts() ) : $contador=0; while( have_posts() ) : the_post();
 							$terms  = categoria_papa_post();
 							if (!empty($terms)) {
 								$term_name = $terms->name;
@@ -83,11 +84,14 @@
 
 										<a href="#" >
 											<span class="titulo1 pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span>
+											<span class="bola"></span>
 										</a>
 									</li>
 							<?php endif;
 						$contador++; endwhile; endif; wp_reset_postdata(); ?>
 		 			</ol>
+
+
 		 			<ul class='slides'>
 						<?php while( have_posts() ) : the_post(); ?>
 						<li>
@@ -100,7 +104,7 @@
 								the_post_thumbnail('slider-home'); ?>
 								<div class="footer-slide">
 									<h4><?php the_title(); ?></h4>
-									<p><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
+									<p class="excertp-p"><?php echo wp_trim_words( get_the_excerpt(), 12 ) ?></p>
 
 									<div class="extras">
 										<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
@@ -110,7 +114,7 @@
 							</a>
 						</li>
 
-					<?php $no_posts[] = $post->ID;
+					<?php
 					endwhile; ?>
 					</ul>
 				</div>

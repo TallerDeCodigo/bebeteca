@@ -1,9 +1,14 @@
-<?php get_header(); $no_posts = array(); global $exclude; ?>
+<?php get_header();
+$no_posts = array();
+global $exclude;
+global $count_m_home;?>
+
 	<!-- Insert content here -->
 	<div class="main">
-		<section class="no-mobile">
+		<section>
 			<?php get_template_part( 'template/home', 'slide' ); ?>
-			<article class="un-medio">
+
+			<article class="un-medio no-tablet">
 				<span class="titulo2">Videos</span>
 				<?php $meta_query = array(
 										'relation' => 'OR',
@@ -39,7 +44,7 @@
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
-			<article class="un-medio ultimo-fila">
+			<article class="un-medio ultimo-fila no-tablet">
 				<span class="titulo2 color-rosa">Cupones</span>
 					<?php $post_video = new WP_Query(array( 'posts_per_page' => 1, 'post_type' => array('promociones'), 'post__not_in' => $exclude ) );
 
@@ -59,7 +64,7 @@
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</article><!-- VIDEOS -->
 
-			<article class="entero autor-home clearfix index-au">
+			<article class="entero autor-home clearfix index-au no-tablet">
 				<?php $user_query = new WP_User_Query(array('role' => 'colaborador','number' => 40));
 				$users  = $user_query->results;
 				$total  = count($users) - 1;
@@ -98,18 +103,17 @@
 
 			<?php $cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
 
-			$post_general = new WP_Query(array( 'posts_per_page' => 4, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__not_in' => array($cat_no->term_id) ) );
-			if ( $post_general->have_posts() ) : while( $post_general->have_posts() ) : $post_general->the_post();
+			$post_general = new WP_Query(array( 'posts_per_page' => 11, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__not_in' => array($cat_no->term_id) ) );
+			if ( $post_general->have_posts() ) : $count = 1; while( $post_general->have_posts() ) : $post_general->the_post();
 				$exclude[] = $post->ID;
+				$count_m_home = $count;
 				get_template_part( 'template/articulo', 'general' );
-
+				$count++;
 			endwhile; endif; wp_reset_postdata(); ?>
 
 		</section>
 
-		<?php get_template_part( 'template/home', 'responsive' );
-
-		get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 	</div>
 
 
