@@ -88,6 +88,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.content-header header .top-header ul.redes-sociales,
 	.content-header header .top-header span{display: none;}
 	.content-header header .top-header form input[type=submit]{background:#8bd3d9;margin-right: 2.7%; text-indent: 0;width: 11%;cursor: pointer; height: 28px;margin-top: 2px;text-align: center;padding: 0;}
+	.logo a {width: 180px;height: 46px;}
 
 	.content-header header .top-header{display: none; width: 103%; height: 39px; margin-right: -1.5%;background: #b0e1e5;margin-top:15px;}
 	.content-header header .top-header form{width: 100%;}
