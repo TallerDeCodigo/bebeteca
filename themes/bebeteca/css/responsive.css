@@ -22,9 +22,9 @@
 .autor-home .info-autor{margin-left: 28.4%;width: 72.3%; margin-right: 3.3%;}
 .autor-home.single-autor blockquote{display: block;}
 .autor-home .post-autor {width: 71.3%;float: right;}
-.autor-home.single-autor .cont-image img{margin-left: 0;}
+.autor-home.single-autor .cont-image img{margin-left: 0; float: none;}
 .mas-autor-t{margin-left: 28.4%;}
-.autor-home.single-autor .cont-image{margin: 0 auto;float: none;}
+.autor-home.single-autor .cont-image{text-align: center;width: auto; height: auto; margin: 0 auto 15px auto;float: none;}
 .sigue-colaborador{left: 0;position: relative;top: 0;overflow: hidden;margin-bottom: 21px;}
 .entero.divicion.autor span.line{width: 20%;}
 .autor-home .info-autor .boton{font-size: 11px;}
