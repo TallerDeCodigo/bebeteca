@@ -20,6 +20,7 @@
 .play_2.home_vid{margin-left: 50%;left: -44.5px;margin-top: -10%;}
 .autor-home img{width: 21.6%; height: auto; margin-top: 40px;top: 0;}
 .autor-home .info-autor{margin-left: 28.4%;width: 72.3%; margin-right: 3.3%;}
+.autor-home.single-autor blockquote{display: block;}
 .autor-home .post-autor {width: 71.3%;float: right;}
 .autor-home.single-autor .cont-image img{margin-left: 0;}
 .mas-autor-t{margin-left: 28.4%;}
