@@ -71,6 +71,8 @@ span.breadcrumbs,
 .header-category .extras-category ul li.mail{display: none;}
 .siguenos-contacto .redes-siguenos{width: 184px;margin: 0 auto;}
 .siguenos-contacto .redes-siguenos li.fb{margin-left: 17px;}
+.single .entero.news blockquote{width: 100%;}
+.new-header-category{position: relative;height: 28px;}
 
 .single .article-gral img{margin-top: -5px;margin-right: 5.9%;}
 

@@ -9,7 +9,7 @@ $news_resp = isset($news_resp) ? $news_resp : '';
 
 			<span class="breadcrumbs">Home/Newsletter</span>
 			<h1>Newsletter</h1>
-			<div class="header-category">
+			<div class="header-category new-header-category">
 				<div class="extras-category">
 					<div class="extras">
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
@@ -32,7 +32,7 @@ $news_resp = isset($news_resp) ? $news_resp : '';
 
 			</article>
 
-			<article class="entero news-sigue">
+			<article class="entero siguenos-contacto">
 				<p class="siguenos">Síguenos en redes</p>
 				<ul class="redes-siguenos">
 					<li class="fb active-red">facebook</li>
