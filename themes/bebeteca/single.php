@@ -66,7 +66,7 @@ foreach ($terms as $key => $term) {
 					</ul>
 				</div>
 			</div>
-			<article class="entero clearfix">
+			<article class="entero clearfix cont-single">
 				<?php if (get_post_meta($post->ID, 'id_youtube', true) OR get_post_meta($post->ID, 'id_vimeo', true) ):
 
 					if(get_post_meta($post->ID, 'id_vimeo', true)): ?>

@@ -8,6 +8,9 @@
 			 animation: "slide"
 		});
 
+
+		$(".cont-single").fitVids();
+
 		/**
 		 * Regresa todos los valores de un formulario como un associative array
 		 */
