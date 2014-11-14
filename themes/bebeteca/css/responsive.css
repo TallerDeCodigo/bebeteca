@@ -252,4 +252,5 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 @media only screen and (max-width: 330px){
 	footer{font-size: 0.75rem;}
+	.single article.autor-home .info-autor, .autor-home .info-autor{width: 182px;}
 }
