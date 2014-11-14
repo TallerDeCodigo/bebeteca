@@ -126,16 +126,32 @@ if(empty($post_child->posts) ){
 					</ul>
 				</div>
 			</div>
+			<div class="texto-slide-mobile si-mobile">
+				<a href="<?php echo $link_prev;?>" class="boton">
+					< Anterior
+				</a>
+				<span class="paginacion"><?php echo $estoy; ?> de <?php echo $de; ?></span>
+				<a href="<?php echo $link_next;?>" class="boton ultimo-fila">
+					Siguiente >
+				</a>
+
+			</div>
 			<article class="entero slide clearfix">
 				<div class="slide_header">
 					<?php echo get_the_post_thumbnail( $post_slide_ID, 'medio-home'); ?>
 					<span><?php echo get_post_meta($post_slide_ID, 'tagline', true); ?></span>
 				</div>
-
-				<div class="texto-slide">
-					<a href="<?php echo $link_prev;?>" class="boton">< Anterior</a>
+				<h3 class="si-mobile"><?php echo get_the_title($post_slide_ID); ?></h3>
+				<div class="texto-slide no-mobile">
+					<a href="<?php echo $link_prev;?>" class="boton">
+						<span class="no-tablet">< Anterior</span>
+						<span class="si-tablet"><</span>
+					</a>
 					<span class="paginacion"><?php echo $estoy; ?> de <?php echo $de; ?></span>
-					<a href="<?php echo $link_next;?>" class="boton ultimo-fila">Siguiente ></a>
+					<a href="<?php echo $link_next;?>" class="boton ultimo-fila">
+						<span class="no-tablet">Siguiente ></span>
+						<span class="si-tablet">></span>
+					</a>
 
 					<h3><?php echo get_the_title($post_slide_ID); ?></h3>
 

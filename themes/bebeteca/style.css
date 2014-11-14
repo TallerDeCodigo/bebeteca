@@ -429,6 +429,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article.slide .texto-slide span.paginacion{display: block; font-size: 14px; color: #b73ba1; float: left; margin-right: 22px; margin-left: 14px;}
 .single article.slide .texto-slide .boton{margin-bottom: 24px; background: #a98eb4;}
 .single article.slide .texto-slide h3{display: block; clear: both;}
+.single article.slide .texto-slide .boton span{color: #fff;}
 
 .single .divicion span.line{width: 175px;}
 .single .divicion.promo-rel span.line{width: 195px;}
@@ -437,9 +438,9 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single .entero.news blockquote{background: transparent; font-size: 31px; padding: 0 0;}
 .single .entero.news img{width: 248px; height: auto; margin: 0 auto; display: block;}
 
-#form_contacto{display: block;overflow: hidden; width: 100%; padding:20px; text-align: center;}
-#form_contacto input{width: 381px; height: 37px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 0 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic; margin-bottom: 20px; }
-#form_contacto textarea{width: 381px; height: 150px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 10px 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic;resize:none; }
+#form_contacto{display: block;overflow: hidden; width: 422px; padding:20px; text-align: center; margin: 0 auto;}
+#form_contacto input{max-width: 381px; width: 100%; height: 37px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 0 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic; margin-bottom: 20px; }
+#form_contacto textarea{max-width: 381px; width: 100%; height: 150px; border: 1px solid #a98eb4; border-radius: 8px; clear: both; outline: none; padding: 10px 10px; font-family: 'pt_sansregular'; font-size: 15px; color: #a98eb4; font-style: italic;resize:none; }
 #form_contacto input[type=submit] {width: 227px; height: 43px; text-align: center; font-family: 'arvoregular'; font-size: 21px; font-weight: normal; background-color: #a98eb4; color: #fff; margin-top: 20px;  }
 
 .no-padding{padding: 0 !important;}

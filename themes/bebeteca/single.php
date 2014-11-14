@@ -136,11 +136,12 @@ foreach ($terms as $key => $term) {
 					<h4><?php the_author_meta( 'display_name'); ?></h4>
 					<p class="rol"><?php the_author_meta('perfil') ?></p>
 					<?php $user_nicename = get_the_author_meta( 'user_nicename'); ?>
-					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton">Más sobre el autor</a>
+					<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton no-tablet">Más sobre el autor</a>
 				</div>
 				<div class="post-autor">
 					<p><?php the_author_meta('quote') ?> </p>
 				</div>
+				<a href="<?php echo site_url('/author/'.$user_nicename.'/') ?>" class="boton mas-autor-t si-tablet">Más sobre el autor</a>
 			</article>
 
 			<article class="entero comentarios">
