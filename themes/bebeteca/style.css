@@ -403,7 +403,7 @@ img.play_2{position: absolute;z-index: 999; top:62px; left:60px; width: 89px !im
 .single article{position: relative; overflow: visible; width: 100%; height: auto; padding: 25px; background: #fff; -webkit-box-shadow: 0 0px 5px 1px #DAD9D9;-moz-box-shadow: 0 0px 5px 1px #dad9d9;box-shadow: 0 0px 5px 1px #DAD9D9;}
 .single article img.freatured-post{width: 620px; height: auto; margin-top: -25px; margin-left: -25px; max-width: none;}
 .single article img{max-width: 100%;display: block;height: auto;overflow: hidden;margin: 0 auto;}
-.single article iframe{margin-top: -25px;margin-left: -25px;}
+
 .single article h3{color: #9d65b4; font-size: 18px; margin-top: 0px;}
 .single article p, .single article ul li, .single article ol li, .single article span{font-family: 'pt_sansregular'; font-size: 15px; color: #808080; line-height: 25px;}
 .single article p strong,
