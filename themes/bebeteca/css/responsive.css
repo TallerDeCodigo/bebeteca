@@ -61,6 +61,7 @@ span.breadcrumbs,
 .single article.autor-home .post-autor{width: 38.3%;}
 .single article.autor-home .post-autor p{margin-bottom: 0;}
 .single .divicion span.line{width: 25.6%;}
+
 .single .article-gral img{margin-top: -5px;margin-right: 5.9%;}
 
 /* FOOTER */
@@ -86,7 +87,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 @media only screen and (max-width: 727px){
 	.span.line{width: 35%;}
-	.single .divicion span.line{width: 35%;}
+	.single .divicion span.line{width: 25.6%;}
 	.extras-category,
 	.header-category .extras-category .extras,
 	.comentarios{display: none;}
@@ -137,10 +138,11 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.main section{width: 100%;}
 
 	.article-gral{background: transparent; box-shadow: none; padding: 0 !important; overflow: hidden;}
-	.article-gral .cont-info-gral{width: auto; margin-left: 205px; background: #fff;  padding-left: 15px; padding-right: 15px;}
-	.article-gral img{position: absolute;top: 0;left: 0;width: 40.3% !important;  margin-right: 1.9%;  margin-top: 0; max-width: 184px;}
+	.article-gral .cont-info-gral{width: auto; margin-left: 193px; background: #fff;  padding-left: 15px; padding-right: 15px;}
+	.article-gral img,
+	.single .article-gral img{position: absolute;top: 0;left: 0;width: 40.3% !important;  margin-right: 1.9%;  margin-top: 0; max-width: 184px;}
 	.article-gral .cont-info-gral .franja{display: block;width: 123%;margin-left: -15px; height: 20px; margin-bottom: 26px; }
-
+	.single .article-gral{background: transparent; box-shadow: none;}
 	.article-gral .cont-info-gral .franja-embarazo{background: #AE3079;}
 	.article-gral .cont-info-gral .franja-dia-a-dia{background: #4E9BAB;}
 	.article-gral .cont-info-gral .franja-nacimiento{background: #C57FA6;}
@@ -188,6 +190,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 }
 
 @media only screen and (max-width: 480px){
+	.single .article-gral img,
 	.article-gral img{position: relative;}
 	.article-gral .cont-info-gral{width: 57.8%; margin-left: 0;}
 }
