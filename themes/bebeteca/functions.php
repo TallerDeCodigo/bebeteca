@@ -1,7 +1,7 @@
 <?php
 $status_slide_post = '';
-$exclude = array();
 global $count_m_home;
+global $exclude;
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 
@@ -22,15 +22,22 @@ global $count_m_home;
 
 
 	add_action( 'wp_enqueue_scripts', function(){
+		global $exclude;
 
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'lazy-load', JSPATH.'lazy-load.js', array('plugins'), '1.0', true );
+
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 		wp_localize_script( 'functions', 'is_search', (string)is_search() );
+		wp_localize_script( 'functions', 'is_home', (string)is_home() );
+		wp_localize_script( 'functions', 'image_url', THEMEPATH.'images/' );
 		wp_localize_script( 'functions', 'site_url', site_url('/') );
+		$exclude = (isset($exclude)) ? $exclude : array();
+		wp_localize_script( 'functions', 'excluir', $exclude );
 
 		if (is_search()) {
 			wp_localize_script( 'functions', 'get', $_GET['s'] );
@@ -149,6 +156,7 @@ global $count_m_home;
 
 	require_once('inc/functions-newsletter.php');
 
+	require_once('inc/ajax-lazy.php');
 
 
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////

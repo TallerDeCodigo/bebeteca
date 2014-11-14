@@ -1,0 +1,76 @@
+<?php
+/**
+ * RESIVE INFORMACION PARA EL LAZYLOAD DEL HOME
+ */
+function ajax_lazy_home(){
+
+	$offset = isset($_POST['offset']) ? $_POST['offset'] : '';
+	$exclude = isset($_POST['exclude']) ? $_POST['exclude'] : '';
+
+	$elementos = get_posts_home_lazyload($offset, $exclude);
+
+	$posts = get_agrega_lo_necesario($elementos);
+
+	// $posts = !empty($posts) ? $posts : 'nada';
+
+	wp_send_json($posts);
+
+}
+
+add_action('wp_ajax_ajax_lazy_home', 'ajax_lazy_home');
+add_action('wp_ajax_nopriv_ajax_lazy_home', 'ajax_lazy_home');
+
+function get_posts_home_lazyload($offset, $exclude){
+	$cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
+	$post_general = new WP_Query(array( 'posts_per_page' => 11, 'offset' => $offset,  'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__not_in' => array($cat_no->term_id) ) );
+	return $post_general->posts;
+}
+
+
+function get_agrega_lo_necesario($elementos){
+	$posts = array();
+	if (!empty($elementos)) :
+		foreach ($elementos as $key => $post):
+
+			$thumb1 = attachment_image_url($post->ID, 'articulos-gral');
+			$thumb2 = attachment_image_url($post->ID, 'thumbnail');
+			$cat = get_category_post($post->ID);
+			$posts[$key]['ID'] = $post->ID;
+			$posts[$key]['titulo'] = excerpt(50, $post->post_title);
+			// $posts[$key]['contenido'] = $post->post_content;
+			$posts[$key]['img1'] = $thumb1;
+			$posts[$key]['img2'] = $thumb2;
+			$posts[$key]['slug_cat'] = $cat[1];
+			$posts[$key]['name_cat'] = $cat[0];
+
+
+
+		endforeach;
+	endif;
+
+	return $posts;
+}
+
+
+function get_category_post($post_id){
+	$terms  = wp_get_post_terms( $post_id, 'category');
+	if (!empty($terms)) {
+		foreach ($terms as $term) {
+			if($term->parent == 0){
+				$term_name = $term->name;
+				$term_slug = $term->slug;
+			}
+		}
+	}else{
+		$term_name = '';
+		$term_slug = '';
+	}
+
+	$postype = get_post_type($post_id);
+	if ($postype == 'promociones') {
+		$term_name = 'Promociones';
+		$term_slug = 'promociones';
+	}
+
+	return array($term_name, $term_slug);
+}

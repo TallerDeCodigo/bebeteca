@@ -100,16 +100,18 @@ global $count_m_home;?>
 				<h5>Más artículos</h5>
 				<span class="line"></span>
 			</div>
+			<div class="entero lazy-container" data-page="home" data-offset="11">
+				<?php $cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
+				wp_localize_script( 'functions', 'excluir', $exclude );
 
-			<?php $cat_no = get_term_by( 'slug', 'entrevistas', 'category' );
-
-			$post_general = new WP_Query(array( 'posts_per_page' => 11, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__not_in' => array($cat_no->term_id) ) );
-			if ( $post_general->have_posts() ) : $count = 1; while( $post_general->have_posts() ) : $post_general->the_post();
-				$exclude[] = $post->ID;
-				$count_m_home = $count;
-				get_template_part( 'template/articulo', 'general' );
-				$count++;
-			endwhile; endif; wp_reset_postdata(); ?>
+				$post_general = new WP_Query(array( 'posts_per_page' => 11, 'post_status'=>'publish', 'post_type' => array('post', 'articulo-slider'), 'post__not_in' => $exclude, 'category__not_in' => array($cat_no->term_id) ) );
+				if ( $post_general->have_posts() ) : $count = 1; while( $post_general->have_posts() ) : $post_general->the_post();
+					$exclude[] = $post->ID;
+					$count_m_home = $count;
+					get_template_part( 'template/articulo', 'general' );
+					$count++;
+				endwhile; endif; wp_reset_postdata(); ?>
+			</div>
 
 		</section>
 
