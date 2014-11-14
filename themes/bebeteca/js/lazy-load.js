@@ -131,10 +131,10 @@
 		};
 
 
-		/**
+		*
 		 * Despliega el tema del evento dentro del contenedor
 		 * @return {[type]} [description]
-		 */
+
 		Eventos.render_actividad_evento = function (user_id, post_id)
 		{
 			$.post(ajax_url, {
@@ -153,7 +153,7 @@
 		Eventos.render_posts = function (post)
 		{
 			var content = '<article class="entero article-gral posts-tablet">'+
-							'<a href="">sdfsd'+
+							'<a href="">'+
 								'<img src="'+post.img1+'" class="img-gral1">'+
 								'<img src="'+post.img2+'" class="img-gral2 img-resp">'+
 								'<div class="cont-info-gral">'+
