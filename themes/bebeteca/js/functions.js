@@ -93,6 +93,34 @@
 		});
 
 
+
+		/*
+		* SUBIT NEWSLETTER
+		*/
+		$('#form-newsletter-footer').on('submit', function (event) {
+			event.preventDefault();
+			var email = $('#news-email-fo').val();
+
+			if( ! validateEmail(email)){
+				alert('El mail '+email+' no es valido');
+				$('#news-email-fo').focus();
+			}else{
+				$.post(ajax_url,{
+					email    : email,
+					action   : 'ajax_resive_mail_newsletter'
+				}, 'json')
+				.done(function (data){
+					if (data == 1){
+						 window.location.replace(site_url+'newsletter');
+					}else{
+						alert(data);
+					};
+				});
+			}
+
+		});
+
+
 		function ajax_mail_newsletter(email){
 			$.post(ajax_url,{
 				email    : email,

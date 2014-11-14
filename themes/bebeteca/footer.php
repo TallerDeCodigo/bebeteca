@@ -27,7 +27,7 @@
 					Suscríbete al newsletter
 				</p>
 				<form id="form-newsletter-footer" class="forma-news">
-					<input type="email" name="news-email" id="news-email" value="" placeholder="email@mail.com" >
+					<input type="email" name="news-email-fo" id="news-email-fo" value="" placeholder="email@mail.com" >
 					<input type="submit" value="Enviar">
 				</form>
 			</div>
