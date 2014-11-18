@@ -110,6 +110,41 @@
 
 
 		/**
+		 * Trae los elementos siguientes de cupones
+		 */
+		Eventos.ajax_cupones = function (offset)
+		{
+			Eventos.offset = Eventos.offset + offset;
+
+			$.post(ajax_url, {
+				offset: Eventos.offset,
+				exclude: excluir,
+				action: 'ajax_lazy_cupones'
+			}, 'json').done(function (data){
+
+				if ( data == 'nada') Eventos.unbind();
+
+				if ( data != 'nada') {
+
+					Eventos.displayLoader();
+
+					for (var i = 0; i < data.length; i++) {
+
+						Eventos.render_posts(data[i]);
+						$('.loading-eventos').remove();
+
+					};
+				};
+
+
+			});
+
+			Eventos.reloadScripts();
+
+		}
+
+
+		/**
 		 * Coloca los siguientes eventos
 		 *
 		 * @return Object
@@ -123,25 +158,14 @@
 		 	}else if(page == 'category'){
 		 		var term_id = $('.lazy-container').data('term_id');
 		 		Eventos.ajax_category(offset, term_id);
+		 	}else if(page == 'cupones'){
+		 		Eventos.ajax_cupones(offset);
 		 	}
 
 		};
 
 
-		/*
-		 * Despliega el tema del evento dentro del contenedor
-		 * @return {[type]} [description]
 
-		Eventos.render_actividad_evento = function (user_id, post_id)
-		{
-			$.post(ajax_url, {
-				user_id : user_id,
-				post_id : post_id,
-				action: 'ajax_render_evento'
-			}, 'json').done(function (content){
-				Eventos.container_actividad.append( content );
-			});
-		};
 
 		/**
 		 * Despliega el tema del usuario dentro del contenedor
@@ -171,6 +195,9 @@
 									'<span class="franja si-mobile franja-'+franja+'"></span>'+
 									'<h4>'+post.titulo+'</h4>'+
 									'<p class="no-tablet">'+post.contenido+'</p>'+
+								'</div>'+
+								'<div class="extras">'+
+									'<span class="compartir"></span><p>'+post.shares+'</p>'+
 								'</div>'+
 							'</a>'+
 							'</article>';

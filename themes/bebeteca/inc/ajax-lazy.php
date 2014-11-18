@@ -21,6 +21,30 @@ add_action('wp_ajax_ajax_lazy_home', 'ajax_lazy_home');
 add_action('wp_ajax_nopriv_ajax_lazy_home', 'ajax_lazy_home');
 
 
+
+/**
+ * RESIVE INFORMACION PARA EL LAZYLOAD DE CUPONES
+ */
+function ajax_lazy_cupones(){
+
+	$offset = isset($_POST['offset']) ? $_POST['offset'] : '';
+
+	$elementos = get_posts_cupones_lazyload($offset);
+
+	$posts = get_agrega_lo_necesario($elementos);
+
+	$posts = !empty($posts) ? $posts : 'nada';
+
+	wp_send_json($posts);
+
+}
+
+add_action('wp_ajax_ajax_lazy_cupones', 'ajax_lazy_cupones');
+add_action('wp_ajax_nopriv_ajax_lazy_cupones', 'ajax_lazy_cupones');
+
+
+
+
 /**
  * RESIVE INFORMACION PARA EL LAZYLOAD DE LAS CATEGORIAS
  */
@@ -53,6 +77,18 @@ function get_posts_home_lazyload($offset, $exclude){
 	return $post_general->posts;
 }
 
+
+
+/**
+ * REGRESA LOS POSTS QUE SIGUEN EN CUPONES
+ */
+function get_posts_cupones_lazyload($offset, $exclude){
+	$post_general = new WP_Query(array( 'posts_per_page' => 10, 'offset' => $offset,  'post_status'=>'publish', 'post_type' => array('promociones') ) );
+	return $post_general->posts;
+}
+
+
+
 /**
  * REGRESA LOS POSTS QUE SIGUEN EN LA CATEGORIA
  */
@@ -78,9 +114,7 @@ function get_agrega_lo_necesario($elementos){
 			$posts[$key]['slug_cat'] = $cat[1];
 			$posts[$key]['name_cat'] = $cat[0];
 			$posts[$key]['url'] = get_permalink( $post->ID );
-
-
-
+			$posts[$key]['shares'] = get_count_share(get_permalink( $post->ID ));
 
 		endforeach;
 	endif;

@@ -3,7 +3,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 
 	<!-- Insert content here -->
 	<div class="main">
-		<section>
+		<section class="lazy-container" data-page="cupones" data-offset="10">
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/promociones/') ?>">Cupones</a></span>
 			<div class="header-category clearfix">
 				<h4>Cupones</h4>
