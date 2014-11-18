@@ -2,7 +2,7 @@
 
 	<!-- Insert content here -->
 	<div class="main">
-		<section>
+		<section class="search">
 			<span class="breadcrumbs">Resultados de busqueda</span>
 			<div class="header-category">
 				<h4>" <?php printf( __( '%s' ),  get_search_query()  ); ?> "</h4>

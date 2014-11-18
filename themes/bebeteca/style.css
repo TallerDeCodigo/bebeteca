@@ -315,6 +315,7 @@ span.line{position: relative; overflow: hidden;float: left; border-bottom: 1px s
 .article-gral .cont-info-gral{position: relative;overflow: hidden; width: 317px;}
 
 section .mas-entradas{display: none; float: left; width: 115px; overflow: hidden;}
+.search .mas-entradas{display: block !important;}
 section .mas-entradas a{text-decoration: none; color: #fff;}
 
 .page-numbers{display: none;}
