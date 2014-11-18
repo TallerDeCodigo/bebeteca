@@ -20,7 +20,9 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 		$term_slug = 'promociones';
 	}
 
-	$class_ultimos = ($count_m_home >= 5) ? 'posts-tablet' : '';
+	// $class_ultimos = ($count_m_home >= 5) ? 'posts-tablet' : '';
+	$class_ultimos = '';
+
 	$class_medida  = ($count_m_home == 1) ? 'img-medida' : '';
 	?>
 

@@ -118,7 +118,7 @@
 		{
 			var page = $('.lazy-container').data('page');
 			var offset = $('.lazy-container').data('offset');
-		 	if (page == 'home' && ancho < 980) {
+		 	if (page == 'home') {
 		 		Eventos.ajax_home(offset);
 		 	}else if(page == 'category'){
 		 		var term_id = $('.lazy-container').data('term_id');
