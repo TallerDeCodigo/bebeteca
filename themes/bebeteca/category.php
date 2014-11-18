@@ -1,12 +1,12 @@
 <?php get_header();
+	global $count_m_home;
 	$paged    = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$cat_name = single_cat_title( '', false );
-	$term     = get_term_by( 'name', $cat_name, 'category' );
-	 ?>
+	$term     = get_term_by( 'name', $cat_name, 'category' ); ?>
 
 	<!-- Insert content here -->
 	<div class="main">
-		<section>
+		<section class="lazy-container" data-page="category" data-offset="10" data-term_id="<?php echo $term->term_id; ?>">
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/categoria/'.$term->slug.'/'); ?>"><?php echo get_category_parents( $term->term_id, true, ' / ' ); ?></a></span>
 			<div class="header-category clearfix">
 				<h4><?php echo $cat_name; ?></h4>
@@ -46,9 +46,11 @@
 			</div>
 			<?php get_template_part( 'template/cat', 'slide' ); ?>
 
-			<?php if ( have_posts() ) :  while( have_posts() ) : the_post();
+			<?php if ( have_posts() ) : $count = 1;  while( have_posts() ) : the_post();
+				$count_m_home = $count;
 
 				get_template_part( 'template/articulo', 'general' );
+				$count++;
 
 			endwhile;
 

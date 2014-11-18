@@ -41,38 +41,35 @@
 		/**
 		 * Trae los elementos siguientes
 		 */
-		Eventos.ajax_elementos = function ()
+		Eventos.ajax_category = function (offset, term_id)
 		{
 
-			// $.post(ajax_url, {
-			// 	offset: Eventos.offset,
-			// 	action: 'ajax_actividad_siguientes'
-			// }, 'json').done(function (data){
+			Eventos.offset = Eventos.offset + offset;
 
-			// 	if ( data == 'nada') Eventos.unbind();
+			$.post(ajax_url, {
+				offset: Eventos.offset,
+				term_id: term_id,
+				exclude: excluir,
+				action: 'ajax_lazy_category'
+			}, 'json').done(function (data){
 
-			// 	if ( data != 'nada') {
+				if ( data == 'nada') Eventos.unbind();
 
-			// 		Eventos.displayLoader();
-			// 		for (var i = 0; i < data.length; i++) {
-			// 			var data_type = data[i].type;
-			// 			if(data_type === 'usuario'){
-			// 				Eventos.render_actividad_usuario(data[i].user_id, data[i].post_id);
-			// 				$('.loading-eventos').remove();
-			// 			}else
-			// 			if(data_type === 'evento') {
-			// 				Eventos.render_actividad_evento(data[i].user_id, data[i].post_id);
-			// 				$('.loading-eventos').remove();
-			// 			}else{
-			// 				Eventos.render_actividad_agendo(data[i].user_id, data[i].post_id);
-			// 				$('.loading-eventos').remove();
-			// 			}
-			// 		};
-			// 	};
+				if ( data != 'nada') {
 
-			// 	Eventos.reloadScripts();
+					Eventos.displayLoader();
 
-			// });
+					for (var i = 0; i < data.length; i++) {
+
+						Eventos.render_posts(data[i]);
+						$('.loading-eventos').remove();
+
+					};
+				};
+
+			});
+
+			Eventos.reloadScripts();
 
 		}
 
@@ -123,9 +120,10 @@
 			var offset = $('.lazy-container').data('offset');
 		 	if (page == 'home' && ancho < 980) {
 		 		Eventos.ajax_home(offset);
-		 	}else{
-		 		Eventos.ajax_elementos();
-		 	};
+		 	}else if(page == 'category'){
+		 		var term_id = $('.lazy-container').data('term_id');
+		 		Eventos.ajax_category(offset, term_id);
+		 	}
 
 		};
 
@@ -157,14 +155,20 @@
 				style = 'style="min-height: '+tamano+'px;"';
 			}
 
-
-			var content = '<article class="entero article-gral posts-tablet">'+
-							'<a href="">'+
-								'<span class="titulo1 no-mobile pleca-'+post.slug_cat+'">'+post.name_cat+'</span>'+
+			var categoria = $('.lazy-container').data('cat');
+			var span_cat = '<span class="titulo1 no-mobile pleca-'+post.slug_cat+'">'+post.name_cat+'</span>';
+			var franja = post.slug_cat;
+			if (categoria == 'entrevistas') {
+				span_cat = '';
+				franja = 'entrevistas';
+			};
+			var content = '<article class="entero article-gral">'+
+							'<a href="'+post.url+'">'+
+								span_cat+
 								'<img src="'+post.img1+'" class="img-gral1">'+
 								'<img src="'+post.img2+'" class="img-gral2 img-resp">'+
 								'<div class="cont-info-gral" '+style+'>'+
-									'<span class="franja si-mobile franja-'+post.slug_cat+'"></span>'+
+									'<span class="franja si-mobile franja-'+franja+'"></span>'+
 									'<h4>'+post.titulo+'</h4>'+
 									'<p class="no-tablet">'+post.contenido+'</p>'+
 								'</div>'+
@@ -235,13 +239,11 @@
 		 * Bind the scroll event to the window.
 		 * and trigger loadMoreEvents when user reaches bottom of the page.
 		 */
-
-		if ( is_home == '1'){
-
-			$(window).on('scroll', function(){
+		 var elements = document.getElementsByClassName('lazy-container');
+		 if (elements.length != 0) {
+		 	$(window).on('scroll', function(){
 
 				var win = $(window);
-
 
 				if (win.height() + win.scrollTop() == $(document).height()) {
 					var ancho = $(window).width();
@@ -253,7 +255,9 @@
 				}
 
 			});
-		}
+		};
+
+
 
 	});
 

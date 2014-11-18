@@ -1,11 +1,12 @@
 <?php get_header();
+global $count_m_home;
 	$paged    = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	$cat_name = single_cat_title( '', false );
 	$term     = get_term_by( 'name', $cat_name, 'category' );?>
 
 	<!-- Insert content here -->
 	<div class="main">
-		<section>
+		<section class="lazy-container" data-page="category" data-cat="entrevistas" data-offset="10" data-term_id="<?php echo $term->term_id; ?>">
 			<span class="breadcrumbs"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/categoria/entrevistas/') ?>"><?php echo $cat_name; ?></a></span>
 			<div class="header-category">
 				<h4><?php echo $cat_name; ?></h4>
@@ -64,14 +65,15 @@
 						</a>
 					</article><!-- SLIDE -->
 
-				<?php else: ?>
+				<?php else:
+					$class_img = ($count == 2) ? 'img-medida' : ''; ?>
 
 					<article class="entero article-gral">
 						<a href="<?php the_permalink(); ?>">
 							<img class="play_2" src="<?php echo THEMEPATH; ?>images/play_2.png">
 							<?php the_post_thumbnail('articulos-gral', array( 'class' => 'img-gral1' ));
 
-							the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2 img-resp' ));?>
+							the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2 img-resp '.$class_img ));?>
 							<div class="cont-info-gral">
 								<span class="franja si-mobile franja-entrevistas"></span>
 								<h4><?php echo excerpt(50, get_the_title()); ?></h4>

@@ -31,7 +31,8 @@ if ( $post_general->have_posts() AND $paged == 1) :?>
 								<a href="#" ></a>
 							</li>
 					<?php endif;
-				$contador++; endwhile; endif; wp_reset_postdata(); ?>
+				$contador++; endwhile; endif; wp_reset_postdata();
+				wp_localize_script( 'functions', 'excluir', $exclude );?>
 			</ul>
 			<a class="flecha_carrusel prev" href="#"></a>
 			<div class="viewport">
