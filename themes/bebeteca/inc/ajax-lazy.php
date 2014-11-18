@@ -37,7 +37,7 @@ function get_agrega_lo_necesario($elementos){
 			$cat = get_category_post($post->ID);
 			$posts[$key]['ID'] = $post->ID;
 			$posts[$key]['titulo'] = excerpt(50, $post->post_title);
-			// $posts[$key]['contenido'] = $post->post_content;
+			$posts[$key]['contenido'] = wp_trim_words( $post->post_content, 10 );
 			$posts[$key]['img1'] = $thumb1;
 			$posts[$key]['img2'] = $thumb2;
 			$posts[$key]['slug_cat'] = $cat[1];

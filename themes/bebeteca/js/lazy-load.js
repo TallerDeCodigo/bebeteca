@@ -43,8 +43,6 @@
 		 */
 		Eventos.ajax_elementos = function ()
 		{
-			Eventos.offset = Eventos.offset + 10;
-			console.log(Eventos.offset);
 
 			// $.post(ajax_url, {
 			// 	offset: Eventos.offset,
@@ -106,9 +104,10 @@
 					};
 				};
 
-				Eventos.reloadScripts();
 
 			});
+
+			Eventos.reloadScripts();
 
 		}
 
@@ -118,11 +117,11 @@
 		 *
 		 * @return Object
 		 */
-		Eventos.loadMoreContent = function ()
+		Eventos.loadMoreContent = function (ancho)
 		{
 			var page = $('.lazy-container').data('page');
 			var offset = $('.lazy-container').data('offset');
-		 	if (page == 'home') {
+		 	if (page == 'home' && ancho < 980) {
 		 		Eventos.ajax_home(offset);
 		 	}else{
 		 		Eventos.ajax_elementos();
@@ -131,7 +130,7 @@
 		};
 
 
-		*
+		/*
 		 * Despliega el tema del evento dentro del contenedor
 		 * @return {[type]} [description]
 
@@ -152,14 +151,22 @@
 		 */
 		Eventos.render_posts = function (post)
 		{
+			var style = '';
+			if( $(window).width() < 728 ){
+				var tamano = $('.img-medida').height();
+				style = 'style="min-height: '+tamano+'px;"';
+			}
+
+
 			var content = '<article class="entero article-gral posts-tablet">'+
 							'<a href="">'+
+								'<span class="titulo1 no-mobile pleca-'+post.slug_cat+'">'+post.name_cat+'</span>'+
 								'<img src="'+post.img1+'" class="img-gral1">'+
 								'<img src="'+post.img2+'" class="img-gral2 img-resp">'+
-								'<div class="cont-info-gral">'+
+								'<div class="cont-info-gral" '+style+'>'+
 									'<span class="franja si-mobile franja-'+post.slug_cat+'"></span>'+
 									'<h4>'+post.titulo+'</h4>'+
-									'<p class="no-tablet"></p>'+
+									'<p class="no-tablet">'+post.contenido+'</p>'+
 								'</div>'+
 							'</a>'+
 							'</article>';
@@ -210,20 +217,8 @@
 		 */
 		Eventos.reloadScripts = function ()
 		{
-			// if( $(window).width() < 728 ){
-			// 	$('.article-gral').not( '.primer_post' ).each(function( index ) {
-			// 		var tam_papa = $(this).children('a').children('.img-resp').height();
-
-			// 		$(this).children('a').children('.cont-info-gral').css({'min-height':tam_papa });
-			// 		$('.primer_content' ).removeAttr('style');
 
 
-			// 	});
-			// }else{
-			// 	$('#main-menu').removeClass('visible');
-			// 	$('.content-header').removeClass('fix-head');
-			// 	$('.cont-info-gral, .submenu').not( '.primer_content' ).removeAttr('style');
-			// }
 
 		};
 
@@ -241,16 +236,17 @@
 		 * and trigger loadMoreEvents when user reaches bottom of the page.
 		 */
 
-
 		if ( is_home == '1'){
 
 			$(window).on('scroll', function(){
 
 				var win = $(window);
 
-				if (win.height() + win.scrollTop() == $(document).height()) {
 
-					Eventos.loadMoreContent();
+				if (win.height() + win.scrollTop() == $(document).height()) {
+					var ancho = $(window).width();
+
+					Eventos.loadMoreContent(ancho);
 
 				}else{
 

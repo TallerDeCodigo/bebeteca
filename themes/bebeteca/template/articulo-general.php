@@ -21,6 +21,7 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 	}
 
 	$class_ultimos = ($count_m_home >= 5) ? 'posts-tablet' : '';
+	$class_medida  = ($count_m_home == 1) ? 'img-medida' : '';
 	?>
 
 	<article class="entero article-gral <?php echo $class_ultimos; ?>">
@@ -34,7 +35,7 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 			<?php if ($term_name != ''): ?><span class="titulo1 no-mobile pleca-<?php echo $term_slug; ?>"><?php echo $term_name; ?></span><?php endif; ?>
 			<?php the_post_thumbnail('articulos-gral', array( 'class' => 'img-gral1' ));
 
-			the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2 img-resp' ));?>
+			the_post_thumbnail('thumbnail', array( 'class' => 'img-gral2 img-resp '.$class_medida ));?>
 			<div class="cont-info-gral">
 				<span class="franja si-mobile franja-<?php echo $term_slug; ?>"></span>
 				<h4><?php echo excerpt(50, get_the_title()); ?></h4>
