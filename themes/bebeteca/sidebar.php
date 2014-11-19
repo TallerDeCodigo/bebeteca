@@ -95,9 +95,7 @@
 		<?php
 			$facebook = new Comments\Facebook();
 			$comentados = $facebook->getComentados();
-			echo '<pre>';
-			print_r($comentados);
-			echo '</pre>';
+
 
 		if( $comentados ) : foreach (array_slice($comentados, 0, 5) as $post) : setup_postdata($post); ?>
 
