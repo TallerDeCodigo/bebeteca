@@ -312,10 +312,25 @@
 
 
 				});
+
+				/* BANNERS */
+
+				$('.banner-aside-1').children('div').appendTo('.banner5-resp');
+				googletag.cmd.push(googletag.pubads().refresh());
+
+				$('.banner-aside-2').children('div').appendTo('.banner9-resp');
+				googletag.cmd.push(googletag.pubads().refresh());
 			}else{
 				$('#main-menu').removeClass('visible');
 				$('.content-header').removeClass('fix-head');
 				$('.cont-info-gral, .submenu').not( '.primer_content' ).removeAttr('style');
+
+				/* BANNERS */
+				$('.banner5-resp').children('div').appendTo('.banner-aside-1');
+				googletag.cmd.push(googletag.pubads().refresh());
+
+				$('.banner9-resp').children('div').appendTo('.banner-aside-2');
+				googletag.cmd.push(googletag.pubads().refresh());
 			}
 		});
 
@@ -331,10 +346,24 @@
 					$('.primer_content' ).removeAttr('style');
 
 				});
+
+				/* BANNERS */
+				$('.banner-aside-1').children('div').appendTo('.banner5-resp');
+				googletag.cmd.push(googletag.pubads().refresh());
+
+				$('.banner-aside-2').children('div').appendTo('.banner9-resp');
+				googletag.cmd.push(googletag.pubads().refresh());
 			}else{
 				$('#main-menu').removeClass('visible');
 				$('.content-header').removeClass('fix-head');
 				$('.cont-info-gral, .submenu').not( '.primer_content' ).removeAttr('style');
+
+				/* BANNERS */
+				$('.banner5-resp').children('div').appendTo('.banner-aside-1');
+				googletag.cmd.push(googletag.pubads().refresh());
+
+				$('.banner9-resp').children('div').appendTo('.banner-aside-2');
+				googletag.cmd.push(googletag.pubads().refresh());
 			}
 
 		});
@@ -365,6 +394,7 @@
 			$('.submenu').fadeOut(0);
 			$('.sub-'+submnu).toggle(750);
 		});
+
 
 	});
 

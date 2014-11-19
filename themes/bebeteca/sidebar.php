@@ -1,5 +1,5 @@
 <aside id="main_sidebar">
-	<div class="banner-aside">
+	<div class="banner-aside banner-aside-1">
 		<!-- BoxBanner_Top_Home -->
 		<div id='div-gpt-ad-1413996590367-3' style='width:100%; height:auto;'>
 			<script type='text/javascript'>
@@ -28,7 +28,7 @@
 
 	?>
 
-	<div class="banner-aside">
+	<div class="banner-aside banner-aside-2">
 		<!-- BoxBanner_Bottom_Home -->
 		<div id='div-gpt-ad-1413996590367-2' style='width:300px; height:250px;'>
 			<script type='text/javascript'>

@@ -23,9 +23,11 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 	// $class_ultimos = ($count_m_home >= 5) ? 'posts-tablet' : '';
 	$class_ultimos = '';
 
-	$class_medida  = ($count_m_home == 1) ? 'img-medida' : '';
-	if ($count_m_home%3==1 AND $count_m_home > 1) : ?>
+	$class_medida = ($count_m_home == 1) ? 'img-medida' : '';
+	if ($count_m_home%4==1 AND $count_m_home > 1) : ?>
+		<div class="continer-banners banner<?php echo $count_m_home; ?>-resp si-mobile">
 
+		</div>
 	<?php endif; ?>
 
 	<article class="entero article-gral <?php echo $class_ultimos; ?>">
