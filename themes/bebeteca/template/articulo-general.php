@@ -25,14 +25,7 @@ $terms  = wp_get_post_terms( get_the_ID(), 'category');
 
 	$class_medida  = ($count_m_home == 1) ? 'img-medida' : '';
 	if ($count_m_home%3==1 AND $count_m_home > 1) : ?>
-		<div class="banner_resp">
-			<!-- BoxBanner_Bottom_Home -->
-			<div id='div-gpt-ad-1413996590367-2' style='width:300px; height:250px;'>
-				<script type='text/javascript'>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1413996590367-2'); });
-				</script>
-			</div>
-		</div>
+
 	<?php endif; ?>
 
 	<article class="entero article-gral <?php echo $class_ultimos; ?>">
