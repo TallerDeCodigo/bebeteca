@@ -336,6 +336,7 @@
 				$('.banner9-resp').children('div').appendTo('.banner-aside-2');
 				googletag.cmd.push(googletag.pubads().refresh());
 			}
+
 		});
 
 
@@ -399,6 +400,12 @@
 			$('.submenu').fadeOut(0);
 			$('.sub-'+submnu).toggle(750);
 		});
+
+
+
+		if (is_device == 'tablet') {
+			$(document).on('click','#main-menu ul li a.mnu-a', function (event) {}
+		};
 
 
 	});
