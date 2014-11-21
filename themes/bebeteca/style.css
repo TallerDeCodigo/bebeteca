@@ -186,13 +186,13 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu ul li .submenu .post-rel p{font-family: 'pt_sansregular'; font-size: 15px; font-weight: normal; text-align: left;}
 .active .submenu .subcategorias li.cat-item a{color: #999 !important;}
 
-.bg-nacimiento .submenu{left: -122px !important;}
-.bg-dia-a-dia .submenu{left: -246px !important;}
-.bg-estimulacion .submenu{left: -346px !important;}
-.bg-nutricion .submenu{left: -482px !important;}
-.bg-lactancia .submenu{left: -591px !important;}
-.bg-entrevistas .submenu{left: -699px !important;}
-.bg-promociones .submenu{left: -819px !important;}
+.bg-embarazo .submenu{left: -85px !important;}
+    .bg-nacimiento .submenu{left: -195px !important;}
+    .bg-dia-a-dia .submenu{left: -318px !important;}
+    .bg-estimulacion .submenu{left: -418px !important;}
+    .bg-nutricion .submenu{left: -482px !important;}
+    .bg-lactancia .submenu{left: -555px !important;}
+    .bg-entrevistas .submenu{left: -662px !important;}
 .content-header header nav#main-menu ul li.bg-embarazo:hover, nav#main-menu ul li.bg-embarazo.active{background-color: #ae3079;}
 .content-header header nav#main-menu ul li.bg-nacimiento:hover, nav#main-menu ul li.bg-nacimiento.active{background-color: #c57fa6;}
 .content-header header nav#main-menu ul li.bg-dia-a-dia:hover, nav#main-menu ul li.bg-dia-a-dia.active{background-color: #4e9bab;}
