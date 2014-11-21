@@ -98,6 +98,13 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 
 @media only screen and (max-device-width: 980px){
 	section .mas-entradas{display: none;}
+	.bg-embarazo .submenu{left: -85px !important;}
+	.bg-nacimiento .submenu{left: -195px !important;}
+	.bg-dia-a-dia .submenu{left: -318px !important;}
+	.bg-estimulacion .submenu{left: -418px !important;}
+	.bg-nutricion .submenu{left: -482px !important;}
+	.bg-lactancia .submenu{left: -555px !important;}
+	.bg-entrevistas .submenu{left: -662px !important;}
 }
 
 @media only screen and (max-width: 850px){
