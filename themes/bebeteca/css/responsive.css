@@ -234,6 +234,8 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	#form_contacto {width: 100%;}
 	#form_contacto input,
 	#form_contacto textarea{max-width: 100%;}
+	.content-header header .top-header input{width: 78.3%;}
+	.content-header header .top-header form input[type=submit]{width: 17%;}
 }
 
 @media only screen and (max-width: 440px){
