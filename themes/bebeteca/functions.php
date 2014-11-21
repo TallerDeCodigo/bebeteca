@@ -2,6 +2,15 @@
 $status_slide_post = '';
 global $count_m_home;
 global $exclude;
+global $deviceType;
+
+
+/**
+ * DETECTA EL DISPOSITIVO
+ */
+require_once 'inc/detect-mobile/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 
@@ -23,6 +32,7 @@ global $exclude;
 
 	add_action( 'wp_enqueue_scripts', function(){
 		global $exclude;
+		global $deviceType;
 
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
@@ -38,6 +48,7 @@ global $exclude;
 		wp_localize_script( 'functions', 'site_url', site_url('/') );
 		$exclude = (isset($exclude)) ? $exclude : array();
 		wp_localize_script( 'functions', 'excluir', $exclude );
+		wp_localize_script( 'functions', 'is_device', $deviceType );
 
 		if (is_search()) {
 			wp_localize_script( 'functions', 'get', $_GET['s'] );
