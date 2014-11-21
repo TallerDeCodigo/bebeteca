@@ -89,9 +89,9 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 .ultimo_footer{margin-right: 12% !important;}
 
 
-@media only screen and (max-device-width: 980px){
+/*@media only screen and (max-device-width: 980px){
 	section .mas-entradas{display: none;}
-}
+}*/
 
 @media only screen and (max-width: 850px){
 	.single article blockquote{width: 100%; background-size: 100%;}
