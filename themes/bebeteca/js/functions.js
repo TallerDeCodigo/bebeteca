@@ -404,7 +404,7 @@
 
 
 		if (is_device == 'tablet') {
-			$(document).on('click','#main-menu ul li a.mnu-a', function (event) {}
+			$(document).on('click','#main-menu ul li a.mnu-a', function (event) {});
 		};
 
 
