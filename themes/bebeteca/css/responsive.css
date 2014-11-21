@@ -1,3 +1,10 @@
+.content-header header nav#main-menu ul li .submenu{width: 267px;left: 0px !important;}
+.content-header header nav#main-menu ul li .submenu.sub-lactancia{left: -48px !important;}
+.content-header header nav#main-menu ul li .submenu.sub-entrevistas{left: -155px !important;}
+
+.content-header header nav#main-menu ul li .submenu .subcategorias{width: 226px;}
+.content-header header nav#main-menu ul li .submenu .post-rel{display: none;}
+
 .content-header{padding-top: 40px;}
 .content-header header{width: 95%; height: auto;}
 .abre-pop-registro{display: none;}
@@ -6,7 +13,7 @@
 .content-header header .top-header form{float: right;}
 .content-header header nav#main-menu{width: 100%;}
 .content-header header nav#main-menu ul li{display: inline-block;float: none;margin-right: 1%;}
-.content-header header nav#main-menu ul li:hover .submenu{display: none;}
+/*.content-header header nav#main-menu ul li:hover .submenu{display: none;}*/
 
 .logo{width: 156px;height: 99px;background-size: 100% auto;margin-top: -43px;}
 .logo a{width: 156px;height: 99px;}
