@@ -9,21 +9,8 @@ $news_resp = isset($news_resp) ? $news_resp : '';
 
 			<span class="breadcrumbs">Home/Newsletter</span>
 			<h1>Newsletter</h1>
-			<div class="header-category new-header-category">
-				<div class="extras-category">
-					<div class="extras">
-						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
-						<span class="compartir"></span><p><?php echo get_count_share($post->ID, 'post'); ?></p>
-					</div>
-					<span>Comparte</span>
-					<ul>
-						<li class="fb"><a href=""></a></li>
-						<li class="tw"><a href=""></a></li>
-						<li class="gm"><a href=""></a></li>
-						<li class="pr"><a href=""></a></li>
-						<li class="mail"><a href=""></a></li>
-					</ul>
-				</div>
+			<div class="header-category new-header-category hidden">
+				
 			</div>
 			<article class="entero news">
 				<blockquote>¡Gracias por registrarte<br /> a nuestro newsletter!</blockquote>
