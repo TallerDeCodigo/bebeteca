@@ -269,7 +269,7 @@
 		 */
 		 var elements = document.getElementsByClassName('lazy-container');
 
-		 if (elements.length != 0 && (is_device == 'phone' || is_device == 'tablet')  {
+		 if (elements.length != 0 && (is_device == 'phone' || is_device == 'tablet') )  {
 		 	$(window).on('scroll', function(){
 
 				var win = $(window);
