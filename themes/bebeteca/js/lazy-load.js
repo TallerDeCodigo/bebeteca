@@ -268,8 +268,8 @@
 		 * and trigger loadMoreEvents when user reaches bottom of the page.
 		 */
 		 var elements = document.getElementsByClassName('lazy-container');
-		 // if (elements.length != 0 && is_device == 'phone') {
-		 if (elements.length != 0) {
+
+		 if (elements.length != 0 && is_device == 'phone') {
 		 	$(window).on('scroll', function(){
 
 				var win = $(window);
