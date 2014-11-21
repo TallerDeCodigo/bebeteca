@@ -403,7 +403,7 @@
 
 
 
-		if (is_device == 'tablet') {
+		if (is_device == 'tablet' || is_device == 'phone' ) {
 			$(document).on('click','#main-menu ul li a.mnu-a', function (event) {});
 		};
 
