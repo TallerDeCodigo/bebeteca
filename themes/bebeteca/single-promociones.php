@@ -23,9 +23,9 @@
 							<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>" target="_blank" ></a>
 						</li>
 
-						<li class="gm">
+						<!-- <li class="gm">
 							<a href="https://plus.google.com/share?url=<?php echo get_permalink($post->ID) ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-						</li>
+						</li> -->
 
 						<?php if ( have_posts() ) : $count = 1; while( have_posts() ) : the_post();
 							$url_image = attachment_image_url($post->ID, 'large');
@@ -86,16 +86,33 @@
 								<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>" target="_blank" ></a>
 							</li>
 
-							<li class="gm">
+							<!-- <li class="gm">
 								<a href="https://plus.google.com/share?url=<?php echo get_permalink($post->ID) ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-							</li>
+							</li> -->
 
 							<?php $url_image = attachment_image_url($post->ID, 'large'); ?>
 							<li class="pr">
 								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post->ID) ?>&media=<?php echo $url_image; ?>&description=<?php the_excerpt(); ?>" target="_blank" ></a>
 							</li>
 							<li class="mail">
-								<a href=""></a>
+								<a rel="nofollow" class="share_post_by_mail" data-id="<?php echo $post->ID; ?>"></a>
+								<form class="mail_pop">
+									<label for="username">Tu nombre:</label>
+									<input type="text" name="username">
+
+									<label for="sender_email">Tu email:</label>
+									<input type="email" name="sender_email">
+
+									<label for="recipient">Email del receptor:</label>
+									<input type="email" name="recipient">
+
+									<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+									<label for="message">Mensaje:</label>
+									<textarea type="text" name="message"></textarea>
+
+									<input type="submit" value="Enviar">
+								</form>
 							</li>
 						</ul>
 					</div>

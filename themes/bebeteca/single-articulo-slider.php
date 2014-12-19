@@ -95,9 +95,9 @@ if(empty($post_child->posts) ){
 							<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo $permalink; ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo $permalink; ?>" target="_blank" ></a>
 						</li>
 
-						<li class="gm">
+						<!-- <li class="gm">
 							<a href="https://plus.google.com/share?url=<?php echo $permalink; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-						</li>
+						</li> -->
 
 						<?php $url_image = attachment_image_url($parent_id, 'large'); ?>
 						<li class="pr">
@@ -170,16 +170,33 @@ if(empty($post_child->posts) ){
 								<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post_slide_ID); ?>" target="_blank" ></a>
 							</li>
 
-							<li class="gm">
+							<!-- <li class="gm">
 								<a href="https://plus.google.com/share?url=<?php echo get_permalink($post_slide_ID); ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-							</li>
+							</li> -->
 
 							<?php $url_image = attachment_image_url($post_slide_ID, 'large'); ?>
 							<li class="pr">
 								<a rel="nofollow" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)', '_blank', 'height=365,width=660'); return false;" href="http://pinterest.com/pin/create/button/?url=<?php echo get_permalink($post_slide_ID); ?>&media=<?php echo $url_image; ?>&description=<?php echo get_post_field('post_content', $post_slide_ID); ?> (Bebeteca)" target="_blank" ></a>
 							</li>
 							<li class="mail">
-								<a href=""></a>
+								<a rel="nofollow" class="share_post_by_mail" data-id="<?php echo $post->ID; ?>"></a>
+								<form class="mail_pop">
+									<label for="username">Tu nombre:</label>
+									<input type="text" name="username">
+
+									<label for="sender_email">Tu email:</label>
+									<input type="email" name="sender_email">
+
+									<label for="recipient">Email del receptor:</label>
+									<input type="email" name="recipient">
+
+									<input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+
+									<label for="message">Mensaje:</label>
+									<textarea type="text" name="message"></textarea>
+
+									<input type="submit" value="Enviar">
+								</form>
 							</li>
 						</ul>
 					</div>

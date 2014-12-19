@@ -35,9 +35,9 @@ foreach ($terms as $key => $term) {
 							<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>" target="_blank" ></a>
 						</li>
 
-						<li class="gm">
+						<!-- <li class="gm">
 							<a href="https://plus.google.com/share?url=<?php echo get_permalink($post->ID) ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-						</li>
+						</li> -->
 
 						<?php $url_image = attachment_image_url($post->ID, 'large'); ?>
 						<li class="pr">
@@ -97,9 +97,9 @@ foreach ($terms as $key => $term) {
 								<a rel="nofollow" onclick="window.open('http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>', '_blank', 'height=365,width=660'); return false;" href="http://twitter.com/home?status=<?php echo get_permalink($post->ID) ?>" target="_blank" ></a>
 							</li>
 
-							<li class="gm">
+							<!-- <li class="gm">
 								<a href="https://plus.google.com/share?url=<?php echo get_permalink($post->ID) ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-							</li>
+							</li> -->
 
 							<?php $url_image = attachment_image_url($post->ID, 'large'); ?>
 							<li class="pr">
