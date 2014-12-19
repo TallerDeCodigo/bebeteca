@@ -179,7 +179,7 @@ input:-moz-placeholder { color:#8bd3d9; font-family: 'arvoregular'; font-style: 
 .content-header header nav#main-menu ul li:hover .submenu{display: block;}
 .content-header header nav#main-menu ul li .submenu .subcategorias{position: relative; overflow: hidden; width: 150px; height: 100%; list-style: none; float: left;}
 .content-header header nav#main-menu ul li .submenu .subcategorias li{display: block; overflow: hidden; margin: 0; padding: 0; width: 100%; text-align: left; font-size: 16px; line-height: 20px; margin-bottom: 13px; font-weight: normal;}
-.content-header header nav#main-menu ul li .submenu .subcategorias li a{font-size: 16px;}
+.content-header header nav#main-menu ul li .submenu .subcategorias li a{font-size: 14px;}
 .content-header header nav#main-menu ul li .submenu .post-rel{position: relative;overflow: hidden;float: right;width: 372px; height: auto; padding:0 10px; margin: 0 0 20px 13px; }
 .content-header header nav#main-menu ul li .submenu .post-rel img{display: block; width: 149px; height: auto; margin-right: 9px; float: left;}
 .content-header header nav#main-menu ul li .submenu .post-rel h4{font-size: 18px; color:#9d65b4; text-align: left;}

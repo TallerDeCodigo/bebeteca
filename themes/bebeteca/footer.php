@@ -24,7 +24,7 @@
 			</ul>
 			<div class="news-footer">
 				<p>
-					Suscríbete al newsletter
+					Suscríbete y recibe la mejor información
 				</p>
 				<form id="form-newsletter-footer" class="forma-news">
 					<input type="email" name="news-email-fo" id="news-email-fo" value="" placeholder="email@mail.com" >

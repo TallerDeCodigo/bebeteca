@@ -85,7 +85,7 @@ if(empty($post_child->posts) ){
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share($permalink); ?></p>
 					</div>
-					<span>Comparte</span>
+					<span>Comparte:</span>
 					<ul>
 						<li class="fb">
 							<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo $permalink; ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo $permalink; ?>" target="_blank"></a>
@@ -160,7 +160,7 @@ if(empty($post_child->posts) ){
 
 				<div class="header-category post-slide">
 					<div class="extras-category">
-						<span>Comparte</span>
+						<span>Comparte:</span>
 						<ul>
 							<li class="fb">
 								<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post_slide_ID); ?>" target="_blank"></a>
@@ -205,8 +205,8 @@ if(empty($post_child->posts) ){
 			</article>
 
 			<div class="entero divicion">
-				<span class="line"></span>
-				<h5>Artículos relacionados</h5>
+				<span class="line"></span><br />
+				<h5>Artículos relacionados</h5><br />
 				<span class="line"></span>
 			</div>
 			<?php

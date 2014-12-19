@@ -256,7 +256,9 @@
 
 							</div>
 						</li>
-						<li class="bg-promociones boton ultimo-fila si-mobile"><a class="mnu-a" href=""></a>
+						<!-- <li class="bg-promociones boton si-mobile"><a class="mnu-a" href=""></a> -->
+						<li class="bg-terminos boton ultimo-fila si-mobile"><a class="bg-terminos" href="<?php echo site_url('/terminos-y-condiciones/'); ?>">Términos y condiciones</a>
+						<li class="bg-terminos boton  si-mobile"><a class="bg-terminos" href="<?php echo site_url('/aviso-privacidad/'); ?>">Avisos de privacidad</a>
 					</ul>
 				</nav>
 			</header>

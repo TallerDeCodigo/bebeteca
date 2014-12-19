@@ -13,7 +13,7 @@
 						<!-- <span class="megusta verde"></span><p><?php echo get_count_like($post->ID, 'post'); ?></p> -->
 						<span class="compartir"></span><p><?php echo get_count_share(get_permalink($post->ID)); ?></p>
 					</div>
-					<span>Comparte</span>
+					<span>Comparte:</span>
 					<ul>
 						<li class="fb">
 							<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post->ID) ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post->ID) ?>" target="_blank"></a>
@@ -76,7 +76,7 @@
 
 				<div class="header-category">
 					<div class="extras-category">
-						<span>Comparte</span>
+						<span>Comparte:</span>
 						<ul>
 							<li class="fb">
 								<a rel="nofollow" onclick="window.open('http://www.facebook.com/share.php?u=<?php echo get_permalink($post->ID) ?>&t=Promociones', '_blank', 'height=365,width=660'); return false;" href="http://www.facebook.com/share.php?u=<?php echo get_permalink($post->ID) ?>" target="_blank"></a>
@@ -108,8 +108,8 @@
 			</article>
 
 			<div class="entero divicion promo-rel">
-				<span class="line"></span>
-				<h5>Otras promociones</h5>
+				<span class="line"></span><br />
+				<h5>Otras promociones</h5><br />
 				<span class="line"></span>
 			</div>
 

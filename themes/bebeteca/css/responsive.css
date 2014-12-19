@@ -60,7 +60,9 @@ span.breadcrumbs,
 .slider-principal.videos img,
 .main section .slider-principal{width: 100%; height: auto;}
 
-.play_1, .play_2{display: none !important;}
+img.play_1 {display: none!important;}
+.article-gral img.play_2{display: block; width:15%!important; height: auto!important; position: absolute; top:2rem!important; left: 2rem!important;}
+.single .article-gral img.play_2{display: block; width:15%!important; height: auto!important; position: absolute; top:2rem!important; left: 2rem!important;}
 
 .single article img.freatured-post{max-width: 100%;height: auto;margin: 0 auto;}
 .single span.autor{display: none;}
@@ -124,7 +126,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.span.line{width: 35%;}
 	.extras-category,
 	.header-category .extras-category .extras,
-	.comentarios{display: none;}
+	.comentarios{display: block;}
 	.single .header-category .extras-category {display: block; float: right; }
 	.single article img.freatured-post {max-width: 100%;height: auto;margin: 0 auto;}
 	.content-header.fix-head{position: fixed;}
@@ -134,7 +136,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.logo{position: absolute;width: 180px;height: 35px;margin-left: 50%;left: -90px;margin-top: -3px;background: url('../images/logo_res.png') no-repeat;}
 	.content-header header .top-header ul.redes-sociales,
 	.content-header header .top-header span{display: none;}
-	.content-header header .top-header form input[type=submit]{background:#8bd3d9;margin-right: 2.7%; text-indent: 0;width: 11%;cursor: pointer; height: 28px;margin-top: 2px;text-align: center;padding: 0;}
+	.content-header header .top-header form input[type=submit]{background:#8bd3d9;margin-right: 2.7%; text-indent: 0;width: 11%;cursor: pointer; height: 28px;margin-top: 2px;text-align: center;padding: 0; font-style: italic; border-radius: 0px; font-family: 'arvoregular';}
 	.logo a {width: 180px;height: 46px;}
 
 	.content-header header .top-header{display: none; width: 103%; height: 39px; margin-right: -1.5%;background: #b0e1e5;margin-top:15px;}
@@ -159,6 +161,7 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.content-header header nav#main-menu.visible ul li a.bg-estimulacion{border-color: #A674B8;}
 	.content-header header nav#main-menu.visible ul li a.bg-lactancia{border-color: #FAC600;}
 	.content-header header nav#main-menu.visible ul li a.bg-entrevistas{border-color: #8FA0E0;}
+	.content-header header nav#main-menu.visible ul li a.bg-terminos{border-color: #D5D5D5;}
 	.content-header header nav#main-menu.visible ul li a {width: 100%;height: 49px;display: block; border-left:11px solid #fff; padding-left: 12px;}
 	.content-header header nav#main-menu.visible ul li .submenu{display: none;width: 100%; position: relative;overflow: hidden;border: none;border-radius: 0;box-shadow: none; padding: 0; left: -0px !important; background: transparent;}
 	.content-header header nav#main-menu.visible ul li .submenu .post-rel{display: none;}
@@ -193,11 +196,17 @@ footer .content-footer .footer-parte1 p{margin-bottom: 13px;}
 	.article-gral.primer_post .cont-info-gral .franja{margin-bottom: 13px;}
 
 	.single article.autor-home,
-	.autor-home{background: rgba(0, 0, 0, 0);box-shadow: none; border-bottom: 1px solid #D8B0EA;padding-top: 0; min-height: 161px;}
+	.autor-home{background: #fff;box-shadow: none; padding:1rem; min-height: 161px;}
+	.single article.autor-home p,
+	.autor-home p{width: 90%;}
+	.single article.autor-home .info-autor p.rol,
+	.autor-home .info-autor p.rol{width: 80%;}
+	.single article.autor-home h4,
+	.autor-home h4{width: 90%;}
 	.single article.autor-home img,
-	.autor-home img{width: 139px; height: 139px; margin-top: 0;}
+	.autor-home img{width: 139px; height: 139px; margin-top: 1rem;}
 	.single article.autor-home .info-autor,
-	.autor-home .info-autor {margin-left: 175px;display: block;margin-right: 0; }
+	.autor-home .info-autor {margin-left: 175px;display: block;margin-right: 0;}
 	.single article.autor-home .post-autor,
 	.autor-home .post-autor{display: none;}
 	.single article.autor-home .info-autor{line-height: 20px;}
